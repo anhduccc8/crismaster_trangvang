@@ -105,7 +105,7 @@ $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', wc_get_checko
 										}
 										?>
 										</div>
-										<div class="hidden_mobile product-line-info product-price h5 ">
+										<div class="product-line-info product-price h5 ">
 											<div class="current-price">
 											<?php
 												echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.

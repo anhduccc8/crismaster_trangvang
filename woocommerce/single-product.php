@@ -50,7 +50,7 @@ $show_page_title = $smof_data['ftc_prod_title'];
 				?>
 
 			</div>
-			<div class="col-md-3">
+			<div class="col-sm-3">
 				<ul class="ybc-widget-ybc-custom-2">
 					<li class="ybc-widget-item">
 						<div class="content_toggle ybc_links_page_home">

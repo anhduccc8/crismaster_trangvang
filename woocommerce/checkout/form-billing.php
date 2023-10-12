@@ -56,13 +56,13 @@ defined( 'ABSPATH' ) || exit;
 						<?php
 							foreach ( $fields as $key => $field ) {
 								if($key == 'billing_first_name'){
-									woocommerce_form_field( $key, ['placeholder' => 'Tên', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
+									woocommerce_form_field( $key, ['placeholder' => 'Tên *', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
 									break;
 								}
 							};
 							foreach ( $fields as $key => $field ) {
 								if($key == 'billing_last_name'){
-									woocommerce_form_field( $key, ['placeholder' => 'Họ', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
+									woocommerce_form_field( $key, ['placeholder' => 'Họ *', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
 									break;
 								}
 							};
@@ -95,7 +95,14 @@ defined( 'ABSPATH' ) || exit;
 						
 							foreach ( $fields as $key => $field ) {
 								if($key == 'billing_phone'){
-									woocommerce_form_field( $key, ['placeholder' => 'Điện thoại', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
+									woocommerce_form_field( $key, ['placeholder' => 'Điện thoại *', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
+									break;
+								}
+							}
+
+							foreach ( $fields as $key => $field ) {
+								if($key == 'billing_country'){
+									woocommerce_form_field( $key, ['placeholder' => 'Quốc Gia *', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
 									break;
 								}
 							}

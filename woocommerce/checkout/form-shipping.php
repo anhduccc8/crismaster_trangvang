@@ -42,6 +42,18 @@ defined( 'ABSPATH' ) || exit;
 								<?php
 									$fields = $checkout->get_checkout_fields( 'shipping' );
 									foreach ( $fields as $key => $field ) {
+										if($key == 'shipping_first_name'){
+											woocommerce_form_field( $key, ['placeholder' => 'Tên *', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
+											break;
+										}
+									};
+									foreach ( $fields as $key => $field ) {
+										if($key == 'shipping_last_name'){
+											woocommerce_form_field( $key, ['placeholder' => 'Họ *', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
+											break;
+										}
+									};
+									foreach ( $fields as $key => $field ) {
 										if($key == 'shipping_address_1'){
 											woocommerce_form_field( $key, ['placeholder' => 'Địa chỉ *', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
 											break;
@@ -58,6 +70,13 @@ defined( 'ABSPATH' ) || exit;
 									foreach ( $fields as $key => $field ) {
 										if($key == 'shipping_city'){
 											woocommerce_form_field( $key, ['placeholder' => 'Thành phố *', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
+											break;
+										}
+									};
+
+									foreach ( $fields as $key => $field ) {
+										if($key == 'shipping_country'){
+											woocommerce_form_field( $key, ['placeholder' => 'Quốc gia *', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
 											break;
 										}
 									};

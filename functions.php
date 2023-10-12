@@ -122,6 +122,32 @@ function setPostViews($postID) {
     }
 }
 
+add_action( 'woocommerce_widget_shopping_cart_buttons', function(){
+    // Removing Buttons
+    remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10 );
+    remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_proceed_to_checkout', 20 );
+
+    // Adding customized Buttons
+    add_action( 'woocommerce_widget_shopping_cart_buttons', 'custom_widget_shopping_cart_button_view_cart', 10 );
+    add_action( 'woocommerce_widget_shopping_cart_buttons', 'custom_widget_shopping_cart_proceed_to_checkout', 20 );
+}, 1 );
+
+// Custom cart button
+function custom_widget_shopping_cart_button_view_cart() {
+    echo '<button type="button" class="btn btn-secondary back-to-shop" data-dismiss="modal">Tiếp tục mua hàng</button>';
+}
+
+// Custom Checkout button
+function custom_widget_shopping_cart_proceed_to_checkout() {
+    $original_link = wc_get_checkout_url();
+    echo '<a href="' . esc_url( $original_link ) . '" class="btn btn-primary"><i class="material-icons rtl-no-flip"></i>Thanh toán</a>';
+}
+add_filter( 'wc_add_to_cart_message', 'remove_add_to_cart_message' );
+
+function remove_add_to_cart_message() {
+    return;
+}
+
 /*ajax add to cart*/
 add_action('wp_ajax_ftc_woocommerce_ajax_add_to_cart', 'ftc_woocommerce_ajax_add_to_cart');
 add_action('wp_ajax_nopriv_ftc_woocommerce_ajax_add_to_cart', 'ftc_woocommerce_ajax_add_to_cart');

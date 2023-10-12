@@ -1395,18 +1395,7 @@ form#form_ets_onepagecheckout, form#form_ets_onepagecheckout * {
     padding: 10px 0 0;
     position: static;
   }
-  .product-line-grid-right .qty:before,
-  .product-line-grid-right .form_price:before,
-  .product-line-grid-right .form_total_price:before{
-    content: attr(data-title);
-    display: block;
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
-  .form_info_price_mobile > .row > div:not(:first-child) {
-    border-left: 1px solid #eee;
-    text-align: center;
-  }
+  
   .form_info_price_mobile > .row {
     display: flex;
     display: -webkit-flex;
@@ -1434,8 +1423,8 @@ form#form_ets_onepagecheckout, form#form_ets_onepagecheckout * {
   }
   .ets_remove_cart {
     position: absolute;
-    top: 40px;
-    right: 10px;
+    top: -5px;
+    right: 0px;
     width: 30px;
     height: 30px;
   }
@@ -1462,16 +1451,13 @@ form#form_ets_onepagecheckout, form#form_ets_onepagecheckout * {
     padding-top: 0;
   }
   .form_info_price_mobile > .row > div {
-    width: 33.33%;
+    width: 50%;
   }
   #form_ets_onepagecheckout .bootstrap-touchspin input.form-control,
   #form_ets_onepagecheckout .bootstrap-touchspin input.input-group{
     /*max-width: calc(100% - 20px);*/
   }
-  .block-onepagecheckout .product-line-grid-right .qty {
-    padding-right: 5px;
-    padding-left: 5px;
-  }
+
   body#checkout .form-group {
         margin-bottom: 1rem;
     }
@@ -1498,6 +1484,9 @@ form#form_ets_onepagecheckout, form#form_ets_onepagecheckout * {
     }
   .block-onepagecheckout .block-promo .promo-code form {
     padding-left: 27px;
+  }
+	#form_ets_onepagecheckout {
+    padding: 0;
   }
 }
 #form_ets_onepagecheckout i.ets_checkbox {

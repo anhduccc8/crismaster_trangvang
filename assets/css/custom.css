@@ -346,14 +346,14 @@ span.icon_phone {
         display: inline-block;
         margin-right: 15px;
     }
-    body .block-onepagecheckout .product-line-grid-right .qty {
+/*     body .block-onepagecheckout .product-line-grid-right .qty {
         padding-right: 5px;
         padding-left: 5px;
         width: 100%;
         text-align: left;
         padding: 0;
         border: none;
-    }
+    } */
     body .block-onepagecheckout.block-shopping-cart > .title-heading {
         margin-left: 0;
         margin-right: 0;
@@ -378,16 +378,7 @@ span.icon_phone {
         max-width: 100%;
         white-space: normal;
     }
-    body .product-line-grid-right .qty:before,
-    body .product-line-grid-right .form_price:before,
-    body .product-line-grid-right .form_total_price:before {
-        content: attr(data-title);
-        display: inline-block;
-        font-size: 14px;
-        margin-bottom: 8px;
-        margin-right: 10px;
-        color: #999;
-    }
+ 
     body .block-onepagecheckout .input-group.bootstrap-touchspin {
         max-width: 80px;
         display: inline-flex;
