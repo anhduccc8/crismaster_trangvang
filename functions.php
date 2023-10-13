@@ -28,6 +28,7 @@ require_once get_template_directory() . '/plugins/custom-visual/follow-chung-toi
 require_once get_template_directory() . '/plugins/custom-visual/khach-hang-cua-chung-toi.php';
 require_once get_template_directory() . '/plugins/custom-visual/tin-tuc-trang-chu.php';
 require_once get_template_directory() . '/plugins/custom-visual/anh-background-cate.php';
+require_once get_template_directory() . '/plugins/custom-visual/san-pham-theo-cate.php';
 
 
 if (version_compare($GLOBALS['wp_version'], '4.7-alpha', '<')) {
@@ -98,6 +99,45 @@ function admin_custom_css() {
     } 
   </style>';
 }
+
+function crismaster_pagination() {
+    if( is_singular() )
+        return;
+    global $wp_query;
+    /** Stop execution if there's only 1 page */
+    if( $wp_query->max_num_pages <= 1 )
+        return;
+    $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+    $max   = intval( $wp_query->max_num_pages );
+    /** Add current page to the array */
+    if ( $paged >= 1 )
+        $links[] = $paged;
+    if ( $paged == 1 && $max > 2 )
+        $links[] = $paged + 2 ;
+    /** Add the pages around the current page to the array */
+    if ( $paged >= 2 ) {
+        $links[] = $paged - 1;
+    }
+    if ( ( $paged + 1 ) <= $max ) {
+        $links[] = $paged + 1;
+    }
+    if ( $paged == $max && $max > 2 )
+        $links[] = $paged - 2 ;
+    /** Previous Post Link */
+    $url_template = get_template_directory_uri();
+    if ( get_previous_posts_link() )
+        printf( '<li class="page-item page-link">%s</li>' . "\n", get_previous_posts_link('&laquo;') );
+    /** Link to current page, plus 2 pages in either direction if necessary */
+    sort( $links );
+    foreach ( (array) $links as $link ) {
+        $class = $paged == $link ? ' class="page-item active"' : '';
+        printf( '<li%s><a class="page-link" href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
+    }
+    /** Next Post Link */
+    if ( get_next_posts_link() )
+        printf( '<li class="page-item page-link">%s</li>' . "\n", get_next_posts_link('&raquo;') );
+}
+
 
 function getPostViews($postID){
     $count_key = 'post_views_count';

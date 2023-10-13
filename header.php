@@ -275,8 +275,4 @@ $hotline_header = $theme_option['hotline_header'];
             </div>
         </div>
     </header>
-    <section id="wrapper">
-        <div id="content-wrapper">
-         <section id="main">
-            <section id="content" class="page-home">
-                <div class="tea_content_body">
+

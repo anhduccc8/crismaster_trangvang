@@ -26,14 +26,16 @@ function background_cate_func($atts,$content = null){
     ob_start();
     $mobile = wp_is_mobile();
     ?>
-    <div id="js-product-list-header">
-        <div class="block-category">
-            <div class="block-category-inner">
-                <div class="category-cover">
-                    <?php if(isset($image_ca) && $image_ca!='') {
-                        $image_cas = wp_get_attachment_image_src($image_ca, ''); ?>
-                        <img src="<?= esc_url($image_cas[0]) ?>" >
-                    <?php } ?>
+    <div class="col-xs-12 col-sm-12 col-md-12 category_header_banner">
+        <div id="js-product-list-header">
+            <div class="block-category">
+                <div class="block-category-inner">
+                    <div class="category-cover">
+                        <?php if(isset($image_ca) && $image_ca!='') {
+                            $image_cas = wp_get_attachment_image_src($image_ca, ''); ?>
+                            <img src="<?= esc_url($image_cas[0]) ?>" >
+                        <?php } ?>
+                    </div>
                 </div>
             </div>
         </div>

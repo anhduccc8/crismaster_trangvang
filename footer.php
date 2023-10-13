@@ -24,11 +24,7 @@ $footer_infor_8 = $theme_option['footer_infor_8'];
 
 $mobile = wp_is_mobile(); ?>
 
-</div>
-</section>
-</section>
-</div>
-</section>
+
 <footer id="footer">
 
     <div class="container">

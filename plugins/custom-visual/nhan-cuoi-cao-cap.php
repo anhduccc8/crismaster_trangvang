@@ -49,6 +49,13 @@ if(function_exists('vc_map')){
                         'value' => '',
                         'description' => esc_html__('Nhập vào link trang page mà bạn muốn đến',"crismaster")
                     ),
+                    array(
+                        'type' => 'textfield',
+                        'heading' => esc_html__('Hoặc nhập ID sản phẩm','crismaster'),
+                        'param_name' => 'id_ca',
+                        'value' => '',
+                        'description' => esc_html__('Nhập vào ID sản phẩm bạn muốn link đến',"crismaster")
+                    ),
 
                 ),
                 'description' => esc_html__('Các danh mục sẽ được hiển thị theo dạng slide',"crismaster")
@@ -102,6 +109,9 @@ function nhan_cuoi_cao_cap_func($atts,$content = null){
                                                             $image_cas = explode(',',$dca['images_ca'] );
                                                             $dca['image_ca_0'] = wp_get_attachment_image_src($image_cas[0], '');
                                                             $dca['image_ca_1'] = wp_get_attachment_image_src($image_cas[1], '');
+                                                            if ($dca['id_ca'] != ''){
+                                                                $dca['link_ca'] = get_permalink($dca['id_ca']);
+                                                            }
                                                         }
                                                         ?>
                                                         <div class="tea_product_group_item tea_product_group_1 slick-slide">

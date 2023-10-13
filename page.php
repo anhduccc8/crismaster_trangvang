@@ -31,7 +31,12 @@ get_header( );
 ftc_breadcrumbs_title($show_breadcrumb, $show_page_title, get_the_title());
 $page_column_class = '';
 ?>
-	<div id="primary" class="content-area">
+    <section id="wrapper">
+    <div id="content-wrapper">
+    <section id="main">
+    <section id="content" class="page-home">
+    <div class="tea_content_body">
+	    <div id="primary" class="content-area">
 
 		<main id="main" class="site-main container" >
 
@@ -51,4 +56,9 @@ $page_column_class = '';
 		<!-- Right Sidebar -->
 
 	</div><!-- #primary -->
+    </div>
+    </section>
+    </section>
+    </div>
+    </section>
 <?php get_footer();
