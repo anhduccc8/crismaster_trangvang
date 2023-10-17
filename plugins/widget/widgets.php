@@ -188,7 +188,7 @@ class Crismaster_Recent_Product extends WP_Widget{
                     <div id="product_page-viewedproducts" class="owl-carousel recent-product product_page product_list grid products crosssell_product_list_wrapper cs-wrapper-viewedproducts layout-slide ets_mp_desktop_4 ets_mp_tablet_3 ets_mp_mobile_2">
                     <?php  if ($query->have_posts()) :
                         while ( $query->have_posts() ) : $query->the_post();
-                            $single_image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()));
+                            $single_image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()),'large');
                             $product = wc_get_product( get_the_ID() );
                             $price = $product->get_price_html();
                             ?>
