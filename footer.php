@@ -253,6 +253,9 @@ $mobile = wp_is_mobile(); ?>
                                     </div>
                                 </div>
                             </div>
+                            <div class="footer-row row text-center">
+                                <p>Copyright © 2023 ADJ. Designed by Innocom</p>
+                            </div>
                         </div>
                     </div>
                 </div>

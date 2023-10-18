@@ -55,7 +55,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
-  .owl-carousel.owl-loaded {
+  .owl-carousel.owl-loaded:not(.tea_cat_blocks) {
     display: block; }
   .owl-carousel.owl-loading {
     opacity: 0;

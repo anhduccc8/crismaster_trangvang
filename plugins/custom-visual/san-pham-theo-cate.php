@@ -101,11 +101,13 @@ function san_pham_theo_cate_func($atts,$content = null){
                                         </a>
                                         <div class="product-description">
                                             <h2 class="h3 product-title" ><a href="<?php the_permalink(); ?>" title="<?php the_title() ?>"><?php echo (strlen(get_the_title()) > 30) ? mb_substr(get_the_title(),0,30,'utf-8')."..." : get_the_title(); ?></a></h2>
-                                            <?php   if(isset($price) && $price != '') { ?>
-                                                <span class="price_contact" aria-label="Giá"><?php echo ($price); ?></span>
-                                            <?php }else{ ?>
-                                                <span class="price_contact"><i class="fa-phone fa"></i> Giá liên hệ</span>
-                                            <?php } ?>
+                                            <div class="product-price-and-shipping">
+                                                <?php   if(isset($price) && $price != '') { ?>
+                                                    <span class="price_contact" aria-label="Giá"><?php echo ($price); ?></span>
+                                                <?php }else{ ?>
+                                                    <span class="price_contact"><i class="fa-phone fa"></i> Giá liên hệ</span>
+                                                <?php } ?>
+                                            </div>
                                         </div>
                                     </div>
                                 </article>
