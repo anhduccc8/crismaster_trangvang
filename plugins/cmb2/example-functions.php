@@ -64,91 +64,6 @@ function yourprefix_before_row_if_2( $field_args, $field ) {
 		echo '<p>Testing <b>"before_row"</b> parameter (<b>NOT</b> on $post_id 2)</p>';
 	}
 }
-
-add_action( 'cmb2_admin_init', 'details_product_metabox' );
-function details_product_metabox() {
-	$prefix = '_cmb_';
-
-	$cmb_crismaster = new_cmb2_box( array(
-		'id'            => $prefix . 'details_product',
-		'title'         => __( 'Chi tiết sản phẩm', 'cmb2' ),
-		'object_types'  => array( 'productt'), // Post type
-		'fields' => array(					            
-			array(
-				'name' => esc_html__( 'Giá Sản Phẩm', 'cmb2' ),
-				'desc' => '',
-				'id'   => $prefix . 'price_product',
-				'type' => 'text',
-			),
-//            array(
-//                'name' => esc_html__( 'Giá Khuyễn Mãi', 'cmb2' ),
-//                'desc' => '',
-//                'id'   => $prefix . 'price_product_2',
-//                'type' => 'text',
-//            ),
-//            array(
-//                'name' => esc_html__( 'Kích thước sản phẩm', 'cmb2' ),
-//                'desc' => '',
-//                'id'   => $prefix . 'size_product',
-//                'type' => 'text',
-//            ),
-//            array(
-//                'name' => esc_html__( 'Gallery cho sản phẩm', 'cmb2' ),
-//                'desc' => esc_html__( 'Có thể nhập nhiều ảnh có kích thước 930 x 650', 'cmb2' ),
-//                'id'   => $prefix . 'list_image_product',
-//                'type' => 'file_list',
-//                'text' => array(
-//                    'add_upload_files_text' => 'Thêm hoặc Upload File', // default: "Add or Upload Files"
-//                    'remove_image_text' => 'Xóa File', // default: "Remove Image"
-//                    'file_text' => 'File', // default: "File:"
-//                    'file_download_text' => 'Download File', // default: "Download"
-//                    'remove_text' => 'Xóa', // default: "Remove"
-//                ),
-//            ),
-
-
-            array(
-                'name' => __( 'Ảnh Thumbnail Sản Phẩm', 'cmb' ),
-                'desc' => __( 'Upload ảnh thumbnail cho sản phẩm (hiển thị ở trang chủ hoặc các danh mục khác, nên có kích thước 300 x 300)', 'cmb2' ),
-                'id'   => $prefix . 'popular_product',
-                'type' => 'file',
-            ),
-		),
-	) );
-
-//    $group_param_id = $cmb_crismaster->add_field( array(
-//        'name'        => esc_html__( 'Nhập các thông số sản phẩm', 'cmb2' ),
-//        'id'          => $prefix.'group_paramter',
-//        'type'        => 'group',
-//        'description' => __( 'Có thể nhập nhiều option', 'cmb2' ),
-//        'options'     => array(
-//            'group_title'       => __( 'Thông số {#}', 'cmb2' ),
-//            'add_button'        => __( 'Thêm', 'cmb2' ),
-//            'remove_button'     => __( 'Xóa', 'cmb2' ),
-//            //'sortable'          => true,
-//             'closed'         => false,
-//            // 'remove_confirm' => esc_html__( 'Are you sure you want to remove?', 'cmb2' ),
-//        ),
-//    ) );
-//
-//    $cmb_crismaster->add_group_field( $group_param_id, array(
-//        'name' => 'Thông Số Chi Tiết',
-//        'des' => __( 'Ví dụ: Nguồn gốc: Nhập khẩu 100%,..', 'cmb2' ),
-//        'id'   =>  'param_product',
-//        'type' => 'text',
-//        // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
-//    ) );
-
-//    $cmb_crismaster->add_field(
-//        array(
-//            'name' => __( 'Mô Tả Sản Phẩm', 'cmb' ),
-//            'desc' => __( 'Miêu tả về sản phẩm (bài viết có thể có hình ảnh,..)', 'cmb2' ),
-//            'id'   => $prefix . 'des_product',
-//            'type' => 'textarea',
-//        )
-//    );
-}
-
 add_action( 'cmb2_admin_init', 'single_post_metabox' );
 function single_post_metabox() {
     $prefix = '_cmb_';
@@ -158,16 +73,9 @@ function single_post_metabox() {
         'title'         => __( 'Thêm thông tin cho tin tức', 'cmb2' ),
         'object_types'  => array( 'post'), // Post type
         'fields' => array(
-
-//            array(
-//                'name' => __( 'Ảnh "Danh sách tin tức"', 'cmb' ),
-//                'desc' => __( 'Upload ảnh cho tin tức hiển thị ở trang danh sách tin tức (880x580)', 'cmb2' ),
-//                'id'   => $prefix . 'single_image',
-//                'type' => 'file',
-//            ),
             array(
-                'name' => __( 'Ảnh Thu nhỏ tin tức trên sidebar', 'cmb' ),
-                'desc' => __( 'Upload ảnh thu nhỏ cho tin tức hiển thị trên sidebar (nên có kích thước 150 x 105)', 'cmb2' ),
+                'name' => __( 'Ảnh đại diện bài viết', 'cmb' ),
+                'desc' => __( 'Ảnh sẽ hiển thị trên đầu mỗi bài post (1920 x 720)', 'cmb2' ),
                 'id'   => $prefix . 'single_image',
                 'type' => 'file',
             ),

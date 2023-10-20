@@ -12,6 +12,8 @@
  * Lolo only works in WordPress 4.7 or later.
  */
 
+require_once get_template_directory() . '/plugins/cmb2/init.php';
+require_once get_template_directory() . '/plugins/cmb2/example-functions.php';
 require_once get_template_directory() . '/plugins/redux/ReduxCore/framework.php';
 require_once get_template_directory() . '/plugins/redux/sample/sample-config.php';
 require_once get_template_directory() . '/plugins/widget/widgets.php';

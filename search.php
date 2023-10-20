@@ -10,7 +10,6 @@
                 $wp_query = new WP_Query( array(
                         's' => $s,
                         'post_type' => 'product',
-                        'posts_per_page' => 1,
                         'paged' => $paged,
 //                        'showposts' => -1,
 
