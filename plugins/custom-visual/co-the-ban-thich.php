@@ -44,6 +44,13 @@ if(function_exists('vc_map')){
                     ),
                     array(
                         'type' => 'textfield',
+                        'heading' => esc_html__('Giá cũ','crismaster'),
+                        'param_name' => 'price_old',
+                        'value' => '',
+                        'description' => esc_html__('Giá cũ sẽ được hiển thị gạch bỏ',"crismaster")
+                    ),
+                    array(
+                        'type' => 'textfield',
                         'heading' => esc_html__('Đi đến Link','crismaster'),
                         'param_name' => 'link_ca',
                         'value' => '',
@@ -105,7 +112,10 @@ function co_the_ban_thich_func($atts,$content = null){
                                                     <div class="product-description">
                                                         <h3 class="h3 product-title" ><a href="<?php echo esc_url($dca['link_ca']); ?>" title="<?php echo ($dca['title_ca']); ?>"><?php echo strlen($dca['title_ca']) > 30 ? mb_substr($dca['title_ca'],0,30,'utf-8')."..." : $dca['title_ca']; ?></a></h3>
                                                         <div class="product-price-and-shipping">
-                                                            <?php   if(isset($dca['price_lh']) && $dca['price_lh'] = true) { ?>
+                                                             <?php   if(isset($dca['price_old']) && $dca['price_old'] != '') { ?>
+                                                                 <span class="regular-price" aria-label="Giá"><?= $dca['price_old'] ?></span>
+                                                            <?php   }
+                                                            if(isset($dca['price_lh']) && $dca['price_lh'] = true) { ?>
                                                                 <span class="price_contact"><i class="fa-phone fa"></i> Giá liên hệ</span>
                                                             <?php }else{ ?>
                                                                 <span class="price" aria-label="Giá"><?php echo ($dca['price_ca']); ?></span>

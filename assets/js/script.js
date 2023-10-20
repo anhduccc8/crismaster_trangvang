@@ -29,7 +29,7 @@ jQuery(document).ready(function($) {
         }
     });
     $('.slides-nhan-cuoi-cao-cap').owlCarousel({
-        loop: false,
+        loop: true,
         nav: true,
         autoplay: false,
         margin: 0,
@@ -52,7 +52,7 @@ jQuery(document).ready(function($) {
         }
     });
     $('.slides-nhan-cau-hon').owlCarousel({
-        loop: false,
+        loop: true,
         nav: true,
         autoplay: false,
         margin: 0,
@@ -75,7 +75,7 @@ jQuery(document).ready(function($) {
         }
     });
     $('.slides-nhan-nu').owlCarousel({
-        loop: false,
+        loop: true,
         nav: true,
         autoplay: false,
         margin: 0,
@@ -98,7 +98,7 @@ jQuery(document).ready(function($) {
         }
     });
     $('.slides-kim-thuy-moc-hoa-tho').owlCarousel({
-        loop: false,
+        loop: true,
         nav: true,
         autoplay: false,
         margin: 0,
@@ -121,7 +121,7 @@ jQuery(document).ready(function($) {
         }
     });
     $('.slides-nhan-nam-cao-cap').owlCarousel({
-        loop: false,
+        loop: true,
         nav: true,
         autoplay: false,
         margin: 0,
@@ -144,7 +144,7 @@ jQuery(document).ready(function($) {
         }
     });
     $('.slides-co-the-ban-thich').owlCarousel({
-        loop: false,
+        loop: true,
         nav: true,
         autoplay: false,
         margin: 0,
@@ -167,7 +167,7 @@ jQuery(document).ready(function($) {
         }
     });
     $('.owl-carousel.widget-popular-post').owlCarousel({
-        loop: false,
+        loop: true,
         items: 1,
         nav: true,
         autoplay: true,
@@ -176,7 +176,7 @@ jQuery(document).ready(function($) {
     });
 
     $('.related-blogs.owl-carousel').owlCarousel({
-        loop: false,
+        loop: true,
         nav: true,
         items: 3,
         autoplay: true,
@@ -184,7 +184,7 @@ jQuery(document).ready(function($) {
         dots: false,
     });
     $('.owl-carousel.recent-product').owlCarousel({
-        loop: false,
+        loop: true,
         nav: true,
         items: 4,
         autoplay: true,
@@ -192,7 +192,7 @@ jQuery(document).ready(function($) {
         dots: false,
     });
     $('.owl-carousel.tin-tuc-trang-chu').owlCarousel({
-        loop: false,
+        loop: true,
         nav: true,
         items: 3,
         autoplay: true,

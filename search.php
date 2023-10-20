@@ -1,62 +1,78 @@
-<?php
-/**
- * The template for displaying search results pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package WordPress
- * @subpackage Lolo
- * @since 1.0
- * @version 1.0
- */
+<?php get_header(); ?>
+    <section id="wrapper">
+        <div class="container">
+            <nav data-depth="2" class="breadcrumb hidden-sm-down">
+                <?php
+                global $paged;
+                global $wp_query;
+                $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+//                $search_query = new WP_Query( 's='.$s.'&paged='.$paged.'.&post_type=product&showposts=-1' );
+                $wp_query = new WP_Query( array(
+                        's' => $s,
+                        'post_type' => 'product',
+                        'posts_per_page' => 1,
+                        'paged' => $paged,
+//                        'showposts' => -1,
 
-get_header( $smof_data['ftc_header_layout'] ); ?>
+                ) );
+                $search_keyword =  $s;
+                $search_count = $wp_query->post_count; ?>
+                <ol>
+                    <li>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><span>Trang chủ</span></a>
+                    </li>
 
-<div class="container">
+                    <li>
+                        <span><?php echo esc_attr($search_count);?> <?php
+                            printf( esc_html__(' kết quả tìm được cho: ', 'crismaster'));?><?php echo esc_attr($search_keyword)?></span>
+                    </li>
+                </ol>
+            </nav>
+            <div id="content-wrapper">
+                <section class="products">
+                    <section id="main">
+                        <section id="products">
+                            <div id="js-product-list">
+                                <div class="products row">
+                                    <?php if ( $wp_query->have_posts() ) : while ($wp_query->have_posts() ) : $wp_query->the_post();
+                                        $single_image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'large');
+                                        $product = wc_get_product( get_the_ID() );
+                                        $price = $product->get_price_html();?>
+                                        <div class="product">
+                                            <article class="product-miniature js-product-miniature">
+                                                <div class="thumbnail-container">
+                                                    <a href="<?php the_permalink(); ?>" class="thumbnail product-thumbnail">
+                                                        <img class=" lazyloaded"  src="<?= esc_url($single_image[0])?>" alt="<?php the_title() ?>">
+                                                        <!--                                            <img class="fade replace-2x img-responsive ybc_img_hover">-->
+                                                    </a>
+                                                    <div class="product-description">
+                                                        <h2 class="h3 product-title"><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h2>
+                                                        <?php   if(isset($price) && $price != '') { ?>
+                                                            <span class="price_contact" aria-label="Giá"><?php echo ($price); ?></span>
+                                                        <?php }else{ ?>
+                                                            <span class="price_contact"><i class="fa-phone fa"></i> Giá liên hệ</span>
+                                                        <?php } ?>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    <?php endwhile;endif;?>
+                                </div>
+                                <nav class="pagination">
+                                    <div class="col-md-4">
+                                    </div>
+                                    <div class="col-md-6 offset-md-2 pr-0">
+                                        <ul class="page-list clearfix text-sm-center">
+                                            <?php crismaster_pagination(); ?>
+                                        </ul>
+                                    </div>
 
-	<header class="page-header">
-		<?php if ( have_posts() ) : ?>
-			<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'lolo' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-		<?php else : ?>
-			<h1 class="page-title"><?php esc_attr( 'Nothing Found', 'lolo' ); ?></h1>
-		<?php endif; ?>
-	</header><!-- .page-header -->
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" >
-
-		<?php
-		if ( have_posts() ) :
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/post/content', 'excerpt' );
-
-			endwhile; // End of the loop.
-
-			the_posts_pagination( array(
-				'prev_text' => ftc_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'lolo' ) . '</span>',
-				'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'lolo' ) . '</span>' . ftc_get_svg( array( 'icon' => 'arrow-right' ) ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'lolo' ) . ' </span>',
-			) );
-
-		else : ?>
-
-			<p><?php esc_attr( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'lolo' ); ?></p>
-			<?php
-				get_search_form();
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
-</div><!-- .container -->
-
-<?php get_footer();
+                                </nav>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </section>
+<?php get_footer(); ?>

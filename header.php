@@ -132,10 +132,10 @@ $hotline_header = $theme_option['hotline_header'];
                                             <div id="desktop_cart">
                                                 <div class="blockcart cart-preview inactive" data-refresh-url="">
                                                     <div class="header">
-                                                        <a class="" rel="nofollow" href="<?php echo wc_get_cart_url(); ?>">
+                                                        <a class="" rel="nofollow" href="<?php echo wc_get_checkout_url(); ?>">
                                                             Giỏ hàng
                                                             <?php $items_count = WC()->cart->get_cart_contents_count();  ?>
-                                                            <span class="icon_cart"><span class="cart-products-count" id="mini-cart-count"><?php echo $items_count ? $items_count : '&nbsp;'; ?></span></span>
+                                                            <span class="icon_cart"><span class="cart-products-count" id="mini-cart-count"><?php echo $items_count ? $items_count : '0'; ?></span></span>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -245,15 +245,8 @@ $hotline_header = $theme_option['hotline_header'];
                                     <div class="header-block ">
                                         <div class="block-content">
                                             <!-- Block search module TOP -->
-                                            <div id="search_widget" class="search-widget" data-search-controller-url="//www.adj.com.vn/tìm kiếm">
-                                                <form method="get" action="http://www.adj.com.vn/tìm kiếm">
-                                                    <input type="hidden" name="controller" value="search">
-                                                    <input type="text" name="s" value="" placeholder="Tìm kiếm" aria-label="Tìm kiếm">
-                                                    <button type="submit">
-                                                        <i class="material-icons search">&#xE8B6;</i>
-                                                        <span class="hidden-xl-down">Tìm kiếm</span>
-                                                    </button>
-                                                </form>
+                                            <div id="search_widget" class="search-widget">
+                                                <?php get_search_form(); ?>
                                             </div>
                                             <!-- /Block search module TOP -->
                                         </div>

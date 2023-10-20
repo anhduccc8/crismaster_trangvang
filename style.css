@@ -4912,10 +4912,14 @@ form {
 
 
 /*Single product*/
-
+.ftc-slider .details_thumbnails{
+	display: block;
+}
 .details_thumbnails li {
     padding: 20px 0;
     list-style: none;
+	max-width: 98px;
+    margin: 0 auto;
 }
 
 .woocommerce #content div.product div.details-img,
@@ -7724,7 +7728,7 @@ html.swipebox-html.swipebox-touch {
 }
 
 #swipebox-close {
-    background-image: url(./assets/images/icons.svg);
+    background-image: url(./assets/img/icons.svg);
     background-repeat: no-repeat;
     border: none !important;
     text-decoration: none !important;

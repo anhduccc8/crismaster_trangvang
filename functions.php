@@ -99,6 +99,12 @@ function admin_custom_css() {
     } 
   </style>';
 }
+   
+add_action( 'woocommerce_single_product_summary', 'single_not_price', 15 );
+
+function single_not_price() {
+    echo '<span class="price_contact d-none"><i class="fa-phone fa"></i> Giá liên hệ</span>';
+}
 
 function crismaster_pagination() {
     if( is_singular() )
@@ -663,18 +669,11 @@ function ftc_scripts() {
 
     wp_enqueue_script('ftc-skip-link-focus-fix', get_theme_file_uri('/assets/js/skip-link-focus-fix.js'), array(), '1.0', true);
 
-    if (has_nav_menu('top')) {
-        wp_enqueue_script('ftc-navigation', get_theme_file_uri('/assets/js/navigation.js'), array(), '1.0', true);
-        $ftc_l10n['expand'] = __('Expand child menu', 'lolo');
-        $ftc_l10n['collapse'] = __('Collapse child menu', 'lolo');
-        $ftc_l10n['icon'] = ftc_get_svg(array('icon' => 'angle-down', 'fallback' => true));
-    }
 
     wp_enqueue_script('ftc-global', get_theme_file_uri('/assets/js/custom.js'), array('jquery'), '1.0', true);
 
     wp_enqueue_script('jquery-scrollto', get_theme_file_uri('/assets/js/jquery.scrollto.js'), array('jquery'), '2.1.2', true);
 
-    wp_localize_script('ftc-skip-link-focus-fix', 'ftcScreenReaderText', $ftc_l10n);
 
     if (is_singular('product') && isset($smof_data['ftc_prod_cloudzoom']) && $smof_data['ftc_prod_cloudzoom'] ) {
         wp_register_script('cloud-zoom', get_template_directory_uri() . '/assets/js/cloud-zoom.js', array('jquery'), null, true);
@@ -1099,4 +1098,20 @@ if (!function_exists('ftc_template_social_sharing')) {
     }
 
 }
+
+
+function crismaster_search_form( $form ) {
+    $form = '
+    <form action="' . esc_attr(home_url( '/' )) .'" method="GET">
+        <input type="text" name="s" class="form-control" placeholder="Tìm kiếm..." value= "' . get_search_query() . '">
+        <input type="hidden" name="post_type" value="products" />
+        <button type="submit">
+        <i class="material-icons search">&#xE8B6;</i>
+         <span class="hidden-xl-down">Tìm kiếm</span>
+        </button>
+    </form>
+    ';
+    return $form;
+}
+add_filter( 'get_search_form', 'crismaster_search_form' );
 ?>
