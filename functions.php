@@ -35,6 +35,9 @@ require_once get_template_directory() . '/plugins/custom-visual/blog-element-3-1
 require_once get_template_directory() . '/plugins/custom-visual/blog-element-2.php';
 require_once get_template_directory() . '/plugins/custom-visual/blog-element-3.php';
 require_once get_template_directory() . '/plugins/custom-visual/blog-element-4.php';
+require_once get_template_directory() . '/plugins/custom-visual/khuyen-mai-banner-1.php';
+require_once get_template_directory() . '/plugins/custom-visual/khuyen-mai-2.php';
+require_once get_template_directory() . '/plugins/custom-visual/khuyen-mai-3.php';
 
 
 if (version_compare($GLOBALS['wp_version'], '4.7-alpha', '<')) {
