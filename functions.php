@@ -31,6 +31,10 @@ require_once get_template_directory() . '/plugins/custom-visual/khach-hang-cua-c
 require_once get_template_directory() . '/plugins/custom-visual/tin-tuc-trang-chu.php';
 require_once get_template_directory() . '/plugins/custom-visual/anh-background-cate.php';
 require_once get_template_directory() . '/plugins/custom-visual/san-pham-theo-cate.php';
+require_once get_template_directory() . '/plugins/custom-visual/blog-element-3-1.php';
+require_once get_template_directory() . '/plugins/custom-visual/blog-element-2.php';
+require_once get_template_directory() . '/plugins/custom-visual/blog-element-3.php';
+require_once get_template_directory() . '/plugins/custom-visual/blog-element-4.php';
 
 
 if (version_compare($GLOBALS['wp_version'], '4.7-alpha', '<')) {
