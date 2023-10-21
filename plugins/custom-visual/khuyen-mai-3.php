@@ -32,7 +32,7 @@ if(function_exists('vc_map')){
                         'type' => 'textfield',
                         'heading' => esc_html__('Đi đến Link','crismaster'),
                         'param_name' => 'link_ca',
-                        'value' => '#',
+                        'value' => '',
                         'description' => esc_html__('Nhập vào link trang page mà bạn muốn đến',"crismaster")
                     ),
 
