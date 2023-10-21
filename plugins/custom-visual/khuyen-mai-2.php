@@ -32,7 +32,7 @@ if(function_exists('vc_map')){
                         'type' => 'textfield',
                         'heading' => esc_html__('Đi đến Link','crismaster'),
                         'param_name' => 'link_ca',
-                        'value' => '',
+                        'value' => '#',
                         'description' => esc_html__('Nhập vào link trang page mà bạn muốn đến',"crismaster")
                     ),
 
@@ -72,12 +72,12 @@ function khuyen_mai_2_func($atts,$content = null){
                                     ?>
                                 <div class="tea_cate_item item49 col-lg-6 col-sm-6 col-xs-6">
                                     <div class="tea_cate_item_content">
-                                        <a class="tea_cate_link" href="<?php echo esc_url($dca['link_ca']); ?>" >
+                                        <a class="tea_cate_link" href="<?php echo ($dca['link_ca']); ?>" >
                                             <img class="lazyload" src="<?php echo esc_url($dca['image_ca'][0]); ?>" />
                                         </a>
                                         <h3 class="tea_title_category">
-                                            <a class="tea_cate_link" href="<?php echo esc_url($dca['link_ca']); ?>" >
-                                                <span class="name"><?php echo esc_url($dca['title_ca']); ?></span>
+                                            <a class="tea_cate_link" href="<?php echo ($dca['link_ca']); ?>" >
+                                                <span class="name"><?php echo ($dca['title_ca']); ?></span>
                                             </a>
                                         </h3>
                                     </div>
