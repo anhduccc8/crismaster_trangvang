@@ -68,7 +68,7 @@ $hotline_header = $theme_option['hotline_header'];
                                         <div class="block-content">
                                             <div id="_desktop_contact_link">
                                                 <div id="contact-link">
-                                                    <a href="#"><span class="icon_store"></span> <span class="label_title">Stores</span></a>
+                                                    <a href="https://adj.smb.vn/danh-sach-cua-hang/"><span class="icon_store"></span> <span class="label_title">Stores</span></a>
                                                     <?php if(isset($hotline_header) && !empty($hotline_header)){ ?>
                                                         <a href="tel:<?= $hotline_header ?>"><span class="icon_phone"></span> <span class="label_desktop"><?= $hotline_header ?></span><span class="label_mobile">Call</span> </a>
                                                     <?php } ?>

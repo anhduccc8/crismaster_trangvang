@@ -260,7 +260,7 @@ $mobile = wp_is_mobile(); ?>
                     </div>
                 </div>
                 <?php
-//                session_start();
+                session_start();
                 if ((!isset($_SESSION["show_popup_image"]) || $_SESSION["show_popup_image"] == 0)){
                 ?>
                 <div class="ybc-newsletter-popup ynpt2 ybc-mail-wrapper hidden_bg_mobie">
