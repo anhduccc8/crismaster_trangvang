@@ -8767,6 +8767,43 @@ ul.woocommerce-mini-cart.cart_list.product_list_widget li {
 .product-line-info a{
 	white-space: normal;
 }
+.wc_payment_methods li{
+	position: relative;
+}
+.wc_payment_methods li input{
+	width: 15px;
+	height: 15px;
+	opacity: 1;
+	top: 7px;
+}
+.wc_payment_methods li label{
+	margin-left: 20px;
+}
+.woocommerce-order-details{
+	display: none;
+}
+.woocommerce .woocommerce-order  .col2-set .col-2{
+	padding: 0;
+	border: 0;
+}
+.woocommerce ul.order_details li{
+	margin-top: 10px;
+}
+.nf-form-title, .nf-form-fields-required,.nf-field-label {
+    display: none;
+}
+.nf-form-content input.ninja-forms-field,
+.nf-form-content select.ninja-forms-field:not([multiple]){
+    height: 45px !important;
+}
+#nf-field-4 {
+    width: 100%;
+}
+@media only screen and (max-width: 768px){
+	.woocommerce .woocommerce-order .col2-set .col-2{
+		margin-top: 10px;
+	}
+}
 @media only screen and (max-width: 767px){
 	.ets_crosssell_block{
 		padding: 0 15px;

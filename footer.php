@@ -254,15 +254,121 @@ $mobile = wp_is_mobile(); ?>
                                 </div>
                             </div>
                             <div class="footer-row row text-center">
-                                <p>Copyright © 2023 ADJ. Designed by Innocom</p>
+                                <p>Copyright © 2023 ADJ. Designed by <a target="_blank" href="https://innocom.vn/">Innocom</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php
+//                session_start();
+                if ((!isset($_SESSION["show_popup_image"]) || $_SESSION["show_popup_image"] == 0)){
+                ?>
+                <div class="ybc-newsletter-popup ynpt2 ybc-mail-wrapper hidden_bg_mobie">
+                    <div class="ynp-div-l2 ybc_animation">
+                        <div class="ynp-div-l3">
+                            <div class="ybc_nlt_content ybc_animation">
+                                <span id="ynp-close" class="ynp-close button" title="Close popup">đóng</span>
+                                <div class="img_bg">
+                                    <span class="bg_inline" style="background-image: url('<?= get_template_directory_uri() ?>/assets/img/letter_bg.png');"></span>
+                                </div>
+                                <div class="ynp-form ynp-form-popup" >
+                                    <div class="ynp-inner">
+                                        <div class="ynp-inner-wrapper">
+                                            <div class="header_logo_center">
+                                                <img src="<?= get_template_directory_uri() ?>/assets/img/letter_logo.png" alt="" />
+                                            </div>
+                                            <h4>ADJ Kính Chào Quý Khách Hàng!</h4>
+                                            <p style="text-align:center;">Quý khách vui lòng điển đầy đủ thông tin, để nhận được ngay ưu đãi 15% tại ADJ. Từ ngày 24/8 - 31/8/2023.</p>
+                                            <p style="text-align:center;">Xin trân trọng cảm ơn!</p>
+                                            <div class="ynp-input-row">
+                                                <?=  do_shortcode( '[ninja_form id=1]' ); ?>
+                                            </div>
+                                            <div class="section_social">
+                                                <ul>
+                                                    <li class="facebook">
+                                                        <a class="_blank" href="https://www.facebook.com/adj.com.vn">
+                                                            <span><i class="icon-facebook"></i></span>
+                                                            <span class="icon_hover"><i class="icon-facebook"></i></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="twitter">
+                                                        <a class="_blank" href="#">
+                                                            <span><i class="icon-twitter"></i></span>
+                                                            <span class="icon_hover"><i class="icon-twitter"></i></span>
+
+                                                        </a>
+                                                    </li>
+                                                    <li class="google-plus">
+                                                        <a class="_blank" href="#" rel="publisher">
+                                                            <span><i class="fa fa-google"></i></span>
+                                                            <span class="icon_hover"><i class="fa fa-google"></i></span>
+
+                                                        </a>
+                                                    </li>
+                                                    <li class="pinterest">
+                                                        <a class="_blank" href="#">
+                                                            <span><i class="icon-pinterest-p"></i></span>
+                                                            <span class="icon_hover"><i class="icon-pinterest-p"></i></span>
+
+                                                        </a>
+                                                    </li>
+                                                    <li class="vimeo">
+                                                        <a class="_blank" href="#">
+                                                            <span><i class="fa fa-vimeo"></i></span>
+                                                            <span class="icon_hover"><i class="fa fa-vimeo"></i></span>
+
+                                                        </a>
+                                                    </li>
+                                                    <li class="instagram">
+                                                        <a class="_blank" href="#">
+                                                            <span><i class="icon-instagram"></i></span>
+                                                            <span class="icon_hover"><i class="icon-instagram"></i></span>
+
+                                                        </a>
+                                                    </li>
+                                                    <li class="youtube">
+                                                        <a class="_blank" href="#">
+                                                            <span><i class="fa fa-youtube-play"></i></span>
+                                                            <span class="icon_hover"><i class="fa fa-youtube-play"></i></span>
+
+                                                        </a>
+                                                    </li>
+                                                    <li class="linkedin">
+                                                        <a class="_blank" href="#">
+                                                            <span><i class="icon-linkedin"></i></span>
+                                                            <span class="icon_hover"><i class="icon-linkedin"></i></span>
+
+                                                        </a>
+                                                    </li>
+                                                    <li class="rss">
+                                                        <a class="_blank" href="#">
+                                                            <span><i class="fa fa-rss"></i></span>
+                                                            <span class="icon_hover"><i class="fa fa-rss"></i></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="ynp-input-checkbox">
+                                                <div class="box_input">
+                                                    <input type="checkbox" id="ynp-input-dont-show" class="ynp-input-dont-show" name="ynpcheckbox" />
+                                                    <span></span>
+                                                </div>
+                                                <label for="ynp-input-dont-show">Do not show this again</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ybc-pp-clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php }
+                $_SESSION["show_popup_image"] = 1;
+                ?>
             </div>
         </div>
     </div>
-
 </footer>
 <div class="ftc-close-popup"></div>
 <?php wp_footer(); ?>

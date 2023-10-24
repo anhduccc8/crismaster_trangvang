@@ -3,6 +3,28 @@ jQuery(document).ready(function($) {
         $(this).parent().stop().toggleClass('active')
     });
 
+    setTimeout(function() {
+        $('.ybc-newsletter-popup').addClass('active');
+        $('.ybc_nlt_content').addClass('ybc_type_zoomIn')
+    }, 1000);
+    if ($('.ybc-newsletter-popup').length > 0) {
+        $('.ybc-newsletter-popup').fadeIn()
+    }
+    $('.ynp-close').click(function() {
+        $('.ybc-newsletter-popup').hide()
+    });
+    $(document).keyup(function(e) {
+        if (e.keyCode === 27 && $('.ynp-form').length > 0 && $('.ynp-close').length > 0) {
+            $('.ynp-close').click()
+        }
+    });
+    $(document).mouseup(function(e) {
+        var container = $(".ybc_nlt_content");
+        if (!container.is(e.target) && container.has(e.target).length === 0 && $('.ynp-form').length > 0 && $('.ynp-close').length > 0) {
+            $('.ynp-close').click()
+        }
+    });
+
 
 
     $('.tea_cat_blocks.slides-news').owlCarousel({
