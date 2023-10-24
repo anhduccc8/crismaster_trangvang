@@ -89,7 +89,7 @@ function tin_tuc_trang_chu_func($atts,$content = null){
                             } ?>
                             </ul>
                             <div class="blog_view_all_button">
-                                <a href="#" class="view_all_link">Xem tất cả bài mới</a>
+                                <a href="https://adj.smb.vn/blog/" class="view_all_link">Xem tất cả bài mới</a>
                             </div>
                         </div>
                         <div class="clear"></div>
