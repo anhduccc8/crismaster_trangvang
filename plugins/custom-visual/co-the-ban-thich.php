@@ -128,8 +128,8 @@ function co_the_ban_thich_func($atts,$content = null){
                                     </div>
                                     <?php  } } ?>
                                 </div>
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>

@@ -117,10 +117,11 @@ function nhan_nu_func($atts,$content = null){
                                                 </article>
                                             </div>
                                         </div>
-                                    <?php  } } ?>
+                                        <?php  } } ?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                         </div>
                     </div>
                 </div>
             </div>

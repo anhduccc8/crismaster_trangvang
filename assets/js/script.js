@@ -25,8 +25,34 @@ jQuery(document).ready(function($) {
         }
     });
 
+    $(document).on('click', '.tea_mobile_cat_dropdown', function(e) {
+        $(this).next().toggleClass('active')
+    });
 
 
+    $('.banner-home-cus.owl-carousel').owlCarousel({
+        loop: true,
+        nav: false,
+        autoplay: false,
+        dots: false,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: true,
+                margin: 0,
+                navClass: ['nhan-nu slick-prev slick-arrow', 'nhan-nu slick-next slick-arrow'],
+            },
+            480: {
+                margin: 25,
+                items: 3,
+            },
+            768: {
+                margin: 25,
+                items: 3,
+            }
+        }
+    });
     $('.tea_cat_blocks.slides-news').owlCarousel({
         loop: true,
         nav: true,
@@ -60,7 +86,7 @@ jQuery(document).ready(function($) {
         responsiveClass: true,
         responsive: {
             0: {
-                items: 1,
+                items: 2,
                 nav: true,
             },
             480: {
@@ -83,7 +109,7 @@ jQuery(document).ready(function($) {
         responsiveClass: true,
         responsive: {
             0: {
-                items: 1,
+                items: 2,
                 nav: true,
             },
             480: {
@@ -106,7 +132,7 @@ jQuery(document).ready(function($) {
         responsiveClass: true,
         responsive: {
             0: {
-                items: 1,
+                items: 2,
                 nav: true,
             },
             480: {
@@ -129,7 +155,7 @@ jQuery(document).ready(function($) {
         responsiveClass: true,
         responsive: {
             0: {
-                items: 1,
+                items: 2,
                 nav: true,
             },
             480: {
@@ -152,7 +178,7 @@ jQuery(document).ready(function($) {
         responsiveClass: true,
         responsive: {
             0: {
-                items: 1,
+                items: 2,
                 nav: true,
             },
             480: {
@@ -175,7 +201,7 @@ jQuery(document).ready(function($) {
         responsiveClass: true,
         responsive: {
             0: {
-                items: 1,
+                items: 2,
                 nav: true,
             },
             480: {
@@ -204,22 +230,64 @@ jQuery(document).ready(function($) {
         autoplay: true,
         margin: 0,
         dots: false,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: true,
+            },
+            480: {
+                items: 3,
+                nav: true,
+            },
+            768: {
+                items: 3,
+                nav: true,
+            }
+        }
     });
     $('.owl-carousel.recent-product').owlCarousel({
         loop: true,
         nav: true,
-        items: 4,
         autoplay: true,
         margin: 0,
         dots: false,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 2,
+                nav: true,
+            },
+            480: {
+                items: 3,
+                nav: true,
+            },
+            768: {
+                items: 4,
+                nav: true,
+            }
+        }
     });
     $('.owl-carousel.tin-tuc-trang-chu').owlCarousel({
         loop: true,
-        nav: true,
+        nav: false,
         items: 3,
         autoplay: true,
         margin: 0,
         dots: false,
+        navClass: ['owl-prev', 'owl-next'],
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            480: {
+                items: 3,
+            },
+            768: {
+                items: 3,
+            }
+        }
     });
 
     $('.tea_cat_blocks.slides-news .owl-item').addClass('item');
@@ -233,6 +301,7 @@ jQuery(document).ready(function($) {
     $('.related-blogs.owl-carousel .owl-item').addClass('item');
     $('.owl-carousel.recent-product .owl-item').addClass('item');
     $('.owl-carousel.tin-tuc-trang-chu .owl-item').addClass('item');
+    $('.banner-home-cus.owl-carousel .owl-item').addClass('item');
 
     if ($('.ets_prmn_megamenu.sticky_enabled').length > 0) {
         var sticky_navigation_offset_top = $('.ets_prmn_megamenu.sticky_enabled').offset().top;

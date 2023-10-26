@@ -115,7 +115,6 @@ function kim_thuy_moc_hoa_tho_func($atts,$content = null){
         <div class="container">
             <div class="home-row row">
                 <div class="home-position col-lg-12 col-sm-12 col-md-12 col-xs-12">
-
                     <div class="tea_categories_group tea_cat_17 center enable_css16">
                         <div class="tea_categories group9">
                             <div class="tea_blocks">
@@ -190,14 +189,16 @@ function kim_thuy_moc_hoa_tho_func($atts,$content = null){
                                             </div>
                                         </div>
                                         <?php  } } ?>
-                                </div>
-                            </div>
-                        </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
                     </div>
-
+                </div>
             </div>
         </div>
     </div>
+
     <?php
     return ob_get_clean();
 }

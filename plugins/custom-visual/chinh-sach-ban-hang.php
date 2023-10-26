@@ -81,7 +81,8 @@ function chinh_sach_ban_hang_func($atts,$content = null){
                     </div>
                 </div>
             </div>
-        </div>	</div>
+        </div>
+    </div>
     <?php
     return ob_get_clean();
 }

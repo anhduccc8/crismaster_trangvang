@@ -118,10 +118,12 @@ function nhan_nam_cao_cap_func($atts,$content = null){
                                             </div>
                                         </div>
                                         <?php  } } ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>

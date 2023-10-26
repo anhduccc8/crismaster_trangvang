@@ -43,9 +43,9 @@ function banner_dau_trang_chu_func($atts,$content = null){
     ob_start();
     $mobile = wp_is_mobile();
     ?>
-    <div class="panel_services_2" style=" ">
+    <div class="panel_services_2 tea_categories_group" style=" ">
         <div class="container">
-            <div class="home-row row">
+            <div class="banner-home-cus home-row row owl-carousel">
             <?php if(isset($details_ca)&&$details_ca != ''){
                 $details_ca = vc_param_group_parse_atts($details_ca,'');
                 foreach ($details_ca as $dca ) {
@@ -53,7 +53,7 @@ function banner_dau_trang_chu_func($atts,$content = null){
                         $dca['image_ca'] = wp_get_attachment_image_src($dca['image_ca'], '');
                     }
                     ?>
-                <div class="home-position col-lg-4 col-sm-4 col-md-4 col-xs-12 ">
+                <div class="">
                     <div style="" class="tea_widget_block widget_content_inner_top" >
                         <a class="widget_image_link" href="<?php echo esc_url($dca['link_ca']); ?>">
                             <img alt="" class="lazyload" src="<?php echo esc_url($dca['image_ca'][0]); ?>"
