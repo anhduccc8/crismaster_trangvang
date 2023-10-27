@@ -46,6 +46,29 @@ if (version_compare($GLOBALS['wp_version'], '4.7-alpha', '<')) {
     return;
 }
 
+function update_checkout() {
+    if (isset($_POST['item_key']) && isset($_POST['quantity'])) {
+        $item_keys = sanitize_text_field($_POST['item_key']);
+        $pattern = '/\[([^]]+)\]/';
+        preg_match($pattern, $item_keys, $matches);
+        $item_key = $matches[1];
+        $quantity = intval($_POST['quantity']);
+        // Cập nhật số lượng trong giỏ hàng
+        WC()->cart->set_quantity($item_key, $quantity);
+
+        // Tính toán lại tổng cộng
+        WC()->cart->calculate_totals();
+
+        // Trả về thông báo AJAX (nếu cần)
+        echo 'Cập nhật thành công';
+
+        die();
+    }
+}
+
+add_action('wp_ajax_update_checkout', 'update_checkout');
+add_action('wp_ajax_nopriv_update_checkout', 'update_checkout');
+
 /* * * Include TGM Plugin Activation ** */
 //require_once get_template_directory() . '/inc/includes/class-tgm-plugin-activation.php';
 /* * * Theme Options ** */

@@ -2,7 +2,33 @@ jQuery(document).ready(function($) {
     $(document).on('click', '.size_guide', function(e) {
         $(this).parent().stop().toggleClass('active')
     });
+    $(window).on('load', function() {
+        $('.return-to-shop').find('.button.wc-backward').attr('href', 'https://adj.smb.vn/');
+    });
 
+    jQuery(function($){
+        $('body').on('change', '.woocommerce-checkout .quantity input', function(){
+			$('body').addClass('show-load');
+            var item_key = $(this).attr('name');
+            var quantity = $(this).val();
+            $.ajax({
+                type: 'POST',
+                url: wc_checkout_params.ajax_url,
+                data: {
+                    action: 'update_checkout',
+                    item_key: item_key,
+                    quantity: quantity
+                },
+                success: function (response) {
+                    console.log(response);
+                    if (response) {
+                        location.reload();
+                        // Yêu cầu cập nhật giỏ hàng thành công, bạn có thể cập nhật trang hoặc hiển thị thông báo.
+                    }
+                }
+            });
+        });
+    });
     setTimeout(function() {
         $('.ybc-newsletter-popup').addClass('active');
         $('.ybc_nlt_content').addClass('ybc_type_zoomIn')

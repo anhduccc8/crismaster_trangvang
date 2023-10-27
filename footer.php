@@ -80,14 +80,25 @@ $mobile = wp_is_mobile(); ?>
                                                         </span>
                                                     </div>
                                                     <ul id="footer_sub_menu_43309" class="collapse">
+                                                        
                                                         <li>
-                                                            <a id="link-cms-page-2-1" class="cms-page-link" href="<?= $footer_chinhsach1 ?>" title="">
-                                                                Chính sách bảo mật thông tin khách hàng
+                                                            <a id="link-cms-page-2-1" class="cms-page-link" href="<?= $footer_huongdan1 ?>" title="">
+                                                                Hình thức thanh toán
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a id="link-cms-page-2-1" class="cms-page-link" href="<?= $footer_huongdan1 ?>" title="">
-                                                                Hướng dẫn mua hàng và thanh toán
+                                                            <a id="link-cms-page-2-1" class="cms-page-link" href="<?= $footer_chinhsach1 ?>" title="">
+                                                                Chính sách bảo mật
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a id="link-cms-page-2-1" class="cms-page-link" href="<?= $footer_chinhsach2 ?>" title="">
+                                                                Chính sách hoàn trả
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a id="link-cms-page-2-1" class="cms-page-link" href="<?= $footer_chinhsach2 ?>" title="">
+                                                                Chính sách bảo hành
                                                             </a>
                                                         </li>
                                                         <li>
@@ -98,11 +109,6 @@ $mobile = wp_is_mobile(); ?>
                                                         <li>
                                                             <a id="link-cms-page-2-1" class="cms-page-link" href="<?= $footer_giaohang ?>" title="">
                                                                 Giao hàng và vận chuyển
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a id="link-cms-page-2-1" class="cms-page-link" href="<?= $footer_chinhsach2 ?>" title="">
-                                                                Chính sách bảo hành và hoàn trả
                                                             </a>
                                                         </li>
                                                     </ul>
@@ -371,6 +377,14 @@ $mobile = wp_is_mobile(); ?>
     </div>
 </footer>
 <div class="ftc-close-popup"></div>
+<div class="wap-loading">
+	<div class="loading">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</div>
 <?php wp_footer(); ?>
 </main>
 </body>

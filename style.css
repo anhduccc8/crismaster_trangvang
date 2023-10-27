@@ -8803,6 +8803,81 @@ ul.woocommerce-mini-cart.cart_list.product_list_widget li {
     padding-left: 0px !important;
     padding-right: 0px !important;
 }
+.product-line-actions .quantity .minus:hover, .product-line-actions .quantity .plus:hover,
+.product-line-actions .quantity .minus:focus, .product-line-actions .quantity .plus:focus{
+	color: #000;
+}
+
+/* Hieu ung */
+.show-load .wap-loading{
+	opacity: 1;
+	visibility: visible;
+}
+*{ margin: 0px;padding: 0px; }
+.wap-loading{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0,0,0,.7);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	opacity: 0;
+	visibility: hidden;
+}
+.wap-loading .loading{
+    width: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    animation: rotate 3s linear infinite;
+}
+
+.wap-loading .loading span{
+    width: 20px;
+    height: 20px;
+    background: coral;
+    margin: 4px;
+    animation: scale 1.5s linear infinite;
+}
+
+@keyframes scale {
+    50%{
+        transform:scale(1.2);
+    }
+}
+
+@keyframes rotate {
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.wap-loading .loading span:nth-child(1){
+    border-radius: 100%;
+    background-color: white;
+    transform-origin: bottom right;
+}
+.wap-loading .loading span:nth-child(2){
+    border-radius: 100%;
+    background-color:teal;
+    transform-origin: bottom left;
+    animation-delay: .5s;
+}
+.wap-loading .loading span:nth-child(3){
+    border-radius: 100%;
+    background-color:tomato;
+    transform-origin: top right;
+    animation-delay: 1.5s;
+}
+.wap-loading .loading span:nth-child(4){
+    border-radius: 100%;
+    background-color:crimson;
+    transform-origin: top left;
+    animation-delay: 1.5s;
+}
+
+
 @media only screen and (max-width: 768px){
 	.woocommerce .woocommerce-order .col2-set .col-2{
 		margin-top: 10px;
