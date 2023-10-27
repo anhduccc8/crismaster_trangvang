@@ -45,7 +45,7 @@ function banner_dau_trang_chu_func($atts,$content = null){
     ?>
     <div class="panel_services_2 tea_categories_group" style=" ">
         <div class="container">
-            <div class="banner-home-cus home-row row owl-carousel">
+            <div class="banner-home-cus home-row owl-carousel">
             <?php if(isset($details_ca)&&$details_ca != ''){
                 $details_ca = vc_param_group_parse_atts($details_ca,'');
                 foreach ($details_ca as $dca ) {
