@@ -8809,6 +8809,14 @@ ul.woocommerce-mini-cart.cart_list.product_list_widget li {
 	}
 }
 @media only screen and (max-width: 767px){
+    body div .tea_categories_group .nhan-nu.slick-arrow.slick-prev {
+        left: -20px !important;
+        top: 135px;
+    }
+    body div .tea_categories_group .nhan-nu.slick-arrow.slick-next {
+        right: -12px !important;
+        top: 135px;
+    }
     body div .panel_services_2.tea_categories_group .nhan-nu.slick-arrow.slick-next {
         right: -15px;
         top: 95px;

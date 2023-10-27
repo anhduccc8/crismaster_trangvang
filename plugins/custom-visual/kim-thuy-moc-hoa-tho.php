@@ -118,7 +118,7 @@ function kim_thuy_moc_hoa_tho_func($atts,$content = null){
                     <div class="tea_categories_group tea_cat_17 center enable_css16">
                         <div class="tea_categories group9">
                             <div class="tea_blocks">
-                                <h4 class="tea_mobile_cat_dropdown">Categories</h4>
+                                <h4 class="tea_mobile_cat_dropdown">Danh mục</h4>
                                 <ul class="tea_ul_categories tea_countitem_group_5">
                                     <li class="tea_li_item" data-id="26" data-id-category="33">
                                         <a class="tea_cat_item item26 cat33" href="<?php echo esc_url($kim); ?>" title="Kim">
