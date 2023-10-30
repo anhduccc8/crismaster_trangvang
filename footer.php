@@ -164,11 +164,6 @@ $mobile = wp_is_mobile(); ?>
                                                                 Cửa hàng
                                                             </a>
                                                         </li>
-                                                        <li>
-                                                            <a id="link-cms-page-2-1" class="cms-page-link" href="<?= $footer_account ?>" title="">
-                                                                My Account
-                                                            </a>
-                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>

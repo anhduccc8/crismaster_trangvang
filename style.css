@@ -8789,29 +8789,36 @@ ul.woocommerce-mini-cart.cart_list.product_list_widget li {
 .woocommerce ul.order_details li{
 	margin-top: 10px;
 }
-.nf-form-title, .nf-form-fields-required,.nf-field-label {
-    display: none;
-}
-.nf-form-content input.ninja-forms-field,
-.nf-form-content select.ninja-forms-field:not([multiple]){
-    height: 45px !important;
-}
-#nf-field-4 {
-    width: 100%;
-}
+
 .row-custom-p0 {
     padding-left: 0px !important;
     padding-right: 0px !important;
 }
-.tnp-field-email {
+#nf-form-1-cont .tnp-field-email {
     width: 65%;
     float: left;
 }
 .block_newsletter form input[type="email"] {
     height: 37px;
 }
-.tnp-field label {
+#nf-form-1-cont .tnp-field label {
     display: none;
+}
+#nf-form-1-cont .nf-form-title,  .nf-form-fields-required,#nf-form-1-cont .nf-field-label {
+    display: none;
+}
+.nf-form-content input.ninja-forms-field,
+.nf-form-content select.ninja-forms-field:not([multiple]){
+    height: 45px !important;
+}
+#nf-form-1-cont #nf-field-4 {
+    width: 100%;
+}
+#nf-form-2-cont .nf-field-label {
+    width: 25%;
+}
+#nf-form-2-cont .nf-field-label label {
+    font-weight: 100;
 }
 .product-line-actions .quantity .minus:hover, .product-line-actions .quantity .plus:hover,
 .product-line-actions .quantity .minus:focus, .product-line-actions .quantity .plus:focus{
