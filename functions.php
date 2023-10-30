@@ -39,6 +39,7 @@ require_once get_template_directory() . '/plugins/custom-visual/khuyen-mai-banne
 require_once get_template_directory() . '/plugins/custom-visual/khuyen-mai-2.php';
 require_once get_template_directory() . '/plugins/custom-visual/khuyen-mai-3.php';
 require_once get_template_directory() . '/plugins/custom-visual/trang-cua-hang.php';
+require_once get_template_directory() . '/plugins/custom-visual/san-pham-moi.php';
 
 
 if (version_compare($GLOBALS['wp_version'], '4.7-alpha', '<')) {

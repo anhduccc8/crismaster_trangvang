@@ -2,42 +2,34 @@
 $pre_text = 'VG ';
 if(function_exists('vc_map')){
     vc_map(array(
-        'name' => esc_html__($pre_text.'List Sản phẩm theo category','crismaster'),
-        'base' => 'san_pham_theo_cate',
+        'name' => esc_html__($pre_text.'List Sản phẩm mới/bán chạy','crismaster'),
+        'base' => 'san_pham_moi',
         'class' => '',
         'icon' => 'icon-st',
         'category' => 'Content',
         'params' => array(
             array(
                 'type' => 'textfield',
-                'heading' => esc_html__('Nhập ID danh mục sản phẩm mà bạn muốn show ','crismaster'),
-                'param_name' => 'ids',
-                'value' => '',
-                'description' => esc_html__('',"crismaster")
-            ),
-            array(
-                'type' => 'textfield',
-                'heading' => esc_html__('Nhập số sản phẩm muốn hiện','crismaster'),
+                'heading' => esc_html__('Nhập số sản phẩm mới nhất muốn show','crismaster'),
                 'param_name' => 'number',
                 'value' => '',
                 'description' => esc_html__('',"crismaster")
             ),
             array(
-                'type' => 'checkbox',
-                'heading' => __('Hoặc Show tất cả sản phẩm của ID danh mục này', 'crismaster' ),
-                'param_name' => 'check_all',
+                'type' => 'textfield',
+                'heading' => esc_html__('Hoặc Nhập các ID sản phẩm cụ thể','crismaster'),
+                'param_name' => 'ids',
                 'value' => '',
-                'description' =>''
+                'description' => esc_html__('',"crismaster")
             ),
         )
     ));
 }
-add_shortcode('san_pham_theo_cate','san_pham_theo_cate_func');
-function san_pham_theo_cate_func($atts,$content = null){
+add_shortcode('san_pham_moi','san_pham_moi_func');
+function san_pham_moi_func($atts,$content = null){
     extract(shortcode_atts(array(
         'number' => '',
         'ids' => '',
-        'check_all' => '',
     ),$atts));
     ob_start();
     $mobile = wp_is_mobile();
@@ -50,42 +42,25 @@ function san_pham_theo_cate_func($atts,$content = null){
                     <div id="js-product-list">
                         <div class="products row">
                         <?php
-                         if(isset($check_all) && $check_all = true && $check_all != '') {
-                             $args = array(
-                                 'post_type' => 'product',
-                                 'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
-                                 'posts_per_page' => -1,
-                                 'tax_query' => array(
-                                     array(
-                                         'taxonomy' => 'product_cat',
-                                         'field'    => 'term_id',
-                                         'terms'    => array($ids),
-                                     ),
-                                 ),
-                                 'status' => 'approve',
-                                 'post_status' => 'publish',
-                             );
-                         }else{
-                             $args = array(
-                                 'post_type' => 'product',
-                                 'posts_per_page' => $number,
-                                 'tax_query' => array(
-                                     array(
-                                         'taxonomy' => 'product_cat',
-                                         'field'    => 'term_id',
-                                         'terms'    => array($ids),
-                                     ),
-                                 ),
-                                 'paged' => $paged,
-                                 'status' => 'approve',
-                                 'post_status' => 'publish',
-                                 'order' => 'DESC',
-                                 'orderby' => 'date'
-                             );
-                         }
-
+                            if (isset($ids_pro) && $ids_pro != '') {
+                                $p_ids_pro = explode(',', $ids_pro);
+                                $args = array(
+                                    'post_type' => 'post',
+                                    'status' => 'approve',
+                                    'post_status' => 'publish',
+                                    'post__in' => $p_ids_pro
+                                );
+                            } else {
+                                $args = array(
+                                    'post_type' => 'post',
+                                    'posts_per_page' => $number,
+                                    'status' => 'approve',
+                                    'post_status' => 'publish',
+                                    'order' => 'DESC',
+                                    'orderby' => 'date'
+                                );
+                            }
                             $wp_query = new WP_Query($args);
-
                             if ($wp_query->have_posts()) {
                                 while ($wp_query->have_posts()) {
                                     $wp_query->the_post();
@@ -96,6 +71,7 @@ function san_pham_theo_cate_func($atts,$content = null){
                                     }else{
                                         $price = '';
                                     }
+
                                     ?>
                                 <div class="product">
                                 <article class="product-miniature js-product-miniature" >
