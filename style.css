@@ -8803,6 +8803,16 @@ ul.woocommerce-mini-cart.cart_list.product_list_widget li {
     padding-left: 0px !important;
     padding-right: 0px !important;
 }
+.tnp-field-email {
+    width: 65%;
+    float: left;
+}
+.block_newsletter form input[type="email"] {
+    height: 37px;
+}
+.tnp-field label {
+    display: none;
+}
 .product-line-actions .quantity .minus:hover, .product-line-actions .quantity .plus:hover,
 .product-line-actions .quantity .minus:focus, .product-line-actions .quantity .plus:focus{
 	color: #000;

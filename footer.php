@@ -216,20 +216,7 @@ $mobile = wp_is_mobile(); ?>
                                         <div class="block_newsletter" id="blockEmailSubscription_footer">
                                             <div class="row">
                                                 <div class="col-md-12 col-xs-12">
-                                                    <form method="post"  action="http://localhost/quang_adjn/?na=s">
-                                                        <div class="row">
-                                                            <div class="col-xs-12">
-                                                                <input class="btn btn-primary float-xs-right hidden-xs-down" name="submitNewsletter" type="submit" value="Đăng ký">
-                                                                <input class="btn btn-primary float-xs-right hidden-sm-up" name="submitNewsletter" type="submit" value="OK">
-                                                                <div class="input-wrapper">
-                                                                    <input name="ne" id="tnp-1" type="email" value="" placeholder="Địa chỉ email của bạn" aria-labelledby="block-newsletter-label" required="">
-                                                                </div>
-                                                                <input type="hidden" name="blockHookName" value="footer">
-                                                                <input type="hidden" name="action" value="0">
-                                                                <div class="clearfix"></div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
+                                                   <?= do_shortcode('[newsletter_form]') ?>
                                                 </div>
                                             </div>
                                         </div>
