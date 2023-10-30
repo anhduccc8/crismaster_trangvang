@@ -68,7 +68,7 @@ defined( 'ABSPATH' ) || exit;
 							};
 							foreach ( $fields as $key => $field ) {
 								if($key == 'billing_email'){
-									woocommerce_form_field( $key, ['placeholder' => 'Enail', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
+									woocommerce_form_field( $key, ['placeholder' => 'Địa chỉ email', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
 									break;
 								}
 							};
@@ -88,21 +88,21 @@ defined( 'ABSPATH' ) || exit;
 						
 							foreach ( $fields as $key => $field ) {
 								if($key == 'billing_city'){
-									woocommerce_form_field( $key, ['placeholder' => 'Thành phố *', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
+									woocommerce_form_field( $key, ['placeholder' => 'Tỉnh/Thành phố *', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
 									break;
 								}
 							};
 						
 							foreach ( $fields as $key => $field ) {
 								if($key == 'billing_phone'){
-									woocommerce_form_field( $key, ['placeholder' => 'Điện thoại *', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
+									woocommerce_form_field( $key, ['placeholder' => 'Số điện thoại *', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
 									break;
 								}
 							}
 
 							foreach ( $fields as $key => $field ) {
 								if($key == 'billing_country'){
-									woocommerce_form_field( $key, ['placeholder' => 'Quốc Gia *', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
+									woocommerce_form_field( $key, ['placeholder' => 'Quốc Gia *', 'input_class' => ["form-control","validate","is_required", "input_text", "hide"]] , $checkout->get_value( $key ) );
 									break;
 								}
 							}
