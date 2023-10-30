@@ -102,7 +102,7 @@ defined( 'ABSPATH' ) || exit;
 
 							foreach ( $fields as $key => $field ) {
 								if($key == 'billing_country'){
-									woocommerce_form_field( $key, ['placeholder' => 'Quốc Gia *', 'input_class' => ["form-control","validate","is_required", "input_text", "hide"]] , $checkout->get_value( $key ) );
+									woocommerce_form_field( $key, ['placeholder' => 'Quốc Gia *', 'input_class' => ["form-control","validate","is_required", "input_text", "hide", "d-none"]] , 'VN' );
 									break;
 								}
 							}

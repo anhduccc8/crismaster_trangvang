@@ -69,14 +69,14 @@ defined( 'ABSPATH' ) || exit;
 								
 									foreach ( $fields as $key => $field ) {
 										if($key == 'shipping_city'){
-											woocommerce_form_field( $key, ['placeholder' => 'Thành phố *', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
+											woocommerce_form_field( $key, ['placeholder' => 'Tỉnh/Thành phố *', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
 											break;
 										}
 									};
 
 									foreach ( $fields as $key => $field ) {
 										if($key == 'shipping_country'){
-											woocommerce_form_field( $key, ['placeholder' => 'Quốc gia *', 'input_class' => ["form-control","validate","is_required", "input_text"]] , $checkout->get_value( $key ) );
+											woocommerce_form_field( $key, ['placeholder' => 'Quốc gia *', 'input_class' => ["form-control","validate","is_required", "input_text","d-none"]] , 'VN' );
 											break;
 										}
 									};
