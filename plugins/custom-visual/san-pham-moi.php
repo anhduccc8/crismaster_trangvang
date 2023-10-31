@@ -48,6 +48,7 @@ function san_pham_moi_func($atts,$content = null){
                                     'post_type' => 'product',
                                     'status' => 'approve',
                                     'post_status' => 'publish',
+                                    'posts_per_page' => -1,
                                     'post__in' => $p_ids_pro
                                 );
                             } else {
