@@ -42,17 +42,17 @@ function san_pham_moi_func($atts,$content = null){
                     <div id="js-product-list">
                         <div class="products row">
                         <?php
-                            if (isset($ids_pro) && $ids_pro != '') {
-                                $p_ids_pro = explode(',', $ids_pro);
+                            if (isset($ids) && $ids != '') {
+                                $p_ids_pro = explode(',', $ids);
                                 $args = array(
-                                    'post_type' => 'post',
+                                    'post_type' => 'product',
                                     'status' => 'approve',
                                     'post_status' => 'publish',
                                     'post__in' => $p_ids_pro
                                 );
                             } else {
                                 $args = array(
-                                    'post_type' => 'post',
+                                    'post_type' => 'product',
                                     'posts_per_page' => $number,
                                     'status' => 'approve',
                                     'post_status' => 'publish',
