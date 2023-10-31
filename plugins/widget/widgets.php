@@ -397,7 +397,7 @@ class Crismaster_Popular_Posts extends WP_Widget {
                  ?>
                 </ul>
                 <div class="blog_view_all_button">
-                    <a href="#" class="view_all_link">Xem tất cả</a>
+                    <a href="<?php echo get_permalink(364); ?>" class="view_all_link">Xem tất cả</a>
                 </div>
             </div>
             <div class="clear"></div>
