@@ -57,9 +57,9 @@ function thanh_tuu_func($atts,$content = null){
             $t1 = 1;
             $class = array(
                 '1' => 'left',
-                '2' => 'right',
+                '2' => 'left',
                 '3' => 'left',
-                '4' => 'right',
+                '4' => 'left',
             );
             $detailss = vc_param_group_parse_atts($details,'');
             foreach ($detailss as $dca ) {

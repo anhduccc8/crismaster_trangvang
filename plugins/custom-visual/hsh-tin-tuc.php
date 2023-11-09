@@ -109,7 +109,7 @@ function hsh_tin_tuc_func($atts,$content = null){
                         $wp_query->the_post();
                         $single_image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'large');
                         ?>
-                        <div class="col-xs-12 shs-item-blog pd-l-r-15 u-fade-type-right js-scroll-trigger" data-dot='<div class="nav-number"><?php if($t < 10){ echo '0'; } ?><?= $t ?></div>'>
+                        <div class="col-xs-12 shs-item-blog pd-l-r-15 u-fade-type-left js-scroll-trigger" data-dot='<div class="nav-number"><?php if($t < 10){ echo '0'; } ?><?= $t ?></div>'>
                             <div class="item-blog item">
                                 <div class="item-image-blog">
                                     <img alt="img-blog-01" src="<?= esc_url($single_image[0]) ?>" style="width:100%">
@@ -135,7 +135,7 @@ function hsh_tin_tuc_func($atts,$content = null){
                         if (isset($dca['simage']) && $dca['simage'] != '') {
                             $dca['simage'] = wp_get_attachment_image_src($dca['simage'], '');
                         } ?>
-                        <div class="col-xs-12 shs-item-blog pd-l-r-15 u-fade-type-right js-scroll-trigger" data-dot='<div class="nav-number"><?php if($t < 10){ echo '0'; } ?><?= $t ?></div>'>
+                        <div class="col-xs-12 shs-item-blog pd-l-r-15 u-fade-type-left js-scroll-trigger" data-dot='<div class="nav-number"><?php if($t < 10){ echo '0'; } ?><?= $t ?></div>'>
                             <div class="item-blog item">
                                 <div class="item-image-blog">
                                     <img alt="img-blog-01" src="<?= esc_url($dca['simage'][0]) ?>" style="width:100%">

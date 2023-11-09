@@ -133,7 +133,7 @@ function ve_chung_toi_func($atts,$content = null){
                 <div class="col-4 shs-item-about mr-b-0-767 p-lr-lg-0 u-fade-type-<?= $class[$t] ?> js-scroll-trigger <?php if ($t == 2){ echo 'text-center'; } ?>">
                     <?php if ($t==2){ ?>
                         <div class="shs-btn-about">
-                            <a class="btn-main" href="<?= esc_url($link) ?>"><?= esc_html__('simage2','crismaster') ?></a>
+                            <a class="btn-main" href="<?= esc_url($link) ?>"><?= esc_html__('Đọc thêm','crismaster') ?></a>
                         </div>
                     <?php } ?>
                     <div class="item-about text-center">

@@ -21,15 +21,18 @@ jQuery(document).ready(function($) {
         });
     }
 
-    $(".js-window-trigger").each(function () {
-        $(this).addClass('is-active');
-    });
+    // $(".js-window-trigger").each(function () {
+    //     $(this).addClass('is-active');
+    // });
     $(window).scroll(function () {
         $(".js-scroll-trigger").each(function () {
             let position = $(this).offset().top,
                 scroll = $(window).scrollTop(),
                 windowHeight = $(window).height();
+            console.log('scroll: '+scroll);
+            console.log('scroll2: '+ (position - windowHeight + 80));
             if (scroll > position - windowHeight + 80) {
+                console.log(scroll > position - windowHeight + 80);
                 $(this).addClass('is-active');
             }
         });
