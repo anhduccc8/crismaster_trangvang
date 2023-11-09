@@ -15,7 +15,7 @@ if (!class_exists("Redux_Framework_sample_config")) {
             if ( defined('TEMPLATEPATH') && strpos( Redux_Helpers::cleanFilePath( __FILE__ ), Redux_Helpers::cleanFilePath( TEMPLATEPATH ) ) !== false) {
                 $this->initSettings();
             } else {
-                add_action('plugins_loaded', array($this, 'initSettings'), 10);
+                add_action('plugins_loaded', array($this, 'initSettings'), 10);    
             }
         }
 
@@ -23,8 +23,8 @@ if (!class_exists("Redux_Framework_sample_config")) {
 
             if ( !class_exists("ReduxFramework" ) ) {
                 return;
-            }
-
+            }       
+            
             // Just for demo purposes. Not needed per say.
             $this->theme = wp_get_theme();
 
@@ -78,9 +78,9 @@ if (!class_exists("Redux_Framework_sample_config")) {
               );
               }
              */
-        }
+          }
 
-        function dynamic_section($sections) {
+          function dynamic_section($sections) {
             //$sections = array();
             $sections[] = array(
                 'title' => esc_html__('Section via hook', 'crismaster'),
@@ -198,203 +198,145 @@ if (!class_exists("Redux_Framework_sample_config")) {
                 }
                 $sampleHTML = $wp_filesystem->get_contents(dirname(__FILE__) . '/info-html.html');
             }
-
-            // ACTUAL DECLARATION OF SECTIONS
+            
+            // ACTUAL DECLARATION OF SECTIONS          
             $this->sections[] = array(
                 'title'      => esc_html__( 'Cài đặt Header', 'crismaster' ),
-                'id'         => 'header_logo',
-                'icon' => 'el-icon-th-list',
+                'id'         => 'header_setting',
+                'icon' => 'el-icon-th-list',        
                 'fields'     => array(
                     $fields =
                         array(
-                            'id'       => 'hotline_header',
-                            'type'     => 'text',
-                            'title'    => esc_html__( 'Hot Line', 'crismaster' ),
-                            'subtitle' => esc_html__( '', 'crismaster' ),
-                            'desc'     => esc_html__( 'Nhập số điện thoại hiển thị trên header', 'crismaster' ),
-                            'default'  => '',
+                            'id'       => 'header_logo',
+                            'type'     => 'media',
+                            'url' => true,
+                            'title'    => __( 'Logo', 'crismaster' ),
+                            'desc'     => __( '', 'crismaster' ),
+                            'subtitle' => __( '', 'crismaster' ),
+                            'default' => '',
                         ),
-//
-
+                        array(
+                            'id'       => 'header_language',
+                            'type'     => 'checkbox',
+                            'title'    => __( 'Đa ngôn ngữ', 'crismaster' ),
+                            'desc'     => __( '', 'crismaster' ),
+                            'subtitle' => __( 'Tích vào ô để bật chế độ đa ngôn ngữ', 'crismaster' ),
+                            'default'  => true, // You can set the default value to true or false as needed.
+                        ),
+                )
+            );
+            $this->sections[] = array(
+                'title'      => esc_html__( 'Cài đặt Banner', 'crismaster' ),
+                'id'         => 'header_setting',
+                'icon' => 'el-icon-th-list',
+                'desc' => __( 'Banner sẽ hiển thị ở đầu mỗi trang', 'crismaster' ),
+                'fields'     => array(
+                    $fields =
+                        array(
+                            'id'       => 'banner_logo_1',
+                            'type'     => 'media',
+                            'url' => true,
+                            'title'    => __( 'Banner HSH - Thăng Long', 'crismaster' ),
+                            'desc'     => __( '', 'crismaster' ),
+                            'subtitle' => __( '', 'crismaster' ),
+                            'default' => '',
+                        ),
+                        array(
+                            'id'       => 'banner_logo_2',
+                            'type'     => 'media',
+                            'url' => true,
+                            'title'    => __( 'Banner Giới thiệu tập đoàn', 'crismaster' ),
+                            'desc'     => __( '', 'crismaster' ),
+                            'subtitle' => __( '', 'crismaster' ),
+                            'default' => '',
+                        ),
+                        array(
+                            'id'       => 'banner_logo_3',
+                            'type'     => 'media',
+                            'url' => true,
+                            'title'    => __( 'Banner Lĩnh vực hoạt động', 'crismaster' ),
+                            'desc'     => __( '', 'crismaster' ),
+                            'subtitle' => __( '', 'crismaster' ),
+                            'default' => '',
+                        ),
+                        array(
+                            'id'       => 'banner_logo_4',
+                            'type'     => 'media',
+                            'url' => true,
+                            'title'    => __( 'Banner Tin tức', 'crismaster' ),
+                            'desc'     => __( '', 'crismaster' ),
+                            'subtitle' => __( '', 'crismaster' ),
+                            'default' => '',
+                        ),
                 )
             );
             $this->sections[] = array(
                 'title'      => esc_html__( 'Cài đặt Footer', 'crismaster' ),
-                'id'         => 'page_option_footer',
+                'id'         => 'footer_setting',
                 'icon' => 'el-icon-edit',
                 'fields'     => array(
                     array(
-                        'id'       => 'footer_phaply',
-                        'type'     => 'text',
-                        'title'    => esc_html__( 'Thông báo pháp lý', 'crismaster' ),
-                        'subtitle' => esc_html__( '', 'crismaster' ),
-                        'desc'     => esc_html__( '', 'crismaster' ),
+                        'id'       => 'footer_logo',
+                        'type'     => 'media',
+                        'url' => true,
+                        'title'    => __( 'Logo', 'crismaster' ),
+                        'desc'     => __( '', 'crismaster' ),
+                        'subtitle' => __( '', 'crismaster' ),
+                        'default' => '',
                     ),
                     array(
-                        'id'       => 'footer_thongtin',
+                        'id'       => 'footer_name',
                         'type'     => 'text',
-                        'title'    => esc_html__( 'Thông tin về ADJ', 'crismaster' ),
+                        'title'    => esc_html__( 'Tên công ty', 'crismaster' ),
                         'subtitle' => esc_html__( '', 'crismaster' ),
-                        'desc'     => esc_html__( '', 'crismaster' ),
+                        'desc'     => esc_html__( 'CÔNG TY TNHH XUẤT NHẬP KHẨU HSH THĂNG LONG', 'crismaster' ),
                     ),
                     array(
-                        'id'       => 'footer_chinhsach1',
-                        'type'     => 'text',
-                        'title'    => esc_html__( 'Chính sách bảo mật thông tin KH', 'crismaster' ),
-                        'subtitle' => esc_html__( '', 'crismaster' ),
-                        'desc'     => esc_html__( '', 'crismaster' ),
-                    ),
-                    array(
-                        'id'       => 'footer_huongdan1',
-                        'type'     => 'text',
-                        'title'    => esc_html__( 'Hướng dẫn mua hàng và thanh toán', 'crismaster' ),
-                        'subtitle' => esc_html__( '', 'crismaster' ),
-                        'desc'     => esc_html__( '', 'crismaster' ),
-                    ),
-                    array(
-                        'id'       => 'footer_huongdan2',
-                        'type'     => 'text',
-                        'title'    => esc_html__( 'Hướng dẫn đo size trang sức', 'crismaster' ),
-                        'subtitle' => esc_html__( '', 'crismaster' ),
-                        'desc'     => esc_html__( '', 'crismaster' ),
-                    ),
-                    array(
-                        'id'       => 'footer_giaohang',
-                        'type'     => 'text',
-                        'title'    => esc_html__( 'Giao hàng và vận chuyển', 'crismaster' ),
-                        'subtitle' => esc_html__( '', 'crismaster' ),
-                        'desc'     => esc_html__( '', 'crismaster' ),
-                    ),
-                    array(
-                        'id'       => 'footer_chinhsach2',
-                        'type'     => 'text',
-                        'title'    => esc_html__( 'Chính sách bảo hành và hoàn trả', 'crismaster' ),
-                        'subtitle' => esc_html__( '', 'crismaster' ),
-                        'desc'     => esc_html__( '', 'crismaster' ),
-                    ),
-                    array(
-                        'id'       => 'footer_giamgia',
-                        'type'     => 'text',
-                        'title'    => esc_html__( 'Giảm giá', 'crismaster' ),
-                        'subtitle' => esc_html__( '', 'crismaster' ),
-                        'desc'     => esc_html__( '', 'crismaster' ),
-                    ),
-                    array(
-                        'id'       => 'footer_sanphammoi',
-                        'type'     => 'text',
-                        'title'    => esc_html__( 'Sản phẩm mới', 'crismaster' ),
-                        'subtitle' => esc_html__( '', 'crismaster' ),
-                        'desc'     => esc_html__( '', 'crismaster' ),
-                    ),
-                    array(
-                        'id'       => 'footer_banchaynhat',
-                        'type'     => 'text',
-                        'title'    => esc_html__( 'Bán chạy nhất', 'crismaster' ),
-                        'subtitle' => esc_html__( '', 'crismaster' ),
-                        'desc'     => esc_html__( '', 'crismaster' ),
-                    ),
-                    array(
-                        'id'       => 'footer_lienhe',
-                        'type'     => 'text',
-                        'title'    => esc_html__( 'Liên hệ với chúng tôi', 'crismaster' ),
-                        'subtitle' => esc_html__( '', 'crismaster' ),
-                        'desc'     => esc_html__( '', 'crismaster' ),
-                    ),
-                    array(
-                        'id'       => 'footer_cuahang',
-                        'type'     => 'text',
-                        'title'    => esc_html__( 'Cửa hàng', 'crismaster' ),
-                        'subtitle' => esc_html__( '', 'crismaster' ),
-                        'desc'     => esc_html__( '', 'crismaster' ),
-                    ),
-                    array(
-                        'id'       => 'footer_account',
-                        'type'     => 'text',
-                        'title'    => esc_html__( 'My Account', 'crismaster' ),
-                        'subtitle' => esc_html__( '', 'crismaster' ),
-                        'desc'     => esc_html__( '', 'crismaster' ),
-                    ),
-                    array(
-                        'id'       => 'footer_infor_1',
-                        'type'     => 'text',
-                        'title'    => esc_html__( 'Giới thiệu', 'crismaster' ),
-                        'subtitle' => esc_html__( '', 'crismaster' ),
-                        'desc'     => esc_html__( '', 'crismaster' ),
-                    ),
-                    array(
-                        'id'       => 'footer_infor_2',
+                        'id'       => 'footer_address',
                         'type'     => 'text',
                         'title'    => esc_html__( 'Địa chỉ', 'crismaster' ),
                         'subtitle' => esc_html__( '', 'crismaster' ),
                         'desc'     => esc_html__( '', 'crismaster' ),
                     ),
                     array(
-                        'id'       => 'footer_infor_3',
+                        'id'       => 'footer_phone',
                         'type'     => 'text',
                         'title'    => esc_html__( 'Số điện thoại', 'crismaster' ),
                         'subtitle' => esc_html__( '', 'crismaster' ),
                         'desc'     => esc_html__( '', 'crismaster' ),
                     ),
                     array(
-                        'id'       => 'footer_infor_4',
+                        'id'       => 'footer_email',
                         'type'     => 'text',
                         'title'    => esc_html__( 'Email', 'crismaster' ),
-                        'subtitle' => esc_html__( '', 'crismaster' ),
-                        'desc'     => esc_html__( '', 'crismaster' ),
-                    ),
-                    array(
-                        'id'       => 'footer_infor_5',
-                        'type'     => 'text',
-                        'title'    => esc_html__( 'Chứng nhận doanh nghiệp', 'crismaster' ),
-                        'subtitle' => esc_html__( '', 'crismaster' ),
-                        'desc'     => esc_html__( '', 'crismaster' ),
-                    ),
-                    array(
-                        'id'       => 'footer_infor_6',
-                        'type'     => 'text',
-                        'title'    => esc_html__( 'Link facebook', 'crismaster' ),
-                        'subtitle' => esc_html__( '', 'crismaster' ),
-                        'desc'     => esc_html__( '', 'crismaster' ),
-                    ),
-                    array(
-                        'id'       => 'footer_infor_7',
-                        'type'     => 'text',
-                        'title'    => esc_html__( 'Link youtube', 'crismaster' ),
-                        'subtitle' => esc_html__( '', 'crismaster' ),
-                        'desc'     => esc_html__( '', 'crismaster' ),
-                    ),
-                    array(
-                        'id'       => 'footer_infor_8',
-                        'type'     => 'text',
-                        'title'    => esc_html__( 'Link instagram', 'crismaster' ),
                         'subtitle' => esc_html__( '', 'crismaster' ),
                         'desc'     => esc_html__( '', 'crismaster' ),
                     ),
                 )
             );
 
-        }
+}
 
-        public function setHelpTabs() {
+public function setHelpTabs() {
 
             // Custom page help tabs, displayed using the help API. Tabs are shown in order of definition.
-            $this->args['help_tabs'][] = array(
-                'id' => 'redux-opts-1',
-                'title' => esc_html__('Theme Information 1', 'crismaster'),
-                'content' => esc_html__('<p>This is the tab content, HTML is allowed.</p>', 'crismaster')
-            );
+    $this->args['help_tabs'][] = array(
+        'id' => 'redux-opts-1',
+        'title' => esc_html__('Theme Information 1', 'crismaster'),
+        'content' => esc_html__('<p>This is the tab content, HTML is allowed.</p>', 'crismaster')
+    );
 
-            $this->args['help_tabs'][] = array(
-                'id' => 'redux-opts-2',
-                'title' => esc_html__('Theme Information 2', 'crismaster'),
-                'content' => esc_html__('<p>This is the tab content, HTML is allowed.</p>', 'crismaster')
-            );
+    $this->args['help_tabs'][] = array(
+        'id' => 'redux-opts-2',
+        'title' => esc_html__('Theme Information 2', 'crismaster'),
+        'content' => esc_html__('<p>This is the tab content, HTML is allowed.</p>', 'crismaster')
+    );
 
             // Set the help sidebar
-            $this->args['help_sidebar'] = esc_html__('<p>This is the sidebar content, HTML is allowed.</p>', 'crismaster');
-        }
+    $this->args['help_sidebar'] = esc_html__('<p>This is the sidebar content, HTML is allowed.</p>', 'crismaster');
+}
 
-        public function setArguments() {
+public function setArguments() {
 
             $theme = wp_get_theme(); // For use with some settings. Not necessary.
 
@@ -445,7 +387,7 @@ if (!class_exists("Redux_Framework_sample_config")) {
                 'url' => 'https://github.com/ReduxFramework/ReduxFramework',
                 'title' => 'Visit us on GitHub',
                 'icon' => 'el-icon-github'
-                // 'img' => '', // You can use icon OR img. IMG needs to be a full URL.
+                    // 'img' => '', // You can use icon OR img. IMG needs to be a full URL.
             );
             $this->args['share_icons'][] = array(
                 'url' => 'https://www.facebook.com/pages/Redux-Framework/243141545850368',
@@ -513,8 +455,8 @@ if (!function_exists('redux_validate_callback_function')):
           }
          */
 
-        $return['value'] = $value;
-        if ($error == true) {
+          $return['value'] = $value;
+          if ($error == true) {
             $return['error'] = $field;
         }
         return $return;

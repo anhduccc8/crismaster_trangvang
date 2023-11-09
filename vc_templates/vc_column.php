@@ -28,8 +28,8 @@ $width = vc_column_offset_class_merge( $offset, $width );
 
 $css_classes = array(
     $this->getExtraClass( $el_class ) . $this->getCSSAnimation( $css_animation ),
-    'wpb_column',
-    'vc_column_container',
+    '',
+    '',
     $width,
 );
 
@@ -87,12 +87,7 @@ $wrapper_attributes[] = 'class="' . esc_attr( trim( $css_class ) ) . '"';
 if ( ! empty( $el_id ) ) {
     $wrapper_attributes[] = 'id="' . esc_attr( $el_id ) . '"';
 }
-$output .= '<div ' . implode( ' ', $wrapper_attributes ) . '>';
-$output .= '<div class="' . esc_attr( trim( vc_shortcode_custom_css_class( $css ) ) ) . '">';
-$output .= '<div class="">';
-$output .= wpb_js_remove_wpautop( $content );
-$output .= '</div>';
-$output .= '</div>';
-$output .= '</div>';
+
+$output = wpb_js_remove_wpautop( $content );
 
 echo $output;

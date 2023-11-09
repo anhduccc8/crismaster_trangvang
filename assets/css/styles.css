@@ -1,0 +1,81 @@
+﻿.has-error.form-control {
+    border-bottom: 1px solid #a94442 !important;
+}
+
+input.has-error::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #e2185c !important;
+    opacity: 1; /* Firefox */
+}
+
+input.has-error::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #e2185c !important;
+}
+
+input.has-error::-moz-placeholder { /* Firefox 19+ */
+    color: #e2185c !important;
+}
+
+input.has-error:-ms-input-placeholder { /* IE 10+ */
+    color: #e2185c !important;
+}
+
+input.has-error:-moz-placeholder { /* Firefox 18- */
+    color: #e2185c !important;
+}
+
+.swal2-popup .swal2-title {
+    font-size: 16px;
+}
+
+.hide {
+    display: none;
+}
+
+.lg-toolbar {
+    height: 100% !important;
+    z-index: 99 !important;
+}
+
+.f-right {
+    float:right;
+}
+
+.newsList li:first-child .itemNews .copy {
+    opacity: 0.8;
+}
+
+.development-content ul {
+    margin-bottom: 5px;
+}
+
+.development-content ul li {
+    list-style: unset;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.development-content ul li a {
+    text-decoration: underline;
+}
+
+.development-content a {
+    color: inherit;
+}
+
+#pDevelopment .slick-dots {
+    text-align: center;
+    margin-left: 0px;
+    bottom: 40px;
+}
+
+.partnerPageWrap .another ul li a {
+    text-transform: capitalize;
+}
+
+.partnerPageWrap .item-3 .itembot3 .anotherLogo {
+    height: calc(50% - 33px);
+}
+
+.partnerPageWrap .title2:after {
+    width: 100%;
+}

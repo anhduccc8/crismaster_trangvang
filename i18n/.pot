@@ -1,0 +1,369 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: crismaster\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-07 09:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.3.2\n"
+"X-Domain: crismaster"
+
+#: functions.php:68 functions.php:69
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:87
+msgid ""
+"<p class=\"description\">This is a section created by adding a filter to the "
+"sections array. Can be used by child themes to add/remove sections from the "
+"options.</p>"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:417
+#, php-format
+msgid ""
+"<p>Did you know that Redux sets a global variable for you? To access any of "
+"your saved options from within your code you can use your global variable: "
+"<strong>$%1$s</strong></p>"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:336
+msgid "<p>This is the sidebar content, HTML is allowed.</p>"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:326
+#: plugins/redux/sample/sample-config.php:332
+msgid "<p>This is the tab content, HTML is allowed.</p>"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:419
+msgid ""
+"<p>This text is displayed above the options panel. It isn't required, but "
+"more info is always better! The intro_text field accepts all HTML.</p>"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:423
+msgid ""
+"<p>This text is displayed below the options panel. It isn't required, but "
+"more info is always better! The footer_text field accepts all HTML.</p>"
+msgstr ""
+
+#: functions.php:72
+#, php-format
+msgid "Articles Posted by %s"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:248
+msgid "Banner Giới thiệu tập đoàn"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:239
+msgid "Banner HSH - Thăng Long"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:257
+msgid "Banner Lĩnh vực hoạt động"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:232
+msgid "Banner sẽ hiển thị ở đầu mỗi trang"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:266
+msgid "Banner Tin tức"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:171
+#, php-format
+msgid "By %s"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:26
+msgid "Chèn thêm sản phẩm"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:23
+msgid "Chọn ảnh đại diện sản phẩm"
+msgstr ""
+
+#. Description of the theme
+msgid "CR"
+msgstr ""
+
+#. Name of the theme
+msgid "crismaster"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:350
+#: plugins/redux/sample/sample-config.php:351
+msgid "crismaster Options"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:159
+#: plugins/redux/sample/sample-config.php:162
+msgid "Current theme preview"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:153
+#, php-format
+msgid "Customize &#8220;%s&#8221;"
+msgstr ""
+
+#: footer.php:31 plugins/redux/sample/sample-config.php:292
+msgid "CÔNG TY TNHH XUẤT NHẬP KHẨU HSH THĂNG LONG"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:229
+msgid "Cài đặt Banner"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:274
+msgid "Cài đặt Footer"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:204
+msgid "Cài đặt Header"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:27
+msgid "Cập nhật"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:69
+msgid "Cập Nhật Danh Mục"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:17
+msgid "Cập Nhật Sản Phẩm"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:63
+#: plugins/custom-post-type/crismaster_post_type.php:72
+msgid "Danh Mục"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:66
+msgid "Danh Mục Cha"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:67
+msgid "Danh Mục Cha:"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:71
+msgid "Danh Mục Mới"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:62
+msgid "Danh Mục Sản Phẩm"
+msgstr ""
+
+#. Name of the template
+msgid "Danh sách tin tức"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:311
+msgid "Email"
+msgstr ""
+
+#: functions.php:73
+msgid "Error 404"
+msgstr ""
+
+#. Name of the template
+msgid "Home Page"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:178
+msgid "http://codex.wordpress.org/Child_Themes"
+msgstr ""
+
+#. Author of the theme
+msgid "Khách"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:20
+msgid "Không tìm thấy"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:21
+msgid "Không tìm thấy trong thùng rác"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:28
+msgid "List Sản Phẩm"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:213
+#: plugins/redux/sample/sample-config.php:282
+msgid "Logo"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:30
+msgid "Lọc Sản Phẩm"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:34
+msgid "Miêu tả Sản Phẩm"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:29
+msgid "Navigation Sản Phẩm"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:7
+msgctxt "Post Type General Name"
+msgid "Sản Phẩm"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:8
+msgctxt "Post Type Singular Name"
+msgid "Sản Phẩm"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:86
+msgid "Section via hook"
+msgstr ""
+
+#: functions.php:187
+msgid "Sidebar - Trang tin tức"
+msgstr ""
+
+#: functions.php:190
+msgid "Sidebar sẽ xuất hiện ở các trang tin tức."
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:9
+#: plugins/custom-post-type/crismaster_post_type.php:10
+#: plugins/custom-post-type/crismaster_post_type.php:33
+msgid "Sản Phẩm"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:11
+msgid "Sản Phẩm Gốc:"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:15
+msgid "Sản Phẩm Mới"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:304
+msgid "Số điện thoại"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:25
+msgid "Sử dụng làm ảnh đại diện"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:68
+msgid "Sửa Danh Mục"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:16
+msgid "Sửa Sản Phẩm"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:173
+msgid "Tags"
+msgstr ""
+
+#: functions.php:71
+#, php-format
+msgid "Tags \"%s\""
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:325
+msgid "Theme Information 1"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:331
+msgid "Theme Information 2"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:178
+#, php-format
+msgid "This <a href=\"%1$s\">child theme</a> requires its parent theme, %2$s."
+msgstr ""
+
+#: footer.php:17
+msgid "THÔNG TIN LIÊN HỆ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:14
+msgid "Thêm Mới"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:70
+msgid "Thêm mới Danh mục"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:13
+msgid "Thêm Mới Sản Phẩm"
+msgstr ""
+
+#: functions.php:67
+msgid "Trang chủ"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:290
+msgid "Tên công ty"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:64
+msgid "Tìm Danh Mục"
+msgstr ""
+
+#: functions.php:70
+#, php-format
+msgid "Tìm kiếm \"%s\""
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:19
+msgid "Tìm kiếm Sản Phẩm"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:223
+msgid "Tích vào ô để bật chế độ đa ngôn ngữ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:65
+msgid "Tất Cả Danh Mục"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:12
+msgid "Tất cả Sản Phẩm"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:172
+#, php-format
+msgid "Version %s"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:18
+msgid "Xem Sản Phẩm"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:24
+msgid "Xóa ảnh đại diện"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:221
+msgid "Đa ngôn ngữ"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:297
+msgid "Địa chỉ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:22
+msgid "Ảnh sản phẩm (930 x 650)"
+msgstr ""

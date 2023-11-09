@@ -1,44 +1,27 @@
 <?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package WordPress
- * @subpackage FTC
- * @since 1.0
- * @version 1.0
- */
-get_header( $smof_data['ftc_header_layout'] ); ?>
-
-<div class="container">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" >
-
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<?php 
-					$allowed_html = array(
-						'h1'	=> array()
-						,'h2'	=> array()
-						,'p'	=> array()
-						,'br'	=> array()
-						,'a'	=> array( 'href' => array(), 'title' => array() )
-					);
-					echo sprintf( wp_kses( __( '<h1>404</h1><h2 class="page-title">Oops! Page Not Found</h2>
-					<p>The page you are looking for was moved, 
-						removed, renamed or might never existed.</p>
-					<a href="%s">Back to homepage</a>'
-					, 'lolo' ), $allowed_html ), esc_url( home_url('/') ) );
-					?>
-					</header>
-					<div class="page-content">
-						<?php get_search_form(); ?>
-
-					</div><!-- .page-content -->
-				</section><!-- .error-404 -->
-			</main><!-- #main -->
-		</div><!-- #primary -->
-	</div><!-- .wrap -->
-
-	<?php get_footer();
+get_header();
+$theme_option = get_option('theme_option');
+?>
+<div id="content-wrapper-parent " class="error-page" style="clear: both;min-height: 200px">
+    <div id="content-wrapper">
+        <div id="content" class="clearfix">
+            <section class="content">
+                <div id="col-main" class="clearfix">
+                    <div class="col-lg-12 col-lg-offset-6 error-page-container" style="font-size: 30px; padding-top: 30px;">
+                        <div class="wrap">
+                            <h2><?php if (isset($theme_option['title_404'])) {
+                                    echo esc_attr($theme_option['title_404']);
+                                } ?><i class="<?php if(isset($theme_option['icon_404'])){ echo esc_attr($theme_option['icon_404']); } ?>"></i></h2>
+                            <p><?php if (isset($theme_option['subtitle_404'])) {
+                                    echo esc_attr($theme_option['subtitle_404']);
+                                } ?></p>
+                            <?php echo  get_search_form(); ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<?php get_footer();
+?>

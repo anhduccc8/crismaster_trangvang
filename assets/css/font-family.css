@@ -1,0 +1,54 @@
+/**
+ * @license
+ *
+ * Font Family: Crimson Text
+ * URL: https://fonts.googleapis.com/css?family=Crimson Text
+ * © 2023 By Jason-Phan custom font
+ *
+*/
+
+@font-face {
+  font-family: 'CrimsonText-Regular';
+  src: url('../fonts/CrimsonText-Regular.woff2') format('woff2'),
+       url('../fonts/CrimsonText-Regular.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'CrimsonText-SemiBold';
+  src: url('../fonts/CrimsonText-SemiBold.woff2') format('woff2'),
+       url('../fonts/CrimsonText-SemiBold.ttf') format('truetype');
+       font-weight: 600;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'CrimsonText-SemiBoldItalic';
+  src: url('../fonts/CrimsonText-SemiBoldItalic.woff2') format('woff2'),
+       url('../fonts/CrimsonText-SemiBoldItalic.ttf') format('truetype');
+       font-weight: 600;
+       font-display: swap;
+       font-style: italic;
+}
+
+@font-face {
+  font-family: 'CrimsonText-Bold';
+  src: url('../fonts/CrimsonText-Bold.woff2') format('woff2'),
+       url('../fonts/CrimsonText-Bold.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'CrimsonText-BoldItalic';
+  src: url('../fonts/CrimsonText-BoldItalic.woff2') format('woff2'),
+       url('../fonts/CrimsonText-BoldItalic.ttf') format('ttf');
+       font-weight: 700;
+       font-display: swap;
+       font-style: italic;
+}
+
