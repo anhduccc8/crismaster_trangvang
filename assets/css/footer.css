@@ -19,7 +19,12 @@
 		padding: 343px 0 300px;
 	}
 }
-
+@media (min-width: 1200px) and (max-width: 1399px) {
+	.site-footer-main .shs-footer-main {
+		min-height: 800px;
+		padding: 200px 0 300px;
+	}
+}
 @media (max-width: 1199px) {
 	.site-footer-main .shs-footer-main {
 		padding: 170px 0 170px;

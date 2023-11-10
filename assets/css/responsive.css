@@ -118,6 +118,26 @@
     .shs-heading-widget-blog {
         padding-left: 0;
     }
+    .about-column-03.row-01 {
+        margin-bottom: 100px;
+    }
+    .shs-section-history {
+        padding: 100px 10px 100px 27px;
+    }
+    .shs-nav-year {
+        margin-top: 100px;
+    }
+    .shs-activity-image {
+        order: 2;
+    }
+    /* section about us */
+    .shs-section-about {
+        padding: 90px 0 0;
+    }
+    .shs-section-about .shs-item-about {
+        margin-bottom: 0;
+    }
+
 
 }
 
@@ -165,6 +185,13 @@
     .item-about-meta-title {
         transform: translateY(-9px);
     }
+    .activity-description {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .content-left .item-activity-content {
+        padding: 30px;
+    }
 
 }
 
@@ -182,7 +209,6 @@
         left: 70px;
     }
 
-    .shs-header-custom, .slider-content img,
     .shs-header-custom, .slider-content .bgr-img {
         min-height: 400px;
     }
@@ -217,6 +243,60 @@
     .item-post-heading {
         font-size: 24px !important;
     }
+    .col-12-ct {
+        width: 100%;
+        max-width: 100%;
+    }
+    .item-activity-content {
+        padding: 80px 30px 80px !important;
+        overflow: hidden;
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+    .shs-introduce-content .bgr-map-right {
+        left: 0;
+    }
+    .shs-section-about-03 {
+        padding: 120px 0 120px;
+        background-position: bottom left;
+    }
+    .shs-item-heading-03 {
+        font-size: 30px;
+    }
+    .shs-item-heading-03:before {
+        width: 268px;
+    }
+    .about-03-description {
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .item-history-content .shs-heading {
+        font-size: 30px;
+    }
+    .shs-heading-year {
+        font-size: 30px;
+        margin: 11px 0 5px;
+    }
+    .shs-title-history {
+        font-size: 16px;
+    }
+    .shs-history-meta {
+        margin-top: 20px;
+    }
+    .shs-nav-year {
+        margin-top: 40px;
+    }
+    .shs-nav-year .nav-year {
+        font-size: 30px;
+        margin: 0 13px;
+    }
+    .shs-section-history {
+        padding: 80px 10px 80px 27px;
+    }
+    .shs-nav-year-inner i {
+        font-size: 17px;
+    }
 
 }
 
@@ -230,7 +310,7 @@
         left: 20px;
     }
 
-    .shs-header-custom, .slider-content img {
+    .shs-header-custom, .slider-content .bgr-img {
         min-height: 300px;
     }
 
@@ -261,44 +341,44 @@
 
 }
 
-@media (min-width: 768px) {
-    .elementor-element-r1 {
-        width: 6.639%;
-    }
-    .elementor-element-r2 {
-        width: 25%
-    }
-    .elementor-element-r3 {
-        width: 25%;
-    }
-    .elementor-element-r4 {
-        width: 19.361%;
-    }
-    .elementor-element-r5 {
-        width: 24%;
-    }
-    .elementor-column.elementor-col-100, .elementor-column[data-col="100"] {
-        width: 100%;
-    }
-}
+/*@media (min-width: 768px) {*/
+/*    .elementor-element-r1 {*/
+/*        width: 6.639%;*/
+/*    }*/
+/*    .elementor-element-r2 {*/
+/*        width: 25%*/
+/*    }*/
+/*    .elementor-element-r3 {*/
+/*        width: 25%;*/
+/*    }*/
+/*    .elementor-element-r4 {*/
+/*        width: 19.361%;*/
+/*    }*/
+/*    .elementor-element-r5 {*/
+/*        width: 24%;*/
+/*    }*/
+/*    .elementor-column.elementor-col-100, .elementor-column[data-col="100"] {*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/
 
-@media (max-width: 1024px) and (min-width: 768px) {
-    .elementor-element-r2 {
-        width: 50%
-    }
-    .elementor-element-r3 {
-        width: 50%;
-    }
-    .elementor-element-r4 {
-        width: 50%;
-    }
-    .elementor-element-r5 {
-        width: 50%;
-    }   
-    .elementor .elementor-hidden-tablet {
-        display: none; 
-    }
-}
+/*@media (max-width: 1024px) and (min-width: 768px) {*/
+/*    .elementor-element-r2 {*/
+/*        width: 50%*/
+/*    }*/
+/*    .elementor-element-r3 {*/
+/*        width: 50%;*/
+/*    }*/
+/*    .elementor-element-r4 {*/
+/*        width: 50%;*/
+/*    }*/
+/*    .elementor-element-r5 {*/
+/*        width: 50%;*/
+/*    }   */
+/*    .elementor .elementor-hidden-tablet {*/
+/*        display: none; */
+/*    }*/
+/*}*/
 
 
 

@@ -120,7 +120,7 @@ function ve_chung_toi_func($atts,$content = null){
              $class = array(
                      '1' => 'left',
                      '2' => 'up',
-                     '3' => 'right',
+                     '3' => 'left',
              );
             foreach ($detailss as $dca ) {
                 if(isset($dca['simage']) && $dca['simage']!='') {
