@@ -311,7 +311,7 @@
     }
 
     .shs-header-custom, .slider-content .bgr-img {
-        min-height: 300px;
+        /*min-height: 300px;*/
     }
 
     .shs-section-blog {

@@ -321,11 +321,6 @@ add_filter('previous_posts_link_attributes', 'custom_prev_posts_link_attributes'
 function custom_polylang_langswitcher() {
     $langs_array = pll_the_languages( array( 'dropdown' => 1, 'hide_current' => 0, 'raw' => 1 ) );
     $current_language = function_exists('pll_current_language') ? pll_current_language() : '';
-    if ($current_language == 'vi'){
-        $class = 'active';
-    }else{
-        $class = '';
-    }
     if ($langs_array) : ?>
         <a class="text-uppercase <?php if ($current_language == $langs_array['en']['slug']) echo 'active'; ?>" href="<?= $langs_array['en']['url'] ?>"><?= $langs_array['en']['slug'] ?></a><em>|</em><a class="text-uppercase <?php if ($current_language == $langs_array['vi']['slug']) echo 'active'; ?>" href="<?= $langs_array['vi']['url'] ?>"><?= $langs_array['vi']['slug'] ?></a>
     <?php endif;

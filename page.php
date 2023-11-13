@@ -11,7 +11,7 @@ if (isset($theme_option['banner_logo_1']['url'])){
 }
 ?>
 
-<div class="shs-header-custom bg-img-section" id="bannerHome" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bg-world.png');">
+<div class="shs-header-custom bg-img-section" id="bannerHome">
     <div class="shs-slide container-fluidd">
         <div class="slider-content">
             <video class="video-display" autoplay muted loop src="https://hshgroup.co/video/HSH.mp4"></video>

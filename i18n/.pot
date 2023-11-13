@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crismaster\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-07 09:27+0000\n"
+"POT-Creation-Date: 2023-11-13 09:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -13,12 +13,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.6; wp-6.3.2\n"
+"X-Loco-Version: 2.6.6; wp-6.4.1\n"
 "X-Domain: crismaster"
 
-#: functions.php:68 functions.php:69
+#: functions.php:80 functions.php:81
 #, php-format
 msgid "%s"
+msgstr ""
+
+#: plugins/custom-visual/hsh-tin-tuc.php:65
+msgid "08/11/2023"
 msgstr ""
 
 #: plugins/redux/sample/sample-config.php:87
@@ -57,7 +61,7 @@ msgid ""
 "more info is always better! The footer_text field accepts all HTML.</p>"
 msgstr ""
 
-#: functions.php:72
+#: functions.php:84
 #, php-format
 msgid "Articles Posted by %s"
 msgstr ""
@@ -91,8 +95,32 @@ msgstr ""
 msgid "Chèn thêm sản phẩm"
 msgstr ""
 
+#: plugins/custom-visual/linh-vuc-hoat-dong.php:23
+msgid "Chỉ nên chọn 10 banner để tối ưu hiển thị"
+msgstr ""
+
+#: plugins/custom-visual/ve-chung-toi.php:51
+msgid "Chỉ nên chọn 3 banner để hiển thị"
+msgstr ""
+
+#: plugins/custom-visual/hsh-tin-tuc.php:30
+msgid "Chỉ nên chọn 3-5 bài post để tối ưu hiển thị"
+msgstr ""
+
+#: plugins/custom-visual/thanh-tuu.php:16
+msgid "Chỉ nên thêm 4 thành tựu để tối ưu hiển thị"
+msgstr ""
+
+#: plugins/custom-visual/p3-linh-vuc-hoat-dong.php:41
+msgid "Chọn style hiển thị"
+msgstr ""
+
 #: plugins/custom-post-type/crismaster_post_type.php:23
 msgid "Chọn ảnh đại diện sản phẩm"
+msgstr ""
+
+#: plugins/custom-visual/p2-thong-diep-chu-tich.php:41
+msgid "Chức danh"
 msgstr ""
 
 #. Description of the theme
@@ -118,7 +146,7 @@ msgstr ""
 msgid "Customize &#8220;%s&#8221;"
 msgstr ""
 
-#: footer.php:31 plugins/redux/sample/sample-config.php:292
+#: footer.php:32 plugins/redux/sample/sample-config.php:292
 msgid "CÔNG TY TNHH XUẤT NHẬP KHẨU HSH THĂNG LONG"
 msgstr ""
 
@@ -132,6 +160,15 @@ msgstr ""
 
 #: plugins/redux/sample/sample-config.php:204
 msgid "Cài đặt Header"
+msgstr ""
+
+#: plugins/custom-visual/hsh-tin-tuc.php:23
+#: plugins/custom-visual/p4-list-tin-tuc.php:30
+msgid "Các Ids ngăn cách nhau bằng dấu phẩy"
+msgstr ""
+
+#: plugins/custom-visual/hsh-tin-tuc.php:20
+msgid "Có thể nhập các ID bài viết"
 msgstr ""
 
 #: plugins/custom-post-type/crismaster_post_type.php:27
@@ -167,7 +204,7 @@ msgstr ""
 msgid "Danh Mục Sản Phẩm"
 msgstr ""
 
-#. Name of the template
+#: plugins/custom-visual/p4-list-tin-tuc.php:5
 msgid "Danh sách tin tức"
 msgstr ""
 
@@ -175,16 +212,60 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: functions.php:73
+#: functions.php:85
 msgid "Error 404"
 msgstr ""
 
+#: template/gioi-thieu-tap-doan.php:23
+msgid "GIỚI THIỆU CHUNG"
+msgstr ""
+
+#: template/linh-vuc-hoat-dong.php:23
+msgid "Giới thiệu chung"
+msgstr ""
+
 #. Name of the template
-msgid "Home Page"
+msgid "Home Page - HSH Thăng Long"
+msgstr ""
+
+#: plugins/custom-visual/p4-list-tin-tuc.php:27
+msgid "Hoặc Có thể nhập các ID bài viết muốn hiển thị"
+msgstr ""
+
+#: plugins/custom-visual/hsh-tin-tuc.php:27
+msgid "Hoặc thêm link các bài post tương ứng"
+msgstr ""
+
+#: plugins/custom-visual/hsh-tin-tuc.php:5
+msgid "HSH - Tin tức"
+msgstr ""
+
+#: template/gioi-thieu-tap-doan.php:24 template/linh-vuc-hoat-dong.php:24
+msgid "HSH THĂNG LONG"
 msgstr ""
 
 #: plugins/redux/sample/sample-config.php:178
 msgid "http://codex.wordpress.org/Child_Themes"
+msgstr ""
+
+#: plugins/custom-visual/hsh-tin-tuc.php:48
+#: plugins/custom-visual/p2-thong-diep-chu-tich.php:13
+#: plugins/custom-visual/p3-linh-vuc-hoat-dong.php:27
+msgid "Hình Ảnh"
+msgstr ""
+
+#: plugins/custom-visual/linh-vuc-hoat-dong.php:34
+#: plugins/custom-visual/ve-chung-toi.php:62
+msgid "Hình Ảnh Desktop"
+msgstr ""
+
+#: plugins/custom-visual/linh-vuc-hoat-dong.php:41
+msgid "Hình Ảnh Hover Desktop"
+msgstr ""
+
+#: plugins/custom-visual/linh-vuc-hoat-dong.php:48
+#: plugins/custom-visual/ve-chung-toi.php:69
+msgid "Hình Ảnh Mobile"
 msgstr ""
 
 #. Author of the theme
@@ -199,6 +280,18 @@ msgstr ""
 msgid "Không tìm thấy trong thùng rác"
 msgstr ""
 
+#: plugins/custom-visual/p2-lich-su-thanh-lap.php:5
+msgid "Lich sử hình thành"
+msgstr ""
+
+#: plugins/custom-visual/hsh-tin-tuc.php:34
+msgid "Link"
+msgstr ""
+
+#: plugins/custom-visual/ve-chung-toi.php:41
+msgid "Link bài viết muốn đến"
+msgstr ""
+
 #: plugins/custom-post-type/crismaster_post_type.php:28
 msgid "List Sản Phẩm"
 msgstr ""
@@ -206,6 +299,20 @@ msgstr ""
 #: plugins/redux/sample/sample-config.php:213
 #: plugins/redux/sample/sample-config.php:282
 msgid "Logo"
+msgstr ""
+
+#: plugins/custom-visual/linh-vuc-hoat-dong.php:5
+#: plugins/custom-visual/linh-vuc-hoat-dong.php:16
+#: plugins/custom-visual/p3-linh-vuc-hoat-dong.php:5
+msgid "Lĩnh vực hoạt động"
+msgstr ""
+
+#: plugins/custom-visual/p2-lich-su-thanh-lap.php:55
+msgid "LỊCH SỬ THÀNH LẬP"
+msgstr ""
+
+#: plugins/custom-visual/p2-lich-su-thanh-lap.php:16
+msgid "Lịch sử hình thành qua các năm"
 msgstr ""
 
 #: plugins/custom-post-type/crismaster_post_type.php:30
@@ -216,8 +323,77 @@ msgstr ""
 msgid "Miêu tả Sản Phẩm"
 msgstr ""
 
+#: plugins/custom-visual/p2-lich-su-thanh-lap.php:34
+#: plugins/custom-visual/p2-thong-diep-chu-tich.php:27
+#: plugins/custom-visual/p3-linh-vuc-hoat-dong.php:34
+#: plugins/custom-visual/ve-chung-toi.php:34
+msgid "Mô tả"
+msgstr ""
+
+#: plugins/custom-visual/hsh-tin-tuc.php:55
+msgid "Mô tả ngắn"
+msgstr ""
+
+#: plugins/custom-visual/p2-tam-nhin-su-menh.php:34
+msgid "Mô tả sứ mệnh"
+msgstr ""
+
+#: plugins/custom-visual/p2-tam-nhin-su-menh.php:20
+msgid "Mô tả tầm nhìn"
+msgstr ""
+
 #: plugins/custom-post-type/crismaster_post_type.php:29
 msgid "Navigation Sản Phẩm"
+msgstr ""
+
+#: plugins/custom-visual/hsh-tin-tuc.php:62
+msgid "Ngày tháng"
+msgstr ""
+
+#: plugins/custom-visual/p4-list-tin-tuc.php:20
+msgid "Nhập số bài viết muốn show trên 1 trang"
+msgstr ""
+
+#: plugins/custom-visual/p4-list-tin-tuc.php:13
+msgid "Nhập tổng số bài viết mới nhất muốn show"
+msgstr ""
+
+#: plugins/custom-visual/linh-vuc-hoat-dong.php:37
+#: plugins/custom-visual/linh-vuc-hoat-dong.php:44
+#: plugins/custom-visual/p3-linh-vuc-hoat-dong.php:30
+#: plugins/custom-visual/ve-chung-toi.php:72
+msgid "Nên nhập ảnh sp có kích thước dọc"
+msgstr ""
+
+#: plugins/custom-visual/linh-vuc-hoat-dong.php:51
+#: plugins/custom-visual/p2-thong-diep-chu-tich.php:16
+#: plugins/custom-visual/ve-chung-toi.php:65
+msgid "Nên nhập ảnh sp có kích thước vuông"
+msgstr ""
+
+#: plugins/custom-visual/p2-lich-su-thanh-lap.php:20
+#: plugins/custom-visual/p2-lich-su-thanh-lap.php:66
+msgid "Năm"
+msgstr ""
+
+#. Name of the template
+msgid "Page - Danh sách tin tức"
+msgstr ""
+
+#. Name of the template
+msgid "Page - Giới thiệu tập đoàn"
+msgstr ""
+
+#. Name of the template
+msgid "Page - Index"
+msgstr ""
+
+#. Name of the template
+msgid "Page - Liên hệ"
+msgstr ""
+
+#. Name of the template
+msgid "Page - Lĩnh vực hoạt động"
 msgstr ""
 
 #: plugins/custom-post-type/crismaster_post_type.php:7
@@ -234,11 +410,11 @@ msgstr ""
 msgid "Section via hook"
 msgstr ""
 
-#: functions.php:187
+#: functions.php:199
 msgid "Sidebar - Trang tin tức"
 msgstr ""
 
-#: functions.php:190
+#: functions.php:202
 msgid "Sidebar sẽ xuất hiện ở các trang tin tức."
 msgstr ""
 
@@ -260,6 +436,10 @@ msgstr ""
 msgid "Số điện thoại"
 msgstr ""
 
+#: plugins/custom-visual/p2-tam-nhin-su-menh.php:27
+msgid "Sứ mệnh"
+msgstr ""
+
 #: plugins/custom-post-type/crismaster_post_type.php:25
 msgid "Sử dụng làm ảnh đại diện"
 msgstr ""
@@ -276,7 +456,7 @@ msgstr ""
 msgid "Tags"
 msgstr ""
 
-#: functions.php:71
+#: functions.php:83
 #, php-format
 msgid "Tags \"%s\""
 msgstr ""
@@ -294,8 +474,26 @@ msgstr ""
 msgid "This <a href=\"%1$s\">child theme</a> requires its parent theme, %2$s."
 msgstr ""
 
-#: footer.php:17
+#: footer.php:18
 msgid "THÔNG TIN LIÊN HỆ"
+msgstr ""
+
+#: plugins/custom-visual/thanh-tuu.php:5
+msgid "Thành tựu"
+msgstr ""
+
+#: plugins/custom-visual/linh-vuc-hoat-dong.php:20
+#: plugins/custom-visual/p2-lich-su-thanh-lap.php:13
+#: plugins/custom-visual/ve-chung-toi.php:48
+msgid "Thêm banner giới thiệu"
+msgstr ""
+
+#: plugins/custom-visual/p3-linh-vuc-hoat-dong.php:13
+msgid "Thêm các lĩnh vực hoạt động"
+msgstr ""
+
+#: plugins/custom-visual/thanh-tuu.php:13
+msgid "Thêm các thành tựu"
 msgstr ""
 
 #: plugins/custom-post-type/crismaster_post_type.php:14
@@ -310,8 +508,57 @@ msgstr ""
 msgid "Thêm Mới Sản Phẩm"
 msgstr ""
 
-#: functions.php:67
+#: plugins/custom-visual/p2-thong-diep-chu-tich.php:5
+msgid "Thông điệp chủ tịch"
+msgstr ""
+
+#: template/danh-sach-tin-tuc.php:22
+msgid "TIN TỨC"
+msgstr ""
+
+#: template/danh-sach-tin-tuc.php:39 plugins/custom-visual/hsh-tin-tuc.php:16
+#: plugins/custom-visual/p4-list-tin-tuc.php:52
+msgid "Tin tức"
+msgstr ""
+
+#: plugins/custom-visual/hsh-tin-tuc.php:13
+#: plugins/custom-visual/hsh-tin-tuc.php:41
+#: plugins/custom-visual/linh-vuc-hoat-dong.php:13
+#: plugins/custom-visual/linh-vuc-hoat-dong.php:27
+#: plugins/custom-visual/p2-lich-su-thanh-lap.php:27
+#: plugins/custom-visual/p2-thong-diep-chu-tich.php:20
+#: plugins/custom-visual/p3-linh-vuc-hoat-dong.php:20
+#: plugins/custom-visual/ve-chung-toi.php:20
+#: plugins/custom-visual/ve-chung-toi.php:55
+msgid "Tiêu đề"
+msgstr ""
+
+#: plugins/custom-visual/thanh-tuu.php:27
+msgid "Tiêu đề phải"
+msgstr ""
+
+#: plugins/custom-visual/thanh-tuu.php:34
+msgid "Tiêu đề phụ"
+msgstr ""
+
+#: plugins/custom-visual/ve-chung-toi.php:27
+msgid "Tiêu đề phụ (dưới)"
+msgstr ""
+
+#: plugins/custom-visual/ve-chung-toi.php:13
+msgid "Tiêu đề phụ (trên)"
+msgstr ""
+
+#: plugins/custom-visual/thanh-tuu.php:20
+msgid "Tiêu đề trái (số)"
+msgstr ""
+
+#: functions.php:79
 msgid "Trang chủ"
+msgstr ""
+
+#: plugins/custom-visual/p2-thong-diep-chu-tich.php:34
+msgid "Tên"
 msgstr ""
 
 #: plugins/redux/sample/sample-config.php:290
@@ -322,7 +569,7 @@ msgstr ""
 msgid "Tìm Danh Mục"
 msgstr ""
 
-#: functions.php:70
+#: functions.php:82
 #, php-format
 msgid "Tìm kiếm \"%s\""
 msgstr ""
@@ -343,9 +590,21 @@ msgstr ""
 msgid "Tất cả Sản Phẩm"
 msgstr ""
 
+#: plugins/custom-visual/p2-tam-nhin-su-menh.php:13
+msgid "Tầm nhìn"
+msgstr ""
+
+#: plugins/custom-visual/p2-tam-nhin-su-menh.php:5
+msgid "Tầm nhìn Sứ mệnh"
+msgstr ""
+
 #: plugins/redux/sample/sample-config.php:172
 #, php-format
 msgid "Version %s"
+msgstr ""
+
+#: plugins/custom-visual/ve-chung-toi.php:5
+msgid "Về chúng tôi"
 msgstr ""
 
 #: plugins/custom-post-type/crismaster_post_type.php:18
@@ -360,8 +619,20 @@ msgstr ""
 msgid "Đa ngôn ngữ"
 msgstr ""
 
+#: plugins/custom-visual/linh-vuc-hoat-dong.php:55
+#: plugins/custom-visual/ve-chung-toi.php:76
+msgid "Đi đến Link"
+msgstr ""
+
 #: plugins/redux/sample/sample-config.php:297
 msgid "Địa chỉ"
+msgstr ""
+
+#: template/danh-sach-tin-tuc.php:68 plugins/custom-visual/hsh-tin-tuc.php:122
+#: plugins/custom-visual/hsh-tin-tuc.php:148
+#: plugins/custom-visual/p4-list-tin-tuc.php:90
+#: plugins/custom-visual/ve-chung-toi.php:136
+msgid "ĐỌC THÊM"
 msgstr ""
 
 #: plugins/custom-post-type/crismaster_post_type.php:22
