@@ -4,6 +4,7 @@ if (isset($theme_option['footer_logo']['url'])){
 }
 $footer_name = $theme_option['footer_name'];
 $footer_address = $theme_option['footer_address'];
+$footer_address2 = $theme_option['footer_address2'];
 $footer_phone = $theme_option['footer_phone'];
 $footer_email = $theme_option['footer_email'];
 $mobile = wp_is_mobile(); ?>
@@ -35,8 +36,12 @@ $mobile = wp_is_mobile(); ?>
                             <ul>
                                 <li>
                                     <i class="fa-sharp fa-solid fa-location-dot"></i>
-                                    <?php if (isset($footer_address) && $footer_address != '') { ?>
+                                    <?php
+                                    $current_language = function_exists('pll_current_language') ? pll_current_language() : '';
+                                    if (isset($footer_address) && $footer_address != '' && $current_language == 'vi' ) { ?>
                                         <a class="shs-link" href="#"><?= htmlspecialchars_decode($footer_address) ?></a>
+                                    <?php }elseif(isset($footer_address2) && $footer_address2 != '' ){ ?>
+                                        <a class="shs-link" href="#"><?= htmlspecialchars_decode($footer_address2) ?></a>
                                     <?php }else{ ?>
                                         <a class="shs-link" href="#">Số nhà 19, ngách 26, ngõ 154 đường Đình Thôn, TDP số 7, <span>Phường Mỹ Đình 1, Quận Nam Từ Liêm, Thành phố Hà Nội, Việt Nam</span> </a>
                                     <?php } ?>

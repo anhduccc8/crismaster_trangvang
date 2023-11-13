@@ -20,8 +20,7 @@ if (isset($theme_option['banner_logo_3']['url'])){
             <?php } ?>
             <div class="shs-slide">
                 <div class="shs-heading-meta">
-                    <div class="sub-heading-slide text-white fs-30 fs-15 fw-700 text-uppercase"><?= esc_html__('Giới thiệu chung','crismaster') ?></div>
-                    <h3 class="shs-heading t-shadow color-white"><?= esc_html__('HSH THĂNG LONG','crismaster') ?></h3>
+                    <h3 class="shs-heading t-shadow color-white"><?= esc_html__('LĨNH VỰC HOẠT ĐỘNG','crismaster') ?></h3>
                 </div>
             </div>
         </div>

@@ -299,6 +299,13 @@ if (!class_exists("Redux_Framework_sample_config")) {
                         'desc'     => esc_html__( '', 'crismaster' ),
                     ),
                     array(
+                        'id'       => 'footer_address2',
+                        'type'     => 'text',
+                        'title'    => esc_html__( 'Địa chỉ EN', 'crismaster' ),
+                        'subtitle' => esc_html__( '', 'crismaster' ),
+                        'desc'     => esc_html__( '', 'crismaster' ),
+                    ),
+                    array(
                         'id'       => 'footer_phone',
                         'type'     => 'text',
                         'title'    => esc_html__( 'Số điện thoại', 'crismaster' ),
