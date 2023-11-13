@@ -39,7 +39,7 @@ if(have_posts()):
                                             <hr>
                                             <?php the_content(); ?>
                                             <div class="sharePost  u-fade-type-left js-scroll-trigger">
-                                                <p>Chia sẻ:</p>
+                                                <p><?= esc_html__('Chia sẻ','crismaster') ?>:</p>
                                                 <a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=<?= get_the_permalink() ?>" target="_blank"><i class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i></a>
                                                 <a class="gp" href="https://plus.google.com/share?url=<?= get_the_permalink() ?>" target="_blank"><i class="fab fa-google fa-2x" style="color: #dd4b39;"></i></a>
                                                 <a class="mail" href="mailto:?subject=HSH - Group&amp;body=<?= get_the_permalink() ?>" target="_blank"><i class="fab fa-envelope fa-2x" style="color: #dda00e;"></i></a>
