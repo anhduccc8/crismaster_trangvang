@@ -4,21 +4,17 @@
 *
 */ 
 get_header();
-//echo pll_the_languages();
+
 $theme_option = get_option('theme_option');
 if (isset($theme_option['banner_logo_1']['url'])){
     $banner_logo_1 = $theme_option['banner_logo_1']['url'];
 }
 ?>
 
-<div class="shs-header-custom" id="bannerHome">
+<div class="shs-header-custom bg-img-section" id="bannerHome" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bg-world.png');">
     <div class="shs-slide container-fluidd">
         <div class="slider-content">
-            <?php if (isset($banner_logo_1) && $banner_logo_1 != '') { ?>
-                <img class="bgr-img" src="<?php  echo esc_url($banner_logo_1) ?>" style="width:100%">
-            <?php }else{ ?>
-                <img class="bgr-img" src="<?= get_template_directory_uri() ?>/assets/images/img-slide-01.jpg" style="width:100%">
-            <?php } ?>
+            <video class="video-display" autoplay muted loop src="https://hshgroup.co/video/HSH.mp4"></video>
         </div>
     </div>
     <a class="scrolldown js-scrollCt" href="#">

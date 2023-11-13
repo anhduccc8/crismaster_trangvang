@@ -12,9 +12,9 @@
     }
 
     /* slide */
-    .shs-header-custom, .slider-content .bgr-img {
-        min-height: 800px;
-    }
+    /*.shs-header-custom, .slider-content .bgr-img {*/
+    /*    min-height: 800px;*/
+    /*}*/
 
     .slider-content .shs-slide {
         top: 100px;
@@ -211,7 +211,7 @@
     }
 
     .shs-header-custom, .slider-content .bgr-img {
-        min-height: 500px;
+        /*min-height: 500px;*/
     }
 
     /* section activiti */
