@@ -43,7 +43,13 @@ $mobile = wp_is_mobile();
         <nav>
             <ul id="nav">
                 <?php
-                $menu_items = wp_get_menu_array('3');
+                $current_language = function_exists('pll_current_language') ? pll_current_language() : '';
+                if ($current_language == 'vi'){
+                    $menu_items = wp_get_menu_array('3');
+                }else{
+                    $menu_items = wp_get_menu_array('26');
+                }
+
                 if (!empty($menu_items)){
                     foreach ($menu_items as $menu) { ?>
                         <li><a href="<?= $menu['url'] ?>" class="text-uppercase" id="id-<?= $menu['ID'] ?>"><?php esc_attr_e( $menu['title'], 'crismaster'); ?></a></li>
