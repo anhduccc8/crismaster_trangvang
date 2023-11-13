@@ -8,7 +8,8 @@ if (isset($theme_option['header_logo']['url'])){
 $header_language = $theme_option['header_language'];
 $mobile = wp_is_mobile();
 ?>
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/vnd.microsoft.icon" href="<?= get_template_directory_uri() ?>/assets/images/favicon.ico">
@@ -29,10 +30,11 @@ $mobile = wp_is_mobile();
         <div class="hamburger-menu">
             <div class="bar"></div>
         </div>
-        <?php if ($header_language){ ?>
+        <?php if ($header_language){
+            ?>
             <div class="botHd">
                 <p>
-                    <a href="#">EN</a><em>|</em><span>VN</span>
+                    <?= do_shortcode('[polylang_langswitcher]') ?>
                 </p>
             </div>
         <?php } ?>

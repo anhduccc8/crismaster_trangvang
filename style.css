@@ -197,47 +197,40 @@
         max-width: 520px;
     }
 }
-/* section history */
-.shs-section-history {
-    padding: 200px 160px 232px;
-}
-.shs-heading-year {
-    color: var(--primary_color);
-    margin: 54px 0 34px;
-}
-.shs-title-history {
-    font-size: 30px;
-}
-.shs-history-meta {
-    padding-left: 25px;
-    margin-top: 30px;
-}
-.shs-history-meta:before {
-    width: 6px;
-    top: 3px;
-    bottom: 2px;
-}
-.shs-nav-year-inner {
-    display: inline-flex;
-    align-items: center;
-}
-.shs-nav-year-inner i {
-    margin: 0 5px;
-}
-.shs-nav-year-inner .fa-chevron-right {
-    transform: translateY(-2px);
-}
-.shs-nav-year {
-    text-align: center;
-    margin-top: 173px;
-}
-.shs-nav-year .nav-year {
-    display: inline-block;
-    font-size: 50px;
-    color: #333333;
-    margin: 0 30px;
-}
 
+.owl-carousel.year-lich-su .owl-nav.disabled{
+    display: block;
+}
+.owl-carousel.year-lich-su .owl-nav .owl-prev {
+    position: absolute;
+    top: 20px;
+}
+.owl-carousel.year-lich-su .owl-nav .owl-next {
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+.owl-carousel.year-lich-su.owl-drag .owl-item.actived .nav-year{
+    color: var(--primary_color);
+    font-weight: 600;
+}
+.owl-carousel.year-lich-su.owl-drag .owl-item .nav-year.actived{
+    color: var(--primary_color);
+    font-weight: 600;
+}
+.shs-nav-number-bottom .nav-number.active {
+    background-color: var(--primary_color);
+    color: #fff;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.botHd p a.active{
+    color: #0E99C9;
+}
+.hdContainer.active .botHd p a.active{
+    color: var(--primary_color);
+}
 @media only screen and (max-width: 768px){
     .mobile-hide {
         display: none;
@@ -250,5 +243,11 @@
     }
     .mr-b-0-767 {
         margin-bottom: 0;
+    }
+    .owl-carousel.year-lich-su .owl-nav .owl-prev {
+        top: 3px;
+    }
+    .owl-carousel.year-lich-su .owl-nav .owl-next {
+        top: 3px;
     }
 }

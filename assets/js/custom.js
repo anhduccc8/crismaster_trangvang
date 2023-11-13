@@ -20,6 +20,50 @@ jQuery(document).ready(function($) {
             dotsClass: 'shs-nav-number shs-nav-number-news',
         });
     }
+    if ($('.owl-carousel.lich-su-thanh-lap').length > 0 ){
+        var owl1 = $('.owl-carousel.lich-su-thanh-lap').owlCarousel({
+            loop: true,
+            nav: false,
+            navText: ["<i class='fa-solid fa-chevron-left'></i>","<i class='fa-solid fa-chevron-right'></i>"],
+            items: 1,
+            autoplay: false,
+            dots: false,
+            mouseDrag: false,
+            touchDrag: false,
+        });
+    }
+    if ($('.owl-carousel.year-lich-su').length > 0 ){
+        var owl2 = $('.owl-carousel.year-lich-su').owlCarousel({
+            loop: true,
+            nav: true,
+            navText: ["<i class='fa-solid fa-chevron-left'></i>","<i class='fa-solid fa-chevron-right'></i>"],
+            autoplay: false,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 3,
+                    nav: true,
+                    center: true,
+                },
+                768: {
+                    items: 3,
+                    nav: true,
+                    center: true,
+                }
+            },
+        });
+        $('.owl-carousel.year-lich-su .owl-nav').removeClass('disabled');
+        owl2.on('changed.owl.carousel', function(event) {
+            var currentItem = event.item.index;
+            if (currentItem !== owl1.trigger('owl.carousel').to) {
+                owl1.trigger('to.owl.carousel', [currentItem, 300, true]);
+                $('.owl-carousel.year-lich-su .owl-item').not(':eq(' + currentItem + ')').removeClass('actived');
+                $('.owl-carousel.year-lich-su .owl-item').eq(currentItem).addClass('actived');
+                $('.owl-carousel.year-lich-su .owl-item').not(':eq(' + currentItem + ')').find('.nav-year').removeClass('actived');
+                $('.owl-carousel.year-lich-su .owl-item').eq(currentItem).find('.nav-year').removeClass('actived');
+            }
+        });
+    }
 
     // $(".js-window-trigger").each(function () {
     //     $(this).addClass('is-active');
@@ -29,10 +73,7 @@ jQuery(document).ready(function($) {
             let position = $(this).offset().top,
                 scroll = $(window).scrollTop(),
                 windowHeight = $(window).height();
-            console.log('scroll: '+scroll);
-            console.log('scroll2: '+ (position - windowHeight + 80));
             if (scroll > position - windowHeight + 80) {
-                console.log(scroll > position - windowHeight + 80);
                 $(this).addClass('is-active');
             }
         });

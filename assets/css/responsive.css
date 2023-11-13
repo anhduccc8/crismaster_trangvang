@@ -12,7 +12,7 @@
     }
 
     /* slide */
-    .shs-header-custom, .slider-content img {
+    .shs-header-custom, .slider-content .bgr-img {
         min-height: 800px;
     }
 
@@ -89,11 +89,12 @@
         font-size: 30px;
     }
 
-    .shs-heading-meta .shs-sub-heading-bottom {
-        font-size: 15px;
-    }
     .shs-heading-meta.style-02 .shs-heading {
         font-size: 50px;
+    }
+
+    .shs-heading-meta .shs-sub-heading-bottom {
+        font-size: 15px;
     }
 
     /* section activiti */
@@ -210,7 +211,7 @@
     }
 
     .shs-header-custom, .slider-content .bgr-img {
-        min-height: 400px;
+        min-height: 500px;
     }
 
     /* section activiti */
@@ -227,10 +228,6 @@
 
     .shs-item-activiti-column {
         width: 100%;
-    }
-
-    .shs-nav-number {
-        display: none;
     }
 
     .item-activiti-title {
@@ -272,6 +269,9 @@
         line-height: 32px;
     }
     .item-history-content .shs-heading {
+        font-size: 30px;
+    }
+    .item-history-content-cus .shs-heading {
         font-size: 30px;
     }
     .shs-heading-year {

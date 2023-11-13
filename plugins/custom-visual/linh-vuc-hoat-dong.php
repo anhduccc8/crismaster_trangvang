@@ -73,7 +73,8 @@ function linh_vuc_hoat_dong_func($atts,$content = null){
                 </div>
             </div>
         </div>
-        <div class="container-fluid container-content linh-vuc-hoat-dong <?php if (!$mobile){ echo 'owl-carousel'; } ?>">
+<!--        linh-vuc-hoat-dong-->
+        <div class="container-fluid container-content  <?php if (!$mobile){ echo 'owl-carousel'; } ?>">
         <?php if(isset($details) && $details != ''){
             $t = 1;
         $detailss = vc_param_group_parse_atts($details,'');

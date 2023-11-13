@@ -2357,6 +2357,50 @@ ul li {
     background-color: var(--primary_color);
     color: #fff;
 }
+/* section history */
+.shs-section-history {
+    padding: 200px 160px 232px;
+}
+.shs-heading-year {
+    color: var(--primary_color);
+    margin: 54px 0 34px;
+}
+.shs-title-history {
+    font-size: 30px;
+}
+.shs-history-meta {
+    padding-left: 25px;
+    margin-top: 30px;
+}
+.shs-history-meta:before {
+    width: 6px;
+    top: 3px;
+    bottom: 2px;
+}
+.shs-nav-year-inner {
+    display: inline-flex;
+    align-items: center;
+}
+.shs-nav-year-inner i {
+    margin: 0 5px;
+}
+.shs-nav-year-inner .fa-chevron-right {
+    transform: translateY(-2px);
+}
+.shs-nav-year {
+    text-align: center;
+    margin-top: 173px;
+}
+.shs-nav-year .nav-year {
+    display: inline-block;
+    font-size: 50px;
+    color: #333333;
+    margin: 0 30px;
+}
+.shs-nav-year {
+    width: 70%;
+    margin: 173px auto 0 auto;
+}
 @media (max-width: 768px) {
     .shs-nav-number-bottom .nav-number {
         width: 45px;

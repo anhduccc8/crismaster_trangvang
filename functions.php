@@ -10,6 +10,11 @@ require_once get_template_directory() . '/plugins/custom-visual/ve-chung-toi.php
 require_once get_template_directory() . '/plugins/custom-visual/linh-vuc-hoat-dong.php';
 require_once get_template_directory() . '/plugins/custom-visual/thanh-tuu.php';
 require_once get_template_directory() . '/plugins/custom-visual/hsh-tin-tuc.php';
+require_once get_template_directory() . '/plugins/custom-visual/p2-thong-diep-chu-tich.php';
+require_once get_template_directory() . '/plugins/custom-visual/p2-lich-su-thanh-lap.php';
+require_once get_template_directory() . '/plugins/custom-visual/p2-tam-nhin-su-menh.php';
+require_once get_template_directory() . '/plugins/custom-visual/p3-linh-vuc-hoat-dong.php';
+require_once get_template_directory() . '/plugins/custom-visual/p4-list-tin-tuc.php';
 
 // @ini_set( 'upload_max_size' , '64M' );
 // @ini_set( 'post_max_size', '64M');
@@ -239,18 +244,20 @@ function crismaster_pagination() {
     if ( $paged == $max && $max > 2 )
         $links[] = $paged - 2 ;
     /** Previous Post Link */
-    $url_template = get_template_directory_uri();
-    if ( get_previous_posts_link() )
-        printf( '<li class="page-item page-link">%s</li>' . "\n", get_previous_posts_link('&laquo;') );
+    $next_page_exists = get_next_posts_link(null, $wp_query->max_num_pages) !== null;
+    $prev_page_exists = get_previous_posts_link(null) !== null;
+    if ( $prev_page_exists )
+        printf( get_previous_posts_link('&laquo;') );
     /** Link to current page, plus 2 pages in either direction if necessary */
     sort( $links );
     foreach ( (array) $links as $link ) {
-        $class = $paged == $link ? ' class="page-item active"' : '';
-        printf( '<li%s><a class="page-link" href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
+        $class = $paged == $link ? 'active' : '';
+        printf( '<a class="nav-number %s" href="%s">%s</a>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
     }
     /** Next Post Link */
-    if ( get_next_posts_link() )
-        printf( '<li class="page-item page-link">%s</li>' . "\n", get_next_posts_link('&raquo;') );
+    if ( $next_page_exists )
+//        printf( '<a class="nav-number">%s</a>' . "\n", get_next_posts_link('&raquo;') );
+        printf( get_next_posts_link('&raquo;'));
 }
 
 function wp_get_menu_array($current_menu='Main Menu') {
@@ -300,6 +307,33 @@ add_action('get_header', 'remove_admin_login_header');
 //    load_theme_textdomain( 'crismaster',  get_template_directory() . '/languages' );
 //}
 //add_action( 'after_setup_theme', 'cris_theme_setup' );
+function custom_next_posts_link_attributes($attr) {
+    $attr .= ' class="nav-number"';
+    return $attr;
+}
+add_filter('next_posts_link_attributes', 'custom_next_posts_link_attributes');
+function custom_prev_posts_link_attributes($attr) {
+    $attr .= ' class="nav-number"';
+    return $attr;
+}
+add_filter('previous_posts_link_attributes', 'custom_prev_posts_link_attributes');
+
+function custom_polylang_langswitcher() {
+    $langs_array = pll_the_languages( array( 'dropdown' => 1, 'hide_current' => 0, 'raw' => 1 ) );
+    $current_language = function_exists('pll_current_language') ? pll_current_language() : '';
+    if ($current_language == 'vi'){
+        $class = 'active';
+    }else{
+        $class = '';
+    }
+    if ($langs_array) : ?>
+        <a class="text-uppercase <?php if ($current_language == $langs_array['en']['slug']) echo 'active'; ?>" href="<?= $langs_array['en']['url'] ?>"><?= $langs_array['en']['slug'] ?></a><em>|</em><a class="text-uppercase <?php if ($current_language == $langs_array['vi']['slug']) echo 'active'; ?>" href="<?= $langs_array['vi']['url'] ?>"><?= $langs_array['vi']['slug'] ?></a>
+    <?php endif;
+}
+add_shortcode( 'polylang_langswitcher', 'custom_polylang_langswitcher' );
+
+// Hook the custom_pll_the_languages function into the pll_the_languages filter
+add_filter('pll_the_languages', 'custom_pll_the_languages', 10, 2);
 
 function formatPhoneNumber($phoneNumber) {
     $phoneNumber = preg_replace("/[^0-9]/", "", $phoneNumber);
