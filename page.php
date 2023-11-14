@@ -17,22 +17,15 @@ if (isset($theme_option['banner_logo_1']['url'])){
 <!--            <video class="video-display" autoplay muted loop playsinline>-->
 <!--                <source src="https://www.youtube.com/embed/M9bGM2nly2Q?si=DXuH2g-16cDvmkt8?autoplay=1" type="video/mp4">-->
 <!--            </video>-->
-            <video id="myVideo" class="video-display" autoplay muted loop src="https://hshgroup.co/video/HSH.mp4"></video>
+            <video id="myVideo" class="video-display" autoplay muted loop playsinline src="https://hshgroup.co/video/HSH.mp4"></video>
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
                     var video = document.getElementById('myVideo');
                     var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                    if (!isMobile) {
+                    if (isMobile) {
                         video.autoplay = true;
                         video.play();
                     }
-                    video.addEventListener('loadedmetadata', function() {
-                        video.requestFullscreen().then(() => {
-                            if (!isMobile) {
-                                video.play();
-                            }
-                        });
-                    });
                 });
             </script>
         </div>
