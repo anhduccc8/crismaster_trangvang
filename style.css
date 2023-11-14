@@ -84,7 +84,7 @@
 .item-activity-content {
     padding: 40px 20px 40px 60px;
 }
-.item-activity-content img {
+.item-activity-content img  {
     position: absolute;
     top: 50%;
     left: -65%;
@@ -291,6 +291,10 @@
     bottom: 10px;
     left: 40px;
 }
+.shs-item-activity-cus {
+    background-size: cover;
+}
+
 @media (min-width: 768px) {
     #horizontal-image {
         display: flex;
@@ -303,6 +307,9 @@
         width: 100%;
         min-width: 100%;
         position: relative;
+    }
+    .shs-item-activity-cus {
+        background-image: unset !important;
     }
 }
 @media (max-width: 1199px) {
@@ -347,5 +354,24 @@
     }
     .owl-carousel.year-lich-su .owl-nav .owl-next {
         top: 3px;
+    }
+    .shs-item-activity-cus .bgr-map {
+        display: none;
+    }
+    .shs-item-activity-cus{
+        background-color: unset;
+    }
+    .shs-item-activity-cus .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .shs-item-activity-cus .overlay-1 {
+        background: linear-gradient( -48.36deg, rgba(59, 105, 174, 1), rgba(14, 153, 201, 0) );
+    }
+    .shs-item-activity-cus .overlay-2 {
+        background: linear-gradient( -48.36deg, rgb(255 255 255), rgba(14, 153, 201, 0) )
     }
 }

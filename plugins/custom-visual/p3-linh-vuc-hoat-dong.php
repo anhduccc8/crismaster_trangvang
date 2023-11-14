@@ -74,9 +74,10 @@ function p3_linh_vuc_hoat_dong_func($atts,$content = null){
                                 <img alt="img-activity-01" src="<?= esc_url($dca['simage'][0]) ?>" style="width:100%">
                             </div>
                         </div>
-                        <div class="col-12-ct col-6-ct shs-item-activity shs-activity-content">
+                        <div class="col-12-ct col-6-ct shs-item-activity shs-activity-content shs-item-activity-cus" style="background-image: url('<?= esc_url($dca['simage'][0]) ?>')">
+                            <div class="overlay overlay-1"></div>
                             <div class="item-activity-content">
-                                <img class="bgr-map-right" alt="bgr-map-01" src="<?= get_template_directory_uri() ?>/assets/images/bgr-map-activity-01.png" style="width:100%">
+                                <img class="bgr-map bgr-map-right" alt="bgr-map-01" src="<?= get_template_directory_uri() ?>/assets/images/bgr-map-activity-01.png" style="width:100%">
                                 <div class="shs-heading-meta">
                                     <h3 class="shs-heading color-white text-transform u-fade-type-left js-scroll-trigger"><?= htmlspecialchars_decode($dca['stitle']) ?></h3>
                                 </div>
@@ -88,9 +89,10 @@ function p3_linh_vuc_hoat_dong_func($atts,$content = null){
                     </div>
                 <?php }else{ ?>
                     <div class="row shs-item-activity-inner">
-                        <div class="col-12-ct col-6-ct shs-item-activity shs-activity-content content-left">
+                        <div class="col-12-ct col-6-ct shs-item-activity shs-activity-content content-left shs-item-activity-cus" style="background-image: url('<?= esc_url($dca['simage'][0]) ?>'">
+                            <div class="overlay overlay-2"></div>
                             <div class="item-activity-content">
-                                <img class="bgr-map-left" alt="bgr-map-01" src="<?= get_template_directory_uri() ?>/assets/images/bgr-map-activity-02.png" style="width:100%">
+                                <img class="bgr-map bgr-map-left" alt="bgr-map-01" src="<?= get_template_directory_uri() ?>/assets/images/bgr-map-activity-02.png" style="width:100%">
                                 <div class="shs-heading-meta">
                                     <h3 class="shs-heading color-dark text-transform u-fade-type-left js-scroll-trigger"><?= esc_attr__($dca['stitle'],'crismaster') ?></h3>
                                 </div>
