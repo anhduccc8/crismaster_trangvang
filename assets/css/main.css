@@ -792,14 +792,14 @@ nav {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .scrolldown .ar {
-    width: 12px;
+    width: 42px;
     display: inline-block;
     position: absolute;
-    top: 45px;
+    top: 31px;
     left: 50%;
     margin-left: -6px;
-    -webkit-animation: 1.5s infinite sdb05;
-    animation: 1.5s infinite sdb05;
+    /*-webkit-animation: 1.5s infinite sdb05;*/
+    /*animation: 1.5s infinite sdb05;*/
 }
 @-webkit-keyframes sdb05 {
     0% {

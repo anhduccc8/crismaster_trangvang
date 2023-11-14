@@ -31,7 +31,7 @@ if (isset($theme_option['banner_logo_1']['url'])){
         </div>
     </div>
     <a class="scrolldown js-scrollCt" href="#">
-        <img class="ar" src="<?= get_template_directory_uri() ?>/assets/images/scrolldown-icon.png">
+        <img class="ar" src="<?= get_template_directory_uri() ?>/assets/images/vector-1.png">
     </a>
 </div>
 <?php if(have_posts()):
