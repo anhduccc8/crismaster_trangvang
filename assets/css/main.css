@@ -947,7 +947,7 @@ nav {
 .slNews {
     display: none;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .hdContainer {
         width: 100%;
         height: 50px;

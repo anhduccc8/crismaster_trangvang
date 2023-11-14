@@ -294,7 +294,12 @@
 .shs-item-activity-cus {
     background-size: cover;
 }
-
+p.copy-right {
+    position: absolute;
+    bottom: 0;
+    right: 3%;
+    font-size: 20px;
+}
 @media (min-width: 768px) {
     #horizontal-image {
         display: flex;
@@ -313,29 +318,37 @@
     }
 }
 @media (max-width: 1199px) {
-    .item-activity-content .shs-heading-meta {
-        padding-left: 20px;
-    }
-    .item-activity-content .shs-heading-meta:before {
-        top: 3px;
-        bottom: 5px;
+.item-activity-content .shs-heading-meta {
+    padding-left: 20px;
+}
+.item-activity-content .shs-heading-meta:before {
+    top: 3px;
+    bottom: 5px;
+}
+    p.copy-right {
+        text-align: center;
+        left: 50%;
+        right: 0;
+        font-size: 16px;
+        transform: translate(-50%, -50%);
     }
 }
 @media (max-width: 991px) {
-    .shs-ceo-meta .shs-name {
-        font-size: 24px;
-        line-height: 30px;
-        margin: 25px 0 9px;
-    }
-    .shs-position {
-        font-size: 20px;
-    }
+.shs-ceo-meta .shs-name {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 25px 0 9px;
+}
+.shs-position {
+    font-size: 20px;
+}
 }
 @media (min-width: 1200px) {
-    .about-column-03 {
-        max-width: 520px;
-    }
+.about-column-03 {
+    max-width: 520px;
 }
+}
+
 @media only screen and (max-width: 768px){
     .mobile-hide {
         display: none;
@@ -373,5 +386,20 @@
     }
     .shs-item-activity-cus .overlay-2 {
         background: linear-gradient( -48.36deg, rgb(255 255 255), rgba(14, 153, 201, 0) )
+    }
+    p.copy-right {
+        left: auto;
+        right: 0;
+        font-size: 16px;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media only screen and (max-width: 550px){
+    p.copy-right {
+        left: auto;
+        right: auto;
+        font-size: 16px;
+        transform: translate(16%, -50%);
     }
 }

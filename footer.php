@@ -10,7 +10,7 @@ $footer_email = $theme_option['footer_email'];
 $mobile = wp_is_mobile(); ?>
 
 <footer id="colophon" class="site-footer-main">
-    <div class="shs-footer-main" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-footer-01.jpg');">
+    <div class="shs-footer-main position-relative" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-footer-01.jpg');">
         <div class="container-fluiddd">
             <div class="container-default">
                 <div class="row">
@@ -70,6 +70,9 @@ $mobile = wp_is_mobile(); ?>
                             </ul>
                         </div>
                     </div>
+                </div>
+                <div class="row">
+                    <p class="copy-right">Copyright © 2023 HSH. Designed by <a target="_blank" href="https://innocom.vn/">Innocom</a></p>
                 </div>
             </div>
         </div>
