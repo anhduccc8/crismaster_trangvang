@@ -2095,7 +2095,7 @@ ul li {
 .item-activiti-title {
     text-transform: uppercase;
     position: absolute;
-    bottom: 15px;
+    bottom: 15%;
     left: 20px;
     writing-mode: vertical-rl;
     transform: rotate(180deg);

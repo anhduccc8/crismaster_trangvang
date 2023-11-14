@@ -224,6 +224,86 @@
 .owl-carousel .owl-item img.hide{
     display: none;
 }
+#horizontal-image {
+    display: flex;
+    min-height: 1080px;
+    height: 90vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    width: 100%;
+    min-width: 100%;
+    position: relative;
+}
+
+#horizontal-image.active .shs-item-activiti-column,
+#horizontal-image.active .shs-item-activiti,
+#horizontal-image.active .item-activiti-image,
+#horizontal-image.active .item-activiti-image img {
+    height: 100%;
+}
+
+.shs-item-activiti-column {
+    cursor: pointer;
+    flex: 1;
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.shs-item-activiti-column.active .item-activiti-hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.5;
+        flex: 1;
+    }
+    100% {
+        opacity: 1;
+        flex: 2.2;
+    }
+}
+
+.shs-item-activiti-column.active {
+    /*opacity: 1;*/
+    flex: 2.2;
+    visibility: visible;
+    height: 100%;
+    position: relative;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.item-activiti-hover {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+}
+
+.img-column-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.item-activiti-title-hover {
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+}
+
 @media (max-width: 1199px) {
     .item-activity-content .shs-heading-meta {
         padding-left: 20px;
