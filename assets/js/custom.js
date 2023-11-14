@@ -65,6 +65,24 @@ jQuery(document).ready(function($) {
         });
     }
 
+    if ($('#horizontal-image .shs-item-activiti-column').length > 0){
+        setTimeout(function () {
+            var all = document.querySelectorAll('#horizontal-image');
+            var menuItems = document.querySelectorAll('#horizontal-image .shs-item-activiti-column');
+            menuItems.forEach(function(item) {
+                item.addEventListener('mouseover', function() {
+                    item.classList.add('active');
+                    $('#horizontal-image').addClass('active');
+                });
+                item.addEventListener('mouseout', function() {
+                    item.classList.remove('active');
+                    $('#horizontal-image').removeClass('active');
+                });
+            });
+        }, 1000);
+    }
+
+
     // $(".js-window-trigger").each(function () {
     //     $(this).addClass('is-active');
     // });

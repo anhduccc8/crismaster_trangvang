@@ -224,18 +224,6 @@
 .owl-carousel .owl-item img.hide{
     display: none;
 }
-#horizontal-image {
-    display: flex;
-    min-height: 1080px;
-    height: 90vh;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    list-style-type: none;
-    width: 100%;
-    min-width: 100%;
-    position: relative;
-}
 
 #horizontal-image.active .shs-item-activiti-column,
 #horizontal-image.active .shs-item-activiti,
@@ -303,7 +291,20 @@
     bottom: 10px;
     left: 40px;
 }
-
+@media (min-width: 768px) {
+    #horizontal-image {
+        display: flex;
+        min-height: 1080px;
+        height: 90vh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        list-style-type: none;
+        width: 100%;
+        min-width: 100%;
+        position: relative;
+    }
+}
 @media (max-width: 1199px) {
     .item-activity-content .shs-heading-meta {
         padding-left: 20px;

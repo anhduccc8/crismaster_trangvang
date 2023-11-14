@@ -1781,7 +1781,7 @@ ul li {
 }
 @media (max-width: 767px) {
     .none-sm {
-        display: none;
+        display: none !important;
     }
 }
 @media (min-width: 768px) {
