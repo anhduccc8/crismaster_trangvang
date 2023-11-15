@@ -72,7 +72,7 @@ function linh_vuc_hoat_dong_func($atts,$content = null){
     ob_start();
     $mobile = wp_is_mobile();
     ?>
-    <section class="shs-section-widget bg-img-section shs-section-activities" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-about.png');">
+    <section class="shs-section-widget bg-img-section shs-section-activities" id="linh-vuc-hoat-dong-ele" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-about.png');">
         <div class="container-fluid container-heading">
             <div class="shs-heading-widget text-center text-uppercase">
                 <div class="shs-heading-meta">

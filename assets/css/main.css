@@ -417,7 +417,7 @@ select {
 
 header {
     position: relative;
-    z-index: 5;
+    z-index: 14;
 }
 .hdContainer {
     width: 95px;
@@ -631,7 +631,7 @@ nav {
     position: absolute;
     top: 10px;
     left: 100%;
-    width: 400px;
+    width: 500px;
     padding-left: 40px;
     margin-left: 60px;
     display: none;

@@ -148,7 +148,7 @@ function ve_chung_toi_func($atts,$content = null){
             <?php $t++;  } } ?>
             </div>
             <div class="shs-nav-number">
-                <div class="nav-number"><a href="#">01</a></div>
+                <div class="nav-number"><a href="#bannerHome">01</a></div>
                 <div class="nav-number active"><a href="#ve-chung-toi-ele">02</a></div>
                 <div class="nav-number"><a href="#">03</a></div>
                 <div class="nav-number"><a href="#tin-tuc-ele">04</a></div>

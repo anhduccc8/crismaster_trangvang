@@ -116,6 +116,25 @@ jQuery(document).ready(function($) {
             });
         }, 1000);
     }
+    if ($('.shs-nav-number a[href^="#"]').length > 0){
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        // Scroll smoothly to the target element
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+    }
+
     function getSiblings(element,direction) {
         var siblings = [];
         var sibling = (direction === 'next') ? element.nextSibling : element.previousSibling;
