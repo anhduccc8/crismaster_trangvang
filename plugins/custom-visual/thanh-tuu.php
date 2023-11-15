@@ -75,7 +75,7 @@ function thanh_tuu_func($atts,$content = null){
                             <?php } ?>
                         </div>
                         <div class="item-about-02 text-center">
-                            <h6 class="item-about-meta-heading"><?= esc_html__($dca['ssubtitle'], 'crismaster') ?></h6>
+                            <h6 class="item-about-meta-heading"><?= htmlspecialchars_decode($dca['ssubtitle']) ?></h6>
                         </div>
                     </div>
                 </div>
