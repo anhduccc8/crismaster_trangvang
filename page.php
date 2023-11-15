@@ -28,6 +28,13 @@ if (isset($theme_option['banner_logo_1']['url'])){
                     }
                 });
             </script>
+            <div class="shs-nav-number">
+                <div class="nav-number active"><a href="#">01</a></div>
+                <div class="nav-number"><a href="#ve-chung-toi-ele">02</a></div>
+                <div class="nav-number"><a href="#">03</a></div>
+                <div class="nav-number"><a href="#tin-tuc-ele">04</a></div>
+                <div class="nav-number"><a href="#">05</a></div>
+            </div>
         </div>
     </div>
     <a class="scrolldown js-scrollCt" href="#">

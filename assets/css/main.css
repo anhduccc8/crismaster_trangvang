@@ -615,6 +615,7 @@ nav {
 #nav > li > a.active,
 #nav > li > a:hover {
     color: #0E99C9;
+    font-weight: 700;
 }
 #nav > li > a {
     display: block;
@@ -626,33 +627,35 @@ nav {
     padding: 5px 0;
 }
 .submenu {
+    border-left: 1px solid #000;
     position: absolute;
     top: 10px;
     left: 100%;
     width: 400px;
-    padding-left: 100px;
+    padding-left: 40px;
+    margin-left: 60px;
     display: none;
 }
 .submenu:after {
-    content: "";
-    display: inline-block;
-    width: 70px;
-    height: 1px;
-    background: #dedede;
-    position: absolute;
-    top: 20px;
-    left: 0;
+    /*content: "";*/
+    /*display: inline-block;*/
+    /*width: 70px;*/
+    /*height: 1px;*/
+    /*background: #dedede;*/
+    /*position: absolute;*/
+    /*top: 20px;*/
+    /*left: 0;*/
 }
 .submenu a {
     display: block;
     font-size: 22px;
     color: #424d54;
     padding: 5px 0;
-    font-family: san_francisco_text_regularRg;
 }
 .submenu a.active,
 .submenu a:hover {
-    color: #d13138;
+    color: #0E99C9;
+    font-weight: 600;
 }
 .subLink {
     padding-top: 20px;

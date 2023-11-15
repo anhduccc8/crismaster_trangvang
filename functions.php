@@ -263,7 +263,6 @@ function crismaster_pagination() {
 function wp_get_menu_array($current_menu='Main Menu') {
 
     $menu_array = wp_get_nav_menu_items($current_menu);
-
     $menu = array();
 
     function populate_children($menu_array, $menu_item)
@@ -276,6 +275,7 @@ function wp_get_menu_array($current_menu='Main Menu') {
                     $children[$m->ID]['ID'] = $m->ID;
                     $children[$m->ID]['title'] = $m->title;
                     $children[$m->ID]['url'] = $m->url;
+                    $children[$m->ID]['object_id'] = $m->object_id;
                     unset($menu_array[$k]);
                     $children[$m->ID]['children'] = populate_children($menu_array, $m);
                 }
@@ -290,6 +290,7 @@ function wp_get_menu_array($current_menu='Main Menu') {
             $menu[$m->ID]['ID'] = $m->ID;
             $menu[$m->ID]['title'] = $m->title;
             $menu[$m->ID]['url'] = $m->url;
+            $menu[$m->ID]['object_id'] = $m->object_id;
             $menu[$m->ID]['children'] = populate_children($menu_array, $m);
         }
     }
@@ -322,7 +323,7 @@ function custom_polylang_langswitcher() {
     $langs_array = pll_the_languages( array( 'dropdown' => 1, 'hide_current' => 0, 'raw' => 1 ) );
     $current_language = function_exists('pll_current_language') ? pll_current_language() : '';
     if ($langs_array) : ?>
-        <a class="text-uppercase <?php if ($current_language == $langs_array['en']['slug']) echo 'active'; ?>" href="<?= $langs_array['en']['url'] ?>"><?= $langs_array['en']['slug'] ?></a><em>|</em><a class="text-uppercase <?php if ($current_language == $langs_array['vi']['slug']) echo 'active'; ?>" href="<?= $langs_array['vi']['url'] ?>"><?= $langs_array['vi']['slug'] ?></a>
+        <a class="text-uppercase <?php if ($current_language == $langs_array['vi']['slug']) echo 'active'; ?>" href="<?= $langs_array['vi']['url'] ?>"><?= $langs_array['vi']['slug'] ?></a><em>|</em><a class="text-uppercase <?php if ($current_language == $langs_array['en']['slug']) echo 'active'; ?>" href="<?= $langs_array['en']['url'] ?>"><?= $langs_array['en']['slug'] ?></a>
     <?php endif;
 }
 add_shortcode( 'polylang_langswitcher', 'custom_polylang_langswitcher' );

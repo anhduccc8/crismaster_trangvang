@@ -16,8 +16,8 @@ jQuery(document).ready(function($) {
             nav: false,
             items: 3,
             autoplay: false,
-            dotsData: true,
-            dotsClass: 'shs-nav-number shs-nav-number-news',
+            dotsData: false,
+            // dotsClass: 'shs-nav-number shs-nav-number-news',
         });
     }
     if ($('.owl-carousel.lich-su-thanh-lap').length > 0 ){
@@ -81,6 +81,69 @@ jQuery(document).ready(function($) {
             });
         }, 1000);
     }
+    if ($('nav .submenu').length > 0){
+        setTimeout(function () {
+            var menuItems = document.querySelectorAll('.submenu .child-menu-a');
+            menuItems.forEach(function(item) {
+                item.addEventListener('mouseover', function() {
+                    var siblingsBefore  = getSiblings(item, 'previous');
+                    siblingsBefore .forEach(function(sibling) {
+                        sibling.classList.remove('active');
+                        sibling.classList.add('no-active-up');
+                    });
+                    var siblingsAfter  = getSiblings(item, 'next');
+                    siblingsAfter .forEach(function(sibling) {
+                        sibling.classList.remove('active');
+                        sibling.classList.add('no-active-down');
+                    });
+                    item.classList.remove('no-active-up');
+                    item.classList.remove('no-active-down');
+                    item.classList.add('active');
+                });
+                item.addEventListener('mouseout', function() {
+                    item.classList.remove('active');
+                    item.classList.remove('no-active-up');
+                    item.classList.remove('no-active-down');
+                });
+            });
+            var submenu = document.querySelector('.submenu');
+            submenu.addEventListener('mouseout', function() {
+                menuItems.forEach(function(item) {
+                    item.classList.remove('active');
+                    item.classList.remove('no-active-up');
+                    item.classList.remove('no-active-down');
+                });
+            });
+        }, 1000);
+    }
+    function getSiblings(element,direction) {
+        var siblings = [];
+        var sibling = (direction === 'next') ? element.nextSibling : element.previousSibling;
+
+        while (sibling) {
+            if (sibling.nodeType === 1) {
+                siblings.push(sibling);
+            }
+            sibling = (direction === 'next') ? sibling.nextSibling : sibling.previousSibling;
+        }
+
+        return siblings;
+    }
+
+    function getSiblingss(element) {
+        var siblings = [];
+        var sibling = element.parentNode.firstChild;
+
+        while (sibling) {
+            if (sibling.nodeType === 1 && sibling !== element) {
+                siblings.push(sibling);
+            }
+            sibling = sibling.nextSibling;
+        }
+
+        return siblings;
+    }
+
 
 
     // $(".js-window-trigger").each(function () {

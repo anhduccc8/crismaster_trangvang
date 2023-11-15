@@ -49,10 +49,19 @@ $mobile = wp_is_mobile();
                 }else{
                     $menu_items = wp_get_menu_array('26');
                 }
-
+                $object = get_queried_object();
                 if (!empty($menu_items)){
                     foreach ($menu_items as $menu) { ?>
-                        <li><a href="<?= $menu['url'] ?>" class="text-uppercase" id="id-<?= $menu['ID'] ?>"><?php esc_attr_e( $menu['title'], 'crismaster'); ?></a></li>
+                        <li class="<?php if (!empty($menu['children'])){ echo 'hasSub'; } ?> ">
+                            <a href="<?= $menu['url'] ?>" class="text-uppercase <?php if ($menu['object_id'] == $object->ID){ echo 'active'; } ?>" id="id-<?= $menu['ID'] ?>"><?php esc_attr_e( $menu['title'], 'crismaster'); ?></a>
+                        <?php if (!empty($menu['children'])){ ?>
+                            <div class="submenu">
+                            <?php foreach ($menu['children'] as $child1){ ?>
+                                <a href="<?= $child1['url'] ?>" class="child-menu-a text-uppercase" id="id-<?= $child1['ID'] ?>"><?php esc_attr_e( $child1['title'], 'crismaster'); ?></a>
+                            <?php } ?>
+                            </div>
+                        <?php } ?>
+                        </li>
                  <?php   }
                 }
                 ?>

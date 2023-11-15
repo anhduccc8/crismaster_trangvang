@@ -71,11 +71,11 @@ $mobile = wp_is_mobile(); ?>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <p class="copy-right">Copyright © 2023 HSH. Designed by <a target="_blank" href="https://innocom.vn/">Innocom</a></p>
-                </div>
             </div>
         </div>
+    </div>
+    <div class="shs-copy-right">
+        <span class="copy-right text-center">Copyright © 2023 HSH. Designed by <a target="_blank" href="https://innocom.vn/">Innocom</a></span>
     </div>
 </footer>
 

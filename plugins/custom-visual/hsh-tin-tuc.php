@@ -79,7 +79,7 @@ function hsh_tin_tuc_func($atts,$content = null){
     ob_start();
     $mobile = wp_is_mobile();
     ?>
-    <section class="shs-section-widget bg-img-section shs-section-blog" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-blog.png');">
+    <section class="shs-section-widget bg-img-section shs-section-blog" id="tin-tuc-ele" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-blog.png');">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -153,6 +153,13 @@ function hsh_tin_tuc_func($atts,$content = null){
                         <?php $t++; } } ?>
              <?php } ?>
             </div>
+        </div>
+        <div class="shs-nav-number">
+            <div class="nav-number"><a href="#">01</a></div>
+            <div class="nav-number"><a href="#ve-chung-toi-ele">02</a></div>
+            <div class="nav-number"><a href="#">03</a></div>
+            <div class="nav-number active text-black"><a href="#tin-tuc-ele">04</a></div>
+            <div class="nav-number"><a href="#">05</a></div>
         </div>
     </section>
     <?php
