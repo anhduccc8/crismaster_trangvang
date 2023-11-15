@@ -361,6 +361,9 @@ span.copy-right a {
     .submenu {
         border-left: unset;
     }
+    .shs-sub-heading-bottom {
+        letter-spacing: 1.8px;
+    }
 }
 @media (max-width: 991px) {
 .shs-ceo-meta .shs-name {
@@ -430,10 +433,48 @@ span.copy-right a {
     span.copy-right {
         font-size: 15px;
     }
+    .shs-btn-about .btn-main {
+        scale: 0.7;
+    }
+    .item-about .item-about-title {
+        font-size: 18px;
+    }
+    #nav > li > a {
+        font-size: 20px;
+    }
+    .submenu {
+        margin-left: 30px;
+    }
 }
 
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 550px) {
     span.copy-right {
         font-size: 14px;
+    }
+
+    .item-about .item-about-title {
+        font-size: 16px;
+    }
+
+    .shs-heading-meta .shs-heading {
+        font-size: 27px;
+    }
+
+    .item-blog .btn-main {
+        height: 40px;
+        line-height: 40px;
+        padding: 0px 22px;
+    }
+    .shs-section-blog {
+        padding-bottom: 0;
+    }
+    #nav > li > a {
+        font-size: 18px;
+    }
+    .submenu {
+        margin-left: 30px;
+    }
+    .shs-sub-heading-bottom {
+        letter-spacing: 1px;
     }
 }
