@@ -2,7 +2,7 @@
 $pre_text = 'VG ';
 if(function_exists('vc_map')){
     vc_map(array(
-        'name' => esc_html__($pre_text.'Lĩnh vực hoạt động','crismaster'),
+        'name' => esc_html__($pre_text.'Lĩnh vực hoạt động & tuyển dụng','crismaster'),
         'base' => 'p3_linh_vuc_hoat_dong',
         'class' => '',
         'icon' => 'icon-st',
@@ -10,7 +10,7 @@ if(function_exists('vc_map')){
         'params' => array(
             array(
                 'type' => 'param_group',
-                'heading' => esc_html__('Thêm các lĩnh vực hoạt động','crismaster'),
+                'heading' => esc_html__('Thêm các lĩnh vực hoạt động/tuyển dụng','crismaster'),
                 'param_name' => 'details',
                 'value' => '',
                 'description' => esc_html__('','crismaster'),
@@ -45,6 +45,13 @@ if(function_exists('vc_map')){
                             'Style 2' => '2',
                         ),
                         'std' => '1', // Default selected option
+                    ),
+                    array(
+                        'type' => 'textfield',
+                        'heading' => esc_html__('Link','crismaster'),
+                        'param_name' => 'slink',
+                        'value' => '',
+                        'description' => esc_html__('Nhập link nếu muốn xuất hiện button',"crismaster")
                     ),
                 ),
             ),
@@ -84,6 +91,11 @@ function p3_linh_vuc_hoat_dong_func($atts,$content = null){
                                 <div class="activity-description u-fade-type-left js-scroll-trigger">
                                     <?= esc_html__($dca['sdesc'],'crismaster') ?>
                                 </div>
+                                <?php if (isset($dca['slink']) && $dca['slink'] != ''){ ?>
+                                    <div class="shs-btn-about">
+                                        <a class="btn-main" href="<?= esc_url($dca['slink']) ?>"><?= esc_html__('ỨNG TUYỂN','crismaster') ?></a>
+                                    </div>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
@@ -99,6 +111,11 @@ function p3_linh_vuc_hoat_dong_func($atts,$content = null){
                                 <div class="activity-description color-dark u-fade-type-left js-scroll-trigger">
                                     <?= esc_html__($dca['sdesc'],'crismaster') ?>
                                 </div>
+                                <?php if (isset($dca['slink']) && $dca['slink'] != ''){ ?>
+                                <div class="shs-btn-about">
+                                    <a class="btn-main" href="<?= esc_url($dca['slink']) ?>"><?= esc_html__('ỨNG TUYỂN','crismaster') ?></a>
+                                </div>
+                                <?php } ?>
                             </div>
                         </div>
                         <div class="col-12-ct col-6-ct shs-item-activity mobile-hide">

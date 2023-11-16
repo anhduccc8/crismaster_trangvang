@@ -364,6 +364,9 @@ span.copy-right a {
     .shs-sub-heading-bottom {
         letter-spacing: 1.8px;
     }
+    .shs-item-activity-cus .shs-btn-about {
+        margin: 12px 0px 0px 0px;
+    }
 }
 @media (max-width: 991px) {
 .shs-ceo-meta .shs-name {
@@ -455,6 +458,9 @@ span.copy-right a {
     .about-03-description {
         font-size: 20px;
         line-height: 32px;
+    }
+    .shs-item-activity-cus .shs-btn-about {
+        margin: 12px 0px 0px -22px;
     }
 }
 
