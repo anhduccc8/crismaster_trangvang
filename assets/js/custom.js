@@ -116,23 +116,64 @@ jQuery(document).ready(function($) {
             });
         }, 1000);
     }
-    if ($('.shs-nav-number a[href^="#"]').length > 0){
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
+    // if ($('.shs-nav-number a[href^="#"]').length > 0){
+    //         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    //             anchor.addEventListener('click', function (e) {
+    //                 e.preventDefault();
+    //
+    //                 const targetId = this.getAttribute('href').substring(1);
+    //                 const targetElement = document.getElementById(targetId);
+    //
+    //                 if (targetElement) {
+    //                     // Scroll smoothly to the target element
+    //                     window.scrollTo({
+    //                         top: targetElement.offsetTop,
+    //                         behavior: 'smooth'
+    //                     });
+    //                 }
+    //             });
+    //         });
+    // }
+    if ($('#scroll-bullets').length > 0){
+        var sections = document.querySelectorAll("section");
+        const bulletsContainer = document.getElementById("scroll-bullets");
 
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
+        sections.forEach((section, index) => {
+            const bullet = document.createElement("div");
+            bullet.classList.add("nav-number");
+            bullet.textContent = (index < 9) ? ('0'+(index + 1)) : (index + 1);
+            bullet.addEventListener("click", () => scrollToSection(index));
+            bulletsContainer.appendChild(bullet);
+        });
+        function scrollToSection(index) {
+            sections[index].scrollIntoView({ behavior: "smooth" });
+        }
 
-                    if (targetElement) {
-                        // Scroll smoothly to the target element
-                        window.scrollTo({
-                            top: targetElement.offsetTop,
-                            behavior: 'smooth'
+        function updateActiveBullet() {
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            sections.forEach((section, index) => {
+
+                const sectionTop = section.offsetTop;
+                const sectionBottom = sectionTop + section.clientHeight;
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    const bullet = bulletsContainer.childNodes[index+1];
+                    if (bullet && bullet.nodeType === 1 && bullet.classList) {
+                        bulletsContainer.childNodes.forEach((otherBullet, otherBulletIndex) => {
+                            if (otherBullet.nodeType === 1 && otherBullet.classList) {
+                                otherBullet.classList.remove("active");
+                            }
                         });
+                        bullet.classList.add("active");
                     }
-                });
+                }
             });
+        }
+        setTimeout(function () {
+            window.addEventListener("scroll", updateActiveBullet);
+            window.addEventListener("resize", updateActiveBullet);
+            updateActiveBullet();
+        },1000);
     }
 
     function getSiblings(element,direction) {

@@ -49,7 +49,7 @@ function thanh_tuu_func($atts,$content = null){
     ob_start();
     $mobile = wp_is_mobile();
     ?>
-    <section class="shs-section-widget bg-img-section shs-section-about-02" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-about-02.jpg');">
+    <section class="shs-section-widget bg-img-section shs-section-about-02" id="thanh-tuu-ele" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-about-02.jpg');">
         <div class="bg-img-section bg-img-mobile" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-about-mobile-02.jpg');"></div>
         <div class="container-fluid">
         <?php if(isset($details) && $details != ''){

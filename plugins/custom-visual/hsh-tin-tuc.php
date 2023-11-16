@@ -154,7 +154,7 @@ function hsh_tin_tuc_func($atts,$content = null){
              <?php } ?>
             </div>
         </div>
-        <div class="shs-nav-number">
+        <div class="shs-nav-number hide">
             <div class="nav-number"><a href="#bannerHome">01</a></div>
             <div class="nav-number"><a href="#ve-chung-toi-ele">02</a></div>
             <div class="nav-number"><a href="#">03</a></div>

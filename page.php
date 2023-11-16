@@ -11,12 +11,9 @@ if (isset($theme_option['banner_logo_1']['url'])){
 }
 ?>
 
-<div class="shs-header-custom bg-img-section" id="bannerHome">
+<section class="shs-header-custom bg-img-section" id="bannerHome">
     <div class="shs-slide container-fluidd">
         <div class="slider-content">
-<!--            <video class="video-display" autoplay muted loop playsinline>-->
-<!--                <source src="https://www.youtube.com/embed/M9bGM2nly2Q?si=DXuH2g-16cDvmkt8?autoplay=1" type="video/mp4">-->
-<!--            </video>-->
             <video id="myVideo" class="video-display" autoplay muted loop playsinline src="https://hshgroup.co/video/HSH.mp4"></video>
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
@@ -28,7 +25,7 @@ if (isset($theme_option['banner_logo_1']['url'])){
                     }
                 });
             </script>
-            <div class="shs-nav-number">
+            <div class="shs-nav-number hide">
                 <div class="nav-number active"><a href="#">01</a></div>
                 <div class="nav-number"><a href="#ve-chung-toi-ele">02</a></div>
                 <div class="nav-number"><a href="#">03</a></div>
@@ -40,7 +37,7 @@ if (isset($theme_option['banner_logo_1']['url'])){
     <a class="scrolldown js-scrollCt" href="#">
         <img class="ar" src="<?= get_template_directory_uri() ?>/assets/images/vector-1.png">
     </a>
-</div>
+</section>
 <?php if(have_posts()):
     while ( have_posts() ) : the_post(); ?>
         <main class="site-content">

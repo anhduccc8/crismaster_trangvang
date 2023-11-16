@@ -82,7 +82,11 @@ $mobile = wp_is_mobile(); ?>
 <a href="#" class="scroll-top on">
     <i class="zmdi zmdi-long-arrow-up"></i>
 </a>
-
+<?php
+if (is_front_page()) { ?>
+    <div class="footer-nav-number shs-nav-number" id="scroll-bullets">
+    </div>
+<?php } ?>
 <div id="preloader" class="helper-hide">
     <div class="loader helper-centerbox">
         <svg class="circular" viewBox="25 25 50 50">

@@ -312,6 +312,15 @@
 .shs-nav-number .nav-number.active.text-black a {
     color: #000;
 }
+#scroll-bullets {
+    position: fixed;
+    top: 50%;
+    right: 67px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 span.copy-right {
     text-align: center;
     font-size: 19px;
@@ -323,6 +332,10 @@ span.copy-right {
 span.copy-right a {
     color: #767676;
     font-weight: 800;
+}
+.shs-nav-number .nav-number.active {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
 }
 @media (min-width: 768px) {
     #horizontal-image {
@@ -342,7 +355,7 @@ span.copy-right a {
     }
 }
 @media (max-width: 1299px) {
-    .shs-nav-number {
+    .shs-nav-number, #scroll-bullets {
         display: none;
     }
 }

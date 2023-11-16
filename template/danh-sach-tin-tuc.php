@@ -76,7 +76,7 @@ if (isset($theme_option['banner_logo_4']['url'])){
                                 ?>
                             </div>
                         </div>
-                        <div class="shs-nav-number-bottom">
+                        <div class="shs-nav-number-bottom hide">
                         <?php  crismaster_pagination(); ?>
                         </div>
                     </section>

@@ -100,7 +100,7 @@ function p4_list_tin_tuc_func($atts,$content = null){
              ?>
             </div>
         </div>
-        <div class="shs-nav-number-bottom">
+        <div class="shs-nav-number-bottom hide">
 
             <a href="#" class="nav-number">01</a>
             <a href="#" class="nav-number">02</a>
