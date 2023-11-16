@@ -445,6 +445,17 @@ span.copy-right a {
     .submenu {
         margin-left: 30px;
     }
+    .shs-section-about-03 {
+        padding: 120px 0 120px;
+        background-position: bottom left;
+    }
+    .shs-item-heading-03 {
+        font-size: 30px;
+    }
+    .about-03-description {
+        font-size: 20px;
+        line-height: 32px;
+    }
 }
 
 @media only screen and (max-width: 550px) {
