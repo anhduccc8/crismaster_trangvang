@@ -455,8 +455,10 @@ span.copy-right a {
     .item-about .item-about-title {
         font-size: 16px;
     }
-
-    .shs-heading-meta .shs-heading {
+    .shs-item-activity-cus .shs-heading-meta .shs-heading {
+        font-size: 22px;
+    }
+    .shs-section-activities .shs-heading-meta .shs-heading {
         font-size: 27px;
     }
 
@@ -470,11 +472,21 @@ span.copy-right a {
     }
     #nav > li > a {
         font-size: 18px;
+        padding-bottom: 10px;
     }
     .submenu {
         margin-left: 30px;
     }
-    .shs-sub-heading-bottom {
-        letter-spacing: 1px;
+    .shs-nav-year-inner i {
+        margin: 0 -5px;
+    }
+    .shs-nav-year-inner .fa-chevron-right {
+        transform: unset;
+    }
+    .owl-carousel.year-lich-su .owl-nav .owl-prev {
+        left: -15px;
+    }
+    .owl-carousel.year-lich-su .owl-nav .owl-next {
+        right: -15px;
     }
 }

@@ -615,7 +615,6 @@ nav {
 #nav > li > a.active,
 #nav > li > a:hover {
     color: #0E99C9;
-    font-weight: 700;
 }
 #nav > li > a {
     display: block;
