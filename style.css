@@ -337,6 +337,128 @@ span.copy-right a {
     color: #fff;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
 }
+.col-7-td {
+    width: 53%;
+    max-width: 53%;
+}
+.col-5-td {
+    width: 47%;
+    max-width: 47%;
+}
+.shs-section-td {
+    padding: 200px 150px 0;
+}
+
+.item-td-content .shs-heading-meta {
+    margin-bottom: 30px;
+}
+
+.item-td-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.td-description {
+    margin-bottom: 50px;
+}
+
+.item-img-member {
+    margin-top: 30px;
+}
+/* css form aplly */
+.hsh-form-apply {
+    width: 470px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 42px 35px 50px;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    text-align: center;
+    box-shadow: 0 0 10px rgb(149 149 149);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s cubic-bezier(0.645,0.045,0.355,1);
+}
+.hsh-form-apply:before {
+    position: absolute;
+    content: '';
+}
+.hsh-heading-form {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.form-input {
+    margin-bottom: 12px;
+}
+.form-input .form-control {
+    border-radius: 0;
+    min-height: 50px;
+}
+.hsh-update-file {
+    text-align: left;
+}
+label {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 20px 0 -4px;
+}
+.upload-file {
+    font-size: 16px;
+    font-weight: 700;
+}
+span {
+    font-size: 16px;
+    font-weight: 500;
+}
+.btn-form-apply {
+    max-height: 50px;
+    line-height: 50px;
+    display: block;
+    margin: 20px auto 0;
+}
+.btn-form-apply:hover {
+    background-color: #000;
+    color: #fff;
+}
+.hsh-form-apply.active {
+    top: 50%;
+    opacity: 1;
+    visibility: visible;
+}
+.btn-apply {
+    cursor: pointer;
+}
+.modal-backdrop-cus {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #000;
+    opacity: .5;
+}
+.modal-backdrop-cus.active {
+    display: block;
+}
+.hsh-form-apply input[type="text"] {
+    border-color: #ced4da;
+}
+.hsh-form-apply .close{
+    opacity: 1;
+    margin-right: -20px;
+    margin-top: -34px;
+}
+.hsh-form-apply .close span{
+    font-size: 30px;
+}
 @media (min-width: 768px) {
     #horizontal-image {
         display: flex;
@@ -380,6 +502,9 @@ span.copy-right a {
     .shs-item-activity-cus .shs-btn-about {
         margin: 12px 0px 0px 0px;
     }
+    .shs-section-td {
+        padding: 100px 0px 100px;
+    }
 }
 @media (max-width: 991px) {
 .shs-ceo-meta .shs-name {
@@ -406,6 +531,7 @@ span.copy-right a {
         transform: translateY(50px) !important;
         opacity: 0 !important;
     }
+
 }
 
 @media only screen and (max-width: 768px){
@@ -474,6 +600,23 @@ span.copy-right a {
     }
     .shs-item-activity-cus .shs-btn-about {
         margin: 12px 0px 0px -22px;
+    }
+    .shs-section-td {
+        padding: 70px 0 70px;
+    }
+    .col-12-ct {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .hsh-form-apply {
+        width: 300px;
+        padding: 42px 15px 50px;
+    }
+    .hsh-heading-form {
+        font-size: 20px;
     }
 }
 

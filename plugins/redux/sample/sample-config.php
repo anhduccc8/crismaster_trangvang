@@ -268,6 +268,15 @@ if (!class_exists("Redux_Framework_sample_config")) {
                             'subtitle' => __( '', 'crismaster' ),
                             'default' => '',
                         ),
+                    array(
+                        'id'       => 'banner_logo_5',
+                        'type'     => 'media',
+                        'url' => true,
+                        'title'    => __( 'Banner Tuyển dụng', 'crismaster' ),
+                        'desc'     => __( '', 'crismaster' ),
+                        'subtitle' => __( '', 'crismaster' ),
+                        'default' => '',
+                    ),
                 )
             );
             $this->sections[] = array(

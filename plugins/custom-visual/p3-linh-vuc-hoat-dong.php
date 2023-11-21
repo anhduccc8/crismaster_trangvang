@@ -2,7 +2,7 @@
 $pre_text = 'VG ';
 if(function_exists('vc_map')){
     vc_map(array(
-        'name' => esc_html__($pre_text.'Lĩnh vực hoạt động & tuyển dụng','crismaster'),
+        'name' => esc_html__($pre_text.'Lĩnh vực hoạt động','crismaster'),
         'base' => 'p3_linh_vuc_hoat_dong',
         'class' => '',
         'icon' => 'icon-st',
@@ -10,7 +10,7 @@ if(function_exists('vc_map')){
         'params' => array(
             array(
                 'type' => 'param_group',
-                'heading' => esc_html__('Thêm các lĩnh vực hoạt động/tuyển dụng','crismaster'),
+                'heading' => esc_html__('Thêm các lĩnh vực hoạt động','crismaster'),
                 'param_name' => 'details',
                 'value' => '',
                 'description' => esc_html__('','crismaster'),

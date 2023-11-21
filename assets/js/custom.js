@@ -175,6 +175,32 @@ jQuery(document).ready(function($) {
             updateActiveBullet();
         },1000);
     }
+    if ($('.hsh-form-apply').length > 0){
+        var formApply = document.querySelector('.hsh-form-apply');
+        var backdrop = document.querySelector('.modal-backdrop-cus');
+        var btnApplys = document.querySelectorAll('.btn-apply');
+        var btnCloses = document.querySelectorAll('.close');
+
+        btnApplys.forEach(function(btnApply) {
+            btnApply.addEventListener('click', function() {
+                formApply.classList.add('active');
+                backdrop.classList.add('active');
+            });
+        });
+        window.addEventListener('click', function(event) {
+            var positionTarget = event.target;
+            if (!formApply.contains(positionTarget) && ![...btnApplys].some(btnA => btnA.contains(positionTarget))) {
+                formApply.classList.remove('active');
+                backdrop.classList.remove('active');
+            }
+        });
+        btnCloses.forEach(function(btnClose) {
+            btnClose.addEventListener('click', function() {
+                formApply.classList.remove('active');
+                backdrop.classList.remove('active');
+            });
+        });
+    }
 
     function getSiblings(element,direction) {
         var siblings = [];

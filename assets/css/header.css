@@ -80,10 +80,11 @@
     }
 }
 
-.shs-header-custom, .slider-content img,
-.shs-header-custom, .slider-content .bgr-img {
-    min-height: 1080px;
-    position: relative;
+@media (min-width: 1199px) {
+    .shs-header-custom, .slider-content .bgr-img {
+        min-height: 1080px;
+        position: relative;
+    }
 }
 
 .site-header-desktop {

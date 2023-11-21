@@ -138,6 +138,12 @@
     .shs-section-about .shs-item-about {
         margin-bottom: 0;
     }
+    .shs-section-td {
+        padding: 100px 0px 100px;
+    }
+    .item-td-content {
+        max-width: 100%;
+    }
 
 
 }
@@ -251,6 +257,9 @@
         position: relative;
         width: 100%;
     }
+    .shs-section-td-02 .item-activity-content {
+        padding: 70px 15px 70px !important;
+    }
     .shs-introduce-content .bgr-map-right {
         left: 0;
     }
@@ -296,6 +305,22 @@
     }
     .shs-nav-year-inner i {
         font-size: 17px;
+    }
+    .shs-section-td {
+        padding: 70px 0 70px;
+    }
+
+    .item-td-content .shs-heading-meta:before {
+        top: 0;
+        bottom: 0;
+    }
+
+    .item-td-content .shs-history-meta {
+        padding-left: 20px;
+    }
+
+    .item-td-content .shs-heading-meta .shs-heading {
+        font-size: 26px;
     }
 
 }

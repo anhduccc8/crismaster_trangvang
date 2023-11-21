@@ -15,6 +15,8 @@ require_once get_template_directory() . '/plugins/custom-visual/p2-lich-su-thanh
 require_once get_template_directory() . '/plugins/custom-visual/p2-tam-nhin-su-menh.php';
 require_once get_template_directory() . '/plugins/custom-visual/p3-linh-vuc-hoat-dong.php';
 require_once get_template_directory() . '/plugins/custom-visual/p4-list-tin-tuc.php';
+require_once get_template_directory() . '/plugins/custom-visual/p5-tuyen-dung.php';
+require_once get_template_directory() . '/plugins/custom-visual/p5-tuyen-dung-2.php';
 
 // @ini_set( 'upload_max_size' , '64M' );
 // @ini_set( 'post_max_size', '64M');
@@ -330,6 +332,19 @@ add_shortcode( 'polylang_langswitcher', 'custom_polylang_langswitcher' );
 
 // Hook the custom_pll_the_languages function into the pll_the_languages filter
 add_filter('pll_the_languages', 'custom_pll_the_languages', 10, 2);
+
+add_action('wpcf7_mail_sent', 'custom_cf7_redirect');
+
+
+add_action('wpcf7_mail_sent', 'custom_cf7_redirect');
+function custom_cf7_redirect($contact_form) {
+    $form_id = $contact_form->id();
+    if ($form_id == '744b65b') {
+        $redirect_url = get_permalink('217');
+        wp_redirect($redirect_url);
+        exit();
+    }
+}
 
 function formatPhoneNumber($phoneNumber) {
     $phoneNumber = preg_replace("/[^0-9]/", "", $phoneNumber);
