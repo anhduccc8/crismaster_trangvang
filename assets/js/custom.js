@@ -176,6 +176,20 @@ jQuery(document).ready(function($) {
         },1000);
     }
     if ($('.hsh-form-apply').length > 0){
+        var current_lang = themeData.current_lang;
+        if (current_lang === 'en'){
+            document.querySelector('input[name="name-914"]').placeholder = "Enter fullname";
+            document.querySelector('input[name="phone"]').placeholder = "Enter phonenumber";
+            document.querySelector('input[name="address"]').placeholder = "Enter address";
+            document.querySelector('input[name="email"]').placeholder = "Enter email";
+            document.querySelector('input[name="vi-tri"]').placeholder = "Enter Interested position";
+            document.querySelector('.hsh-update-file label a').textContent = "Download CV";
+            document.querySelector('.hsh-heading-form p').textContent = "APPLY FOR JOB";
+            document.querySelector('a.upload-file').textContent = "Choose file";
+            document.querySelector('input[type="submit"]').value = "SEND INFORMATION";
+            document.querySelector('span.upload-file').textContent = "No files have been selected";
+        }
+        document.querySelector('input[type="file"]').style.opacity = "0";
         var formApply = document.querySelector('.hsh-form-apply');
         var backdrop = document.querySelector('.modal-backdrop-cus');
         var btnApplys = document.querySelectorAll('.btn-apply');
@@ -199,6 +213,16 @@ jQuery(document).ready(function($) {
                 formApply.classList.remove('active');
                 backdrop.classList.remove('active');
             });
+        });
+
+        var fileLink = document.querySelector('a.upload-file');
+        var fileInput = document.querySelector('input[type="file"]');
+
+        fileLink.addEventListener('click', function () {
+            fileInput.click();
+        });
+        fileInput.addEventListener('change', function () {
+            document.querySelector('span.upload-file').textContent = fileInput.files[0].name;
         });
     }
 

@@ -73,6 +73,10 @@ function crismaster_theme_scripts_styles(){
     wp_localize_script('3-js', 'themeData', array(
         'direc_url' => get_template_directory_uri().'/assets/'
     ));
+    $current_language = function_exists('pll_current_language') ? pll_current_language() : '';
+    wp_localize_script('custom-js', 'themeData', array(
+        'current_lang' => $current_language
+    ));
 }
 add_action( 'wp_enqueue_scripts', 'crismaster_theme_scripts_styles' );
 
@@ -339,8 +343,13 @@ add_action('wpcf7_mail_sent', 'custom_cf7_redirect');
 add_action('wpcf7_mail_sent', 'custom_cf7_redirect');
 function custom_cf7_redirect($contact_form) {
     $form_id = $contact_form->id();
-    if ($form_id == '744b65b') {
-        $redirect_url = get_permalink('217');
+    if ($form_id) {
+        $current_language = function_exists('pll_current_language') ? pll_current_language() : '';
+        if ($current_language == 'vi'){
+            $redirect_url = get_permalink('217');
+        }else{
+            $redirect_url = get_permalink('220');
+        }
         wp_redirect($redirect_url);
         exit();
     }
