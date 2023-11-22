@@ -49,7 +49,7 @@ function lich_su_thanh_lap_func($atts,$content = null){
     ob_start();
     $mobile = wp_is_mobile();
     ?>
-    <section class="shs-section-widget bg-img-section shs-section-history" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-history.jpg');">
+    <section class="shs-section-widget bg-img-section shs-section-history" id="p2-lich-su-thanh-lap" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-history.jpg');">
         <div class="container-fluid">
             <div class="row shs-item-history-inner item-history-content-cus">
                 <h3 class="shs-heading color-dark text-transform"><?= esc_html__('LỊCH SỬ THÀNH LẬP','crismaster') ?></h3>
