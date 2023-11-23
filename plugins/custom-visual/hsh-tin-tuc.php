@@ -80,13 +80,13 @@ function hsh_tin_tuc_func($atts,$content = null){
     $mobile = wp_is_mobile();
     ?>
     <section class="section shs-section-widget bg-img-section shs-section-blog" data-anchor="news" id="tin-tuc-ele news" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-blog.png');">
-        <div class="container-fluid">
+        <div class="container-fluid height-100vh">
             <div class="row">
                 <div class="col-12">
                     <div class="shs-heading-widget-blog">
                         <img alt="img-sub-heading-new" class="img-sub-heading-style-02" src="<?= get_template_directory_uri() ?>/assets/images/img-sub-heading-style-02.png">
                         <div class="shs-heading-meta">
-                            <h3 class="shs-heading"><?= esc_html__($title, 'crismaster') ?></h3>
+                            <h3 class="shs-heading fs-30-cus"><?= esc_html__($title, 'crismaster') ?></h3>
                         </div>
                     </div>
                 </div>

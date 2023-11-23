@@ -473,12 +473,108 @@ span {
 .fp-watermark {
     display: none;
 }
+.height-100vh {
+    height: 100vh;
+}
+@media screen and (min-width: 1200px) and (max-width: 1600px){
+    #fullpage .container-fluid {
+        max-width: 1140px;
+    }
+    #fullpage .shs-sub-heading-top {
+        font-size: 25px;
+        margin-top: 7px;
+    }
+    #fullpage h3 {
+        font-size: 45px;
+    }
+    #fullpage h3.fs-30-cus {
+        font-size: 45px;
+    }
+    #fullpage .shs-section-about .shs-heading-meta {
+        text-align: center;
+    }
+    #fullpage .shs-section-about .shs-heading-meta:before {
+        left: 14%;
+    }
+    #fullpage .shs-btn-about {
+        margin: 0 0 20px;
+    }
+    #fullpage  .btn-main {
+        height: 39px;
+        font-size: 12px;
+        line-height: unset;
+        padding: 12px 25px;
+    }
+    #fullpage .item-about .item-about-title {
+        font-size: 20px;
+    }
+    #fullpage .shs-description {
+        font-size: 15px;
+    }
+    #fullpage .shs-section-about {
+        padding: 40px 0 0px;
+    }
+    #fullpage .shs-sub-heading-bottom {
+        font-size: 25px;
+        letter-spacing: 1.4px;
+    }
+    #fullpage .shs-item-about-column {
+        margin-top: 20px;
+    }
+    #fullpage .shs-section-about-02 {
+        padding: 70px 0 0;
+    }
+    #fullpage #horizontal-image {
+        height: 100vh;
+        min-height: unset;
+    }
+    #fullpage .shs-item-about-02.row-1 {
+        margin: 0 auto 116px;
+    }
+    #fullpage .item-activiti-title {
+        font-size: 26px;
+    }
+    #fullpage .item-activiti-title-hover {
+        font-size: 30px;
+    }
+    #fullpage .shs-item-about-02 .item-about-number {
+        font-size: 115px;
+    }
+    #fullpage .item-about-meta-heading {
+        font-size: 23px;
+    }
+    #fullpage .shs-section-blog {
+        padding: 20px 0 20px;
+    }
+    #fullpage .shs-nav-number .nav-number {
+        font-size: 30px;
+    }
+    #fullpage .item-blog-title {
+        font-size: 17px;
+    }
+    #fullpage .item-blog-description {
+        font-size: 12px;
+        line-height: 24px;
+    }
+    #fullpage .item-blog-content {
+        padding: 12px 27px 12px;
+    }
+    #fullpage .shs-heading-widget-blog img {
+        bottom: -91px;
+        scale: 0.4;
+        left: -141px;
+    }
+     .shs-nav-number .nav-number {
+        font-size: 30px;
+    }
+}
+
 @media only screen and (min-width: 1700px) {
     #fullpage .shs-btn-about {
         margin: 21px 0 20px;
     }
 }
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1601px) {
     #fullpage h3 {
         font-size: 55px;
     }
