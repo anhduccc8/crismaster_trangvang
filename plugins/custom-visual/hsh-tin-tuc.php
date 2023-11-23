@@ -79,7 +79,7 @@ function hsh_tin_tuc_func($atts,$content = null){
     ob_start();
     $mobile = wp_is_mobile();
     ?>
-    <section class="shs-section-widget bg-img-section shs-section-blog" id="tin-tuc-ele" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-blog.png');">
+    <section class="section shs-section-widget bg-img-section shs-section-blog" data-anchor="news" id="tin-tuc-ele news" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-blog.png');">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -109,7 +109,7 @@ function hsh_tin_tuc_func($atts,$content = null){
                         $wp_query->the_post();
                         $single_image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'large');
                         ?>
-                        <div class="col-xs-12 shs-item-blog pd-l-r-15 u-fade-type-left js-scroll-trigger" data-dot='<div class="nav-number"><?php if($t < 10){ echo '0'; } ?><?= $t ?></div>'>
+                        <div class="col-xs-12 shs-item-blog pd-l-r-15 u-fade-type-left js-scroll-trigger">
                             <div class="item-blog item">
                                 <div class="item-image-blog">
                                     <img alt="img-blog-01" src="<?= esc_url($single_image[0]) ?>" style="width:100%">

@@ -49,7 +49,7 @@ function thanh_tuu_func($atts,$content = null){
     ob_start();
     $mobile = wp_is_mobile();
     ?>
-    <section class="shs-section-widget bg-img-section shs-section-about-02" id="thanh-tuu-ele" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-about-02.jpg');">
+    <section class="section shs-section-widget bg-img-section shs-section-about-02" data-anchor="achievement" id="thanh-tuu-ele achievement" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-about-02.jpg');">
         <div class="bg-img-section bg-img-mobile" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-about-mobile-02.jpg');"></div>
         <div class="container-fluid">
         <?php if(isset($details) && $details != ''){
@@ -57,9 +57,9 @@ function thanh_tuu_func($atts,$content = null){
             $t1 = 1;
             $class = array(
                 '1' => 'left',
-                '2' => 'left',
+                '2' => 'right',
                 '3' => 'left',
-                '4' => 'left',
+                '4' => 'right',
             );
             $detailss = vc_param_group_parse_atts($details,'');
             foreach ($detailss as $dca ) {

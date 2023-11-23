@@ -97,7 +97,7 @@ function ve_chung_toi_func($atts,$content = null){
     ob_start();
     $mobile = wp_is_mobile();
     ?>
-    <section class="shs-section-widget bg-img-section shs-section-about pd-b-0-767" id="ve-chung-toi-ele" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-about.png');">
+    <section class="section shs-section-widget bg-img-section shs-section-about pd-b-0-767" data-anchor="about-us" id="ve-chung-toi-ele about-us" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-about.png');">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -120,7 +120,7 @@ function ve_chung_toi_func($atts,$content = null){
              $class = array(
                      '1' => 'left',
                      '2' => 'up',
-                     '3' => 'left',
+                     '3' => 'right',
              );
             foreach ($detailss as $dca ) {
                 if(isset($dca['simage']) && $dca['simage']!='') {

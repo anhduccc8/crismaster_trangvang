@@ -1,5 +1,25 @@
 jQuery(document).ready(function($) {
     var desktop_width = $(window).width();
+    console.log(desktop_width);
+    if ($('#fullpage').length > 0 && desktop_width > 1200){
+        var myFullpage = new fullpage('#fullpage', {
+            menu: '#scroll-bullets',
+            anchors: ['hsh-thang-long', 'about-us', 'field-activity','achievement','news','contact'],
+            navigation: false,
+            scrollOverflow: false,
+            onLeave: function(origin, destination, direction) {
+                if (origin.index === 1) {
+                    pauseVideo();
+                }
+            },
+            afterLoad: function(origin, destination, direction) {
+                loadEle();
+                if (destination.index === 0) {
+                    playVideo();
+                }
+            }
+        });
+    }
     if ($('.owl-carousel.linh-vuc-hoat-dong').length > 0 && desktop_width > 767){
         $('.owl-carousel.linh-vuc-hoat-dong').owlCarousel({
             loop: true,
@@ -125,7 +145,6 @@ jQuery(document).ready(function($) {
     //                 const targetElement = document.getElementById(targetId);
     //
     //                 if (targetElement) {
-    //                     // Scroll smoothly to the target element
     //                     window.scrollTo({
     //                         top: targetElement.offsetTop,
     //                         behavior: 'smooth'
@@ -134,7 +153,7 @@ jQuery(document).ready(function($) {
     //             });
     //         });
     // }
-    if ($('#scroll-bullets').length > 0){
+    if ($('#sscroll-bullets').length > 0){
         var sections = document.querySelectorAll("section");
         const bulletsContainer = document.getElementById("scroll-bullets");
 
@@ -239,7 +258,6 @@ jQuery(document).ready(function($) {
 
         return siblings;
     }
-
     function getSiblingss(element) {
         var siblings = [];
         var sibling = element.parentNode.firstChild;
@@ -253,13 +271,15 @@ jQuery(document).ready(function($) {
 
         return siblings;
     }
-
-
-
-    // $(".js-window-trigger").each(function () {
-    //     $(this).addClass('is-active');
-    // });
-    $(window).scroll(function () {
+    function pauseVideo() {
+        var video = document.getElementById('myVideo');
+        video.pause();
+    }
+    function playVideo() {
+        var video = document.getElementById('myVideo');
+        video.play();
+    }
+    function loadEle(){
         $(".js-scroll-trigger").each(function () {
             let position = $(this).offset().top,
                 scroll = $(window).scrollTop(),
@@ -268,6 +288,11 @@ jQuery(document).ready(function($) {
                 $(this).addClass('is-active');
             }
         });
-    });
-    $(window).trigger('scroll');
+    }
+    if ($('#fullpage').length == 0 || ($('#fullpage').length > 0 && desktop_width <= 1200)){
+        $(window).scroll(function () {
+            loadEle();
+        });
+        $(window).trigger('scroll');
+    }
 });
