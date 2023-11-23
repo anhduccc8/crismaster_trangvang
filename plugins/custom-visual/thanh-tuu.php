@@ -66,7 +66,7 @@ function thanh_tuu_func($atts,$content = null){
                 if ($t%2 == 1){ ?>
                     <div class="row shs-item-about-02 row-<?= $t1 ?>">
                  <?php   } ?>
-                        <div class="col-sm-12 col-xl-6 about-column u-fade-type-<?= $class[$t] ?> js-scroll-trigger">
+                        <div class="col-sm-12 col-xl-6 about-column <?php if ($mobile){ echo 'u-fade-type-left'; }else{ echo 'u-fade-type-'.$class[$t]; } ?> js-scroll-trigger">
                     <div class="shs-content-inner">
                         <div class="shs-meta-number text-center">
                             <div class="item-about-number t-shadow"><?= $dca['stitle'] ?></div>

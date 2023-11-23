@@ -130,7 +130,7 @@ function ve_chung_toi_func($atts,$content = null){
                     $dca['simage2'] = wp_get_attachment_image_src($dca['simage2'], '');
                 }
                 ?>
-                <div class="col-4 shs-item-about mr-b-0-767 p-lr-lg-0 u-fade-type-<?= $class[$t] ?> js-scroll-trigger <?php if ($t == 2){ echo 'text-center'; } ?>">
+                <div class="col-4 shs-item-about mr-b-0-767 p-lr-lg-0 <?php if ($mobile){ echo 'u-fade-type-left'; }else{ echo 'u-fade-type-'.$class[$t]; } ?> js-scroll-trigger <?php if ($t == 2){ echo 'text-center'; } ?>">
                     <?php if ($t==2){ ?>
                         <div class="shs-btn-about">
                             <a class="btn-main" href="<?= esc_url($link) ?>"><?= esc_html__('ĐỌC THÊM','crismaster') ?></a>
