@@ -66,16 +66,18 @@ function p3_linh_vuc_hoat_dong_func($atts,$content = null){
     ob_start();
     $mobile = wp_is_mobile();
     ?>
-    <section class="shs-section-widget bg-img-section shs-section-activity">
-        <div class="container-fluid">
-        <?php if(isset($details) && $details != ''){
-            $detailss = vc_param_group_parse_atts($details,'');
-            foreach ($detailss as $dca ) {
-                if(isset($dca['simage']) && $dca['simage']!='') {
-                    $dca['simage'] = wp_get_attachment_image_src($dca['simage'], '');
-                }
-                if ($dca['style'] == '1'){ ?>
-                    <div class="row shs-item-activity-inner">
+
+    <?php if(isset($details) && $details != ''){
+        $detailss = vc_param_group_parse_atts($details,'');
+        $t = 1;
+        foreach ($detailss as $dca ) {
+            if(isset($dca['simage']) && $dca['simage']!='') {
+                $dca['simage'] = wp_get_attachment_image_src($dca['simage'], '');
+            }
+            if ($dca['style'] == '1'){ ?>
+                <section class="section shs-section-widget bg-img-section shs-section-activity" data-anchor="linh-vuc-<?= $t ?>" id="linh-vuc-<?= $t ?>-ele linh-vuc-<?= $t ?>">
+                    <div class="container-fluid">
+                         <div class="row shs-item-activity-inner">
                         <div class="col-12-ct col-6-ct shs-item-activity mobile-hide">
                             <div class="item-image-activity">
                                 <img alt="img-activity-01" src="<?= esc_url($dca['simage'][0]) ?>" style="width:100%">
@@ -99,8 +101,12 @@ function p3_linh_vuc_hoat_dong_func($atts,$content = null){
                             </div>
                         </div>
                     </div>
-                <?php }else{ ?>
-                    <div class="row shs-item-activity-inner">
+                    </div>
+                </section>
+            <?php }else{ ?>
+                <section class="section shs-section-widget bg-img-section shs-section-activity" data-anchor="linh-vuc-<?= $t ?>" id="linh-vuc-<?= $t ?>-ele linh-vuc-<?= $t ?>">
+                    <div class="container-fluid">
+                         <div class="row shs-item-activity-inner">
                         <div class="col-12-ct col-6-ct shs-item-activity shs-activity-content content-left shs-item-activity-cus" style="background-image: url('<?= esc_url($dca['simage'][0]) ?>'">
                             <div class="overlay overlay-2"></div>
                             <div class="item-activity-content">
@@ -124,11 +130,10 @@ function p3_linh_vuc_hoat_dong_func($atts,$content = null){
                             </div>
                         </div>
                     </div>
-                <?php }
-            ?>
-            <?php  } } ?>
-        </div>
-    </section>
+                    </div>
+                </section>
+    <?php } $t++; } } ?>
+
     <?php
     return ob_get_clean();
 }

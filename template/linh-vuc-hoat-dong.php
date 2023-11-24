@@ -16,7 +16,7 @@ if (isset($theme_option['banner_logo_3']['url'])){
         <main class="site-content">
             <div class="container-fluiddd">
                 <div class="row-custom js-window-trigger is-active" id="fullpage3">
-                    <section class="section shs-header-custom">
+                    <section class="section shs-header-custom" data-anchor="banner" id="banner-ele banner">
                         <div class="shs-slide container-fluidd">
                             <div class="slider-content slide-page-new">
                                 <?php if (isset($banner_logo_3) && $banner_logo_3 != '') { ?>
@@ -105,6 +105,15 @@ if (isset($theme_option['banner_logo_3']['url'])){
                 </div>
             </div>
         </main>
+        <div class="footer-nav-number shs-nav-number" id="scroll-bullets">
+            <div class="nav-number" data-menuanchor="banner"><a href="#banner">01</a></div>
+            <div class="nav-number" data-menuanchor="linh-vuc-1"><a href="#linh-vuc-1">02</a></div>
+            <div class="nav-number" data-menuanchor="linh-vuc-2"><a href="#linh-vuc-2">03</a></div>
+            <div class="nav-number" data-menuanchor="linh-vuc-3"><a href="#linh-vuc-3">04</a></div>
+            <div class="nav-number" data-menuanchor="linh-vuc-4"><a href="#linh-vuc-4">05</a></div>
+            <div class="nav-number" data-menuanchor="linh-vuc-5"><a href="#linh-vuc-5">06</a></div>
+            <div class="nav-number" data-menuanchor="contact"><a href="#contact">07</a></div>
+        </div>
     <?php
     endwhile;
 endif;

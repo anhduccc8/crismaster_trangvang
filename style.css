@@ -630,6 +630,12 @@ span {
     #fullpage2 .shs-item-heading-03 {
         font-size: 45px;
     }
+    #fullpage3 .shs-heading {
+        font-size: 35px;
+    }
+    #fullpage3 .activity-description {
+        font-size: 20px;
+    }
 }
 
 @media only screen and (min-width: 1700px) {

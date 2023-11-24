@@ -31,6 +31,17 @@ jQuery(document).ready(function($) {
             }
         });
     }
+    if ($('#fullpage3').length > 0 && desktop_width > 1200){
+        var myFullpage = new fullpage('#fullpage3', {
+            menu: '#scroll-bullets',
+            anchors: ['banner', 'linh-vuc-1', 'linh-vuc-2','linh-vuc-3','linh-vuc-4','linh-vuc-5','contact'],
+            navigation: false,
+            scrollOverflow: false,
+            afterLoad: function(origin, destination, direction) {
+                loadEle();
+            }
+        });
+    }
     if ($('.owl-carousel.linh-vuc-hoat-dong').length > 0 && desktop_width > 767){
         $('.owl-carousel.linh-vuc-hoat-dong').owlCarousel({
             loop: true,
