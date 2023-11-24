@@ -42,6 +42,17 @@ jQuery(document).ready(function($) {
             }
         });
     }
+    if ($('#fullpage4').length > 0 && desktop_width > 1200){
+        var myFullpage = new fullpage('#fullpage4', {
+            menu: '#scroll-bullets',
+            anchors: ['banner', 'moi-truong', 'chinh-sach','contact'],
+            navigation: false,
+            scrollOverflow: false,
+            afterLoad: function(origin, destination, direction) {
+                loadEle();
+            }
+        });
+    }
     if ($('.owl-carousel.linh-vuc-hoat-dong').length > 0 && desktop_width > 767){
         $('.owl-carousel.linh-vuc-hoat-dong').owlCarousel({
             loop: true,

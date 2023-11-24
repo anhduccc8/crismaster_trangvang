@@ -34,7 +34,7 @@ function p5_tuyen_dung_1_func($atts,$content = null){
     ob_start();
     $mobile = wp_is_mobile();
     ?>
-    <section class="shs-section-widget bg-img-section shs-section-td" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-td.jpg');">
+    <section class="section shs-section-widget bg-img-section shs-section-td" data-anchor="moi-truong" id="moi-truong-ele moi-truong" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-td.jpg');">
         <div class="container-fluid">
             <div class="row shs-item-td-inner">
                 <div class="col-12">

@@ -45,7 +45,7 @@ function p5_tuyen_dung_2_func($atts,$content = null){
         $image = wp_get_attachment_image_src($image, '');
     }
     ?>
-    <section class="shs-section-widget bg-img-section shs-section-activity shs-section-td-02">
+    <section class="section shs-section-widget bg-img-section shs-section-activity shs-section-td-02" data-anchor="chinh-sach" id="chinh-sach-ele chinh-sach">
         <div class="container-fluid">
             <div class="row shs-item-activity-inner">
                 <div class="col-12-ct col-7-td shs-item-activity shs-activity-content content-left">

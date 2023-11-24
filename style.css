@@ -633,7 +633,23 @@ span {
     #fullpage3 .shs-heading {
         font-size: 35px;
     }
-    #fullpage3 .activity-description {
+    #fullpage3 .activity-description,
+    #fullpage4 .activity-description {
+        font-size: 20px;
+    }
+    #fullpage4 .shs-heading {
+        font-size: 40px;
+    }
+    #fullpage4 .shs-section-td {
+        padding: 20px 150px 0;
+    }
+    #fullpage4 .btn-main {
+        height: 40px;
+        line-height: 40px;
+        padding: 0px 22px;
+    }
+    #fullpage4 .td-description {
+        margin-bottom: 15px;
         font-size: 20px;
     }
 }
