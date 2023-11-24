@@ -473,11 +473,30 @@ span {
 .fp-watermark {
     display: none;
 }
-.height-100vh {
-    height: 100vh;
+
+
+@media screen and (min-width: 1201px) {
+    .shs-section-blog {
+        padding: 20px 168px 0px 69px;
+    }
+    .shs-copy-right {
+        text-align: center;
+        height: 35px;
+        position: absolute;
+        bottom: 0;
+        background-color: #fff;
+        width: 100%;
+    }
+    .height-100vh {
+        height: 100vh;
+    }
 }
 @media screen and (min-width: 1200px) and (max-width: 1589px){
-    #fullpage .container-fluid {
+    .site-footer-main .shs-footer-main {
+        padding: 105px 0 300px 125px;
+    }
+    #fullpage .container-fluid,
+    #fullpage2 .container-fluid {
         max-width: 1140px;
     }
     #fullpage .shs-sub-heading-top {
@@ -567,6 +586,50 @@ span {
      .shs-nav-number .nav-number {
         font-size: 30px;
     }
+
+    #fullpage2 .item-image-activity, .item-image-activity img {
+         height: 100vh;
+     }
+    #fullpage2 .shs-section-activity .shs-heading {
+        font-size: 45px;
+    }
+    #fullpage2 .shs-section-activity .activity-description {
+        font-size: 20px;
+    }
+    #fullpage2 .shs-section-history {
+        padding: 0 160px;
+    }
+    #fullpage2 .shs-section-history h3.shs-heading {
+        font-size: 45px;
+    }
+    #fullpage2 .shs-heading-year {
+        margin: 20px 0 20px;
+    }
+    #fullpage2 .shs-history-description {
+        font-size: 20px;
+    }
+    #fullpage2 .shs-nav-year {
+        margin: 70px auto 0 auto;
+    }
+    #fullpage2 .shs-nav-year .nav-year {
+        font-size: 40px;
+    }
+    #fullpage2 .owl-carousel.year-lich-su .owl-nav .owl-prev,
+    #fullpage2 .owl-carousel.year-lich-su .owl-nav .owl-next{
+        top: 15px;
+    }
+    #fullpage2 .shs-slide .slider-content img {
+        height: 100vh;
+    }
+    #fullpage2 .shs-section-about-03 {
+        padding: 60px 70px 300px;
+    }
+    #fullpage2 .shs-section-about-03 .about-03-description {
+        font-size: 23px;
+    }
+    #fullpage2 .shs-item-heading-03 {
+        font-size: 45px;
+    }
 }
 
 @media only screen and (min-width: 1700px) {
@@ -574,7 +637,7 @@ span {
         margin: 21px 0 20px;
     }
 }
-@media only screen and (min-width: 1601px) {
+@media only screen and (min-width: 1590px) {
     #fullpage h3 {
         font-size: 55px;
     }
@@ -601,6 +664,10 @@ span {
     #fullpage .shs-item-about-02.row-1 {
         margin: 0 auto 198px;
     }
+    #fullpage2 .item-image-activity, .item-image-activity img {
+        height: 100vh;
+    }
+
 }
 
 @media (min-width: 768px) {

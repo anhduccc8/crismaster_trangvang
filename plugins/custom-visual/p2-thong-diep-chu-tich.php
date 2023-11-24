@@ -64,8 +64,8 @@ function p2_thong_diep_func($atts,$content = null){
         $images = get_template_directory_uri() .'/assets/images/img-column-06.jpg';
     }
     ?>
-    <section class="shs-section-widget bg-img-section shs-section-activity">
-        <div class="container-fluid">
+    <section class="section shs-section-widget bg-img-section shs-section-activity" data-anchor="thong-diep" id="thong-diep-ele thong-diep">
+        <div class="">
             <div class="row shs-item-activity-inner">
                 <div class="col-12-ct col-7-ct shs-item-activity shs-activity-image">
                     <div class="item-image-activity">
@@ -76,7 +76,7 @@ function p2_thong_diep_func($atts,$content = null){
                     <div class="item-activity-content">
                         <img class="bgr-map-right" alt="bgr-map-01" src="<?= get_template_directory_uri() ?>/assets/images/bgr-map-activity-01.png" style="width:100%">
                         <div class="shs-heading-meta u-fade-type-left js-scroll-trigger">
-                            <h3 class="shs-heading color-white text-transform style-03"><?= esc_html__($title, 'crismaster') ?></h3>
+                            <h3 class="shs-heading color-white text-transform style-03"><?= htmlspecialchars_decode($title) ?></h3>
                         </div>
                         <div class="activity-description u-fade-type-left js-scroll-trigger">
                             <?= esc_html__($desc, 'crismaster') ?>

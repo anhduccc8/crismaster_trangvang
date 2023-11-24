@@ -21,7 +21,7 @@
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
 	.site-footer-main .shs-footer-main {
-		min-height: 800px;
+		height: 100vh;
 		padding: 200px 0 300px;
 	}
 }

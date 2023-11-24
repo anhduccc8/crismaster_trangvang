@@ -50,7 +50,7 @@ function p2_tam_nhin_su_menh_func($atts,$content = null){
     ob_start();
     $mobile = wp_is_mobile();
     ?>
-    <section class="shs-section-widget bg-img-section shs-section-about-03" id="p2-tam-nhin-su-menh" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-03.jpg');">
+    <section class="section shs-section-widget bg-img-section shs-section-about-03" id="p2-tam-nhin-su-menh tam-nhin-su-menh" data-anchor="tam-nhin-su-menh" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-03.jpg');">
         <div class="container-fluid">
             <div class="row shs-item-about-02">
                 <div class="col-12 col-xl-6 about-column-03 row-01 u-fade-type-left js-scroll-trigger">

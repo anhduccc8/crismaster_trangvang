@@ -20,6 +20,17 @@ jQuery(document).ready(function($) {
             }
         });
     }
+    if ($('#fullpage2').length > 0 && desktop_width > 1200){
+        var myFullpage = new fullpage('#fullpage2', {
+            menu: '#scroll-bullets',
+            anchors: ['banner', 'thong-diep', 'lich-su-thanh-lap','tam-nhin-su-menh','contact'],
+            navigation: false,
+            scrollOverflow: false,
+            afterLoad: function(origin, destination, direction) {
+                loadEle();
+            }
+        });
+    }
     if ($('.owl-carousel.linh-vuc-hoat-dong').length > 0 && desktop_width > 767){
         $('.owl-carousel.linh-vuc-hoat-dong').owlCarousel({
             loop: true,
