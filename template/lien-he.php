@@ -5,7 +5,7 @@
 */
 get_header();
 ?>
-    <section class="section site-footer-main" data-anchor="contact" id="footer-id contact">
+    <section class="section site-footer-main position-relative" data-anchor="contact" id="footer-id contact">
         <div class="shs-footer-main position-relative" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-footer-01.jpg');">
             <div class="container-fluiddd">
                 <div class="container-default">

@@ -10,29 +10,30 @@ if (isset($theme_option['banner_logo_3']['url'])){
     $banner_logo_3 = $theme_option['banner_logo_3']['url'];
 }
 ?>
-<div class="shs-header-custom">
-    <div class="shs-slide container-fluidd">
-        <div class="slider-content slide-page-new">
-            <?php if (isset($banner_logo_3) && $banner_logo_3 != '') { ?>
-                <img class="bgr-img" src="<?php  echo esc_url($banner_logo_3) ?>" style="width:100%">
-            <?php }else{ ?>
-                <img class="bgr-img" src="<?= get_template_directory_uri() ?>/assets/images/slide-activity.jpg" style="width:100%">
-            <?php } ?>
-            <div class="shs-slide">
-                <div class="shs-heading-meta">
-                    <h3 class="shs-heading t-shadow color-white"><?= esc_html__('LĨNH VỰC HOẠT ĐỘNG','crismaster') ?></h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <?php if(have_posts()):
     while ( have_posts() ) : the_post(); ?>
         <main class="site-content">
             <div class="container-fluiddd">
-                <div class="row-custom js-window-trigger is-active">
+                <div class="row-custom js-window-trigger is-active" id="fullpage3">
+                    <section class="section shs-header-custom">
+                        <div class="shs-slide container-fluidd">
+                            <div class="slider-content slide-page-new">
+                                <?php if (isset($banner_logo_3) && $banner_logo_3 != '') { ?>
+                                    <img class="bgr-img" src="<?php  echo esc_url($banner_logo_3) ?>" style="width:100%">
+                                <?php }else{ ?>
+                                    <img class="bgr-img" src="<?= get_template_directory_uri() ?>/assets/images/slide-activity.jpg" style="width:100%">
+                                <?php } ?>
+                                <div class="shs-slide">
+                                    <div class="shs-heading-meta">
+                                        <h3 class="shs-heading t-shadow color-white"><?= esc_html__('LĨNH VỰC HOẠT ĐỘNG','crismaster') ?></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                     <?php the_content(); ?>
-                    <section class="section site-footer-main" data-anchor="contact" id="footer-id contact">
+                    <section class="section site-footer-main position-relative" data-anchor="contact" id="footer-id contact">
                         <div class="shs-footer-main position-relative" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-footer-01.jpg');">
                             <div class="container-fluiddd">
                                 <div class="container-default">
