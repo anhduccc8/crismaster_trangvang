@@ -476,7 +476,7 @@ span {
 .height-100vh {
     height: 100vh;
 }
-@media screen and (min-width: 1200px) and (max-width: 1600px){
+@media screen and (min-width: 1200px) and (max-width: 1589px){
     #fullpage .container-fluid {
         max-width: 1140px;
     }
