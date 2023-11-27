@@ -7,7 +7,16 @@ get_header();
 $theme_option = get_option('theme_option');
 if (isset($theme_option['banner_logo_4']['url'])){
     $banner_logo_4 = $theme_option['banner_logo_4']['url'];
-} ?>
+}
+if (isset($theme_option['footer_logo']['url'])){
+    $footer_logo = $theme_option['footer_logo']['url'];
+}
+$footer_name = $theme_option['footer_name'];
+$footer_address = $theme_option['footer_address'];
+$footer_address2 = $theme_option['footer_address2'];
+$footer_phone = $theme_option['footer_phone'];
+$footer_email = $theme_option['footer_email'];
+?>
     <div class="shs-header-custom">
         <div class="shs-slide container-fluidd">
             <div class="slider-content slide-page-new slide-single-blog">
@@ -76,7 +85,7 @@ if (isset($theme_option['banner_logo_4']['url'])){
                                 ?>
                             </div>
                         </div>
-                        <div class="shs-nav-number-bottom hide">
+                        <div class="shs-nav-number-bottom">
                         <?php  crismaster_pagination(); ?>
                         </div>
                     </section>

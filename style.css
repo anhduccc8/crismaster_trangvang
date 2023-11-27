@@ -470,6 +470,9 @@ span {
 .hsh-update-file p label {
     margin-bottom: 10px;
 }
+.shs-nav-number-bottom {
+    margin-bottom: 30px;
+}
 .fp-watermark {
     display: none;
 }
