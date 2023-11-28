@@ -46,12 +46,12 @@ function crismaster_theme_scripts_styles(){
 
     wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() .'/assets/css/bootstrap.css',array());
     wp_enqueue_style( 'font-css', get_template_directory_uri() .'/assets/font/fontawesome-free-6.0.0-web/css/all.min.css',array());
-    wp_enqueue_style( 'font-css-2', get_template_directory_uri() .'/assets/css/font-family.css',array());
+    wp_enqueue_style( 'font-css-2', get_template_directory_uri() .'/assets/css/font-family.css',array(),'1.0.2');
     wp_enqueue_style( '2-css', get_template_directory_uri() .'/assets/css/owl.carousel.css',array());
     wp_enqueue_style( '3-css', get_template_directory_uri() .'/assets/css/owl.theme.css',array());
     wp_enqueue_style( '4-css', get_template_directory_uri() .'/assets/css/owl.transitions.css',array());
-    wp_enqueue_style( 'font-css-3', 'https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap',array());
-    wp_enqueue_style( 'main-css', get_template_directory_uri() .'/assets/css/main.css',array(),'1.0.1');
+//    wp_enqueue_style( 'font-css-3', 'https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap',array());
+    wp_enqueue_style( 'main-css', get_template_directory_uri() .'/assets/css/main.css',array(),'1.0.4');
     wp_enqueue_style( 'slide-css', get_template_directory_uri() .'/assets/css/slide.css',array());
 //    wp_enqueue_style( 'header-css', get_template_directory_uri() .'/assets/css/header.css',array());
     wp_enqueue_style( 'footer-css', get_template_directory_uri() .'/assets/css/footer.css',array(),'1.0.1');
@@ -61,7 +61,7 @@ function crismaster_theme_scripts_styles(){
     if($mobile){
     }else{
     }
-    wp_enqueue_style( 'mystyle', get_template_directory_uri() .'/style.css',array(),'1.0.1');
+    wp_enqueue_style( 'mystyle', get_template_directory_uri() .'/style.css',array(),'1.0.5');
 
     /**** Start Jquery ****/
     wp_enqueue_script("jquery-min", get_template_directory_uri()."/assets/js/libraries/jquery.min.js",array(),true,false);
@@ -273,24 +273,7 @@ function wp_get_menu_array($current_menu='Main Menu') {
     $menu_array = wp_get_nav_menu_items($current_menu);
     $menu = array();
 
-    function populate_children($menu_array, $menu_item)
-    {
-        $children = array();
-        if (!empty($menu_array)){
-            foreach ($menu_array as $k=>$m) {
-                if ($m->menu_item_parent == $menu_item->ID) {
-                    $children[$m->ID] = array();
-                    $children[$m->ID]['ID'] = $m->ID;
-                    $children[$m->ID]['title'] = $m->title;
-                    $children[$m->ID]['url'] = $m->url;
-                    $children[$m->ID]['object_id'] = $m->object_id;
-                    unset($menu_array[$k]);
-                    $children[$m->ID]['children'] = populate_children($menu_array, $m);
-                }
-            }
-        };
-        return $children;
-    }
+
 
     foreach ($menu_array as $m) {
         if (empty($m->menu_item_parent)) {
@@ -306,7 +289,24 @@ function wp_get_menu_array($current_menu='Main Menu') {
     return $menu;
 
 }
-
+function populate_children($menu_array, $menu_item)
+{
+    $children = array();
+    if (!empty($menu_array)){
+        foreach ($menu_array as $k=>$m) {
+            if ($m->menu_item_parent == $menu_item->ID) {
+                $children[$m->ID] = array();
+                $children[$m->ID]['ID'] = $m->ID;
+                $children[$m->ID]['title'] = $m->title;
+                $children[$m->ID]['url'] = $m->url;
+                $children[$m->ID]['object_id'] = $m->object_id;
+                unset($menu_array[$k]);
+                $children[$m->ID]['children'] = populate_children($menu_array, $m);
+            }
+        }
+    };
+    return $children;
+}
 function remove_admin_login_header() {
     remove_action('wp_head', '_admin_bar_bump_cb');
 }

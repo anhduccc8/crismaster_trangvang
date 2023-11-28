@@ -4,7 +4,6 @@
 if (isset($theme_option['header_logo']['url'])){
     $header_logo = $theme_option['header_logo']['url'];
 }
-
 $header_language = $theme_option['header_language'];
 $mobile = wp_is_mobile();
 ?>
@@ -20,12 +19,13 @@ $mobile = wp_is_mobile();
 <body <?php body_class('body-main'); ?> >
 <header>
     <div class="hdContainer">
-        <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/logo_trans.png');">
+        <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
             <?php if (isset($header_logo) && $header_logo != '') { ?>
                 <img src="<?php  echo esc_url($header_logo) ?>" alt="">
             <?php }else{ ?>
                 <img src="<?= get_template_directory_uri() ?>/assets/images/logo_trans.png">
             <?php } ?>
+            <span>HSH GROUP</span>
         </a>
         <div class="hamburger-menu">
             <div class="bar"></div>

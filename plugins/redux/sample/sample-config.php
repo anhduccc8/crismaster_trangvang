@@ -285,6 +285,14 @@ if (!class_exists("Redux_Framework_sample_config")) {
                 'icon' => 'el-icon-edit',
                 'fields'     => array(
                     array(
+                        'id'       => 'footer_style',
+                        'type'     => 'checkbox',
+                        'title'    => __( 'Show footer cũ', 'crismaster' ),
+                        'desc'     => __( '', 'crismaster' ),
+                        'subtitle' => __( 'Tích vào ô để bật footer cũ', 'crismaster' ),
+                        'default'  => false, // You can set the default value to true or false as needed.
+                    ),
+                    array(
                         'id'       => 'footer_logo',
                         'type'     => 'media',
                         'url' => true,
