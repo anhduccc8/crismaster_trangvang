@@ -1031,4 +1031,25 @@ span.copy-right-2 {
     span.copy-right {
         font-size: 10px;
     }
+    .shs-section-about .shs-description {
+        font-size: 16px;
+    }
+    .shs-section-about .shs-heading-meta .shs-heading {
+        letter-spacing: 5px;
+    }
+    .shs-footer-main-2 {
+        margin: auto;
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 385px) {
+    .shs-footer-main-2 h5 {
+        font-size: 13px;
+    }
+    .shs-footer-main-2 a.shs-link {
+        font-size: 12px;
+    }
+    .shs-footer-main-2 .fa-solid {
+        font-size: 11px;
+    }
 }
