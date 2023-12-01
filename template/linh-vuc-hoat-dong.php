@@ -42,7 +42,7 @@ $footer_email = $theme_option['footer_email'];
                     </section>
                     <?php the_content(); ?>
                     <?php
-                    get_template_part('template-parts/footer');
+                    echo get_template_part('template-parts/footer-cus');
                     ?>
                 </div>
             </div>

@@ -92,9 +92,9 @@ $footer_email = $theme_option['footer_email'];
                 </div>
             </div>
         </main>
-        <?php
-        get_template_part('template-parts/footer');
-        ?>
+    <?php
+    echo get_template_part('template-parts/footer-cus');
+    ?>
 <?php
 get_footer();
 ?>
