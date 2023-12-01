@@ -231,11 +231,29 @@
     font-style: normal;
     font-display: swap;
 }
+/*@font-face {*/
+/*    font-family: 'Iciel Rift';*/
+/*    src: url('../fonts/iceilRift.ttf') format('truetype');*/
+/*    font-weight: 500;*/
+/*    font-style: normal;*/
+/*    font-display: swap;*/
+/*}*/
 @font-face {
     font-family: 'Iciel Rift';
-    src: url('../fonts/iceilRift.ttf') format('truetype');
-    font-weight: 500;
+    src: url('../fonts/Rift.woff2') format('woff2'),
+    url('../fonts/Rift.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Iciel Rift';
+    src: url('../fonts/Rift-Bold.woff2') format('woff2'),
+    url('../fonts/Rift-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 

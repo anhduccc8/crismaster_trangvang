@@ -124,12 +124,16 @@ jQuery(document).ready(function($) {
             var menuItems = document.querySelectorAll('#horizontal-image .shs-item-activiti-column');
             menuItems.forEach(function(item) {
                 item.addEventListener('mouseover', function() {
+                    item.classList.remove('unhover');
                     item.classList.add('active');
                     $('#horizontal-image').addClass('active');
                 });
                 item.addEventListener('mouseout', function() {
-                    item.classList.remove('active');
-                    $('#horizontal-image').removeClass('active');
+                    menuItems.forEach(function(item) {
+                        item.classList.remove('active');
+                        item.classList.add('unhover');
+                        $('#horizontal-image').removeClass('active');
+                    });
                 });
             });
         }, 1000);

@@ -244,10 +244,13 @@
     flex-direction: column;
     overflow: hidden;
     position: relative;
+    transition: flex 1.5s ease-in-out, opacity 1.5s ease-in-out;
+    opacity: 0.5;
 }
 
 
 .shs-item-activiti-column.active .item-activiti-hover {
+    flex: 3.2;
     opacity: 1;
     visibility: visible;
 }
@@ -271,7 +274,14 @@
     position: relative;
     animation: fadeIn 1.5s ease-in-out;
 }
-
+/*.shs-item-activiti-column.unhover {*/
+/*    animation: fadeIn 1.5s ease-in-out reverse;*/
+/*    animation-fill-mode: forwards;*/
+/*}*/
+.shs-section-activities .shs-heading-meta:before {
+     top: 7px;
+     bottom: 5px;
+}
 .item-activiti-hover {
     opacity: 0;
     visibility: hidden;
@@ -416,7 +426,7 @@ label {
     font-weight: 700;
 }
 span {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
 }
 .btn-form-apply {
@@ -539,6 +549,60 @@ span.copy-right-2 {
 .site-footer-main-2-tintuc {
     height: 100vh;
 }
+.footer-ele-logo {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #7b7979;
+}
+.shs-footer-main-3 {
+    height: 100%;
+}
+.footer-ele-logo .logo_footer img {
+    max-width: 150px;
+    width: 100%;
+}
+.shs-footer-main-2 p.company-name {
+    margin-top: 43px;
+    color: #006A97;
+    font-weight: 600;
+}
+.shs-column-02-cus {
+    display: flex;
+    justify-content: right;
+}
+.shs-column-02-cus .logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shs-column-02-cus .logo-container .logo {
+    color: #006A97;
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+    font-size: 45px;
+}
+.shs-column-02-cus .logo-container .logo.zalo {
+    margin-bottom: 20px;
+}
+.shs-footer-main-3 {
+    color: #006A97;
+    padding: 70px 168px 0px 69px;
+}
+.shs-footer-main-3 a {
+    color: #006A97;
+    line-height: 2;
+}
+.shs-footer-main-3 .fa-solid {
+    margin-left: -20px;
+    margin-right: 10px;
+}
+.shs-footer-main-3 .shs-link {
+    line-height: 3;
+}
+.item-blog-title a {
+    color: var(--primary_color);
+}
 @media screen and (min-width: 1201px) {
     .shs-section-blog {
         padding: 20px 168px 10px 69px;
@@ -556,8 +620,24 @@ span.copy-right-2 {
     }
 }
 @media screen and (min-width: 1200px) and (max-width: 1589px){
+    .shs-footer-main-3 .shs-link {
+        font-size: 18px;
+    }
+    .shs-column-01-cus ul li a {
+        font-size: 18px;
+    }
     .site-footer-main .shs-footer-main {
         padding: 105px 0 300px 125px;
+    }
+    .shs-footer-main-2 p.company-name {
+        margin-top: 26px;
+        font-size: 19px;
+    }
+    .shs-column-02-cus .logo-container .logo {
+        font-size: 30px;
+    }
+    .shs-column-02-cus .logo-container .logo {
+        margin-top: 8px;
     }
     #fullpage .container-fluid,
     #fullpage2 .container-fluid {
@@ -574,11 +654,18 @@ span.copy-right-2 {
         font-size: 45px;
     }
     #fullpage .shs-section-about .shs-heading-meta {
-        text-align: center;
+        padding-left: 100px;
+    }
+    #fullpage .shs-section-about .shs-heading-meta .shs-heading {
+        letter-spacing: 10px;
     }
     #fullpage .shs-section-about .shs-heading-meta:before {
-        left: 14%;
+        left: 70px;
     }
+    /*#fullpage .shs-section-about .shs-heading-meta:before {*/
+    /*    left: 14%;*/
+    /*}*/
+
     #fullpage .shs-btn-about {
         margin: 0 0 20px;
     }
@@ -599,7 +686,7 @@ span.copy-right-2 {
     }
     #fullpage .shs-sub-heading-bottom {
         font-size: 25px;
-        letter-spacing: 1.4px;
+        letter-spacing: 3px;
     }
     #fullpage .shs-item-about-column {
         margin-top: 20px;
@@ -727,6 +814,15 @@ span.copy-right-2 {
     #fullpage h3 {
         font-size: 55px;
     }
+    #fullpage .shs-section-about h3 {
+        letter-spacing: 10px;
+    }
+    #fullpage .shs-heading-meta {
+        padding-left: 50px;
+    }
+    #fullpage .shs-section-about .shs-sub-heading-bottom {
+        letter-spacing: 3.5px;
+    }
     #fullpage .shs-sub-heading-bottom {
         font-size: 28px;
         letter-spacing: 2.8px;
@@ -782,13 +878,16 @@ span.copy-right-2 {
     .scale-m1201{
         scale: 1.4;
     }
-    .shs-footer-main-2 h5 {
+    .shs-footer-main-2 h5,
+    .shs-footer-main-3 h5 {
         font-size: 20px;
     }
-    .shs-footer-main-2 a.shs-link {
+    .shs-footer-main-2 a.shs-link,
+    .shs-footer-main-3 a.shs-link {
         font-size: 17px;
     }
-    .shs-footer-main-2 .fa-solid {
+    .shs-footer-main-2 .fa-solid,
+    .shs-footer-main-3 .fa-solid {
         font-size: 15px;
     }
     .shs-column-01-cus a {
@@ -824,15 +923,29 @@ span.copy-right-2 {
     .shs-section-td {
         padding: 100px 0px 100px;
     }
-    .shs-column-01-cus{
+    .shs-column-01-cus,
+    .shs-column-02-cus{
         display: none;
     }
-    .shs-footer-main-2 {
+    .shs-footer-main-2,
+    .shs-footer-main-3 {
         margin: auto;
         padding: unset;
         width: 80%;
         text-align: center;
         padding-top: 30px;
+    }
+    .shs-description {
+       font-size: 18px;
+    }
+    .shs-section-about .shs-heading-meta {
+        max-width: 335px;
+    }
+    .shs-heading-meta .shs-heading {
+        letter-spacing: 10px;
+    }
+    .shs-sub-heading-bottom {
+        letter-spacing: 4.2px;
     }
 }
 @media (max-width: 991px) {
@@ -944,6 +1057,10 @@ span.copy-right-2 {
         padding-top: 0;
         justify-content: start;
     }
+    .shs-footer-main-2 p.company-name {
+        font-size: 18px;
+        margin-top: 31px;
+    }
 }
 
 @media (max-width: 630px) {
@@ -954,6 +1071,15 @@ span.copy-right-2 {
         font-size: 15px;
     }
     .shs-footer-main-2 .fa-solid {
+        font-size: 13px;
+    }
+    .shs-footer-main-3 h5 {
+        font-size: 18px;
+    }
+    .shs-footer-main-3 a.shs-link {
+        font-size: 15px;
+    }
+    .shs-footer-main-3 .fa-solid {
         font-size: 13px;
     }
     .shs-column-01-cus a {
@@ -1028,18 +1154,33 @@ span.copy-right-2 {
     .shs-footer-main-2 .fa-solid {
         font-size: 12px;
     }
+    .shs-footer-main-3 h5 {
+        font-size: 15px;
+    }
+    .shs-footer-main-3 a.shs-link {
+        font-size: 14px;
+    }
+    .shs-footer-main-3 .fa-solid {
+        font-size: 12px;
+    }
     span.copy-right {
         font-size: 10px;
     }
     .shs-section-about .shs-description {
         font-size: 16px;
     }
-    .shs-section-about .shs-heading-meta .shs-heading {
-        letter-spacing: 5px;
-    }
     .shs-footer-main-2 {
         margin: auto;
         width: 90%;
+    }
+    .shs-footer-main-3 {
+        margin: auto;
+        width: 90%;
+    }
+    .shs-footer-main-2 p.company-name {
+        font-size: 15px;
+        margin-top: 21px;
+        margin-left: -24px;
     }
 }
 @media only screen and (max-width: 385px) {
@@ -1051,5 +1192,19 @@ span.copy-right-2 {
     }
     .shs-footer-main-2 .fa-solid {
         font-size: 11px;
+    }
+    .shs-footer-main-3 h5 {
+        font-size: 13px;
+    }
+    .shs-footer-main-3 a.shs-link {
+        font-size: 12px;
+    }
+    .shs-footer-main-3 .fa-solid {
+        font-size: 11px;
+    }
+    .shs-footer-main-2 p.company-name {
+        font-size: 13px;
+        margin-top: 18px;
+        margin-left: -24px;
     }
 }
