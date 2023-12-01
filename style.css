@@ -603,6 +603,9 @@ span.copy-right-2 {
 .item-blog-title a {
     color: var(--primary_color);
 }
+.contact .site-footer-main-2 {
+    height: 100vh;
+}
 @media screen and (min-width: 1201px) {
     .shs-section-blog {
         padding: 20px 168px 10px 69px;
@@ -679,7 +682,7 @@ span.copy-right-2 {
         font-size: 20px;
     }
     #fullpage .shs-description {
-        font-size: 15px;
+        font-size: 13px;
     }
     #fullpage .shs-section-about {
         padding: 40px 0 0px;

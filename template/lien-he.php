@@ -14,8 +14,11 @@ $footer_address2 = $theme_option['footer_address2'];
 $footer_phone = $theme_option['footer_phone'];
 $footer_email = $theme_option['footer_email'];
 ?>
-<?php
-echo get_template_part('template-parts/footer-cus');
-?>
+<div class="contact">
+    <?php
+    echo get_template_part('template-parts/footer-cus');
+    ?>
+</div>
+
 <?php
 get_footer();
