@@ -80,10 +80,10 @@ function p4_list_tin_tuc_func($atts,$content = null){
             <div class="col-xs-12 col-md-6 col-xl-4 shs-item-blog">
                 <div class="item-blog item">
                     <div class="item-image-blog">
-                        <img alt="img-blog-01" src="<?= esc_url($single_image[0]) ?>" style="width:100%">
+                        <a href="<?= get_permalink() ?>"><img alt="img-blog-01" src="<?= esc_url($single_image[0]) ?>" style="width:100%"></a>
                     </div>
                     <div class="item-blog-content">
-                        <h6 class="item-blog-title"><?php echo (strlen(get_the_title()) > 50) ? mb_substr(get_the_title(),0,50,'utf-8')."..." : get_the_title(); ?></h6>
+                        <h6 class="item-blog-title"><a href="<?= get_permalink() ?>"><?php echo (strlen(get_the_title()) > 50) ? mb_substr(get_the_title(),0,50,'utf-8')."..." : get_the_title(); ?></a></h6>
                         <div class="item-blog-description"><?php echo (strlen(get_the_excerpt()) > 150) ? mb_substr(get_the_excerpt(),0,150,'utf-8')."..." : get_the_excerpt(); ?></div>
                         <div class="item-blog-date"><?= get_the_date('d/m/Y') ?></div>
                         <div class="item-blog-btn">
