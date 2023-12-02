@@ -78,7 +78,6 @@ function hsh_tin_tuc_func($atts,$content = null){
     ),$atts));
     ob_start();
     $mobile = wp_is_mobile();
-    var_dump($mobile);die();
     ?>
     <section class="section shs-section-widget bg-img-section shs-section-blog" data-anchor="news" id="tin-tuc-ele news" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-section-blog.png');">
         <div class="container-fluid height-100vh">

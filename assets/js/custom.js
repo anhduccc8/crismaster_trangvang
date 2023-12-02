@@ -75,7 +75,8 @@ jQuery(document).ready(function($) {
     }
     if ($('.owl-carousel.lich-su-thanh-lap').length > 0 ){
         var owl1 = $('.owl-carousel.lich-su-thanh-lap').owlCarousel({
-            loop: true,
+            startPosition: 0,
+            loop: false,
             nav: false,
             navText: ["<i class='fa-solid fa-chevron-left'></i>","<i class='fa-solid fa-chevron-right'></i>"],
             items: 1,
@@ -87,7 +88,8 @@ jQuery(document).ready(function($) {
     }
     if ($('.owl-carousel.year-lich-su').length > 0 ){
         var owl2 = $('.owl-carousel.year-lich-su').owlCarousel({
-            loop: true,
+            startPosition: 0,
+            loop: false,
             nav: true,
             navText: ["<i class='fa-solid fa-chevron-left'></i>","<i class='fa-solid fa-chevron-right'></i>"],
             autoplay: false,

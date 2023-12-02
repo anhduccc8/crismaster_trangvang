@@ -944,11 +944,14 @@ span.copy-right-2 {
     .shs-section-about .shs-heading-meta {
         max-width: 335px;
     }
-    .shs-heading-meta .shs-heading {
+    #fullpage .shs-heading-meta .shs-heading {
         letter-spacing: 10px;
     }
     .shs-sub-heading-bottom {
         letter-spacing: 4.2px;
+    }
+    .shs-history-description {
+        font-size: 20px;
     }
 }
 @media (max-width: 991px) {
@@ -1184,6 +1187,28 @@ span.copy-right-2 {
         font-size: 15px;
         margin-top: 21px;
         margin-left: -24px;
+    }
+    .shs-meta-number {
+        justify-content: flex-start;
+        padding-left: 35%;
+    }
+    .hdContainer {
+        position: fixed;
+    }
+    .site-content {
+        margin-top: 50px;
+    }
+    .activity-description {
+        font-size: 18px;
+    }
+    .contact .site-footer-main-2 {
+        margin-top: 50px;
+    }
+    .td-description {
+        font-size: 18px;
+    }
+    .hsh-form-apply .close {
+        margin-right: 3px;
     }
 }
 @media only screen and (max-width: 385px) {
