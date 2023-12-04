@@ -336,6 +336,27 @@ if (!class_exists("Redux_Framework_sample_config")) {
                         'subtitle' => esc_html__( '', 'crismaster' ),
                         'desc'     => esc_html__( '', 'crismaster' ),
                     ),
+                    array(
+                        'id'       => 'footer_youtube',
+                        'type'     => 'text',
+                        'title'    => esc_html__( 'Youtube', 'crismaster' ),
+                        'subtitle' => esc_html__( '', 'crismaster' ),
+                        'desc'     => esc_html__( '', 'crismaster' ),
+                    ),
+                    array(
+                        'id'       => 'footer_zalo',
+                        'type'     => 'text',
+                        'title'    => esc_html__( 'Zalo', 'crismaster' ),
+                        'subtitle' => esc_html__( '', 'crismaster' ),
+                        'desc'     => esc_html__( '', 'crismaster' ),
+                    ),
+                    array(
+                        'id'       => 'footer_facebook',
+                        'type'     => 'text',
+                        'title'    => esc_html__( 'Facebook', 'crismaster' ),
+                        'subtitle' => esc_html__( '', 'crismaster' ),
+                        'desc'     => esc_html__( '', 'crismaster' ),
+                    ),
                 )
             );
 

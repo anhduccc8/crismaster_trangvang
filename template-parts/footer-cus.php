@@ -9,6 +9,9 @@ $footer_address = $theme_option['footer_address'];
 $footer_address2 = $theme_option['footer_address2'];
 $footer_phone = $theme_option['footer_phone'];
 $footer_email = $theme_option['footer_email'];
+$footer_youtube = $theme_option['footer_youtube'];
+$footer_zalo = $theme_option['footer_zalo'];
+$footer_facebook = $theme_option['footer_facebook'];
 if ($footer_style){ ?>
     <section class="section site-footer-main position-relative" data-anchor="contact" id="footer-id contact">
         <div class="shs-footer-main position-relative" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-footer-01.jpg');">
@@ -104,9 +107,9 @@ if ($footer_style){ ?>
                     </div>
                     <div class="col-lg-12 col-xl-6 shs-column-01 shs-column-02-cus">
                         <div class="logo-container">
-                            <a class="logo" href="#"><iconify-icon icon="mdi:youtube"></iconify-icon></a>
-                            <a class="logo zalo" href="#"><img src="<?= get_template_directory_uri() ?>/assets/images/zalo.png" alt=""></a>
-                            <a class="logo" href="#"><iconify-icon icon="mdi:facebook"></iconify-icon></a>
+                            <a class="logo youtube" href="<?= esc_url($footer_youtube) ?>"><iconify-icon icon="mdi:youtube"></iconify-icon></a>
+                            <a class="logo zalo" href="<?= esc_url($footer_zalo) ?>"><img src="<?= get_template_directory_uri() ?>/assets/images/zalo.png" alt=""></a>
+                            <a class="logo facebook" href="<?= esc_url($footer_facebook) ?>"><iconify-icon icon="mdi:facebook"></iconify-icon></a>
                         </div>
                     </div>
                 </div>
