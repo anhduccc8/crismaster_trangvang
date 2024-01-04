@@ -64,7 +64,7 @@ $footer_email = $theme_option['footer_email'];
                                         $wp_query->the_post();
                                         $single_image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'large');
                                         ?>
-                                        <div class="col-xs-12 col-md-6 col-xl-4 shs-item-blog">
+                                        <div class="col-xs-12 col-md-6 col-xl-4 shs-item-blog" onclick="clickChangeUrls('<?= get_permalink() ?>')">
                                             <div class="item-blog item">
                                                 <div class="item-image-blog">
                                                     <a href="<?= get_permalink() ?>"><img alt="img-blog-01" src="<?= esc_url($single_image[0]) ?>" style="width:100%"></a>
@@ -92,6 +92,11 @@ $footer_email = $theme_option['footer_email'];
                 </div>
             </div>
         </main>
+    <script>
+        function clickChangeUrls(url) {
+            document.location.href = url;
+        }
+    </script>
     <?php
     echo get_template_part('template-parts/footer-cus');
     ?>

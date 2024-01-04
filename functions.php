@@ -61,7 +61,7 @@ function crismaster_theme_scripts_styles(){
     if($mobile){
     }else{
     }
-    wp_enqueue_style( 'mystyle', get_template_directory_uri() .'/style.css',array(),'1.1.6');
+    wp_enqueue_style( 'mystyle', get_template_directory_uri() .'/style.css',array(),'1.1.7');
 
     /**** Start Jquery ****/
     wp_enqueue_script("jquery-min", get_template_directory_uri()."/assets/js/libraries/jquery.min.js",array(),true,false);
