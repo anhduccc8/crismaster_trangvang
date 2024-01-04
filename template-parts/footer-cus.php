@@ -12,6 +12,8 @@ $footer_email = $theme_option['footer_email'];
 $footer_youtube = $theme_option['footer_youtube'];
 $footer_zalo = $theme_option['footer_zalo'];
 $footer_facebook = $theme_option['footer_facebook'];
+$footer_lat_log = $theme_option['footer_lat_log'];
+$footer_lat_log_arr = explode(',',$footer_lat_log);
 if ($footer_style){ ?>
     <section class="section site-footer-main position-relative" data-anchor="contact" id="footer-id contact">
         <div class="shs-footer-main position-relative" style="background-image: url('<?= get_template_directory_uri() ?>/assets/images/bgr-footer-01.jpg');">
@@ -83,7 +85,10 @@ if ($footer_style){ ?>
         </div>
     </section>
 <?php }else{ ?>
-    <section class="section site-footer-main site-footer-main-2 position-relative" data-anchor="contact" id="footer-id contact">
+    <section class="section site-footer-main site-footer-main-2 position-relative <?php if (!empty($footer_lat_log_arr)){ echo 'pt-0px'; }?> " data-anchor="contact" id="footer-id contact">
+        <?php if (!empty($footer_lat_log_arr)){ ?>
+            <div id="footer-map" style="height: 45vh;"></div>
+        <?php } ?>
         <div class="shs-footer-main-2 position-relative text-black" >
             <div class="container-fluid">
                 <div class="row footer-ele-logo">
@@ -187,4 +192,22 @@ if ($footer_style){ ?>
             <span class="copy-right copy-right-2 text-center">Copyright © 2023 HSH. Designed by <a target="_blank" href="https://innocom.vn/">Innocom</a></span>
         </div>
     </section>
-<?php }
+<?php } ?>
+ <script>
+     function initializeMap() {
+         var myLatLng = { lat: <?= $footer_lat_log_arr[0] ?>, lng: <?= $footer_lat_log_arr[1] ?> };
+         var map = new google.maps.Map(document.getElementById('footer-map'), {
+             center: myLatLng,
+             zoom: 15
+         });
+         var marker = new google.maps.Marker({
+             position: myLatLng,
+             map: map,
+             title: 'Hello World!'
+         });
+         marker.addListener('click', function() {
+             alert('Marker clicked!');
+         });
+     }
+     document.addEventListener('DOMContentLoaded', initializeMap);
+  </script>

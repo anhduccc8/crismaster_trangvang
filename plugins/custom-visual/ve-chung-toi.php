@@ -108,8 +108,6 @@ function ve_chung_toi_func($atts,$content = null){
                             <h3 class="shs-heading"><?= esc_html__($title, 'crismaster') ?></h3>
                             <div class="shs-sub-heading-bottom"><?= esc_html__($sub2, 'crismaster') ?></div>
                         </div>
-                        <div class="shs-description"><?= esc_html__($des, 'crismaster') ?>
-                        </div>
                     </div>
                 </div>
             </div>

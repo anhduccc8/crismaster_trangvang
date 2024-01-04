@@ -98,7 +98,7 @@ function linh_vuc_hoat_dong_func($atts,$content = null){
             ?>
             <div class="shs-item-activiti-column">
                 <div class="shs-item-activiti">
-                    <a class="box-link" href="<?= esc_url($dca['slink']) ?>"></a>
+                    <a class="box-link" target="_blank" href="<?= esc_url($dca['slink']) ?>"></a>
                     <div class="item-activiti-image">
                         <img class="none-sm" src="<?= esc_url($dca['simage'][0]) ?>">
                         <img class="none-min-sm" src="<?= esc_url($dca['simage2'][0]) ?>">

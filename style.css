@@ -606,6 +606,9 @@ span.copy-right-2 {
 .contact .site-footer-main-2 {
     height: 100vh;
 }
+.pt-0px {
+    padding-top: 0;
+}
 @media screen and (min-width: 1201px) {
     .shs-section-blog {
         padding: 20px 168px 10px 69px;
@@ -692,7 +695,7 @@ span.copy-right-2 {
         letter-spacing: 3px;
     }
     #fullpage .shs-item-about-column {
-        margin-top: 20px;
+        margin-top: 85px;
     }
     #fullpage .shs-section-about-02 {
         padding: 70px 0 0;
@@ -748,7 +751,7 @@ span.copy-right-2 {
         font-size: 45px;
     }
     #fullpage2 .shs-section-activity .activity-description {
-        font-size: 20px;
+        font-size: 12px;
     }
     #fullpage2 .shs-section-history {
         padding: 0 160px;
@@ -760,7 +763,7 @@ span.copy-right-2 {
         margin: 20px 0 20px;
     }
     #fullpage2 .shs-history-description {
-        font-size: 20px;
+        font-size: 17px;
     }
     #fullpage2 .shs-nav-year {
         margin: 70px auto 0 auto;
@@ -779,7 +782,7 @@ span.copy-right-2 {
         padding: 60px 70px 300px;
     }
     #fullpage2 .shs-section-about-03 .about-03-description {
-        font-size: 23px;
+        font-size: 18px;
     }
     #fullpage2 .shs-item-heading-03 {
         font-size: 45px;
@@ -907,6 +910,9 @@ span.copy-right-2 {
     .item-activity-content .shs-heading-meta {
         padding-left: 20px;
     }
+    #footer-map {
+        display: none;
+    }
     .item-activity-content .shs-heading-meta:before {
         top: 3px;
         bottom: 5px;
@@ -974,14 +980,14 @@ span.copy-right-2 {
     .submenu.active .child-menu-a {
         transition: transform 1s ease, opacity 1s ease !important;
     }
-    .submenu.active .child-menu-a.no-active-up {
-        transform: translateY(-50px) !important;
-        opacity: 0 !important;
-    }
-    .submenu.active .child-menu-a.no-active-down {
-        transform: translateY(50px) !important;
-        opacity: 0 !important;
-    }
+    /*.submenu.active .child-menu-a.no-active-up {*/
+    /*    transform: translateY(-50px) !important;*/
+    /*    opacity: 0 !important;*/
+    /*}*/
+    /*.submenu.active .child-menu-a.no-active-down {*/
+    /*    transform: translateY(50px) !important;*/
+    /*    opacity: 0 !important;*/
+    /*}*/
 
 }
 

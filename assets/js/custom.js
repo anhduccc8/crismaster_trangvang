@@ -111,7 +111,7 @@ jQuery(document).ready(function($) {
         owl2.on('changed.owl.carousel', function(event) {
             var currentItem = event.item.index;
             if (currentItem !== owl1.trigger('owl.carousel').to) {
-                owl1.trigger('to.owl.carousel', [currentItem, 300, true]);
+                owl1.trigger('to.owl.carousel', [currentItem, 2000, true]);
                 $('.owl-carousel.year-lich-su .owl-item').not(':eq(' + currentItem + ')').removeClass('actived');
                 $('.owl-carousel.year-lich-su .owl-item').eq(currentItem).addClass('actived');
                 $('.owl-carousel.year-lich-su .owl-item').not(':eq(' + currentItem + ')').find('.nav-year').removeClass('actived');

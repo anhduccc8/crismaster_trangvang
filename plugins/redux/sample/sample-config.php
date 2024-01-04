@@ -309,6 +309,13 @@ if (!class_exists("Redux_Framework_sample_config")) {
                         'desc'     => esc_html__( 'CÔNG TY TNHH XUẤT NHẬP KHẨU HSH THĂNG LONG', 'crismaster' ),
                     ),
                     array(
+                        'id'       => 'footer_lat_log',
+                        'type'     => 'text',
+                        'title'    => esc_html__( 'Tọa độ địa chỉ', 'crismaster' ),
+                        'subtitle' => esc_html__( 'Ngăn cách nhau bởi dấu phẩy', 'crismaster' ),
+                        'desc'     => esc_html__( 'VD: 21.0193525644659, 105.77550865223736', 'crismaster' ),
+                    ),
+                    array(
                         'id'       => 'footer_address',
                         'type'     => 'text',
                         'title'    => esc_html__( 'Địa chỉ', 'crismaster' ),
