@@ -364,6 +364,13 @@ if (!class_exists("Redux_Framework_sample_config")) {
                         'subtitle' => esc_html__( '', 'crismaster' ),
                         'desc'     => esc_html__( '', 'crismaster' ),
                     ),
+                    array(
+                        'id'       => 'footer_list_contact',
+                        'type'     => 'textarea',
+                        'title'    => esc_html__( 'List danh sách contact', 'crismaster' ),
+                        'subtitle' => esc_html__( '', 'crismaster' ),
+                        'desc'     => esc_html__( '', 'crismaster' ),
+                    ),
                 )
             );
 

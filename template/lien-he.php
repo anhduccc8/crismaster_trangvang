@@ -16,7 +16,7 @@ $footer_email = $theme_option['footer_email'];
 ?>
 <div class="contact">
     <?php
-    echo get_template_part('template-parts/footer-cus');
+    echo get_template_part('template-parts/footer-lienhe');
     ?>
 </div>
 

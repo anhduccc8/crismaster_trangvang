@@ -16,8 +16,8 @@
     position: absolute;
 }
 .pd-l-r-15{
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
 }
 .shs-nav-number .owl-dot.active .nav-number {
     color: #fff;
@@ -510,8 +510,11 @@ span {
     margin-left: 50px;
 }
 span.copy-right-2 {
-    font-size: 17px;
+    font-size: 13px;
     font-weight: 500;
+}
+.footer-lienhe span.copy-right-2 {
+    font-size: 13px;
 }
 .nav-number.active a[href='#contact'],
 .nav-number.active a[href='#news']{
@@ -554,7 +557,7 @@ span.copy-right-2 {
     border-bottom: 1px solid #7b7979;
 }
 .shs-footer-main-3 {
-    height: 100%;
+    /*height: 100%;*/
 }
 .footer-ele-logo .logo_footer img {
     max-width: 150px;
@@ -609,6 +612,26 @@ span.copy-right-2 {
 .pt-0px {
     padding-top: 0;
 }
+.color-006A97 {
+    color: #006A97;
+}
+.shs-footer-main-4 {
+    color: #006A97;
+    padding: 0px 70px 0px 69px;
+}
+.footer-lienhe .shs-column-01-cus ul li ul {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.footer-lienhe .shs-column-01-cus ul li ul li a {
+    font-size: 18px;
+    color: #000000;
+    white-space: nowrap;
+}
+.pd-l-r-25 {
+    padding-left: 25px;
+    padding-right: 25px;
+}
 @media screen and (min-width: 1201px) {
     .shs-section-blog {
         padding: 20px 168px 10px 69px;
@@ -626,11 +649,24 @@ span.copy-right-2 {
     }
 }
 @media screen and (min-width: 1200px) and (max-width: 1589px){
+    .footer-lienhe .shs-footer-main-3 .shs-link {
+        font-size: 15px;
+    }
     .shs-footer-main-3 .shs-link {
-        font-size: 18px;
+        font-size: 15px;
+    }
+    .footer-lienhe .shs-column-01-cus ul li a {
+        font-size: 15px;
+        white-space: nowrap;
+    }
+    .footer-lienhe .shs-column-01-cus ul li ul li a {
+        font-size: 15px;
+        color: #000000;
+        white-space: nowrap;
     }
     .shs-column-01-cus ul li a {
-        font-size: 18px;
+        font-size: 15px;
+        white-space: nowrap;
     }
     .site-footer-main .shs-footer-main {
         padding: 105px 0 300px 125px;
@@ -854,6 +890,9 @@ span.copy-right-2 {
     }
     #fullpage2 .item-image-activity, .item-image-activity img {
         height: 100vh;
+    }
+    .pt-70px-cus {
+        margin-top: 70px;
     }
 
 }
