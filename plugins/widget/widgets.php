@@ -1,8 +1,9 @@
 <?php
 add_action( 'widgets_init', 'create_crismaster_widget' );
 function create_crismaster_widget() {
-    register_widget('crismaster_Related_Products');
-    register_widget('Crismaster_Recent_Posts');
+//    register_widget('crismaster_Related_Products');
+//    register_widget('Crismaster_Recent_Posts');
+    register_widget('Crismaster_Lastest_Posts');
 }
 
 /* Creat Widgets */
@@ -191,4 +192,66 @@ class Crismaster_Recent_Posts extends WP_Widget{
             <?php } wp_reset_postdata(); }?>
         </div>
         <?php }
+}
+class Crismaster_Lastest_Posts extends WP_Widget{
+    function __construct() {
+        $tpwidget_options = array(
+            'classname' => 'recent-posts-entry', // widget class
+            'description' => 'Cris - Tin tức mới nhất'
+        );
+        parent::__construct('Crismaster_Lastest_Posts_widget_id', 'Cris - Tin tức mới nhất', $tpwidget_options);// ID, Name, .
+    }
+    /**
+     * creat form option for widget
+     */
+    function form( $instance ) {
+        //  Default Variables
+        $default = array(
+            'ids' => '',
+            'number' =>'',
+        );
+        $instance = wp_parse_args( (array) $instance, $default);
+        $ids = esc_attr( $instance['ids'] );
+        $number = esc_attr( $instance['number'] );
+        //Show form option in widget
+        echo "<p>ID danh mục bài viết cần hiển thị <input type='text' class='widefat' name='".$this->get_field_name('ids')."' value='".$ids."' /></p>";
+        echo "<p>Số bài viết muốn hiển thị <input type='text' class='widefat' name='".$this->get_field_name('number')."' value='".$number."' /></p>";
+    }
+    /**
+     * save widget form
+     */
+    function update( $new_instance, $old_instance ) {
+        $instance = $old_instance;
+        $instance['ids'] = esc_attr( $new_instance['ids'] );
+        $instance['number'] = esc_attr( $new_instance['number'] );
+        return $instance;
+    }
+    /**
+     * Show widget
+     */
+    function widget( $args, $instance ) {
+        extract( $args );
+        ?>
+        <?php
+        $query = new WP_Query(array(
+            'posts_per_page'      => $instance['number'],
+            'status'      => 'approve',
+            'post_status'         => 'publish',
+            'cat' => $instance['ids'],
+            'order' => 'DESC',
+            'orderby' => 'date'
+        )  );
+        ?>
+        <h6 class="item-blog-title"><?= esc_html__('Tin mới nhất','crismaster') ?></h6>
+        <?php if($query->have_posts()){
+            while($query->have_posts()){
+                $query->the_post();
+                $single_image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'large'); ?>
+                <div class="item-post item cursor-pointer" onclick="clickChangeUrls('<?= get_permalink() ?>')">
+                    <img alt="img-blog-01" src="<?= esc_url($single_image[0]) ?>" style="width:100%">
+                    <div class="blog-title"><?php the_title();  ?> </div>
+                </div>
+        <?php } wp_reset_postdata(); }?>
+
+    <?php }
 }
