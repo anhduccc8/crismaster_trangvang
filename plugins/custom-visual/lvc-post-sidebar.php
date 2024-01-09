@@ -48,7 +48,14 @@ function lvc_post_sidebar_func($atts,$content = null){
     if ($query->have_posts()) {
     while ($query->have_posts()) {
     $query->the_post();
-    $single_image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'large');?>
+    $single_image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'large');
+        $categories = get_the_category();
+        foreach ($categories as $category) {
+            if ($category->cat_ID != '37'){
+                $category_ids[] = $category->cat_ID;
+            }
+        }
+    ?>
     <div class="hsh-blog-column <?php if ($t > 1){ echo 'mt-70'; } ?>">
         <div class="item-post-content cursor-pointer" onclick="clickChangeUrls('<?= get_permalink() ?>')">
             <img alt="img-blog-01" src="<?= esc_url($single_image[0]) ?>" style="width:100%">
@@ -57,17 +64,33 @@ function lvc_post_sidebar_func($atts,$content = null){
                 <?php the_excerpt(); ?>
             </div>
         </div>
-        <div class="hsh-blog-releated">
-            <h6 class="hsh-blog-releated-title"><?= esc_html__('Tin Liên Quan','crismaster') ?></h6>
-            <div class="shs-nav-blog-releated row" data-nav="true">
-                <div class="shs-nav-blog-releated-1  owl-carousel">
-                    <a href="#" class="item nav-image"><img alt="img-blog-01" src="<?= get_template_directory_uri() ?>/assets/images/img-nav-image-01.jpg"></a>
-                    <a href="#" class="item nav-image"><img alt="img-blog-01" src="<?= get_template_directory_uri() ?>/assets/images/img-nav-image-01.jpg"></a>
-                    <a href="#" class="item nav-image"><img alt="img-blog-01" src="<?= get_template_directory_uri() ?>/assets/images/img-nav-image-01.jpg"></a>
-                    <a href="#" class="item nav-image"><img alt="img-blog-01" src="<?= get_template_directory_uri() ?>/assets/images/img-nav-image-01.jpg"></a>
+        <?php if (!empty($category_ids)){  ?>
+            <div class="hsh-blog-releated">
+                <h6 class="hsh-blog-releated-title"><?= esc_html__('Tin Liên Quan','crismaster') ?></h6>
+                <div class="shs-nav-blog-releated row" data-nav="true">
+                    <div class="shs-nav-blog-releated-1  owl-carousel">
+                <?php
+                $args2 = array(
+                    'post_type' => 'post',
+                    'status' => 'approve',
+                    'post_status' => 'publish',
+                    'order' => 'DESC',
+                    'orderby' => 'date',
+                    'category__in' => $category_ids,
+                );
+                $query2 = new WP_Query($args2);
+                if ($query2->have_posts()) {
+                    while ($query2->have_posts()) {
+                        $query2->the_post();
+                        $single_image2 = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'large'); ?>
+                        <a href="" class="item nav-image" title="<?php the_title() ?>"><img alt="<?php the_title() ?>" src="<?= esc_url($single_image2[0]) ?>"></a>
+                <?php }
+                    wp_reset_postdata();
+                }?>
+                    </div>
                 </div>
             </div>
-        </div>
+        <?php } ?>
     </div>
     <?php
      $t +=1; }
