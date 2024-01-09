@@ -32,9 +32,9 @@ $mobile = wp_is_mobile();
                             <?php
                             $current_language = function_exists('pll_current_language') ? pll_current_language() : '';
                             if ($current_language == 'vi'){
-                                $menu_items = wp_get_menu_array('20');
+                                $menu_items = wp_get_menu_array('53');
                             }else{
-                                $menu_items = wp_get_menu_array('20');
+                                $menu_items = wp_get_menu_array('53');
                             }
                             $object = get_queried_object();
                             if (!empty($menu_items)){
@@ -62,7 +62,7 @@ $mobile = wp_is_mobile();
     <div class="container-default">
         <div class="row row-header align-center space-between">
             <div class="hsh-page-title-left">
-                <div class="hsh-icon-home">
+                <div class="hsh-icon-home cursor-pointer" onclick="clickChangeUrls('<?= esc_url( home_url( '/' ) ) ?>')">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_2_180)">
                             <path d="M6.66667 16H4L16 4L28 16H25.3333" stroke="#F2F2F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -78,7 +78,7 @@ $mobile = wp_is_mobile();
                 </div>
                 <div class="hsh-product-category">
                     <div class="hsh-list-category">
-                        <div class="hsh-item-category-item hsh-category-item-active">
+                        <div class="hsh-item-category-item hsh-category-item-active cursor-pointer" onclick="clickChangeUrls('<?= esc_url( home_url( '/' ) ) ?>')">
                             Tất cả sản phẩm
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_2_187)">

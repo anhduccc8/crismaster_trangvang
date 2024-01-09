@@ -116,6 +116,9 @@ $mobile = wp_is_mobile(); ?>
 
 </footer>
 <script>
+    function clickChangeUrls(url) {
+        document.location.href = url;
+    }
     function navOpen() {
         var x = document.getElementById("menu-reponsive");
         if (x.className === "site-navigation") {
