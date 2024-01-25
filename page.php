@@ -1,6 +1,6 @@
 <?php
 /*
-*Template Name: Home Page - HSH Thăng Long
+*Template Name: Home Page
 *
 */ 
 get_header();
@@ -19,39 +19,9 @@ $footer_email = $theme_option['footer_email'];
 <?php if(have_posts()):
     while ( have_posts() ) : the_post(); ?>
         <main class="site-content">
-            <div class="container-fluiddd">
-                <div class="row-custom" id="fullpage">
-                    <section class="section fp-section fp-table shs-header-custom bg-img-section" data-anchor="hsh-thang-long" id="bannerHome hsh-thang-long">
-                        <div class="shs-slide container-fluidd scale-m1345 scale-m1201">
-                            <div class="slider-content">
-                                <video id="myVideo" class="video-display" autoplay muted loop playsinline src="https://hshgroup.co/video/HSH.mp4"></video>
-                                <script>
-                                    document.addEventListener('DOMContentLoaded', function () {
-                                        var video = document.getElementById('myVideo');
-                                        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                                        if (isMobile) {
-                                            video.autoplay = true;
-                                            video.play();
-                                        }
-                                    });
-                                </script>
-                                <div class="shs-nav-number hide">
-                                    <div class="nav-number active"><a href="#">01</a></div>
-                                    <div class="nav-number"><a href="#ve-chung-toi-ele">02</a></div>
-                                    <div class="nav-number"><a href="#">03</a></div>
-                                    <div class="nav-number"><a href="#tin-tuc-ele">04</a></div>
-                                    <div class="nav-number"><a href="#">05</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="scrolldown js-scrollCt" href="#">
-                            <img class="ar" src="<?= get_template_directory_uri() ?>/assets/images/vector-1.png">
-                        </a>
-                    </section>
+            <div class="container-fluid">
+                <div class="row-custom">
                     <?php the_content(); ?>
-                    <?php
-                    get_template_part('template-parts/footer','cus');
-                    ?>
                 </div>
             </div>
         </main>

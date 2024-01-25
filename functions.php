@@ -1,27 +1,23 @@
 <?php
-//require_once get_template_directory() . '/framework/wp_bootstrap_navwalker.php';
+
 require_once get_template_directory() . '/plugins/redux/ReduxCore/framework.php';
 require_once get_template_directory() . '/plugins/redux/sample/sample-config.php';
-//require_once get_template_directory() . '/plugins/custom-post-type/crismaster_post_type.php';
-//require_once get_template_directory() . '/plugins/cmb2/init.php';
-//require_once get_template_directory() . '/plugins/cmb2/example-functions.php';
+require_once get_template_directory() . '/plugins/custom-post-type/crismaster_post_type.php';
+require_once get_template_directory() . '/plugins/cmb2/init.php';
+require_once get_template_directory() . '/plugins/cmb2/example-functions.php';
 require_once get_template_directory() . '/plugins/widget/widgets.php';
-require_once get_template_directory() . '/plugins/custom-visual/ve-chung-toi.php';
-require_once get_template_directory() . '/plugins/custom-visual/linh-vuc-hoat-dong.php';
-require_once get_template_directory() . '/plugins/custom-visual/thanh-tuu.php';
-require_once get_template_directory() . '/plugins/custom-visual/hsh-tin-tuc.php';
-require_once get_template_directory() . '/plugins/custom-visual/p2-thong-diep-chu-tich.php';
-require_once get_template_directory() . '/plugins/custom-visual/p2-lich-su-thanh-lap.php';
-require_once get_template_directory() . '/plugins/custom-visual/p2-tam-nhin-su-menh.php';
-require_once get_template_directory() . '/plugins/custom-visual/p3-linh-vuc-hoat-dong.php';
-require_once get_template_directory() . '/plugins/custom-visual/p4-list-tin-tuc.php';
-require_once get_template_directory() . '/plugins/custom-visual/p5-tuyen-dung.php';
-require_once get_template_directory() . '/plugins/custom-visual/p5-tuyen-dung-2.php';
-require_once get_template_directory() . '/plugins/custom-visual/lvc-banner.php';
-require_once get_template_directory() . '/plugins/custom-visual/lvc-list-san-pham.php';
-require_once get_template_directory() . '/plugins/custom-visual/lvc-gioi-thieu.php';
-require_once get_template_directory() . '/plugins/custom-visual/lvc-post-sidebar.php';
-
+require_once get_template_directory() . '/plugins/custom-visual/p1-banner-dau.php';
+require_once get_template_directory() . '/plugins/custom-visual/p1-dich-vu-doanh-nghiep.php';
+require_once get_template_directory() . '/plugins/custom-visual/p1-gallery.php';
+require_once get_template_directory() . '/plugins/custom-visual/p1-thong-ke.php';
+require_once get_template_directory() . '/plugins/custom-visual/p1-muc-luc-nganh-nghe.php';
+require_once get_template_directory() . '/plugins/custom-visual/p1-doanh-nghiep-tim-kiem-nhieu.php';
+require_once get_template_directory() . '/plugins/custom-visual/p1-san-pham-dich-vu-noi-bat.php';
+require_once get_template_directory() . '/plugins/custom-visual/p1-doanh-nghiep-moi-cap-nhat.php';
+require_once get_template_directory() . '/plugins/custom-visual/p1-doanh-nghiep-moi-dang-ky.php';
+require_once get_template_directory() . '/plugins/custom-visual/p1-kien-thuc-doanh-nghiep.php';
+require_once get_template_directory() . '/plugins/custom-visual/p1-dang-ky-doanh-nghiep.php';
+require_once get_template_directory() . '/plugins/custom-visual/p2-dvu-banner.php';
 // @ini_set( 'upload_max_size' , '64M' );
 // @ini_set( 'post_max_size', '64M');
 // @ini_set( 'max_execution_time', '300' );
@@ -49,54 +45,42 @@ function crismaster_theme_scripts_styles(){
     $protocol = is_ssl() ? 'https' : 'http';
 
     wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() .'/assets/css/bootstrap.css',array());
+    wp_enqueue_style( 'bootstrap-css-2', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css',array());
+    wp_enqueue_style( 'font-css-3', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap',array());
+    wp_enqueue_style( 'font-css-4', 'https://fonts.googleapis.com/css?family=Montserrat|Sonsie+One',array());
     wp_enqueue_style( 'font-css', get_template_directory_uri() .'/assets/font/fontawesome-free-6.0.0-web/css/all.min.css',array());
     wp_enqueue_style( 'font-css-2', get_template_directory_uri() .'/assets/css/font-family.css',array(),'1.0.2');
+    wp_enqueue_style( 'select2-css', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css',array());
+
     wp_enqueue_style( '2-css', get_template_directory_uri() .'/assets/css/owl.carousel.css',array());
     wp_enqueue_style( '3-css', get_template_directory_uri() .'/assets/css/owl.theme.css',array());
     wp_enqueue_style( '4-css', get_template_directory_uri() .'/assets/css/owl.transitions.css',array());
 
-    if (is_page_template('template/linh-vuc-con.php') || is_page_template('template/linh-vuc-con-sidebar.php')) {
-        wp_enqueue_style('lvc-main-css', get_template_directory_uri() . '/assets-lvc/css/main.css', array());
-        wp_enqueue_style('lvc-header-css', get_template_directory_uri() . '/assets-lvc/css/header.css', array());
-        wp_enqueue_style('lvc-footer-css', get_template_directory_uri() . '/assets-lvc/css/footer.css', array());
+    wp_enqueue_style( 'main-css', get_template_directory_uri() .'/assets/css/main.css',array(),'1.0.4');
+    wp_enqueue_style( 'header-css', get_template_directory_uri() .'/assets/css/header.css',array());
+    wp_enqueue_style( 'footer-css', get_template_directory_uri() .'/assets/css/footer.css',array(),'1.0.1');
+    wp_enqueue_style( 'response-css', get_template_directory_uri() .'/assets/css/responsive.css',array(),'1.0.1');
+    wp_enqueue_style( 'mystyle', get_template_directory_uri() .'/style.css',array(),'1.1.8');
+    /**** Start Jquery ****/
+    wp_enqueue_script("jquery-min", get_template_directory_uri()."/assets/js/jquery.min.js",array(),true,false);
+//    wp_enqueue_script("jquery-min", "https://code.jquery.com/jquery-3.6.0.min.js",array(),true,false);
+    wp_enqueue_script("bootstrap-js", "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js",array(),true,false);
+    wp_enqueue_script("select2-js", "https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js",array(),true,false);
+    wp_enqueue_script("owl-carousel-js", get_template_directory_uri()."/assets/js/owl.carousel.min.js",array(),true,false);
+    wp_enqueue_script("custom-js", get_template_directory_uri()."/assets/js/main.js",array(),'1.0.1',false);
+    wp_localize_script('custom-js', 'themeData', array(
+        'direc_url' => get_template_directory_uri().'/assets/'
+    ));
 
-        wp_enqueue_script("jquery-min", get_template_directory_uri()."/assets/js/libraries/jquery.min.js",array(),true,false);
-        wp_enqueue_script("bootstrap-js", "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js",array(),true,false);
-        wp_enqueue_script("owl-carousel-js", get_template_directory_uri()."/assets/js/owl.carousel.js",array(),true,false);
-        wp_enqueue_script("lvc-custom-js", get_template_directory_uri()."/assets-lvc/js/custom.js",array(),'1.0.1',false);
-    }else{
-        //    wp_enqueue_style( 'font-css-3', 'https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap',array());
-        wp_enqueue_style( 'main-css', get_template_directory_uri() .'/assets/css/main.css',array(),'1.0.4');
-        wp_enqueue_style( 'slide-css', get_template_directory_uri() .'/assets/css/slide.css',array());
-//    wp_enqueue_style( 'header-css', get_template_directory_uri() .'/assets/css/header.css',array());
-        wp_enqueue_style( 'footer-css', get_template_directory_uri() .'/assets/css/footer.css',array(),'1.0.1');
-        wp_enqueue_style( 'response-css', get_template_directory_uri() .'/assets/css/responsive.css',array(),'1.0.1');
-        wp_enqueue_style( 'fullpage-css', get_template_directory_uri() .'/assets/css/fullpage.min.css',array());
-        wp_enqueue_style( 'mystyle', get_template_directory_uri() .'/style.css',array(),'1.1.8');
-        /**** Start Jquery ****/
-        wp_enqueue_script("jquery-min", get_template_directory_uri()."/assets/js/libraries/jquery.min.js",array(),true,false);
-        wp_enqueue_script("bootstrap-js", "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js",array(),true,false);
-        wp_enqueue_script("map-js", "https://maps.googleapis.com/maps/api/js?key=AIzaSyAlZDuxldYtZzVxBMRnGJrwAcLBEGB2v8s",array(),true,false);
-        wp_script_add_data("map-js", "async", true);
-        wp_script_add_data("map-js", "defer", true);
-        wp_enqueue_script("2-js", get_template_directory_uri()."/assets/js/plugins/sweetalert2/sweetalert2.min.js",array(),true,false);
-        wp_enqueue_script("3-js", get_template_directory_uri()."/assets/js/main.js",array(),true,false);
-        wp_enqueue_script("4-js", get_template_directory_uri()."/assets/js/app.js",array(),true,false);
-        wp_enqueue_script("5-js", get_template_directory_uri()."/assets/js/fullpage.js",array(),true,false);
-        wp_enqueue_script("owl-carousel-js", get_template_directory_uri()."/assets/js/owl.carousel.js",array(),true,false);
-        wp_enqueue_script("iconify-js", "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js",array(),true,false);
-        wp_enqueue_script("custom-js", get_template_directory_uri()."/assets/js/custom.js",array(),'1.0.1',false);
-        wp_localize_script('3-js', 'themeData', array(
-            'direc_url' => get_template_directory_uri().'/assets/'
-        ));
-        $current_language = function_exists('pll_current_language') ? pll_current_language() : '';
-        wp_localize_script('custom-js', 'themeData', array(
-            'current_lang' => $current_language
-        ));
-    }
 
 }
 add_action( 'wp_enqueue_scripts', 'crismaster_theme_scripts_styles' );
+
+function enqueue_select2_scripts() {
+    wp_enqueue_script('select2', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js', array('jquery'), '', true);
+    wp_enqueue_style('select2', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css');
+}
+add_action('admin_enqueue_scripts', 'enqueue_select2_scripts');
 
 function crismaster_breadcrumbs() {
     // / === OPTIONS === /
@@ -218,10 +202,10 @@ function crismaster_breadcrumbs() {
 
 function crismaster_widgets_init() {
     register_sidebar( array(
-        'name'          => esc_html__( 'Sidebar - Trang xúc tiến thương mại', 'crismaster' ),
+        'name'          => esc_html__( 'Sidebar ', 'crismaster' ),
         'id'            => 'sidebar-1',
         'class'         => '',
-        'description'   => esc_html__( 'Sidebar sẽ xuất hiện ở trang xúc tiến thương mại.', 'crismaster' ),
+        'description'   => esc_html__( 'Sidebar', 'crismaster' ),
         'before_widget' => '',
         'after_widget'  => '',
         'before_title'  => '',
@@ -326,10 +310,6 @@ function remove_admin_login_header() {
 }
 add_action('get_header', 'remove_admin_login_header');
 
-//function cris_theme_setup(){
-//    load_theme_textdomain( 'crismaster',  get_template_directory() . '/languages' );
-//}
-//add_action( 'after_setup_theme', 'cris_theme_setup' );
 function custom_next_posts_link_attributes($attr) {
     $attr .= ' class="nav-number"';
     return $attr;

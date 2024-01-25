@@ -1,259 +1,54 @@
 /**
  * @license
  *
- * Font Family: IcielRift
- * URL: https://fonts.googleapis.com/css?family
- * © 2023 By Crismaster custom font
+ * Font Family: Crimson Text
+ * URL: https://fonts.googleapis.com/css?family=Crimson Text
+ * © 2023 By Jason-Phan custom font
  *
 */
 
-/*@font-face {*/
-/*  font-family: 'CrimsonText-Regular';*/
-/*  src: url('../fonts/../fonts/CrimsonText-Regular.woff2') format('woff2'),*/
-/*       url('../fonts/../fonts/CrimsonText-Regular.ttf') format('truetype');*/
-/*       font-weight: 500;*/
-/*       font-display: swap;*/
-/*       font-style: normal;*/
-/*}*/
-
-/*@font-face {*/
-/*  font-family: 'CrimsonText-SemiBold';*/
-/*  src: url('../fonts/../fonts/CrimsonText-SemiBold.woff2') format('woff2'),*/
-/*       url('../fonts/../fonts/CrimsonText-SemiBold.ttf') format('truetype');*/
-/*       font-weight: 600;*/
-/*       font-display: swap;*/
-/*       font-style: normal;*/
-/*}*/
-
-/*@font-face {*/
-/*  font-family: 'CrimsonText-SemiBoldItalic';*/
-/*  src: url('../fonts/../fonts/CrimsonText-SemiBoldItalic.woff2') format('woff2'),*/
-/*       url('../fonts/../fonts/CrimsonText-SemiBoldItalic.ttf') format('truetype');*/
-/*       font-weight: 600;*/
-/*       font-display: swap;*/
-/*       font-style: italic;*/
-/*}*/
-
-/*@font-face {*/
-/*  font-family: 'CrimsonText-Bold';*/
-/*  src: url('../fonts/../fonts/CrimsonText-Bold.woff2') format('woff2'),*/
-/*       url('../fonts/../fonts/CrimsonText-Bold.ttf') format('truetype');*/
-/*       font-weight: 700;*/
-/*       font-display: swap;*/
-/*       font-style: normal;*/
-/*}*/
-
-/*@font-face {*/
-/*  font-family: 'CrimsonText-BoldItalic';*/
-/*  src: url('../fonts/../fonts/CrimsonText-BoldItalic.woff2') format('woff2'),*/
-/*       url('../fonts/../fonts/CrimsonText-BoldItalic.ttf') format('ttf');*/
-/*       font-weight: 700;*/
-/*       font-display: swap;*/
-/*       font-style: italic;*/
-/*}*/
-
 @font-face {
-    font-family: 'Rift';
-    src: url('../fonts/Rift-BoldItalic.woff2') format('woff2'),
-    url('../fonts/Rift-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
+  font-family: 'CrimsonText-Regular';
+  src: url('../fonts/CrimsonText-Regular.woff2') format('woff2'),
+       url('../fonts/CrimsonText-Regular.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
 }
 
 @font-face {
-    font-family: 'Rift';
-    src: url('../fonts/Rift-LightItalic.woff2') format('woff2'),
-    url('../fonts/Rift-LightItalic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
+  font-family: 'CrimsonText-SemiBold';
+  src: url('../fonts/CrimsonText-SemiBold.woff2') format('woff2'),
+       url('../fonts/CrimsonText-SemiBold.ttf') format('truetype');
+       font-weight: 600;
+       font-display: swap;
+       font-style: normal;
 }
 
 @font-face {
-    font-family: 'Rift';
-    src: url('../fonts/Rift-Italic.woff2') format('woff2'),
-    url('../fonts/Rift-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+  font-family: 'CrimsonText-SemiBoldItalic';
+  src: url('../fonts/CrimsonText-SemiBoldItalic.woff2') format('woff2'),
+       url('../fonts/CrimsonText-SemiBoldItalic.ttf') format('truetype');
+       font-weight: 600;
+       font-display: swap;
+       font-style: italic;
 }
 
 @font-face {
-    font-family: 'Rift';
-    src: url('../fonts/Rift-MediumItalic.woff2') format('woff2'),
-    url('../fonts/Rift-MediumItalic.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
+  font-family: 'CrimsonText-Bold';
+  src: url('../fonts/CrimsonText-Bold.woff2') format('woff2'),
+       url('../fonts/CrimsonText-Bold.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
 }
 
 @font-face {
-    font-family: 'Rift Soft';
-    src: url('../fonts/RiftSoft-LightItalic.woff2') format('woff2'),
-    url('../fonts/RiftSoft-LightItalic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
+  font-family: 'CrimsonText-BoldItalic';
+  src: url('../fonts/CrimsonText-BoldItalic.woff2') format('woff2'),
+       url('../fonts/CrimsonText-BoldItalic.ttf') format('ttf');
+       font-weight: 700;
+       font-display: swap;
+       font-style: italic;
 }
-
-@font-face {
-    font-family: 'Rift Soft';
-    src: url('../fonts/RiftSoft-Italic.woff2') format('woff2'),
-    url('../fonts/RiftSoft-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rift Soft Demi';
-    src: url('../fonts/RiftSoft-DemiItalic.woff2') format('woff2'),
-    url('../fonts/RiftSoft-DemiItalic.woff') format('woff');
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rift Demi';
-    src: url('../fonts/Rift-DemiItalic.woff2') format('woff2'),
-    url('../fonts/Rift-DemiItalic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rift Soft';
-    src: url('../fonts/RiftSoft-BoldItalic.woff2') format('woff2'),
-    url('../fonts/RiftSoft-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rift';
-    src: url('../fonts/Rift-Bold.woff2') format('woff2'),
-    url('../fonts/Rift-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rift Demi';
-    src: url('../fonts/Rift-Demi.woff2') format('woff2'),
-    url('../fonts/Rift-Demi.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rift Soft';
-    src: url('../fonts/RiftSoft-MediumItalic.woff2') format('woff2'),
-    url('../fonts/RiftSoft-MediumItalic.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rift Soft Demi';
-    src: url('../fonts/RiftSoft-Demi.woff2') format('woff2'),
-    url('../fonts/RiftSoft-Demi.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rift';
-    src: url('../fonts/Rift-Regular.woff2') format('woff2'),
-    url('../fonts/Rift-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rift';
-    src: url('../fonts/Rift-Medium.woff2') format('woff2'),
-    url('../fonts/Rift-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rift Soft';
-    src: url('../fonts/RiftSoft-Light.woff2') format('woff2'),
-    url('../fonts/RiftSoft-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rift';
-    src: url('../fonts/Rift-Light.woff2') format('woff2'),
-    url('../fonts/Rift-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rift Soft';
-    src: url('../fonts/RiftSoft-Bold.woff2') format('woff2'),
-    url('../fonts/RiftSoft-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rift Soft';
-    src: url('../fonts/RiftSoft-Regular.woff2') format('woff2'),
-    url('../fonts/RiftSoft-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rift Soft';
-    src: url('../fonts/RiftSoft-Medium.woff2') format('woff2'),
-    url('../fonts/RiftSoft-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-/*@font-face {*/
-/*    font-family: 'Iciel Rift';*/
-/*    src: url('../fonts/iceilRift.ttf') format('truetype');*/
-/*    font-weight: 500;*/
-/*    font-style: normal;*/
-/*    font-display: swap;*/
-/*}*/
-@font-face {
-    font-family: 'Iciel Rift';
-    src: url('../fonts/Rift.woff2') format('woff2'),
-    url('../fonts/Rift.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Iciel Rift';
-    src: url('../fonts/Rift-Bold.woff2') format('woff2'),
-    url('../fonts/Rift-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
 
