@@ -157,9 +157,7 @@ foreach ($lines2 as $line2) {
             <div class="container-fluid-ct">
                 <div class="row-breadcrumb">
                     <div class="breadcrumb-page">
-                        <a class="link-home" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?= esc_html__('Trang chủ','crismaster') ?></a>
-                        <i class="fa-solid fa-angle-right"></i>
-                        <span><?php esc_html__('Dịch vụ','crismaster') ?></span>
+                        <?php crismaster_breadcrumbs(); ?>
                     </div>
                 </div>
             </div>

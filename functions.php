@@ -18,6 +18,8 @@ require_once get_template_directory() . '/plugins/custom-visual/p1-doanh-nghiep-
 require_once get_template_directory() . '/plugins/custom-visual/p1-kien-thuc-doanh-nghiep.php';
 require_once get_template_directory() . '/plugins/custom-visual/p1-dang-ky-doanh-nghiep.php';
 require_once get_template_directory() . '/plugins/custom-visual/p2-dvu-banner.php';
+require_once get_template_directory() . '/plugins/custom-visual/p2-dvu-gioi-thieu-text-anh.php';
+require_once get_template_directory() . '/plugins/custom-visual/p2-dvu-quang-cao.php';
 // @ini_set( 'upload_max_size' , '64M' );
 // @ini_set( 'post_max_size', '64M');
 // @ini_set( 'max_execution_time', '300' );
@@ -102,12 +104,12 @@ function crismaster_breadcrumbs() {
     $homeLink = home_url() . '/';
     $linkBefore = '';
     $linkAfter = '';
-    $linkAttr = ' rel="v:url" property="v:title"';
-    $link = $linkBefore . '<a' . $linkAttr . ' href="%1$s">%2$s</a><span>/</span>' . $linkAfter;
+    $linkAttr = ' rel="v:url" property="v:title"  class="link-home"';
+    $link = $linkBefore . '<a' . $linkAttr . ' href="%1$s">%2$s</a><i class="fa-solid fa-angle-right"></i>' . $linkAfter;
     if (is_home() || is_front_page()) {
-        if ($showOnHome == 1) echo '<span class=""><a href="' . $homeLink . '" class="pathway"><i class=""></i>' . $text['home'] . '</a></span>';
+        if ($showOnHome == 1) echo '<a href="' . $homeLink . '" class="link-home">' . $text['home'] . '</a>';
     } else {
-        echo '' . sprintf($link, $homeLink, '<i class="fa fa-home"></i> '.$text['home']) . $delimiter;
+        echo '' . sprintf($link, $homeLink, $text['home']) . $delimiter;
         if ( is_category() ) {
             $thisCat = get_category(get_query_var('cat'), false);
             if ($thisCat->parent != 0) {
@@ -320,6 +322,7 @@ function custom_prev_posts_link_attributes($attr) {
     return $attr;
 }
 add_filter('previous_posts_link_attributes', 'custom_prev_posts_link_attributes');
+
 
 function custom_polylang_langswitcher() {
     $langs_array = pll_the_languages( array( 'dropdown' => 1, 'hide_current' => 0, 'raw' => 1 ) );
