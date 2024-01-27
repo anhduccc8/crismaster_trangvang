@@ -29,8 +29,14 @@ if(function_exists('vc_map')){
                         'value' => '',
                         'description' => esc_html__('',"crismaster")
                     ),
-
                 ),
+            ),
+            array(
+                'type' => 'textfield',
+                'heading' => esc_html__('Thêm class đặc biệt','crismaster'),
+                'param_name' => 'sclass',
+                'value' => '',
+                'description' => esc_html__('',"crismaster")
             ),
         )
     ));
@@ -39,10 +45,11 @@ add_shortcode('p2_dvu_banner','p2_dvu_banner_func');
 function p2_dvu_banner_func($atts,$content = null){
     extract(shortcode_atts(array(
         'details' => '',
+        'sclass' => '',
     ),$atts));
     ob_start();
     ?>
-    <section class="section section-widget-banner-image-single">
+    <section class="section section-widget-banner-image-single <?php if (isset($sclass) && $sclass !=''){ echo $sclass; } ?>">
         <div class="container-fluid-ct">
             <div class="row">
                 <?php if(isset($details) && $details != ''){

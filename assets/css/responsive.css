@@ -115,6 +115,24 @@
 	.banner-sidebar {
     	padding-left: 1% !important;
 	}
+
+	/* Style form contact */
+	.form-title {
+	    font-size: 24px;
+	}
+
+	.form-input input {
+	    font-size: 18px;
+	}
+
+	.check-box span {
+	    font-size: 16px;
+	}
+
+	.btn-form-register {
+	    font-size: 20px;
+	}
+
 }
 
 @media (max-width: 991px) {
@@ -145,6 +163,10 @@
 
 	.row-custom-box-content {
 	    padding: 40px 30px 40px;
+	}
+
+	.form-box {
+	    padding: 60px 30px 60px;
 	}
 }
 
@@ -268,9 +290,66 @@
 	.row-custom-box-content {
 	    padding: 30px 15px 30px;
 	}
+
+	.form-box {
+	    padding: 50px 15px 60px;
+	}
+
+	.form-title {
+	    font-size: 20px;
+	}
+
+	.link-map {
+	    margin-top: 70px;
+	}
+
+	.btn-form-register {
+		margin-bottom: 60px;
+	}
+
+	.section-show-case.style-02 {
+		margin-top: 50px;
+	}
+
+	.description-contact {
+	    margin-top: 0px;
+	}
+
+	.img-style-border {
+		margin-top: 30px;
+		margin-bottom: 60px;
+	}
+
+	.row-accodition-widget {
+	    margin-top: 40px;
+	}
+
+	.space-custom-01.bgr-fff {
+		margin-top: 20px;
+	}
+
+	.form-contact {
+		margin-top: 20px !important;
+	}
 }
 
+@media (min-width: 1200px) {
+	.row-accodition-widget .column-left {
+        padding-right: 40px;
+    }
 
+    .row-accodition-widget .column-right {
+        padding-left: 40px;
+    }
+
+    .column-form-left {
+	    padding-right: 5% !important; 
+	}
+
+	.column-form-right {
+	    padding-left: 5% !important; 
+	}
+}
 
 
 

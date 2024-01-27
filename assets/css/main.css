@@ -100,8 +100,20 @@ ul li {
 .mt-40 {
     margin-top: 40px !important;
 }
+.mt-50 {
+    margin-top: 50px;
+}
 .mt-70 {
     margin-top: 70px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.mb-40 {
+    margin-bottom: 40px;
 }
 .mr-20 {
     margin-right: 20px;
@@ -1742,4 +1754,123 @@ padding-right: 112px;
 
 .section-blog-tag .trending-category {
     margin-bottom: 0;
+}
+
+/* Style Lien He page */
+.description-contact {
+    margin-top: 20px;
+    color: #003DA5;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.description-contact span {
+    color: #FFCD00;
+} 
+
+.row-accodition-widget {
+    margin-top: 70px;
+}
+
+.accodition-widget {
+    border-bottom: 2px solid #003DA5;
+    padding-bottom: 20px;
+}
+
+.accodition-widget .accodition-title {
+    color: #003DA5;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    margin-bottom: 22px;
+}
+
+.accodition-widget .accodition-des {
+    color: #4D4D4D;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Style Form Register */
+.form-box {
+    border-radius: 12px;
+    border: 2px solid #003DA5;
+    padding: 70px 70px 80px;
+}
+
+.btn-form-register {
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 60px;
+    display: block;
+    width: 100%;
+    height: 77px;
+    line-height: 77px;
+    border-width: 2px;
+}
+
+.btn-form-register:hover {
+    border-color: var(--primary_color);
+    color: var(--primary_color);
+}
+
+.form-title {
+    color: #003DA5;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.form-input input {
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid #4D4D4D !important;
+    color: #4D4D4D;
+    font-size: 20px;
+    font-weight: 500;
+    height: 50px;
+}
+
+.form-input input::placeholder {
+    color: #4D4D4D !important;
+}
+
+.box-upload-file .form-des {
+    color: #8E8E8E;
+    font-family: Inter;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 160%; /* 20.8px */
+    letter-spacing: 0.5px;
+}
+
+.check-box input {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    transform: translateY(4px);
+    margin-right: 5px;
+}
+
+.check-box span {
+    color: #4D4D4D;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.link-map {
+    margin-top: 97px;
+    display: block;
+}
+
+.form-input input:active,
+.form-input input:focus,
+.form-input input:hover {
+    border-bottom-color: var(--primary_color) !important;
+    border-width: 2px !important;
+    color: var(--primary_color);
 }

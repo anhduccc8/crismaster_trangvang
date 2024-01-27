@@ -27,6 +27,8 @@ require_once get_template_directory() . '/plugins/custom-visual/p3-kien-thuc-doa
 require_once get_template_directory() . '/plugins/custom-visual/p3-kien-thuc-doanh-nghiep-carousel.php';
 require_once get_template_directory() . '/plugins/custom-visual/p3-kien-thuc-doanh-nghiep-banner-2.php';
 require_once get_template_directory() . '/plugins/custom-visual/p4-danh-muc-nghe.php';
+require_once get_template_directory() . '/plugins/custom-visual/p5-form-lien-he.php';
+require_once get_template_directory() . '/plugins/custom-visual/p5-lien-he-infor.php';
 // @ini_set( 'upload_max_size' , '64M' );
 // @ini_set( 'post_max_size', '64M');
 // @ini_set( 'max_execution_time', '300' );
