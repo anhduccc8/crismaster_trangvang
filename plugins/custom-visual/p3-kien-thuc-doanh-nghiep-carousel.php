@@ -75,7 +75,7 @@ function p3_kien_thuc_doanh_nghiep_carousel_func($atts,$content = null){
                             <div class="item-post-description">
                                 <?= esc_attr($post_summary) ?>
                             </div>
-                            <a class="btn-main btn-round style-03 btn-page-news" href="<?php the_permalink(); ?>"><?= esc_html__('Xem chi tiết','crismaster') ?></a>
+                            <a class="btn-main btn-round style-03 btn-page-news" href="<?php the_permalink($post->ID); ?>"><?= esc_html__('Xem chi tiết','crismaster') ?></a>
                         </div>
                     <?php } ?>
 
@@ -117,7 +117,7 @@ function p3_kien_thuc_doanh_nghiep_carousel_func($atts,$content = null){
                         $related_posts->the_post();
                         $single_image2 = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'large');
                         ?>
-                            <div class="item-post item">
+                            <div class="item-post item cursor-pointer" onclick="clickChangeUrls('<?= get_permalink() ?>')">
                                 <img alt="img-blog-01" src="<?= esc_url($single_image2[0]) ?>" style="width:100%">
                                 <div class="blog-title"><?= the_title() ?> </div>
                             </div>

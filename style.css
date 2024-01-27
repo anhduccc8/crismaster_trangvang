@@ -45,6 +45,9 @@ h5 {
     width: 70%;
     margin: auto;
 }
+.cursor-pointer {
+    cursor: pointer;
+}
 @media (min-width: 1200px) {
     #menu-reponsive .hsh-menu-list li a {
         color: #fff;
