@@ -1,6 +1,6 @@
 <?php
 /*
-*Template Name: Page Dịch vụ
+*Template Name: Page Short Header
 *
 */
 get_header('short');

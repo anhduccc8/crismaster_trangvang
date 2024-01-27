@@ -20,6 +20,11 @@ require_once get_template_directory() . '/plugins/custom-visual/p1-dang-ky-doanh
 require_once get_template_directory() . '/plugins/custom-visual/p2-dvu-banner.php';
 require_once get_template_directory() . '/plugins/custom-visual/p2-dvu-gioi-thieu-text-anh.php';
 require_once get_template_directory() . '/plugins/custom-visual/p2-dvu-quang-cao.php';
+require_once get_template_directory() . '/plugins/custom-visual/p3-single-post-noi-dung-chinh.php';
+require_once get_template_directory() . '/plugins/custom-visual/p3-single-post-tin-tuc-cung-chu-de.php';
+require_once get_template_directory() . '/plugins/custom-visual/p3-single-post-tin-tuc-moi-nhat.php';
+require_once get_template_directory() . '/plugins/custom-visual/p3-kien-thuc-doanh-nghiep-post-sidebar-quang-cao.php';
+require_once get_template_directory() . '/plugins/custom-visual/p3-kien-thuc-doanh-nghiep-carousel.php';
 // @ini_set( 'upload_max_size' , '64M' );
 // @ini_set( 'post_max_size', '64M');
 // @ini_set( 'max_execution_time', '300' );

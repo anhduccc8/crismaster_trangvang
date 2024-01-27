@@ -31,7 +31,7 @@ if(function_exists('vc_map')){
             ),
             array(
                 'type' => 'textfield',
-                'heading' => esc_html__('ID các bài tin tức muốn hiển thị','crismaster'),
+                'heading' => esc_html__('ID các bài tin tức mới nhất muốn hiển thị','crismaster'),
                 'param_name' => 'ids',
                 'value' => '',
                 'description' => esc_html__('Ngăn cách nhau bởi dấu ","',"crismaster")
@@ -92,6 +92,7 @@ function p1_kien_thuc_doanh_nghiep_func($atts,$content = null){
                     <?php } ?>
 
                     <div class="col-xs-12 col-md-3 shs-blog-sidebar">
+                        <h6 class="item-blog-title"><?= esc_html__('Tin mới nhất','crismaster') ?> </h6>
                     <?php
                     $query = new WP_Query($args);
                     if ($query->have_posts()) {

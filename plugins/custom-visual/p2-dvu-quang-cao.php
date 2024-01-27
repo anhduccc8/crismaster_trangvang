@@ -42,7 +42,7 @@ function p2_dvu_quang_cao_func($atts,$content = null){
     ),$atts));
     ob_start();
     ?>
-    <section class="section section-widget-banner-sale space-custom-02">
+    <section class="section section-widget-banner-sale">
         <div class="container-fluid-ct">
             <div class="row">
             <?php if(isset($details) && $details != ''){
