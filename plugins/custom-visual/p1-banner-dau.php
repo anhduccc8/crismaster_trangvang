@@ -45,13 +45,13 @@ function p1_banner_dau_func($atts,$content = null){
     <section class="section section-widget-banner">
         <div class="container-fluid-ct">
             <div class="row">
-    <?php if(isset($details) && $details != ''){
-        $detailss = vc_param_group_parse_atts($details,'');
-        foreach ($detailss as $dca ) {
-            if(isset($dca['simage']) && $dca['simage']!='') {
-                $dca['simage'] = wp_get_attachment_image_src($dca['simage'], '');
-            }
-            ?>
+            <?php if(isset($details) && $details != ''){
+                $detailss = vc_param_group_parse_atts($details,'');
+                foreach ($detailss as $dca ) {
+                    if(isset($dca['simage']) && $dca['simage']!='') {
+                        $dca['simage'] = wp_get_attachment_image_src($dca['simage'], '');
+                    }
+                    ?>
                 <div class="col-12 col-lg-6 item-banner-image" onclick="clickChangeUrls('<?= esc_url($dca['slink']) ?>')">
                     <img src="<?= esc_url($dca['simage'][0]) ?>" alt="" style="width:100%">
                 </div>
