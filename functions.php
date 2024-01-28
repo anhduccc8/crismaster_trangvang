@@ -78,6 +78,7 @@ function crismaster_theme_scripts_styles(){
     wp_enqueue_script("bootstrap-js", "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js",array(),true,false);
     wp_enqueue_script("select2-js", "https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js",array(),true,false);
     wp_enqueue_script("owl-carousel-js", get_template_directory_uri()."/assets/js/owl.carousel.min.js",array(),true,false);
+    wp_enqueue_script("map-js", "https://maps.googleapis.com/maps/api/js?key=AIzaSyAlZDuxldYtZzVxBMRnGJrwAcLBEGB2v8s",array(),true,false);
     wp_enqueue_script("custom-js", get_template_directory_uri()."/assets/js/main.js",array(),'1.0.1',false);
     wp_localize_script('custom-js', 'themeData', array(
         'direc_url' => get_template_directory_uri().'/assets/'

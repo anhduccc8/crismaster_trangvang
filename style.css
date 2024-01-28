@@ -48,6 +48,9 @@ h5 {
 .cursor-pointer {
     cursor: pointer;
 }
+.link-map {
+    min-height: 300px;
+}
 @media (min-width: 1200px) {
     #menu-reponsive .hsh-menu-list li a {
         color: #fff;
@@ -55,6 +58,9 @@ h5 {
     .section-product .owl-carousel .owl-nav,
     .section-product .owl-carousel .owl-nav.disabled {
         display: block !important;
+    }
+    .link-map {
+        min-height: 500px;
     }
 }
 @media (max-width: 1199px) {
