@@ -355,9 +355,9 @@ function custom_cf7_redirect($contact_form) {
     if ($form_id) {
         $current_language = function_exists('pll_current_language') ? pll_current_language() : '';
         if ($current_language == 'vi'){
-            $redirect_url = get_permalink('217');
+            $redirect_url = get_permalink('189');
         }else{
-            $redirect_url = get_permalink('220');
+            $redirect_url = get_permalink('189');
         }
         wp_redirect($redirect_url);
         exit();

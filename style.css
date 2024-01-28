@@ -51,6 +51,24 @@ h5 {
 .link-map {
     min-height: 300px;
 }
+.hide {
+    display: none;
+}
+.wpcf7-form-control.form-check-input {
+    display: contents;
+}
+.wpcf7-form-control.form-check-input>span{
+    margin-left: 0;
+}
+.btn-form-register:hover {
+    border-color: var(--primary_color);
+    color: var(--primary_color);
+}
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
 @media (min-width: 1200px) {
     #menu-reponsive .hsh-menu-list li a {
         color: #fff;

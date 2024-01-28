@@ -78,4 +78,11 @@ $(document).ready(function() {
         allowClear: true,
         multiple: true,
     });
+
+ if ($('#triggerFileInput').length > 0){
+     document.getElementById('triggerFileInput').addEventListener('click', function() {
+         document.getElementById('fileInput').click();
+     });
+ }
+
 });
