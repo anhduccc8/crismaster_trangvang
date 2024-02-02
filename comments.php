@@ -5,8 +5,9 @@
  * return early without loading the comments.
  */
 ?>
-<h3 class="box-info-title"><?= esc_html__('Nhận xét','crismaster') ?> </h3>
-<div class="box-info-review">
+<h3 class="box-info-title tab-title tab-review active"><?= esc_html__('Nhận xét','crismaster') ?> </h3>
+<h3 class="box-info-title tab-title tab-write-review"><?= esc_html__('Viết Đánh Giá','crismaster') ?></h3>
+<div class="box-info-review active">
     <?php
     if ( have_comments() ) :
         wp_list_comments( array(
@@ -23,13 +24,13 @@
     endif;
 	if (  comments_open() && get_comments_number() == '0' ) : ?>
     <div class="text-center">
-        <span class="text-center min-h200px"><?= esc_html__('Chưa có nhận xét nào!','crismaster') ?></span>
+        <span class="text-center min-h200px"><?= esc_html__('Chưa có nhận xét nào hoặc ý kiến của bạn đang được xét duyệt!','crismaster') ?></span>
     </div>
 	    <?php
     endif;
 
 	?>
 </div>
-<div class="hide">
-    <?php 	comment_form(array('id_form' => 'commentform')); ?>
+<div class="box-write-review">
+    <?php 	comment_form(array('id_form' => 'commentform','class_form' => 'form-review')); ?>
 </div>

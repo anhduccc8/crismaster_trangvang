@@ -86,6 +86,22 @@ h5 {
 .widget-category-list.style-03 .list-item-category li a.active {
     font-weight: bold;
 }
+.comment-reply-title,
+.comment-notes,
+p.logged-in-as{
+    display: none;
+}
+.rating-stars i {
+    font-size: 24px;
+    color: #FFD700; /* Màu vàng, bạn có thể thay đổi màu sắc theo ý muốn */
+    cursor: pointer;
+}
+.rating-stars i {
+    color: #e7e4d5;
+}
+.rating-stars i.selected {
+    color: #FFD700;
+}
 @media (min-width: 1200px) {
     #menu-reponsive .hsh-menu-list li a {
         color: #fff;

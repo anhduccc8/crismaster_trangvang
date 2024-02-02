@@ -372,20 +372,38 @@ function custom_comment_output($comment, $args, $depth) {
 
 // Thêm trường Tên và Số điện thoại vào biểu mẫu bình luận
 function custom_comment_fields($fields) {
-    $fields['author'] = '<p class="comment-form-author"><label for="author">Tên <span class="required">*</span></label><input id="author" name="author" type="text"></p>';
-    $fields['phone_cm'] = '<p class="comment-form-phone"><label for="phone">Số điện thoại <span class="required">*</span></label><input id="phone_cm" name="phone_cm" type="tel"></p>';
+    $fields['author'] = '<div class="form-input-review"><input class="form-control" id="author" name="author" type="text" placeholder="'.esc_html__('Nhập họ tên','crismaster').'"></div>';
+    $fields['email'] = '<div class="form-input-review mt-20"><input class="form-control" id="email" name="email" type="email" placeholder="'.esc_html__('Nhập email','crismaster').'"></div>';
+    $fields['phone_cm'] = '<div class="form-input-review mt-20"><input id="phone_cm"  class="form-control" name="phone_cm" type="tel" placeholder="'.esc_html__('Nhập số điện thoại','crismaster').'"></div>';
     return $fields;
 }
 add_filter('comment_form_default_fields', 'custom_comment_fields');
 
+
+function custom_comment_textarea_field($comment_field) {
+    $comment_field = '<div class="form-input-review mt-20"><textarea name="comment" id="comment" cols="30" rows="10" class="form-control" placeholder="'.esc_html__('Review của bạn','crismaster').'"></textarea></div>';
+    return $comment_field;
+}
+add_filter('comment_form_field_comment', 'custom_comment_textarea_field');
+
+function custom_comment_submit_button() {
+    $submit_button = '<button type="submit" class="btn-main btn-review form-submit-btn mt-30">'.esc_html__('Gửi thông tin').'</button>';
+    return $submit_button;
+}
+add_filter('comment_form_submit_button', 'custom_comment_submit_button');
+
+
 function add_rating_field() {
-    echo '<p class="comment-form-rating"><label for="rating">Đánh giá sao <span class="required">*</span></label><select name="rating" id="rating">
-            <option value="5">5 sao</option>
-            <option value="4">4 sao</option>
-            <option value="3">3 sao</option>
-            <option value="2">2 sao</option>
-            <option value="1">1 sao</option>
-        </select></p>';
+    echo '<div class="rating mt-20"><div class="title-rating">'.esc_html__("Đánh giá",'crismaster').'</div>
+        <input type="hidden" name="rating" id="rating_hide">
+        <div class="rating-stars">
+            <i class="fa fa-star" data-value="1"></i>
+            <i class="fa fa-star" data-value="2"></i>
+            <i class="fa fa-star" data-value="3"></i>
+            <i class="fa fa-star" data-value="4"></i>
+            <i class="fa fa-star" data-value="5"></i>
+        </div>
+        </div>';
 }
 add_action('comment_form_logged_in_after', 'add_rating_field');
 add_action('comment_form_after_fields', 'add_rating_field');

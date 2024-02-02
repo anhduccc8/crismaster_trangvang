@@ -106,5 +106,40 @@ $(document).ready(function() {
          return false;
      });
  }
+ if ($(".tab-review").length > 0){
+     $(".tab-review").on('click', function () {
+         $(this).parents('.widget-box-info').find('.box-info-review').addClass('active');
+         $(this).parents('.widget-box-info').find('.box-write-review').removeClass('active');
+         $(this).parents('.widget-box-info').find('.tab-review').addClass('active');
+         $(this).parents('.widget-box-info').find('.tab-write-review').removeClass('active');
+     });
+ }
 
+ if ($(".tab-write-review").length > 0){
+     $(".tab-write-review").on('click', function () {
+         $(this).parents('.widget-box-info').find('.box-info-review').removeClass('active');
+         $(this).parents('.widget-box-info').find('.box-write-review').addClass('active');
+         $(this).parents('.widget-box-info').find('.tab-review').removeClass('active');
+         $(this).parents('.widget-box-info').find('.tab-write-review').addClass('active');
+     });
+ }
+    if ($('#commentform').length > 0){
+        $("#commentform").append($("#comment").parent());
+        $("#commentform").append($(".form-submit-btn").parent());
+        var stars = document.querySelectorAll('.rating-stars i');
+        stars.forEach(function(star) {
+            star.addEventListener('click', function() {
+                var selectedValue = this.getAttribute('data-value');
+                stars.forEach(function(s) {
+                    s.classList.remove('selected');
+                });
+                for (var i = 0; i < selectedValue; i++) {
+                    stars[i].classList.add('selected');
+                }
+                $('#rating_hide').val(selectedValue);
+                console.log('Đã chọn ' + selectedValue + ' sao');
+            });
+        });
+        stars[4].click();
+    }
 });
