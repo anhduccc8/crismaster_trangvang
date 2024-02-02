@@ -102,32 +102,79 @@ function details_enterprise_metabox() {
         }
         wp_reset_postdata();
     }
+    $theme_option = get_option('theme_option');
+    $header_province = $theme_option['header_province'];
+    $lines2 = explode("\n", trim($header_province));
+    $header_province_arr = [];
+    $province_options = [];
+    foreach ($lines2 as $line2) {
+        $header_province_arr[] = $line2;
+    }
+    if (!empty($header_province_arr)){
+        foreach ($header_province_arr as $province){
+            $province_arr = explode('|',$province);
+            $province_options[$province_arr[0]] = $province_arr[1];
+          }
+    }
 	new_cmb2_box( array(
         'id'           => $prefix . 'details_enterprise',
         'title'        => __( 'Chi tiết doanh nghiệp', 'cmb2' ),
         'object_types' => array( 'enterprise' ),
         'fields'       => array(
+
             array(
                 'name'    => esc_html__( 'Chọn các ngành nghề', 'cmb2' ),
                 'desc'    => '',
                 'id'      => $prefix . 'profession',
-                'type'    => 'select',
-                'options' => $profession_options,
-                'attributes' => array(
-                    'multiple' => 'multiple',
-                    'data-placeholder' => 'Chọn ngành nghề', // Tùy chọn placeholder cho Select2
-                ),
-                'default' => array(),
+                'type'    => 'multicheck',
+                'options'    => $profession_options,
+                'inline'  => true,
             ),
             array(
                 'name'    => esc_html__( 'Chọn các sản phẩm/dịch vụ', 'cmb2' ),
                 'desc'    => '',
                 'id'      => $prefix . 'service',
+                'type'    => 'multicheck',
+                'options'    => $service_options,
+                'inline'  => true,
+            ),
+            array(
+                'name'    => esc_html__( 'Doanh nghiệp được tài trợ', 'cmb2' ),
+                'desc'    => '',
+                'id'      => $prefix . 'is_taitro',
                 'type'    => 'select',
-                'options' => $service_options,
+                'options' => array(
+                        'on' => 'Được tài trợ',
+                        'off' => 'Không được tài trợ',
+                ),
+                'default' => array(),
+            ),
+            array(
+                'name' => esc_html__('Tên công tý đăng ký kinh doanh', 'cmb2'),
+                'desc' => '',
+                'id'   => $prefix . 'name_dn',
+                'type' => 'text',
+            ),
+            array(
+                'name' => esc_html__('Tên người đại diện', 'cmb2'),
+                'desc' => '',
+                'id'   => $prefix . 'ng_daidien',
+                'type' => 'text',
+            ),
+            array(
+                'name' => esc_html__('Địa chỉ', 'cmb2'),
+                'desc' => '',
+                'id'   => $prefix . 'ng_diachi',
+                'type' => 'text',
+            ),
+            array(
+                'name'    => esc_html__( 'Chọn thành phố', 'cmb2' ),
+                'desc'    => '',
+                'id'      => $prefix . 'province',
+                'type'    => 'select',
+                'options' => $province_options,
                 'attributes' => array(
-                    'multiple' => 'multiple',
-                    'data-placeholder' => 'Chọn các sản phẩm/dịch vụ', // Tùy chọn placeholder cho Select2
+                    'data-placeholder' => 'Chọn thành phố', // Tùy chọn placeholder cho Select2
                 ),
                 'default' => array(),
             ),
@@ -142,6 +189,55 @@ function details_enterprise_metabox() {
                 'desc' => '',
                 'id'   => $prefix . 'mst',
                 'type' => 'text',
+            ),
+            array(
+                'name' => esc_html__('Số điện thoại', 'cmb2'),
+                'desc' => '',
+                'id'   => $prefix . 'phone_e',
+                'type' => 'text',
+            ),
+            array(
+                'name' => esc_html__('Email', 'cmb2'),
+                'desc' => '',
+                'id'   => $prefix . 'email_e',
+                'type' => 'text',
+            ),
+            array(
+                'name' => esc_html__('Website', 'cmb2'),
+                'desc' => '',
+                'id'   => $prefix . 'website_e',
+                'type' => 'text',
+            ),
+
+            array(
+                'name' => esc_html__('Loại hình công ty', 'cmb2'),
+                'desc' => 'Nhà sản xuất',
+                'id'   => $prefix . 'type_dn',
+                'type' => 'text',
+            ),
+            array(
+                'name' => esc_html__('Thị trường chính', 'cmb2'),
+                'desc' => 'Toàn quốc, Quốc tế',
+                'id'   => $prefix . 'thitruong_dn',
+                'type' => 'text',
+            ),
+            array(
+                'name' => esc_html__('Ngày cấp phép', 'cmb2'),
+                'desc' => '',
+                'id'   => $prefix . 'date_dn',
+                'type' => 'text_date_timestamp',
+            ),
+            array(
+                'name' => esc_html__( 'Ảnh giải thưởng và danh mục', 'crismaster' ),
+                'desc' => esc_html__( 'Có thể upload nhiều file', 'crismaster' ),
+                'id'   => $prefix . 'giaithuong',
+                'type' => 'file_list',
+            ),
+            array(
+                'name' => esc_html__('Ảnh quảng cáo phía dưới', 'cmb2'),
+                'desc' => esc_html__('', 'cmb2'),
+                'id'   => $prefix . 'quangcao2',
+                'type' => 'file_list',
             ),
         ),
 	) );

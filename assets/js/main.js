@@ -38,7 +38,7 @@ $(document).ready(function() {
                     items: 3
                 },
                 1200: {
-                    items: 4
+                    items: 3
                 }
             }
         });
@@ -82,6 +82,28 @@ $(document).ready(function() {
  if ($('#triggerFileInput').length > 0){
      document.getElementById('triggerFileInput').addEventListener('click', function() {
          document.getElementById('fileInput').click();
+     });
+ }
+
+ if ($('#enterprise-filter').length > 0){
+     $('#dropdownProfession, #dropdownProvince').change(function () {
+         $(this).closest('form').submit();
+     });
+     $('#enterprise-filter').submit(function () {
+         var filter = $('#enterprise-filter');
+         $.ajax({
+             url: filter.attr('action'),
+             data: {
+                 action: 'my_filter_function_profession',
+                 profession: $('#dropdownProfession').val(),
+                 province: $('#dropdownProvince').val()
+             },
+             type: filter.attr('method'),
+             success: function (data) {
+                 $('#primary').html(data);
+             }
+         });
+         return false;
      });
  }
 

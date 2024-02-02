@@ -69,6 +69,23 @@ h5 {
     background-color: #007bff;
     border-color: #007bff;
 }
+.min-h200px {
+    min-height: 200px;
+}
+.comment-form-cookies-consent,
+.form .logged-in-as{
+    display: none !important;
+}
+.list-item-info ul li a.active {
+    color: var(--primary_color);
+}
+.nav-number-blog a.active {
+    background-color: var(--primary_color);
+    color: #fff;
+}
+.widget-category-list.style-03 .list-item-category li a.active {
+    font-weight: bold;
+}
 @media (min-width: 1200px) {
     #menu-reponsive .hsh-menu-list li a {
         color: #fff;

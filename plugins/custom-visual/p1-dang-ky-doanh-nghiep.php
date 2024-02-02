@@ -59,32 +59,14 @@ function p1_dang_ky_doanh_nghiep_func($atts,$content = null){
                             <span class="table-of-contents-title">
                                 <?= esc_html__('Mục lục','crismaster') ?>
                             </span>
-                            <li><a class="box-link-table" href="#">A</a></li>
-                            <li><a class="box-link-table" href="#">B</a></li>
-                            <li><a class="box-link-table" href="#">C</a></li>
-                            <li><a class="box-link-table" href="#">D</a></li>
-                            <li><a class="box-link-table" href="#">E</a></li>
-                            <li><a class="box-link-table" href="#">F</a></li>
-                            <li><a class="box-link-table" href="#">G</a></li>
-                            <li><a class="box-link-table" href="#">H</a></li>
-                            <li><a class="box-link-table" href="#">I</a></li>
-                            <li><a class="box-link-table" href="#">J</a></li>
-                            <li><a class="box-link-table" href="#">K</a></li>
-                            <li><a class="box-link-table" href="#">L</a></li>
-                            <li><a class="box-link-table" href="#">M</a></li>
-                            <li><a class="box-link-table" href="#">N</a></li>
-                            <li><a class="box-link-table" href="#">O</a></li>
-                            <li><a class="box-link-table" href="#">P</a></li>
-                            <li><a class="box-link-table" href="#">Q</a></li>
-                            <li><a class="box-link-table" href="#">R</a></li>
-                            <li><a class="box-link-table" href="#">S</a></li>
-                            <li><a class="box-link-table" href="#">T</a></li>
-                            <li><a class="box-link-table" href="#">U</a></li>
-                            <li><a class="box-link-table" href="#">V</a></li>
-                            <li><a class="box-link-table" href="#">W</a></li>
-                            <li><a class="box-link-table" href="#">X</a></li>
-                            <li><a class="box-link-table" href="#">Y</a></li>
-                            <li><a class="box-link-table" href="#">Z</a></li>
+                            <?php
+                            $array_A_to_Z = range('A', 'Z');
+                            foreach ($array_A_to_Z as $value) {
+                                $search_link = get_search_link($value); ?>
+                                <li><a class="box-link-table" href="<?= esc_attr($search_link) ?>"><?= esc_attr($value) ?></a></li>
+                                <?php
+                            }
+                            ?>
                         </ul>
                     </div>
                 </div>

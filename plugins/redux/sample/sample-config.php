@@ -354,6 +354,106 @@ if (!class_exists("Redux_Framework_sample_config")) {
                     ),
                 )
             );
+            $this->sections[] = array(
+                'title'      => esc_html__( 'Chi tiết Doanh Nghiệp', 'crismaster' ),
+                'id'         => 'enterprise_setting',
+                'icon' => 'el-icon-th-list',
+                'fields'     => array(
+                    $fields =
+                        array(
+                            'id'       => 'enterprise_banner',
+                            'type'     => 'media',
+                            'url' => true,
+                            'title'    => __( 'Banner lớn đầu trang', 'crismaster' ),
+                            'desc'     => __( '', 'crismaster' ),
+                            'subtitle' => __( '', 'crismaster' ),
+                            'default' => '',
+                        ),
+                        array(
+                            'id'       => 'enterprise_gallery',
+                            'type'     => 'gallery',
+                            'url' => true,
+                            'title'    => __( 'List Ảnh gallery', 'crismaster' ),
+                            'desc'     => __( '', 'crismaster' ),
+                            'subtitle' => __( '', 'crismaster' ),
+                            'default' => '',
+                        ),
+                        array(
+                            'id'       => 'enterprise_adver',
+                            'type'     => 'gallery',
+                            'url' => true,
+                            'title'    => __( 'List Ảnh Quảng cáo', 'crismaster' ),
+                            'desc'     => __( '', 'crismaster' ),
+                            'subtitle' => __( '', 'crismaster' ),
+                            'default' => '',
+                        ),
+                        array(
+                            'id'       => 'enterprise_banner2',
+                            'type'     => 'gallery',
+                            'url' => true,
+                            'title'    => __( 'List Ảnh banner bé dưới footer', 'crismaster' ),
+                            'desc'     => __( '', 'crismaster' ),
+                            'subtitle' => __( '', 'crismaster' ),
+                            'default' => '',
+                        ),
+                        array(
+                            'id'       => 'enterprise_link3',
+                            'type'     => 'text',
+                            'title'    => esc_html__( 'Link gửi yêu cầu', 'crismaster' ),
+                            'subtitle' => esc_html__( '', 'crismaster' ),
+                            'desc'     => esc_html__( 'Link gửi yêu cầu cập nhật thông tin doanh nghiệp', 'crismaster' ),
+                        ),
+                        array(
+                            'id'       => 'enterprise_link1',
+                            'type'     => 'text',
+                            'title'    => esc_html__( 'Link liên hệ ngay', 'crismaster' ),
+                            'subtitle' => esc_html__( '', 'crismaster' ),
+                            'desc'     => esc_html__( '', 'crismaster' ),
+                        ),
+                        array(
+                            'id'       => 'enterprise_link2',
+                            'type'     => 'text',
+                            'title'    => esc_html__( 'Link xem chi tiết', 'crismaster' ),
+                            'subtitle' => esc_html__( '', 'crismaster' ),
+                            'desc'     => esc_html__( '', 'crismaster' ),
+                        ),
+                )
+            );
+            $this->sections[] = array(
+                'title'      => esc_html__( 'Danh sách doanh nghiệp', 'crismaster' ),
+                'id'         => 'enterprise_list_setting',
+                'icon' => 'el-icon-th-list',
+                'fields'     => array(
+                    $fields =
+                        array(
+                            'id'       => 'enterprise_list_banner',
+                            'type'     => 'gallery',
+                            'url' => true,
+                            'title'    => __( 'List 4 Ảnh banner bé đầu trang', 'crismaster' ),
+                            'desc'     => __( '', 'crismaster' ),
+                            'subtitle' => __( '', 'crismaster' ),
+                            'default' => '',
+                        ),
+                        array(
+                            'id'       => 'enterprise_list_adver',
+                            'type'     => 'gallery',
+                            'url' => true,
+                            'title'    => __( 'List Ảnh Quảng cáo sidebar', 'crismaster' ),
+                            'desc'     => __( '', 'crismaster' ),
+                            'subtitle' => __( '', 'crismaster' ),
+                            'default' => '',
+                        ),
+                        array(
+                            'id'       => 'enterprise_list_adver2',
+                            'type'     => 'gallery',
+                            'url' => true,
+                            'title'    => __( 'List 4 Ảnh Quảng cáo footer', 'crismaster' ),
+                            'desc'     => __( '', 'crismaster' ),
+                            'subtitle' => __( '', 'crismaster' ),
+                            'default' => '',
+                        ),
+                )
+            );
 
 }
 

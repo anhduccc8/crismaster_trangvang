@@ -32,7 +32,8 @@ function custom_post_types()
         'has_archive' => true,
         'hierarchical' => false,
         'menu_position' => null,
-        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'comments'),
+        'taxonomies' => array('post_tag')
     );
 
     register_post_type('enterprise', $args_doanh_nghiep);
@@ -93,7 +94,8 @@ function custom_post_types()
         'has_archive' => true,
         'hierarchical' => false,
         'menu_position' => null,
-        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt','tags'),
+        'taxonomies' => array('post_tag')
     );
 
     register_post_type('profession', $args_nghe_nghiep);

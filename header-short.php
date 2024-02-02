@@ -77,18 +77,29 @@ foreach ($lines2 as $line2) {
         <div class="slide-content bg-img-section bgr-page-title" style="background-image: url('<?= get_template_directory_uri() ?>/assets/image/page-title-01.jpg');">
             <div class="container-fluid-ct">
                 <div class="row section-form-search">
-                    <form class="slide-form-box">
+                    <form class="slide-form-box" action="<?php echo esc_url(home_url('/')); ?>" method="get">
                         <div class="form-search">
                             <button class="btn hide-mobile-1199">
                                 <svg width="25" height="25" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M33.8979 31.5561L22.8606 20.5189C24.5734 18.3047 25.4999 15.5974 25.4999 12.7499C25.4999 9.34146 24.1696 6.14547 21.7642 3.73573C19.3587 1.32599 16.1542 0 12.7499 0C9.34571 0 6.14122 1.33024 3.73573 3.73573C1.32599 6.14122 0 9.34146 0 12.7499C0 16.1542 1.33024 19.3587 3.73573 21.7642C6.14122 24.1739 9.34146 25.4999 12.7499 25.4999C15.5974 25.4999 18.3004 24.5734 20.5147 22.8649L31.5519 33.8979C31.5842 33.9302 31.6227 33.9559 31.6649 33.9734C31.7072 33.991 31.7526 34 31.7984 34C31.8441 34 31.8895 33.991 31.9318 33.9734C31.9741 33.9559 32.0125 33.9302 32.0449 33.8979L33.8979 32.0491C33.9302 32.0167 33.9559 31.9783 33.9734 31.936C33.991 31.8937 34 31.8484 34 31.8026C34 31.7568 33.991 31.7115 33.9734 31.6692C33.9559 31.6269 33.9302 31.5885 33.8979 31.5561ZM19.4819 19.4819C17.6799 21.2797 15.2914 22.2699 12.7499 22.2699C10.2085 22.2699 7.81997 21.2797 6.01797 19.4819C4.22023 17.6799 3.22999 15.2914 3.22999 12.7499C3.22999 10.2085 4.22023 7.81572 6.01797 6.01797C7.81997 4.22023 10.2085 3.22999 12.7499 3.22999C15.2914 3.22999 17.6842 4.21598 19.4819 6.01797C21.2797 7.81997 22.2699 10.2085 22.2699 12.7499C22.2699 15.2914 21.2797 17.6842 19.4819 19.4819Z" fill="#878787"/>
                                 </svg>
                             </button>
-                                    <input class="input" type="type" placeholder="Ngành nghề, dịch vụ, tên công ty..." />
+                            <?php if (isset($_GET['s']) && $_GET['s'] != ''){
+                                $search_text = $_GET['s'];
+                            }else{
+                                $search_text = '';
+                            }
+                            if (isset($_GET['province']) && $_GET['province'] != ''){
+                                $province_val = $_GET['province'];
+                            }else{
+                                $province_val = '';
+                            }
+                            ?>
+                            <input class="input" type="text" name="s" placeholder="Ngành nghề, dịch vụ, tên công ty..." value="<?= $search_text ?>" />
                         </div>
 
                         <div class="form-check-box">
-                            <input name="gender" type="radio" value="Nam" />
+                            <input name="is_enterprise" type="checkbox"  <?php if (isset($_GET['is_enterprise']) && $_GET['is_enterprise'] == 'on'){ echo 'checked'; } ?>/>
                             <?= esc_html__('Chỉ tìm theo tên công ty','crismaster') ?>
                         </div>
 
@@ -97,16 +108,17 @@ foreach ($lines2 as $line2) {
                                 <path d="M13.0846 19.7001C15.5876 19.7001 17.6166 17.4167 17.6166 14.6001C17.6166 11.7834 15.5876 9.50006 13.0846 9.50006C10.5817 9.50006 8.55261 11.7834 8.55261 14.6001C8.55261 17.4167 10.5817 19.7001 13.0846 19.7001Z" stroke="#878787" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M13.0853 1C9.88008 1 6.80614 2.43285 4.5397 4.98335C2.27327 7.53384 1 10.9931 1 14.6C1 17.8164 1.60729 19.921 3.266 22.25L13.0853 35L22.9046 22.25C24.5633 19.921 25.1706 17.8164 25.1706 14.6C25.1706 10.9931 23.8973 7.53384 21.6309 4.98335C19.3645 2.43285 16.2905 1 13.0853 1V1Z" stroke="#878787" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                            <select id="dropdownAddress">
+                            <select id="dropdownAddress" name="province">
+                                <option value="0"><?= esc_html__('Chọn thành phố','crismaster') ?></option>
                                 <?php if (!empty($header_province_arr)){
                                     foreach ($header_province_arr as $province){
                                         $province_arr = explode('|',$province);
                                         ?>
-                                        <option value="<?= esc_attr($province_arr[0]) ?>"><?= esc_attr($province_arr[1]) ?></option>
+                                        <option value="<?= esc_attr($province_arr[0]) ?>" <?php if ($province_val ==$province_arr[0] ){ echo 'selected';} ?>><?= esc_attr($province_arr[1]) ?></option>
                                     <?php }
                                 } ?>
                             </select>
-                            <button class="btn-main btn-search-dropdown" onclick="myFunction()"><?= esc_html__('Tìm kiếm','crismaster') ?></button>
+                            <button class="btn-main btn-search-dropdown" type="submit"><?= esc_html__('Tìm kiếm','crismaster') ?></button>
                         </div>
                     </form>
                 </div>
@@ -118,35 +130,17 @@ foreach ($lines2 as $line2) {
                 <div class="row row-table-of-contents">
                     <div class="table-of-contents">
                         <ul class="list-of-contents">
-								<span class="table-of-contents-title">
-									Mục lục
-								</span>
-                            <li><a class="box-link-table" href="#">A</a></li>
-                            <li><a class="box-link-table" href="#">B</a></li>
-                            <li><a class="box-link-table" href="#">C</a></li>
-                            <li><a class="box-link-table" href="#">D</a></li>
-                            <li><a class="box-link-table" href="#">E</a></li>
-                            <li><a class="box-link-table" href="#">F</a></li>
-                            <li><a class="box-link-table" href="#">G</a></li>
-                            <li><a class="box-link-table" href="#">H</a></li>
-                            <li><a class="box-link-table" href="#">I</a></li>
-                            <li><a class="box-link-table" href="#">J</a></li>
-                            <li><a class="box-link-table" href="#">K</a></li>
-                            <li><a class="box-link-table" href="#">L</a></li>
-                            <li><a class="box-link-table" href="#">M</a></li>
-                            <li><a class="box-link-table" href="#">N</a></li>
-                            <li><a class="box-link-table" href="#">O</a></li>
-                            <li><a class="box-link-table" href="#">P</a></li>
-                            <li><a class="box-link-table" href="#">Q</a></li>
-                            <li><a class="box-link-table" href="#">R</a></li>
-                            <li><a class="box-link-table" href="#">S</a></li>
-                            <li><a class="box-link-table" href="#">T</a></li>
-                            <li><a class="box-link-table" href="#">U</a></li>
-                            <li><a class="box-link-table" href="#">V</a></li>
-                            <li><a class="box-link-table" href="#">W</a></li>
-                            <li><a class="box-link-table" href="#">X</a></li>
-                            <li><a class="box-link-table" href="#">Y</a></li>
-                            <li><a class="box-link-table" href="#">Z</a></li>
+                            <span class="table-of-contents-title">
+                                <?= esc_html__('Mục lục','crismaster') ?>
+                            </span>
+                            <?php
+                            $array_A_to_Z = range('A', 'Z');
+                            foreach ($array_A_to_Z as $value) {
+                                $search_link = get_search_link($value); ?>
+                                <li><a class="box-link-table" href="<?= esc_attr($search_link) ?>"><?= esc_attr($value) ?></a></li>
+                                <?php
+                            }
+                            ?>
                         </ul>
                     </div>
                 </div>

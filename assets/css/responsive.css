@@ -5,7 +5,17 @@
 	}
 }
 
+@media (max-width: 1350px) {
+	.btn-round.style-04 {
+		font-size: 16px;
+	}
+}
+
 @media (max-width: 1199px) {
+	.btn-round.style-04 {
+		font-size: 11px;
+	}
+
 	.text-behind {
 		font-size: 100px;
 	}
@@ -167,6 +177,54 @@
 
 	.form-box {
 	    padding: 60px 30px 60px;
+	}
+
+	.box-info-title {
+	    font-size: 20px;
+	}
+
+	.item-box-title-info:before {
+		display: none;
+	}
+
+	.sidebar-info-page {
+		margin-top: 80px;
+	}
+
+	.list-item-info {
+	    margin: 30px 0 50px;
+	} 
+
+	.section-blog-main.space-info-page {
+		margin-top: 80px !important;
+	}
+
+	.section-product.space-info-page {
+		margin-top: 40px !important;
+	}
+
+	.section-product.space-info-page .owl-carousel-section {
+		margin-top: 50px !important;
+	}
+
+	.btn-round.style-04 {
+		font-size: 20px;
+	}
+
+	.column-content-box {
+		margin-top: 30px;
+	}
+
+	.box-info-content .item-des {
+		margin: 10px 0 20px !important;
+	}
+
+	.site-content-error {
+	    padding: 0 0 100px;
+	}
+
+	.error-des {
+	    margin: 30px auto 0;
 	}
 }
 
@@ -330,6 +388,85 @@
 
 	.form-contact {
 		margin-top: 20px !important;
+	}
+
+	.box-info-description ul li span, 
+	.box-info-description > div {
+	    font-size: 16px;
+	}
+
+	.box-info-title {
+	    font-size: 16px;
+	}
+
+	.box-info-content {
+	    padding: 30px 20px 35px;
+	}
+
+	.link-box-custom {
+	    font-size: 13px;
+	    padding: 7px 7px;
+	    max-width: 200px;
+	}
+
+	.box-info-content.style-02 {
+	    padding: 60px 20px 40px;
+	}
+
+	.box-info-content .item-section-title {
+		font-size: 18px;
+	}
+
+	.box-info-description.mt-40 {
+		margin-top: 20px !important;
+	}
+
+	.block-certificate .row img {
+		margin-bottom: 30px;
+	}
+
+	.box-info-review {
+	    margin: 40px 20px 40px;
+	}
+
+	.box-write-review .form-review {
+	    padding: 40px 20px 40px;
+	}
+
+	.list-item-info ul li a {
+	    font-size: 16px;
+	}
+
+	.box-info-des.lh-1 {
+		line-height: 1.5;
+	}
+
+	.section-banner-image-dm-page {
+		margin-top: 70px !important;
+	}
+
+	.btn-box-dm {
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+
+	.btn-box-dm a {
+		margin-right: 20px !important;
+		margin-bottom: 20px !important;
+	}
+
+	.title-main {
+		font-size: 24px;
+	}
+
+	.box-cate-title {
+		font-size: 18px !important;
+	}
+}
+
+@media (min-width: 1400px) {
+	.section-widget-banner-socials .row {
+	    transform: translateX(5px);
 	}
 }
 

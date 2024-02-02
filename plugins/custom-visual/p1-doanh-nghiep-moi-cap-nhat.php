@@ -71,7 +71,7 @@ function p1_doanh_nghiep_moi_cap_nhat_func($atts,$content = null){
                     <?php } ?>
                             <div class="wrap-item">
                                 <a href="<?php the_permalink(); ?>" class="link-box"></a>
-                                <img class="item-image" src="<?= esc_url($single_image[0]) ?>" alt="Image">
+                                <img class="item-image" src="<?= esc_url($single_image[0]) ?>" alt="Image" style="max-width: 285px">
                                 <h5 class="item-title">
                                     <span><?= esc_attr($title_post) ?></span>
                                 </h5>
