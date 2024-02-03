@@ -1,4 +1,5 @@
 <?php
+var_dump('aaa');die();
 get_header('short');
 
 $theme_option = get_option('theme_option');
@@ -183,7 +184,7 @@ foreach ($lines2 as $line2) {
                                         );
                                     }
                                     $wp_query = new WP_Query($args); ?>
-                                        <h3 class="title-main color-main text-center"><?php printf( esc_html__( 'Danh mục đang xem: %s', 'crismaster' ), single_cat_title( '', false ) ); ?></h3>
+                                    <h3 class="title-main color-main text-center"><?php printf( esc_html__( 'Danh mục đang xem: %s', 'crismaster' ), single_cat_title( '', false ) ); ?></h3>
                                     <?php
                                     if ($wp_query->have_posts()) : ?>
                                         <?php

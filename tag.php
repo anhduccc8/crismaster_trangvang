@@ -119,7 +119,7 @@ foreach ($lines2 as $line2) {
                                         <?php if (!empty($header_province_arr)){
                                             foreach ($header_province_arr as $province){
                                                 $province_arr = explode('|',$province);
-                                                $link = get_permalink() . '?province=' . urlencode($province_arr[0]);
+                                                $link = get_permalink('208') . '?province=' . urlencode($province_arr[0]);
                                                 ?>
                                                 <li>
                                                     <a class="<?php if (isset($_GET['province']) && $province_arr[0] == $_GET['province']  ){ echo 'active'; } ?>" href="<?= esc_url($link) ?>"><?= esc_attr($province_arr[1]) ?></a>
@@ -299,7 +299,8 @@ foreach ($lines2 as $line2) {
                                                     <a class="btn-text btn-box-text-dm" href="<?php the_permalink() ?>"><?= esc_html__('Xem Thêm','crismaster') ?> <img src="<?= get_template_directory_uri() ?>/assets/image/double-icon.svg" alt="double icon"></a>
                                                     <div class="space-between row-btn-info btn-box-dm">
                                                         <?php  $phone_e = get_post_meta(get_the_ID(), $prefix . '_cmb_phone_e', true);
-                                                        if ($phone_e != ''){ ?>
+                                                        if ($phone_e != ''){
+                                                            $phone_e = mb_strlen($phone_e, 'UTF-8') > 16 ? mb_substr($phone_e, 0, 16, 'UTF-8') . '...' : $phone_e;?>
                                                             <a class="btn-main btn-round style-04" href="tel:02438262938">
                                                                 <svg width="16" height="16" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M20.0887 26.5983C18.206 26.529 12.8701 25.7918 7.28194 20.206C1.69507 14.619 0.958955 9.28558 0.888351 7.40188C0.783752 4.53124 2.98294 1.74295 5.52338 0.654044C5.8293 0.521972 6.1643 0.471688 6.49553 0.508126C6.82675 0.544565 7.14281 0.666474 7.41269 0.861891C9.50466 2.3861 10.9481 4.69203 12.1876 6.50514C12.4603 6.90348 12.5769 7.38822 12.5152 7.86699C12.4535 8.34575 12.2177 8.78508 11.8529 9.10126L9.302 10.9954C9.17876 11.0844 9.09201 11.2151 9.05786 11.3632C9.02371 11.5113 9.04449 11.6667 9.11634 11.8007C9.69424 12.8504 10.7219 14.4138 11.8987 15.5903C13.0767 16.7668 14.7137 17.8622 15.8368 18.5054C15.9776 18.5844 16.1434 18.6065 16.3 18.5671C16.4566 18.5277 16.5922 18.4298 16.6788 18.2936L18.3393 15.7667C18.6446 15.3613 19.0949 15.0897 19.596 15.0088C20.0971 14.9279 20.6101 15.044 21.0275 15.3328C22.8671 16.606 25.014 18.0243 26.5856 20.0361C26.7969 20.3079 26.9314 20.6314 26.9748 20.9729C27.0183 21.3144 26.9692 21.6613 26.8327 21.9773C25.7384 24.5303 22.9691 26.7042 20.0887 26.5983Z" fill="#003DA5"/>
@@ -308,7 +309,8 @@ foreach ($lines2 as $line2) {
                                                             </a>
                                                         <?php } ?>
                                                         <?php  $email_e = get_post_meta(get_the_ID(), $prefix . '_cmb_email_e', true);
-                                                        if ($email_e != ''){ ?>
+                                                        if ($email_e != ''){
+                                                            $email_e = mb_strlen($email_e, 'UTF-8') > 16 ? mb_substr($email_e, 0, 16, 'UTF-8') . '...' : $email_e;?>
                                                             <a class="btn-main btn-round style-04" href="mailto:abc@gmail.com">
                                                                 <svg width="19" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path id="Vector" d="M3.20234 19.4694C2.48444 19.4694 1.86966 19.2391 1.35799 18.7786C0.846327 18.3181 0.590929 17.7652 0.591799 17.1199V3.02295C0.591799 2.37684 0.847632 1.82354 1.3593 1.36304C1.87097 0.902539 2.48531 0.672681 3.20234 0.673464H24.0867C24.8046 0.673464 25.4194 0.903714 25.931 1.36421C26.4427 1.82471 26.6981 2.37763 26.6972 3.02295V17.1199C26.6972 17.766 26.4414 18.3193 25.9297 18.7798C25.4181 19.2403 24.8037 19.4702 24.0867 19.4694H3.20234ZM24.0867 5.37244L14.3298 10.8644C14.221 10.9231 14.1066 10.9674 13.9865 10.9971C13.8664 11.0269 13.7524 11.0414 13.6445 11.0406C13.5357 11.0406 13.4213 11.0261 13.3012 10.9971C13.1811 10.9681 13.0672 10.9239 12.9593 10.8644L3.20234 5.37244V17.1199H24.0867V5.37244ZM13.6445 8.89668L24.0867 3.02295H3.20234L13.6445 8.89668ZM3.20234 5.66613V3.93338V3.96275V3.94865V5.66613Z" fill="#003DA5"/>
@@ -317,7 +319,8 @@ foreach ($lines2 as $line2) {
                                                             </a>
                                                         <?php } ?>
                                                         <?php  $website_e = get_post_meta(get_the_ID(), $prefix . '_cmb_website_e', true);
-                                                        if ($website_e != ''){ ?>
+                                                        if ($website_e != ''){
+                                                            $website_e = mb_strlen($website_e, 'UTF-8') > 16 ? mb_substr($website_e, 0, 16, 'UTF-8') . '...' : $website_e;?>
                                                             <a class="btn-main btn-round style-04" href="#">
                                                                 <svg width="20" height="25" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <g id="Group">
