@@ -1,5 +1,4 @@
 <?php
-var_dump('aaa');die();
 get_header('short');
 
 $theme_option = get_option('theme_option');

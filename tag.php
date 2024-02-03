@@ -1,8 +1,4 @@
 <?php
-/*
-*Template Name: Page Danh sách Doanh Nghiệp
-*
-*/
 get_header('short');
 
 $theme_option = get_option('theme_option');
