@@ -675,4 +675,12 @@ function formatPhoneNumber($phoneNumber) {
         return "";
     }
 }
+
+function tags_add_custom_types( $query ) {
+    if( is_tag() && is_main_query() ) {
+        $post_types = get_post_types();
+        $query->query_vars['post_type'] = $post_types;
+    }
+}
+add_filter( 'pre_get_posts', 'tags_add_custom_types' );
 ?>

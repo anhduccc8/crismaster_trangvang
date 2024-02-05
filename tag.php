@@ -133,8 +133,7 @@ foreach ($lines2 as $line2) {
                                     ?>
                                     <h3 class="title-main color-main text-center"><?= esc_html__('Tags đang xem : ','crismaster') ?><?= single_cat_title() ?></h3>
                                     <?php
-                                    if (have_posts()) : ?>
-                                        <?php
+                                    if (have_posts()) :
                                         while (have_posts()) : the_post();
                                             $single_image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'large'); ?>
                                             <div class="widget-box-info mb-30 mt-40">
