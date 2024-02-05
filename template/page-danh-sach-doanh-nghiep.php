@@ -68,7 +68,7 @@ foreach ($lines2 as $line2) {
                                             foreach ($profession_posts_sidebar as $post2) {
                                                 $post_title2 = mb_strlen($post2->post_title, 'UTF-8') > 20 ? mb_substr($post2->post_title, 0, 20, 'UTF-8') . '...' : $post2->post_title; ?>
                                                 <li>
-                                                    <a href="<?php the_permalink(); ?>"><?= esc_attr($post_title2) ?></a>
+                                                    <a href="<?= get_permalink($post2->ID) ?>"><?= esc_attr($post_title2) ?></a>
                                                 </li>
                                             <?php }
                                             ?>
