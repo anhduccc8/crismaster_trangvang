@@ -103,7 +103,7 @@ foreach ($lines2 as $line2) {
                                 $province_val = '';
                             }
                             ?>
-                            <input class="input" type="text" name="s" placeholder="Ngành nghề, dịch vụ, tên công ty..." value="<?= $search_text ?>" />
+                            <input class="input" type="text" name="s" id="text_search_fill" placeholder="Ngành nghề, dịch vụ, tên công ty..." value="<?= $search_text ?>" />
                         </div>
 
                         <div class="form-check-box">
@@ -140,7 +140,7 @@ foreach ($lines2 as $line2) {
                             <?php if (!empty($header_search_arr)){
                                 foreach ($header_search_arr as $search){?>
                                     <li>
-                                        <a class="box-link" href="#"><?= esc_attr($search) ?></a>
+                                        <a class="box-link box-link-click cursor-pointer"><?= esc_attr($search) ?></a>
                                     </li>
                                 <?php }
                             } ?>

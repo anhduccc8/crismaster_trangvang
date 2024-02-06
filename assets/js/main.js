@@ -142,4 +142,10 @@ $(document).ready(function() {
         });
         stars[4].click();
     }
+    if ($('#text_search_fill').length > 0 && $('.box-link-click').length > 0) {
+        $('.box-link-click').on('click', function(event) {
+            event.preventDefault();
+            $('#text_search_fill').val($(this).text().trim());
+        });
+    }
 });
