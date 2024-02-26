@@ -111,6 +111,13 @@ p.logged-in-as{
 .mt-a50px {
     margin-top: -50px !important;
 }
+.item-show-case .show-case-title {
+    font-weight: 600;
+}
+.section-widget-fields .item-section-title {
+    font-size: 40px;
+    font-weight: 700;
+}
 @media (min-width: 1200px) {
     #menu-reponsive .hsh-menu-list li a {
         color: #fff;

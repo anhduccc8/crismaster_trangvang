@@ -47,7 +47,7 @@ function p1_muc_luc_nganh_nghe_func($atts,$content = null){
                 <div class="col-12">
                     <div class="wrap-title-section text-center heading-service">
                         <span class="text-behind">fields</span>
-                        <h2 class="item-section-title"><span class="text-highlight"><?= esc_attr($title) ?></span> <?= esc_attr($title2) ?></h2>
+                        <h2 class="item-section-title mt-a60px"><span class="text-highlight"><?= esc_attr($title) ?></span> <?= esc_attr($title2) ?></h2>
                     </div>
                 </div>
             </div>
@@ -57,18 +57,35 @@ function p1_muc_luc_nganh_nghe_func($atts,$content = null){
                     'taxonomy' => 'profession_type',
                     'hide_empty' => false,
                 ));
+                $sorted_terms = array();
                 if (!empty($terms) && !is_wp_error($terms)) {
                     $t = 1;
                     foreach ($terms as $term) {
                         $term_link = get_term_link($term);
-                        if($t < 13){ ?>
+                        if ($term->term_id == '14') {
+                            $sorted_terms[] = $term;
+                        } else {
+                            if($t < 12){ ?>
+                                <div class="col-12 col-md-3 col-lg-2 item">
+                                    <a href="<?= esc_attr($term_link) ?>" class="wrap-item-box">
+                                        <h5 class="item-text"><?= esc_attr($term->name) ?></h5>
+                                    </a>
+                                </div>
+                                <?php $t++; }
+                        }
+                     }
+                    if (!empty($terms)) {
+                        foreach ($sorted_terms as $term) {
+                            $term_link = get_term_link($term);
+                            ?>
                             <div class="col-12 col-md-3 col-lg-2 item">
                                 <a href="<?= esc_attr($term_link) ?>" class="wrap-item-box">
                                     <h5 class="item-text"><?= esc_attr($term->name) ?></h5>
                                 </a>
                             </div>
-                        <?php $t++; }
-                         }
+                            <?php
+                        }
+                    }
                 }
                 ?>
             </div>
