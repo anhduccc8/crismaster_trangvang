@@ -54,7 +54,7 @@ function p1_san_pham_dich_vu_noi_bat_func($atts,$content = null){
                 <div class="col-12">
                     <div class="wrap-title-section">
                         <span class="text-behind">products</span>
-                        <h2 class="item-section-title style-02"><?= esc_attr($title) ?> <span class="text-highlight"><?= esc_attr($title2) ?></span></h2>
+                        <h2 class="item-section-title style-02 mt-a50px"><?= esc_attr($title) ?> <span class="text-highlight"><?= esc_attr($title2) ?></span></h2>
                     </div>
                 </div>
                 <div class="col-12 owl-carousel-section">

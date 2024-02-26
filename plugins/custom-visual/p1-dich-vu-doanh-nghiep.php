@@ -71,7 +71,7 @@ function p1_dich_vu_doanh_nghiep_func($atts,$content = null){
                 <div class="col-12">
                     <div class="wrap-title-section text-center heading-service">
                         <span class="text-behind">service</span>
-                        <h2 class="item-section-title">
+                        <h2 class="item-section-title mt-a60px">
                             <span class="text-highlight"><?=  $title ?></span> <?=  $title2 ?>
                              </h2>
                     </div>

@@ -53,7 +53,7 @@ function p1_doanh_nghiep_moi_cap_nhat_func($atts,$content = null){
             <div class="row">
                 <div class="col-12 wrap-title-section">
                     <span class="text-behind">UPDATES</span>
-                    <h2 class="item-section-title"><?= esc_attr($title) ?> <span class="text-highlight"><?= esc_attr($title2) ?></span></h2>
+                    <h2 class="item-section-title mt-a50px"><?= esc_attr($title) ?> <span class="text-highlight"><?= esc_attr($title2) ?></span></h2>
                 </div>
             </div>
             <li class="row row-spacing">

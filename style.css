@@ -102,6 +102,15 @@ p.logged-in-as{
 .rating-stars i.selected {
     color: #FFD700;
 }
+.fw-600 {
+    font-weight: 600;
+}
+.mt-a60px {
+    margin-top: -60px !important;
+}
+.mt-a50px {
+    margin-top: -50px !important;
+}
 @media (min-width: 1200px) {
     #menu-reponsive .hsh-menu-list li a {
         color: #fff;

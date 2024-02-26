@@ -77,7 +77,7 @@ foreach ($lines2 as $line2) {
             <div class="container-fluid-ct">
                 <div class="row">
                     <div class="slide-content-box">
-                        <h2 class="heading-slide"><?= htmlspecialchars_decode($header_title) ?></h2>
+                        <h2 class="heading-slide fw-600"><?= htmlspecialchars_decode($header_title) ?></h2>
                         <div class="description-slide">
                             <?= esc_attr($header_desc) ?>
                         </div>
