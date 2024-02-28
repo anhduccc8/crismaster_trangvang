@@ -118,6 +118,15 @@ p.logged-in-as{
     font-size: 40px;
     font-weight: 700;
 }
+.fs-27 {
+    font-size: 27px;
+}
+.mb-60px {
+    margin-bottom: 60px !important;
+}
+.min-he-315px {
+    min-height: 315px;
+}
 @media (min-width: 1200px) {
     #menu-reponsive .hsh-menu-list li a {
         color: #fff;

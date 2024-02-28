@@ -657,10 +657,11 @@ function custom_cf7_redirect($contact_form) {
     if ($form_id) {
         $current_language = function_exists('pll_current_language') ? pll_current_language() : '';
         if ($current_language == 'vi'){
-            $redirect_url = get_permalink('189');
+            $redirect_url = get_permalink('183');
         }else{
-            $redirect_url = get_permalink('189');
+            $redirect_url = get_permalink('183');
         }
+        $redirect_url = $redirect_url.'?form_submit=success';
         wp_redirect($redirect_url);
         exit();
     }

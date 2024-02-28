@@ -126,7 +126,7 @@ $mobile = wp_is_mobile(); ?>
             <div class="row">
                 <div class="col-xl-12">
                     <div class="wrap wrap-footer-bottom">
-                        <p>Copyright © 2023 <a target="_blank" href="https://innocom.vn/">INNOCOM</a></p>
+                        <p>Copyright © 2023 Trang Vang Designed by <a target="_blank" href="https://innocom.vn/">Innocom</a></p>
                         <ul class="item-link-hozi">
                             <li class="item">All Rights Reserved </li>
                             <li class="item"><a href="<?= $footer_term ?>">Terms and Conditions</a></li>

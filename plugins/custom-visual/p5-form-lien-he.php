@@ -45,6 +45,13 @@ function p5_form_lien_he_func($atts,$content = null){
             <div class="row form-contact mt-30">
                 <div class="col-12">
                     <div class="form-box">
+                        <?php
+                        if (isset($_GET['form_submit']) && $_GET['form_submit'] == 'success'){ ?>
+                            <div class="alert alert-success" role="alert">
+                                <?= esc_html__('Form đăng ký của bạn được gửi đi thành công !','crismaster') ?>
+                            </div>
+                        <?php }
+                        ?>
                         <?= do_shortcode('[contact-form-7 id="cf3bcc0" title="Form liên hệ 1"]') ?>
                     </div>
                 </div>

@@ -39,8 +39,8 @@ function p1_dang_ky_doanh_nghiep_func($atts,$content = null){
                 <div class="col-12 wrap-item registration-box">
                     <div class="row">
                         <div class="col-xl-8 col-lg-12 item-left">
-                            <h2 class="item-section-title">
-                                <?= esc_html__('Đăng ký','crismaster') ?> <span class="text-highlight"> <?= esc_html__('TRANG VÀNG DOANH NGHIỆP','crismaster') ?></span> <span> <?= esc_html__('để tiếp cận khách hàng đang có nhu cầu mua','crismaster') ?></span>
+                            <h2 class="item-section-title fs-27">
+                                <?= esc_html__('Đăng ký','crismaster') ?> <span class="text-highlight"> <?= esc_html__('TRANG VÀNG DOANH NGHIỆP','crismaster') ?></span><br><span> <?= esc_html__('để tiếp cận khách hàng đang có nhu cầu mua','crismaster') ?></span>
                             </h2>
                         </div>
                         <div class="col-xl-4 col-lg-12 item-right column-btn">

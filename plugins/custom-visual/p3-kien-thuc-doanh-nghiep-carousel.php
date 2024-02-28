@@ -68,6 +68,7 @@ function p3_kien_thuc_doanh_nghiep_carousel_func($atts,$content = null){
                     $title_post = mb_strlen($title_post, 'UTF-8') > 50 ? mb_substr($title_post, 0, 50, 'UTF-8') . '...' : $title_post;
                     $single_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
                     $post_summary = get_post_meta($post->ID, '_cmb_post_summary', true);
+                    $post_summary = mb_strlen($post_summary, 'UTF-8') > 300 ? mb_substr($post_summary, 0, 300, 'UTF-8') . '...' : $post_summary;
                     ?>
                         <div class="item-post-content">
                             <img alt="img-blog-01" src="<?= esc_url($single_image[0]) ?>" style="width:100%">
@@ -117,7 +118,7 @@ function p3_kien_thuc_doanh_nghiep_carousel_func($atts,$content = null){
                         $related_posts->the_post();
                         $single_image2 = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'large');
                         ?>
-                            <div class="item-post item cursor-pointer" onclick="clickChangeUrls('<?= get_permalink() ?>')">
+                            <div class="item-post item cursor-pointer mb-60px" onclick="clickChangeUrls('<?= get_permalink() ?>')">
                                 <img alt="img-blog-01" src="<?= esc_url($single_image2[0]) ?>" style="width:100%">
                                 <div class="blog-title"><?= the_title() ?> </div>
                             </div>

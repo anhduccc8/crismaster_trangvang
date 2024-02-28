@@ -116,7 +116,7 @@ function p3_kien_thuc_doanh_nghiep_post_sidebar_quang_cao_func($atts,$content = 
                             $single_image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'large');
                             ?>
                             <a href="<?= get_permalink() ?>" class="nav-image-02 col-lg-4">
-                                <img alt="img-blog-01" src="<?= esc_url($single_image[0]) ?>" style="width:100%">
+                                <img class="min-he-315px" alt="img-blog-01" src="<?= esc_url($single_image[0]) ?>" style="width:100%">
                                 <div class="title-blog-related"><?= esc_attr($title_post2) ?></div>
                             </a>
                         <?php }

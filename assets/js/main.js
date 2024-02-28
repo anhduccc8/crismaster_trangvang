@@ -83,8 +83,21 @@ $(document).ready(function() {
      document.getElementById('triggerFileInput').addEventListener('click', function() {
          document.getElementById('fileInput').click();
      });
- }
+     document.getElementById('fileInput').addEventListener('change', function () {
+         displayFileName();
+     });
 
+ }
+function displayFileName() {
+    var fileInput = document.getElementById('fileInput');
+    var fileNameDisplay = document.getElementById('fileNameDisplay');
+
+    if (fileInput.files.length > 0) {
+        fileNameDisplay.innerText =  fileInput.files[0].name;
+    } else {
+        fileNameDisplay.innerText = '';
+    }
+}
  if ($('#enterprise-filter').length > 0){
      $('#dropdownProfession, #dropdownProvince').change(function () {
          $(this).closest('form').submit();
