@@ -100,6 +100,7 @@ function displayFileName() {
 }
  if ($('#enterprise-filter').length > 0){
      $('#dropdownProfession, #dropdownProvince').change(function () {
+         $('#primary').html('<div class="text-center"><img src="https://laclac.me/wp-content/uploads/2024/01/spinner.gif"></div>');
          $(this).closest('form').submit();
      });
      $('#enterprise-filter').submit(function () {

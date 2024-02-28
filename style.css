@@ -127,6 +127,9 @@ p.logged-in-as{
 .min-he-315px {
     min-height: 315px;
 }
+.item-btn-view-all {
+    padding: 12px 10px;
+}
 @media (min-width: 1200px) {
     #menu-reponsive .hsh-menu-list li a {
         color: #fff;
