@@ -20,11 +20,18 @@ $mobile = wp_is_mobile(); ?>
             <div class="row">
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 wrap-info-company footer-column">
                     <div class="logo-footer">
-                        <?php if (isset($footer_logo) && $footer_logo != '') { ?>
-                            <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php  echo esc_url($footer_logo) ?>" alt="Logo"></a>
-                        <?php }else{ ?>
-                            <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?= get_template_directory_uri() ?>/assets/image/logo.png" alt="Logo"></a>
-                        <?php } ?>
+                        <?php
+                        $current_language = function_exists('pll_current_language') ? pll_current_language() : '';
+                        if ($current_language == 'ja'){ ?>
+                            <img src="<?= get_template_directory_uri() ?>/assets/image/logo_ja.png">
+                            <?php
+                        }else{
+                            if (isset($footer_logo) && $footer_logo != '') { ?>
+                                <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php  echo esc_url($footer_logo) ?>" alt="Logo"></a>
+                            <?php }else{ ?>
+                                <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?= get_template_directory_uri() ?>/assets/image/logo.png" alt="Logo"></a>
+                            <?php } }
+                        ?>
                     </div>
                     <p class="text"><?= esc_attr($footer_sublogo) ?></p>
                     <ul class="social-network">
@@ -57,7 +64,7 @@ $mobile = wp_is_mobile(); ?>
                 </div>
                 <div class="col-xl-2 col-lg-6 col-md-6 col-sm-12 col-xs-12 wrap-link-footer footer-column">
                     <div class="link-of-home">
-                        <h5>Trang chủ</h5>
+                        <h5><?= esc_html__('Trang chủ','crismaster') ?></h5>
                         <ul class="list-link">
                             <li class="item"><a href="#">Feature</a></li>
                             <li class="item"><a href="#">Pricing</a></li>

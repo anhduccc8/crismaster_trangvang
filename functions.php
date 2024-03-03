@@ -326,8 +326,20 @@ add_filter('previous_posts_link_attributes', 'custom_prev_posts_link_attributes'
 function custom_polylang_langswitcher() {
     $langs_array = pll_the_languages( array( 'dropdown' => 1, 'hide_current' => 0, 'raw' => 1 ) );
     $current_language = function_exists('pll_current_language') ? pll_current_language() : '';
-    if ($langs_array) : ?>
-        <a class="text-uppercase <?php if ($current_language == $langs_array['vi']['slug']) echo 'active'; ?>" href="<?= $langs_array['vi']['url'] ?>"><?= $langs_array['vi']['slug'] ?></a><em>|</em><a class="text-uppercase <?php if ($current_language == $langs_array['en']['slug']) echo 'active'; ?>" href="<?= $langs_array['en']['url'] ?>"><?= $langs_array['en']['slug'] ?></a>
+    if ($langs_array) :
+        if ($current_language == $langs_array['vi']['slug']){ ?>
+            <div class="cms-langue-active">Tiếng Việt</div>
+            <ul>
+                <li><a href="<?= $langs_array['ja']['url'] ?>">日本語</a></li>
+            </ul>
+        <?php }
+        if ($current_language == $langs_array['ja']['slug']){ ?>
+            <div class="cms-langue-active">日本語</div>
+            <ul>
+                <li><a href="<?= $langs_array['vi']['url'] ?>">Tiếng Việt</a></li>
+            </ul>
+        <?php } ?>
+
     <?php endif;
 }
 add_shortcode( 'polylang_langswitcher', 'custom_polylang_langswitcher' );
@@ -684,4 +696,5 @@ function tags_add_custom_types( $query ) {
     }
 }
 add_filter( 'pre_get_posts', 'tags_add_custom_types' );
+
 ?>

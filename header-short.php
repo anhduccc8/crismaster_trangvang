@@ -41,12 +41,19 @@ foreach ($lines2 as $line2) {
             <div class="container-fluid-ct">
                 <div class="row row-header align-center space-between">
                     <div class="site-branding">
-                        <a class="logo-hsh logo-desktop" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Trang vàng company">
-                            <?php if (isset($header_logo) && $header_logo != '') { ?>
-                                <img src="<?php  echo esc_url($header_logo) ?>" alt="">
-                            <?php }else{ ?>
-                                <img src="<?= get_template_directory_uri() ?>/assets/image/logo-light.png">
-                            <?php } ?>
+                        <a class="logo-hsh logo-desktop" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?= esc_html__('Trang vàng company','crismaster') ?>">
+                            <?php
+                            $current_language = function_exists('pll_current_language') ? pll_current_language() : '';
+                            if ($current_language == 'ja'){ ?>
+                                <img src="<?= get_template_directory_uri() ?>/assets/image/logo_ja.png">
+                                <?php
+                            }else{
+                                if (isset($header_logo) && $header_logo != '') { ?>
+                                    <img src="<?php  echo esc_url($header_logo) ?>" alt="">
+                                <?php }else{ ?>
+                                    <img src="<?= get_template_directory_uri() ?>/assets/image/logo-light.png">
+                                <?php } }
+                            ?>
                         </a>
                     </div>
                     <div class="header-right shs-menu">
@@ -58,12 +65,21 @@ foreach ($lines2 as $line2) {
                                 if (!empty($menu_items)){
                                     foreach ($menu_items as $menu) { ?>
                                         <li>
-                                            <a class="<?php if ($menu['object_id'] == $object->ID){ echo 'active'; } ?>" href="<?= $menu['url'] ?>"><?php esc_attr_e( $menu['title'], 'crismaster'); ?></a>
+                                            <a class="<?php if ($menu['object_id'] == $object->ID){ echo 'active'; } ?>" href="<?= $menu['url'] ?>"><?php esc_attr_e(trim($menu['title']), 'crismaster'); ?></a>
                                         </li>
                                         <?php
                                     }
                                 }
                                 ?>
+                                <li>
+                                    <div class="info-right d-flex">
+                                        <div class="cms-lang-curentcy">
+                                            <div class="cms-lang">
+                                                <?= do_shortcode('[polylang_langswitcher]') ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -95,7 +111,7 @@ foreach ($lines2 as $line2) {
                                 $province_val = '';
                             }
                             ?>
-                            <input class="input" type="text" name="s" placeholder="Ngành nghề, dịch vụ, tên công ty..." value="<?= $search_text ?>" />
+                            <input class="input" type="text" name="s" placeholder="<?= esc_html__('Ngành nghề, dịch vụ, tên công ty...','crismaster') ?>" value="<?= $search_text ?>" />
                         </div>
 
                         <div class="form-check-box">

@@ -40,12 +40,19 @@ foreach ($lines2 as $line2) {
             <div class="container-fluid-ct">
                 <div class="row row-header align-center space-between">
                     <div class="site-branding">
-                        <a class="logo-hsh logo-desktop" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Trang vàng company">
-                            <?php if (isset($header_logo) && $header_logo != '') { ?>
+                        <a class="logo-hsh logo-desktop" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?= esc_html__('Trang vàng company','crismaster') ?>">
+                           <?php
+                           $current_language = function_exists('pll_current_language') ? pll_current_language() : '';
+                           if ($current_language == 'ja'){ ?>
+                                <img src="<?= get_template_directory_uri() ?>/assets/image/logo_ja.png">
+                            <?php
+                           }else{
+                               if (isset($header_logo) && $header_logo != '') { ?>
                                 <img src="<?php  echo esc_url($header_logo) ?>" alt="">
-                            <?php }else{ ?>
+                                 <?php }else{ ?>
                                 <img src="<?= get_template_directory_uri() ?>/assets/image/logo-light.png">
-                            <?php } ?>
+                           <?php } }
+                           ?>
                         </a>
                     </div>
                     <div class="header-right shs-menu">
@@ -57,12 +64,21 @@ foreach ($lines2 as $line2) {
                                 if (!empty($menu_items)){
                                  foreach ($menu_items as $menu) { ?>
                                      <li>
-                                         <a class="<?php if ($menu['object_id'] == $object->ID){ echo 'active'; } ?>" href="<?= $menu['url'] ?>"><?php esc_attr_e( $menu['title'], 'crismaster'); ?></a>
+                                         <a class="<?php if ($menu['object_id'] == $object->ID){ echo 'active'; } ?>" href="<?= $menu['url'] ?>"><?php esc_attr_e( trim($menu['title']), 'crismaster'); ?></a>
                                      </li>
                                  <?php
                                  }
                                 }
                                 ?>
+                                <li>
+                                    <div class="info-right d-flex">
+                                        <div class="cms-lang-curentcy">
+                                            <div class="cms-lang">
+                                                <?= do_shortcode('[polylang_langswitcher]') ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -77,9 +93,9 @@ foreach ($lines2 as $line2) {
             <div class="container-fluid-ct">
                 <div class="row">
                     <div class="slide-content-box">
-                        <h2 class="heading-slide fw-600"><?= htmlspecialchars_decode($header_title) ?></h2>
+                        <h2 class="heading-slide fw-600"><?= htmlspecialchars_decode(esc_attr__($header_title, 'crismaster')) ?></h2>
                         <div class="description-slide">
-                            <?= esc_attr($header_desc) ?>
+                            <?= esc_attr__($header_desc,'crismaster') ?>
                         </div>
                     </div>
                 </div>
@@ -103,7 +119,7 @@ foreach ($lines2 as $line2) {
                                 $province_val = '';
                             }
                             ?>
-                            <input class="input" type="text" name="s" id="text_search_fill" placeholder="Ngành nghề, dịch vụ, tên công ty..." value="<?= $search_text ?>" />
+                            <input class="input" type="text" name="s" id="text_search_fill" placeholder="<?= esc_html__('Ngành nghề, dịch vụ, tên công ty...','crismaster') ?>" value="<?= $search_text ?>" />
                         </div>
 
                         <div class="form-check-box">
@@ -138,9 +154,10 @@ foreach ($lines2 as $line2) {
 									<?= esc_html__('XU HƯỚNG TÌM KIẾM','crismaster') ?>:
 								</span>
                             <?php if (!empty($header_search_arr)){
-                                foreach ($header_search_arr as $search){?>
+                                foreach ($header_search_arr as $search){
+                                    ?>
                                     <li>
-                                        <a class="box-link box-link-click cursor-pointer"><?= esc_attr($search) ?></a>
+                                        <a class="box-link box-link-click cursor-pointer"><?= esc_attr__(trim($search),'crismaster') ?></a>
                                     </li>
                                 <?php }
                             } ?>

@@ -1,0 +1,1300 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: crismaster\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-28 09:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.4.3\n"
+"X-Domain: crismaster"
+
+#: functions.php:100 functions.php:101
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:325
+msgid "(414) 687 - 5892"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:318
+msgid "794 Mcallister St San Francisco, 94102"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:87
+msgid ""
+"<p class=\"description\">This is a section created by adding a filter to the "
+"sections array. Can be used by child themes to add/remove sections from the "
+"options.</p>"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:557
+#, php-format
+msgid ""
+"<p>Did you know that Redux sets a global variable for you? To access any of "
+"your saved options from within your code you can use your global variable: "
+"<strong>$%1$s</strong></p>"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:476
+msgid "<p>This is the sidebar content, HTML is allowed.</p>"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:466
+#: plugins/redux/sample/sample-config.php:472
+msgid "<p>This is the tab content, HTML is allowed.</p>"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:559
+msgid ""
+"<p>This text is displayed above the options panel. It isn't required, but "
+"more info is always better! The intro_text field accepts all HTML.</p>"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:563
+msgid ""
+"<p>This text is displayed below the options panel. It isn't required, but "
+"more info is always better! The footer_text field accepts all HTML.</p>"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:251
+msgid "API các tỉnh thành"
+msgstr ""
+
+#: functions.php:104
+#, php-format
+msgid "Articles Posted by %s"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:367
+msgid "Banner lớn đầu trang"
+msgstr ""
+
+#: plugins/custom-visual/p1-dang-ky-doanh-nghiep.php:5
+msgid "Banner đăng ký doanh nghiệp"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:171
+#, php-format
+msgid "By %s"
+msgstr ""
+
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-carousel.php:5
+msgid "Bài post sider có carousel"
+msgstr ""
+
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-post-sidebar-quang-cao.php:5
+msgid "Bài post và sidebar quảng cáo"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:358
+msgid "Chi tiết Doanh Nghiệp"
+msgstr ""
+
+#: comments.php:27
+msgid "Chưa có nhận xét nào hoặc ý kiến của bạn đang được xét duyệt!"
+msgstr ""
+
+#: category.php:286 functions.php:579 search.php:295 single-enterprise.php:69
+#: template/page-danh-sach-doanh-nghiep.php:290
+msgid "Chưa thêm ngành nghề"
+msgstr ""
+
+#: category.php:269 functions.php:560 search.php:278
+#: template/page-danh-sach-doanh-nghiep.php:273
+msgid "Chưa thêm sản phẩm/dịch vụ"
+msgstr ""
+
+#: plugins/custom-visual/p1-banner-dau.php:16
+msgid "Chỉ nên chọn 2 banner để hiển thị"
+msgstr ""
+
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-banner-2.php:16
+msgid "Chỉ nên chọn 3 banner để hiển thị,1 banner kích thước dài hơn"
+msgstr ""
+
+#: plugins/custom-visual/p2-dvu-banner.php:16
+#: plugins/custom-visual/p2-dvu-quang-cao.php:16
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-post-sidebar-quang-cao.php:44
+msgid "Chỉ nên chọn 4 banner để hiển thị"
+msgstr ""
+
+#: plugins/custom-visual/p1-thong-ke.php:23
+msgid "Chỉ nên thêm 3 chỉ số để hiển thị"
+msgstr ""
+
+#: header-short.php:103 header.php:111
+msgid "Chỉ tìm theo tên công ty"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:49
+msgid "Chỉnh sửa Danh mục Doanh Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:172
+msgid "Chỉnh sửa Danh mục Dịch Vụ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:111
+msgid "Chỉnh sửa Danh mục Nghề Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:14
+msgid "Chỉnh sửa Doanh Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:138
+msgid "Chỉnh sửa Dịch Vụ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:76
+msgid "Chỉnh sửa Nghề Nghiệp"
+msgstr ""
+
+#: category.php:139 search.php:139 template/page-danh-sach-doanh-nghiep.php:143
+msgid "Chọn Ngành Nghề"
+msgstr ""
+
+#: plugins/custom-visual/p2-dvu-gioi-thieu-text-anh.php:41
+msgid "Chọn style hiển thị"
+msgstr ""
+
+#: category.php:155 search.php:155 template/page-danh-sach-doanh-nghiep.php:159
+msgid "Chọn Thành Phố"
+msgstr ""
+
+#: header-short.php:112 header.php:120
+msgid "Chọn thành phố"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:332
+msgid "contact@company.com"
+msgstr ""
+
+#. Description of the theme
+msgid "CR"
+msgstr ""
+
+#. Name of the theme
+msgid "crismaster"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:490
+#: plugins/redux/sample/sample-config.php:491
+msgid "crismaster Options"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:159
+#: plugins/redux/sample/sample-config.php:162
+msgid "Current theme preview"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:153
+#, php-format
+msgid "Customize &#8220;%s&#8221;"
+msgstr ""
+
+#: single-enterprise.php:185
+msgid "CÔNG TY & SẢN PHẨM DỊCH VỤ"
+msgstr ""
+
+#: single-enterprise.php:294
+msgid "CÙNG CHUYÊN MỤC"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:258
+msgid "Cài đặt Footer"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:204
+msgid "Cài đặt Header"
+msgstr ""
+
+#: plugins/custom-visual/p3-single-post-noi-dung-chinh.php:23
+msgid "Có thể chọn 1 hoặc nhiều hình ảnh cho nội dung"
+msgstr ""
+
+#: plugins/custom-visual/p3-single-post-noi-dung-chinh.php:30
+msgid "Có thể chọn 1 hoặc nhiều hình ảnh quảng cáo trên sidebar"
+msgstr ""
+
+#: plugins/custom-visual/p5-lien-he-infor.php:30
+msgid "Có thể nhập dạng html"
+msgstr ""
+
+#: plugins/custom-visual/p2-dvu-gioi-thieu-text-anh.php:30
+#: plugins/custom-visual/p3-single-post-noi-dung-chinh.php:16
+msgid "Có thể nhập text dạng html"
+msgstr ""
+
+#: plugins/custom-visual/p1-gallery.php:16
+msgid "Có thể thêm nhiều hình ảnh"
+msgstr ""
+
+#: plugins/cmb2/example-functions.php:232
+msgid "Có thể upload nhiều file"
+msgstr ""
+
+#: plugins/custom-visual/p3-single-post-tin-tuc-cung-chu-de.php:47
+msgid "Cùng Chủ Đề"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:50
+msgid "Cập nhật Danh mục Doanh Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:173
+msgid "Cập nhật Danh mục Dịch Vụ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:112
+msgid "Cập nhật Danh mục Nghề Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:53
+msgid "Danh mục Doanh Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:47
+msgid "Danh mục Doanh Nghiệp cha"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:48
+msgid "Danh mục Doanh Nghiệp cha:"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:176
+msgid "Danh mục Dịch Vụ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:170
+msgid "Danh mục Dịch Vụ cha"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:171
+msgid "Danh mục Dịch Vụ cha:"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:115
+msgid "Danh mục Nghề Nghiệp"
+msgstr ""
+
+#: plugins/custom-visual/p4-danh-muc-nghe.php:5
+msgid "Danh mục nghề nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:109
+msgid "Danh mục Nghề Nghiệp cha"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:110
+msgid "Danh mục Nghề Nghiệp cha:"
+msgstr ""
+
+#: taxonomy-profession_type.php:134
+msgid "Danh mục đang xem : "
+msgstr ""
+
+#: category.php:186
+#, php-format
+msgid "Danh mục đang xem: %s"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:423
+msgid "Danh sách doanh nghiệp"
+msgstr ""
+
+#: plugins/custom-visual/p1-doanh-nghiep-tim-kiem-nhieu.php:5
+msgid "DN Tìm kiếm nhiều"
+msgstr ""
+
+#: single-enterprise.php:294
+msgid "DOANH NGHIỆP"
+msgstr ""
+
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-post-sidebar-quang-cao.php:23
+msgid "Doanh nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:11
+msgctxt "Doanh Nghiệp"
+msgid "Thêm mới"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:18
+msgid "Doanh Nghiệp cha:"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:13
+msgid "Doanh Nghiệp mới"
+msgstr ""
+
+#: plugins/custom-visual/p1-doanh-nghiep-moi-cap-nhat.php:5
+msgid "Doanh nghiệp mới cập nhật"
+msgstr ""
+
+#: plugins/custom-visual/p1-doanh-nghiep-moi-dang-ky.php:5
+msgid "Doanh nghiệp mới đăng ký"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:135
+msgctxt "Dịch Vụ"
+msgid "Thêm mới"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:142
+msgid "Dịch Vụ cha:"
+msgstr ""
+
+#: plugins/custom-visual/p1-dich-vu-doanh-nghiep.php:5
+msgid "Dịch vụ Doanh NGhiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:137
+msgid "Dịch Vụ mới"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:330
+msgid "Email"
+msgstr ""
+
+#: functions.php:105
+msgid "Error 404"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:281
+msgid "Facebook"
+msgstr ""
+
+#: plugins/custom-visual/p5-form-lien-he.php:5
+msgid "Form Liên Hệ"
+msgstr ""
+
+#: plugins/custom-visual/p5-form-lien-he.php:51
+msgid "Form đăng ký của bạn được gửi đi thành công !"
+msgstr ""
+
+#: single-enterprise.php:185
+msgid "GIỚI THIỆU"
+msgstr ""
+
+#: plugins/custom-visual/p2-dvu-gioi-thieu-text-anh.php:5
+msgid "Giới thiệu dịch vụ"
+msgstr ""
+
+#: single-enterprise.php:188
+msgid "Gửi yêu cầu cập nhật thông tin doanh nghiệp này"
+msgstr ""
+
+#. Name of the template
+msgid "Home Page"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:178
+msgid "http://codex.wordpress.org/Child_Themes"
+msgstr ""
+
+#: plugins/custom-visual/p1-banner-dau.php:20
+#: plugins/custom-visual/p1-gallery.php:13
+#: plugins/custom-visual/p2-dvu-banner.php:20
+#: plugins/custom-visual/p2-dvu-quang-cao.php:20
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-banner-2.php:20
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-post-sidebar-quang-cao.php:48
+#: plugins/custom-visual/p4-danh-muc-nghe.php:41
+#: plugins/custom-visual/p4-danh-muc-nghe.php:57
+msgid "Hình Ảnh"
+msgstr ""
+
+#: plugins/custom-visual/p2-dvu-gioi-thieu-text-anh.php:34
+msgid "Hình ảnh"
+msgstr ""
+
+#: plugins/custom-visual/p3-single-post-noi-dung-chinh.php:20
+msgid "Hình ảnh cho nội dung"
+msgstr ""
+
+#: plugins/custom-visual/p5-lien-he-infor.php:57
+msgid "Hình ảnh mô tả"
+msgstr ""
+
+#: plugins/custom-visual/p3-single-post-noi-dung-chinh.php:27
+msgid "Hình ảnh quảng cáo sidebar"
+msgstr ""
+
+#: plugins/custom-visual/p5-lien-he-infor.php:60
+msgid "Hình ảnh thêm vào mô tả"
+msgstr ""
+
+#: plugins/custom-visual/p4-danh-muc-nghe.php:44
+#: plugins/custom-visual/p5-lien-he-infor.php:51
+msgid "Hình ảnh đại diện hiển thị cho danh mục"
+msgstr ""
+
+#: plugins/custom-visual/p1-dich-vu-doanh-nghiep.php:34
+msgid "Icon dịch vụ"
+msgstr ""
+
+#: plugins/custom-visual/p1-kien-thuc-doanh-nghiep.php:27
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-carousel.php:20
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-post-sidebar-quang-cao.php:27
+msgid "ID bài tin tức chính"
+msgstr ""
+
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-carousel.php:27
+msgid "ID các bài tin tức liên quan muốn hiển thị"
+msgstr ""
+
+#: plugins/custom-visual/p1-kien-thuc-doanh-nghiep.php:34
+msgid "ID các bài tin tức mới nhất muốn hiển thị"
+msgstr ""
+
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-post-sidebar-quang-cao.php:34
+msgid "ID các bài tin tức phụ muốn hiển thị"
+msgstr ""
+
+#: plugins/custom-visual/p1-doanh-nghiep-moi-cap-nhat.php:27
+#: plugins/custom-visual/p1-doanh-nghiep-moi-dang-ky.php:27
+#: plugins/custom-visual/p1-doanh-nghiep-tim-kiem-nhieu.php:27
+msgid "ID các doanh nghiêp muốn hiển thị"
+msgstr ""
+
+#: plugins/custom-visual/p1-san-pham-dich-vu-noi-bat.php:27
+msgid "ID các sản phẩm/dịch vụ muốn hiển thị"
+msgstr ""
+
+#: plugins/custom-visual/p4-danh-muc-nghe.php:34
+msgid "ID danh mục"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:295
+msgid "Instagram"
+msgstr ""
+
+#: 404.php:13
+msgid "KHÔNG CÒN TỒN TẠI"
+msgstr ""
+
+#. Author of the theme
+msgid "Khách"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:20
+msgid "Không tìm thấy Doanh Nghiệp trong thùng rác."
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:19
+msgid "Không tìm thấy Doanh Nghiệp."
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:144
+msgid "Không tìm thấy Dịch Vụ trong thùng rác."
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:143
+msgid "Không tìm thấy Dịch Vụ."
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:82
+msgid "Không tìm thấy Nghề Nghiệp trong thùng rác."
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:81
+msgid "Không tìm thấy Nghề Nghiệp."
+msgstr ""
+
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-post-sidebar-quang-cao.php:16
+msgid "Kiến thức"
+msgstr ""
+
+#: plugins/custom-visual/p1-kien-thuc-doanh-nghiep.php:5
+msgid "Kiến thức doanh nghiệp"
+msgstr ""
+
+#: functions.php:473
+msgid "kết quả"
+msgstr ""
+
+#: search.php:196
+msgid "kết quả cho : "
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:402
+msgid "Link gửi yêu cầu"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:404
+msgid "Link gửi yêu cầu cập nhật thông tin doanh nghiệp"
+msgstr ""
+
+#: plugins/custom-visual/p1-dang-ky-doanh-nghiep.php:13
+#: plugins/redux/sample/sample-config.php:409
+msgid "Link liên hệ ngay"
+msgstr ""
+
+#: plugins/custom-visual/p1-dang-ky-doanh-nghiep.php:20
+#: plugins/redux/sample/sample-config.php:416
+msgid "Link xem chi tiết"
+msgstr ""
+
+#: plugins/custom-visual/p1-muc-luc-nganh-nghe.php:27
+msgid "Link xem thêm"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:302
+msgid "LinkedIn"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:432
+msgid "List 4 Ảnh banner bé đầu trang"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:450
+msgid "List 4 Ảnh Quảng cáo footer"
+msgstr ""
+
+#: plugins/custom-visual/p1-banner-dau.php:5
+msgid "List Banner"
+msgstr ""
+
+#: plugins/custom-visual/p2-dvu-quang-cao.php:5
+msgid "List Banner Quảng cáo"
+msgstr ""
+
+#: plugins/custom-visual/p2-dvu-banner.php:5
+msgid "List Banner đầu page"
+msgstr ""
+
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-banner-2.php:5
+msgid "List Banner đầu page 2"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:394
+msgid "List Ảnh banner bé dưới footer"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:376
+msgid "List Ảnh gallery"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:385
+msgid "List Ảnh Quảng cáo"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:441
+msgid "List Ảnh Quảng cáo sidebar"
+msgstr ""
+
+#: single-enterprise.php:361
+msgid "LIÊN QUAN"
+msgstr ""
+
+#: single-enterprise.php:458
+#: plugins/custom-visual/p1-dang-ky-doanh-nghiep.php:47
+msgid "Liên hệ ngay"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:213
+#: plugins/redux/sample/sample-config.php:266
+msgid "Logo"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:276
+msgid "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam"
+msgstr ""
+
+#: single-enterprise.php:147
+msgid "Loại hình công ty"
+msgstr ""
+
+#: category.php:135 search.php:135 template/page-danh-sach-doanh-nghiep.php:139
+msgid "Lọc theo"
+msgstr ""
+
+#: category.php:244 functions.php:535 search.php:252 single-enterprise.php:90
+#: single-enterprise.php:268 single-enterprise.php:335
+#: template/page-danh-sach-doanh-nghiep.php:248
+msgid "Mã số thuế"
+msgstr ""
+
+#: plugins/custom-visual/p2-dvu-gioi-thieu-text-anh.php:27
+#: plugins/custom-visual/p5-lien-he-infor.php:48
+msgid "Mô tả"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:237
+msgid "Mô tả banner"
+msgstr ""
+
+#: plugins/custom-visual/p3-single-post-tin-tuc-moi-nhat.php:41
+msgid "Mới nhất"
+msgstr ""
+
+#: category.php:399 header-short.php:134 header.php:159 search.php:408
+#: single-enterprise.php:471 tag-profession.php:239 tag.php:238
+#: taxonomy-profession_type.php:239
+#: template/page-danh-sach-doanh-nghiep.php:404
+#: plugins/custom-visual/p1-dang-ky-doanh-nghiep.php:60
+msgid "Mục lục"
+msgstr ""
+
+#: plugins/custom-visual/p1-muc-luc-nganh-nghe.php:5
+msgid "Mục lục ngành nghề"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:73
+msgctxt "Nghề Nghiệp"
+msgid "Thêm mới"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:80
+msgid "Nghề Nghiệp cha:"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:75
+msgid "Nghề Nghiệp mới"
+msgstr ""
+
+#: single-enterprise.php:361
+msgid "NGÀNH NGHỀ"
+msgstr ""
+
+#: category.php:274 functions.php:565 search.php:283 single-enterprise.php:57
+#: template/page-danh-sach-doanh-nghiep.php:278
+msgid "Ngành nghề kinh doanh"
+msgstr ""
+
+#: category.php:55 search.php:55 tag-profession.php:55 tag.php:55
+#: taxonomy-profession_type.php:55 template/page-danh-sach-doanh-nghiep.php:59
+msgid "Ngành Nghề Liên Quan"
+msgstr ""
+
+#: single-enterprise.php:159
+msgid "Ngày cấp giấy phép"
+msgstr ""
+
+#: plugins/custom-visual/p1-doanh-nghiep-moi-cap-nhat.php:30
+#: plugins/custom-visual/p1-doanh-nghiep-moi-dang-ky.php:30
+#: plugins/custom-visual/p1-doanh-nghiep-tim-kiem-nhieu.php:30
+#: plugins/custom-visual/p1-kien-thuc-doanh-nghiep.php:37
+#: plugins/custom-visual/p1-san-pham-dich-vu-noi-bat.php:30
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-carousel.php:30
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-post-sidebar-quang-cao.php:37
+msgid "Ngăn cách nhau bởi dấu \",\""
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:352
+msgid "Ngăn cách nhau bởi dấu phẩy"
+msgstr ""
+
+#: single-enterprise.php:83
+msgid "Người đại diện"
+msgstr ""
+
+#: category.php:95 search.php:95 tag-profession.php:95 tag.php:95
+#: taxonomy-profession_type.php:95 template/page-danh-sach-doanh-nghiep.php:99
+msgid "NHÓM NGÀNH NGHỀ"
+msgstr ""
+
+#: comments.php:8
+msgid "Nhận xét"
+msgstr ""
+
+#: plugins/custom-visual/p1-kien-thuc-doanh-nghiep.php:30
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-carousel.php:23
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-post-sidebar-quang-cao.php:30
+msgid "Nhập 1 ID của bài viết chính"
+msgstr ""
+
+#: functions.php:376
+msgid "Nhập email"
+msgstr ""
+
+#: functions.php:375
+msgid "Nhập họ tên"
+msgstr ""
+
+#: plugins/custom-visual/p3-single-post-tin-tuc-cung-chu-de.php:13
+#: plugins/custom-visual/p3-single-post-tin-tuc-moi-nhat.php:13
+msgid "Nhập số bài viết muốn hiển thị"
+msgstr ""
+
+#: functions.php:377
+msgid "Nhập số điện thoại"
+msgstr ""
+
+#: 404.php:13
+msgid "NỘI DUNG BẠN TÌM"
+msgstr ""
+
+#: plugins/custom-visual/p3-single-post-noi-dung-chinh.php:13
+msgid "Nội dung chính"
+msgstr ""
+
+#: plugins/custom-visual/p3-single-post-noi-dung-chinh.php:5
+msgid "Nội dung chính bài post"
+msgstr ""
+
+#. Name of the template
+msgid "Page - Index"
+msgstr ""
+
+#. Name of the template
+msgid "Page Danh sách Doanh Nghiệp"
+msgstr ""
+
+#. Name of the template
+msgid "Page Short Header"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:337
+msgid "Privacy Policy"
+msgstr ""
+
+#: 404.php:21
+msgid "QUAY VỀ TRANG CHỦ"
+msgstr ""
+
+#: functions.php:384
+msgid "Review của bạn"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:86
+msgid "Section via hook"
+msgstr ""
+
+#: functions.php:220
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:217
+msgid "Sidebar "
+msgstr ""
+
+#: category.php:257 functions.php:548 search.php:266
+#: template/page-danh-sach-doanh-nghiep.php:261
+msgid "Sản phẩm chính"
+msgstr ""
+
+#: plugins/custom-visual/p1-san-pham-dich-vu-noi-bat.php:5
+msgid "Sản phẩm/Dịch vụ nổi bật"
+msgstr ""
+
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-carousel.php:34
+msgid "Số bài biết mới nhất muốn hiển thị"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:323
+msgid "Số điện thoại"
+msgstr ""
+
+#: category.php:74 search.php:74 tag-profession.php:74 tag.php:74
+#: taxonomy-profession_type.php:74 template/page-danh-sach-doanh-nghiep.php:78
+msgid "TAG NGÀNH NGHỀ"
+msgstr ""
+
+#: tag-profession.php:160 tag.php:159 taxonomy-profession_type.php:160
+#: plugins/redux/sample/sample-config.php:173
+msgid "Tags"
+msgstr ""
+
+#: functions.php:103
+#, php-format
+msgid "Tags \"%s\""
+msgstr ""
+
+#: tag-profession.php:134 tag.php:134
+msgid "Tags đang xem : "
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:344
+msgid "Terms and Conditions"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:465
+msgid "Theme Information 1"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:471
+msgid "Theme Information 2"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:178
+#, php-format
+msgid "This <a href=\"%1$s\">child theme</a> requires its parent theme, %2$s."
+msgstr ""
+
+#: plugins/custom-visual/p1-banner-dau.php:13
+#: plugins/custom-visual/p2-dvu-banner.php:13
+#: plugins/custom-visual/p2-dvu-quang-cao.php:13
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-banner-2.php:13
+msgid "Thêm banner "
+msgstr ""
+
+#: plugins/custom-visual/p4-danh-muc-nghe.php:50
+msgid "Thêm banner quảng cáo"
+msgstr ""
+
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-post-sidebar-quang-cao.php:41
+msgid "Thêm banner quảng cáo sidebar"
+msgstr ""
+
+#: plugins/custom-visual/p2-dvu-banner.php:36
+msgid "Thêm class đặc biệt"
+msgstr ""
+
+#: plugins/custom-visual/p4-danh-muc-nghe.php:53
+msgid "Thêm các banner quảng cáo, chỉ nên thêm 2 banner"
+msgstr ""
+
+#: plugins/custom-visual/p1-thong-ke.php:20
+msgid "Thêm các chỉ số thống kê"
+msgstr ""
+
+#: plugins/custom-visual/p4-danh-muc-nghe.php:30
+msgid "Thêm các danh mục nghề muốn hiển thị"
+msgstr ""
+
+#: plugins/custom-visual/p1-dich-vu-doanh-nghiep.php:27
+msgid "Thêm các dịch vụ"
+msgstr ""
+
+#: plugins/custom-visual/p5-lien-he-infor.php:34
+msgid "Thêm các thông tin hướng dẫn"
+msgstr ""
+
+#: plugins/custom-visual/p4-danh-muc-nghe.php:27
+msgid "Thêm danh mục"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:51
+msgid "Thêm mới Danh mục Doanh Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:174
+msgid "Thêm mới Danh mục Dịch Vụ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:113
+msgid "Thêm mới Danh mục Nghề Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:12
+msgid "Thêm mới Doanh Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:136
+msgid "Thêm mới Dịch Vụ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:74
+msgid "Thêm mới Nghề Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:10
+msgctxt "Thêm mới trên thanh admin"
+msgid "Doanh Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:134
+msgctxt "Thêm mới trên thanh admin"
+msgid "Dịch Vụ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:72
+msgctxt "Thêm mới trên thanh admin"
+msgid "Nghề Nghiệp"
+msgstr ""
+
+#: plugins/custom-visual/p1-thong-ke.php:27
+msgid "Thông số"
+msgstr ""
+
+#: plugins/custom-visual/p5-lien-he-infor.php:5
+msgid "Thông tin bổ sung cho liên hệ"
+msgstr ""
+
+#: single-enterprise.php:132
+msgid "Thông tin chi tiết"
+msgstr ""
+
+#: 404.php:15
+msgid ""
+"Thật không may, địa chỉ URL bạn yêu cầu không được tìm thấy. Quay về trang "
+"trước hoặc trang chủ để tìm kiếm nội dung liên quan."
+msgstr ""
+
+#: single-enterprise.php:153
+msgid "Thị trường chính"
+msgstr ""
+
+#: plugins/custom-visual/p1-thong-ke.php:5
+msgid "Thống kê chỉ số"
+msgstr ""
+
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-carousel.php:16
+msgid "Thời sự"
+msgstr ""
+
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-carousel.php:84
+msgid "Tin Liên Quan"
+msgstr ""
+
+#: plugins/custom-visual/p1-kien-thuc-doanh-nghiep.php:95
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-carousel.php:107
+#: plugins/widget/widgets.php:245
+msgid "Tin mới nhất"
+msgstr ""
+
+#: plugins/custom-visual/p3-single-post-tin-tuc-cung-chu-de.php:47
+#: plugins/custom-visual/p3-single-post-tin-tuc-moi-nhat.php:41
+msgid "Tin Tức"
+msgstr ""
+
+#: plugins/custom-visual/p3-single-post-tin-tuc-cung-chu-de.php:5
+msgid "Tin tức cùng chủ đề"
+msgstr ""
+
+#: plugins/custom-visual/p3-single-post-tin-tuc-moi-nhat.php:5
+msgid "Tin tức mới nhất"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:230
+msgid "Title cho banner"
+msgstr ""
+
+#: plugins/custom-visual/p1-dich-vu-doanh-nghiep.php:13
+#: plugins/custom-visual/p1-doanh-nghiep-moi-cap-nhat.php:13
+#: plugins/custom-visual/p1-doanh-nghiep-moi-dang-ky.php:13
+#: plugins/custom-visual/p1-doanh-nghiep-tim-kiem-nhieu.php:13
+#: plugins/custom-visual/p1-kien-thuc-doanh-nghiep.php:13
+#: plugins/custom-visual/p1-muc-luc-nganh-nghe.php:13
+#: plugins/custom-visual/p1-san-pham-dich-vu-noi-bat.php:13
+#: plugins/custom-visual/p1-thong-ke.php:34
+#: plugins/custom-visual/p2-dvu-gioi-thieu-text-anh.php:13
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-carousel.php:13
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-post-sidebar-quang-cao.php:13
+#: plugins/custom-visual/p4-danh-muc-nghe.php:13
+#: plugins/custom-visual/p5-form-lien-he.php:13
+#: plugins/custom-visual/p5-lien-he-infor.php:13
+#: plugins/custom-visual/p5-lien-he-infor.php:41
+msgid "Tiêu đề"
+msgstr ""
+
+#: plugins/custom-visual/p1-dich-vu-doanh-nghiep.php:20
+#: plugins/custom-visual/p1-doanh-nghiep-moi-cap-nhat.php:20
+#: plugins/custom-visual/p1-doanh-nghiep-moi-dang-ky.php:20
+#: plugins/custom-visual/p1-doanh-nghiep-tim-kiem-nhieu.php:20
+#: plugins/custom-visual/p1-kien-thuc-doanh-nghiep.php:20
+#: plugins/custom-visual/p1-muc-luc-nganh-nghe.php:20
+#: plugins/custom-visual/p1-san-pham-dich-vu-noi-bat.php:20
+#: plugins/custom-visual/p2-dvu-gioi-thieu-text-anh.php:20
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-post-sidebar-quang-cao.php:20
+#: plugins/custom-visual/p4-danh-muc-nghe.php:20
+#: plugins/custom-visual/p5-form-lien-he.php:20
+#: plugins/custom-visual/p5-lien-he-infor.php:20
+msgid "Tiêu đề 2"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:274
+msgid "Tiêu đề cho logo"
+msgstr ""
+
+#: plugins/custom-visual/p5-lien-he-infor.php:27
+msgid "Tiêu đề phụ"
+msgstr ""
+
+#: functions.php:99
+msgid "Trang chủ"
+msgstr ""
+
+#: single-enterprise.php:454
+#: plugins/custom-visual/p1-dang-ky-doanh-nghiep.php:43
+msgid "TRANG VÀNG DOANH NGHIỆP"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:288
+msgid "Twitter"
+msgstr ""
+
+#: single-enterprise.php:141
+msgid "Tên chính thức"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:7
+#: plugins/custom-post-type/crismaster_post_type.php:8
+msgctxt "Tên Danh mục bài viết"
+msgid "Doanh Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:131
+#: plugins/custom-post-type/crismaster_post_type.php:132
+msgctxt "Tên Danh mục bài viết"
+msgid "Dịch Vụ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:69
+#: plugins/custom-post-type/crismaster_post_type.php:70
+msgctxt "Tên Danh mục bài viết"
+msgid "Nghề Nghiệp"
+msgstr ""
+
+#: plugins/custom-visual/p1-dich-vu-doanh-nghiep.php:48
+msgid "Tên dịch vụ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:9
+msgctxt "Tên menu"
+msgid "Doanh Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:133
+msgctxt "Tên menu"
+msgid "Dịch Vụ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:71
+msgctxt "Tên menu"
+msgid "Nghề Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:52
+msgid "Tên mới của Danh mục Doanh Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:175
+msgid "Tên mới của Danh mục Dịch Vụ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:114
+msgid "Tên mới của Danh mục Nghề Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:43
+#: plugins/custom-post-type/crismaster_post_type.php:44
+msgctxt "Tên taxonomy"
+msgid "Danh mục Doanh Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:166
+#: plugins/custom-post-type/crismaster_post_type.php:167
+msgctxt "Tên taxonomy"
+msgid "Danh mục Dịch Vụ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:105
+#: plugins/custom-post-type/crismaster_post_type.php:106
+msgctxt "Tên taxonomy"
+msgid "Danh mục Nghề Nghiệp"
+msgstr ""
+
+#: header-short.php:121 header.php:129
+msgid "Tìm kiếm"
+msgstr ""
+
+#: functions.php:102
+#, php-format
+msgid "Tìm kiếm \"%s\""
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:45
+msgid "Tìm kiếm Danh mục Doanh Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:168
+msgid "Tìm kiếm Danh mục Dịch Vụ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:107
+msgid "Tìm kiếm Danh mục Nghề Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:17
+msgid "Tìm kiếm Doanh Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:141
+msgid "Tìm kiếm Dịch Vụ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:79
+msgid "Tìm kiếm Nghề Nghiệp"
+msgstr ""
+
+#: functions.php:473 search.php:196
+msgid "Tìm thấy"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:46
+msgid "Tất cả Danh mục Doanh Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:169
+msgid "Tất cả Danh mục Dịch Vụ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:108
+msgid "Tất cả Danh mục Nghề Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:16
+msgid "Tất cả Doanh Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:140
+msgid "Tất cả Dịch Vụ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:78
+msgid "Tất cả Nghề Nghiệp"
+msgstr ""
+
+#: category.php:113 search.php:113 tag-profession.php:113 tag.php:113
+#: taxonomy-profession_type.php:113
+#: template/page-danh-sach-doanh-nghiep.php:117
+msgid "Tỉnh/ Thành Phố"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:351
+msgid "Tọa độ địa chỉ"
+msgstr ""
+
+#: plugins/custom-visual/p3-single-post-noi-dung-chinh.php:85
+msgid "Từ Khóa"
+msgstr ""
+
+#: single-enterprise.php:164
+msgid "Từ khóa"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:353
+msgid "VD: 21.0193525644659, 105.77550865223736"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:172
+#, php-format
+msgid "Version %s"
+msgstr ""
+
+#: comments.php:9
+msgid "Viết Đánh Giá"
+msgstr ""
+
+#: single-enterprise.php:459
+#: plugins/custom-visual/p1-dang-ky-doanh-nghiep.php:48
+#: plugins/custom-visual/p1-muc-luc-nganh-nghe.php:93
+msgid "Xem Chi Tiết"
+msgstr ""
+
+#: plugins/custom-visual/p1-kien-thuc-doanh-nghiep.php:88
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-carousel.php:79
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-post-sidebar-quang-cao.php:103
+msgid "Xem chi tiết"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:15
+msgid "Xem Doanh Nghiệp"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:139
+msgid "Xem Dịch Vụ"
+msgstr ""
+
+#: plugins/custom-post-type/crismaster_post_type.php:77
+msgid "Xem Nghề Nghiệp"
+msgstr ""
+
+#: category.php:295 functions.php:589 search.php:304 tag-profession.php:171
+#: tag.php:170 taxonomy-profession_type.php:171
+#: template/page-danh-sach-doanh-nghiep.php:299
+msgid "Xem Thêm"
+msgstr ""
+
+#: plugins/custom-visual/p4-danh-muc-nghe.php:148
+msgid "Xem tất cả"
+msgstr ""
+
+#: header.php:138
+msgid "XU HƯỚNG TÌM KIẾM"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:244
+msgid "Xu hướng tìm kiếm"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:309
+msgid "Youtube"
+msgstr ""
+
+#: plugins/custom-visual/p1-banner-dau.php:27
+#: plugins/custom-visual/p1-dich-vu-doanh-nghiep.php:41
+#: plugins/custom-visual/p2-dvu-banner.php:27
+#: plugins/custom-visual/p2-dvu-quang-cao.php:27
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-banner-2.php:27
+#: plugins/custom-visual/p3-kien-thuc-doanh-nghiep-post-sidebar-quang-cao.php:55
+#: plugins/custom-visual/p4-danh-muc-nghe.php:64
+msgid "Đi đến Link"
+msgstr ""
+
+#: category.php:251 functions.php:542 search.php:260
+#: template/page-danh-sach-doanh-nghiep.php:255
+msgid "Điện thoại"
+msgstr ""
+
+#: functions.php:397
+msgid "Đánh giá"
+msgstr ""
+
+#: category.php:217 functions.php:507 search.php:225 tag-profession.php:152
+#: tag.php:151 taxonomy-profession_type.php:152
+#: template/page-danh-sach-doanh-nghiep.php:221
+msgid "Đã Xác Thực"
+msgstr ""
+
+#: single-enterprise.php:454
+#: plugins/custom-visual/p1-dang-ky-doanh-nghiep.php:43
+msgid "Đăng ký"
+msgstr ""
+
+#: single-enterprise.php:256 single-enterprise.php:323
+msgid "ĐƯỢC ĐỀ XUẤT"
+msgstr ""
+
+#: category.php:206 functions.php:493 search.php:214
+#: template/page-danh-sach-doanh-nghiep.php:210
+msgid "Được Tài Trợ"
+msgstr ""
+
+#: category.php:237 functions.php:528 search.php:245 single-enterprise.php:76
+#: template/page-danh-sach-doanh-nghiep.php:241
+#: plugins/redux/sample/sample-config.php:316
+msgid "Địa chỉ"
+msgstr ""
+
+#: single-enterprise.php:454
+#: plugins/custom-visual/p1-dang-ky-doanh-nghiep.php:43
+msgid "để tiếp cận khách hàng đang có nhu cầu mua"
+msgstr ""
+
+#: plugins/custom-visual/p1-thong-ke.php:13
+msgid "Ảnh background"
+msgstr ""
+
+#: plugins/redux/sample/sample-config.php:222
+msgid "Ảnh banner"
+msgstr ""
+
+#: plugins/cmb2/example-functions.php:231
+msgid "Ảnh giải thưởng và danh mục"
+msgstr ""
+
+#: plugins/custom-visual/p1-gallery.php:5
+msgid "Ảnh sưu tập"
+msgstr ""

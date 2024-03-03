@@ -142,6 +142,9 @@ p.logged-in-as{
         min-height: 500px;
     }
 }
+#menu-reponsive .hsh-menu-list .cms-lang ul li a {
+    color: #003DA5;
+}
 @media (max-width: 1199px) {
     .hide-mobile-1199 {
         display: none;
@@ -149,6 +152,16 @@ p.logged-in-as{
     .form-search input {
         margin-left: 0 !important;
         width: 100%;
+    }
+    .cms-lang {
+        margin-left: 0;
+    }
+    #menu-reponsive .hsh-menu-list .cms-langue-active,
+    #menu-reponsive .hsh-menu-list .cms-langue-active:before{
+        color: #003DA5;
+    }
+    .info-right .cms-lang-curentcy .cms-lang ul {
+        right: auto;
     }
 }
 @media (max-width: 454px) {
