@@ -697,17 +697,29 @@ function tags_add_custom_types( $query ) {
 }
 add_filter( 'pre_get_posts', 'tags_add_custom_types' );
 
-function custom_post_type_id_column($columns) {
+function service_id_column($columns) {
     $columns['post_id'] = 'ID';
     return $columns;
 }
-add_filter('manage_service_posts_columns', 'custom_post_type_id_column');
-function custom_post_type_id_column_data($column, $post_id) {
+add_filter('manage_service_posts_columns', 'service_id_column');
+function service_id_column_data($column, $post_id) {
     if ($column == 'post_id') {
         echo $post_id;
     }
 }
-add_action('manage_service_posts_custom_column', 'custom_post_type_id_column_data', 10, 2);
+add_action('manage_service_posts_custom_column', 'service_id_column_data', 10, 2);
+
+function enterprise_id_column($columns) {
+    $columns['post_id'] = 'ID';
+    return $columns;
+}
+add_filter('manage_enterprise_posts_columns', 'enterprise_id_column');
+function enterprise_id_column_data($column, $post_id) {
+    if ($column == 'post_id') {
+        echo $post_id;
+    }
+}
+add_action('manage_enterprise_posts_custom_column', 'enterprise_id_column_data', 10, 2);
 
 
 ?>

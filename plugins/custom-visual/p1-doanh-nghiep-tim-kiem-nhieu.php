@@ -71,7 +71,7 @@ function p1_doanh_nghiep_tim_kiem_nhieu_func($atts,$content = null){
                                 <li class="item" onclick="clickChangeUrls('<?php  the_permalink() ?> ')">
                                     <div class="wrap-item">
                                         <img class="item-image" src="<?= esc_url($single_image[0]) ?>" alt="Image" style="width:100%">
-                                        <h5 class="item-title"><?= $title_post ?></h5>
+                                        <h5 class="item-title" title="<?= get_the_title() ?>"><?= $title_post ?></h5>
                                     </div>
                                 </li>
                             <?php

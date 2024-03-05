@@ -71,13 +71,13 @@ function p1_san_pham_dich_vu_noi_bat_func($atts,$content = null){
                                 if ($t%2 == 1){ ?>
                                        <div class="item">
                                 <?php } ?>
-                                    <div class="wrap-item relative">
+                                    <div class="wrap-item relative" title="<?= get_the_title() ?>">
                                         <a href="<?php the_permalink(); ?>" class="link-box"></a>
                                         <div class="wrap-image">
                                             <img class="item-icon-svg" src="<?= get_template_directory_uri() ?>/assets/image/faverite.png" alt="">
                                             <img class="item-image" src="<?= esc_url($single_image[0]) ?>" alt="Image">
                                         </div>
-                                        <h5 class="item-title"><?= esc_attr($title_post) ?></h5>
+                                        <h5 class="item-title" title="<?= get_the_title() ?>"><?= esc_attr($title_post) ?></h5>
                                     </div>
                                 <?php if ($t%2 == 0){ ?>
                                         </div>
