@@ -85,7 +85,7 @@ function p1_kien_thuc_doanh_nghiep_func($atts,$content = null){
                                     <div class="item-post-description">
                                         <?= esc_attr($post_summary) ?>
                                     </div>
-                                    <a class="btn-main btn-round style-03" href="<?php the_permalink(); ?>"><?= esc_html__('Xem chi tiết','crismaster') ?></a>
+                                    <a class="btn-main btn-round style-03" href="<?php the_permalink($post->ID); ?>"><?= esc_html__('Xem chi tiết','crismaster') ?></a>
                                 </div>
                             </div>
                         </div>

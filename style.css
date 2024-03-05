@@ -130,6 +130,9 @@ p.logged-in-as{
 .item-btn-view-all {
     padding: 12px 10px;
 }
+.cms-lang-curentcy {
+    display: none;
+}
 @media (min-width: 1200px) {
     #menu-reponsive .hsh-menu-list li a {
         color: #fff;

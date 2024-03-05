@@ -330,13 +330,13 @@ function custom_polylang_langswitcher() {
         if ($current_language == $langs_array['vi']['slug']){ ?>
             <div class="cms-langue-active">Tiếng Việt</div>
             <ul>
-                <li><a href="<?= $langs_array['ja']['url'] ?>">日本語</a></li>
+                <li><a href="<?= $langs_array['ja']['url'] ?>">Tiếng Nhật</a></li>
             </ul>
         <?php }
         if ($current_language == $langs_array['ja']['slug']){ ?>
             <div class="cms-langue-active">日本語</div>
             <ul>
-                <li><a href="<?= $langs_array['vi']['url'] ?>">Tiếng Việt</a></li>
+                <li><a href="<?= $langs_array['vi']['url'] ?>">ベトナム語</a></li>
             </ul>
         <?php } ?>
 
