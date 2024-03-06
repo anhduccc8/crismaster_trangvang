@@ -88,10 +88,10 @@ $mobile = wp_is_mobile(); ?>
                     <div class="link-of-support">
                         <h5><?= esc_html__('Trợ giúp','crismaster') ?></h5>
                         <ul class="list-link">
-                            <li class="item"><a href="#"><?= esc_html__('Mới bắt đầu','crismaster') ?>Getting started</a></li>
-                            <li class="item"><a href="#"><?= esc_html__('Trung tâm trợ giúp','crismaster') ?>Help center</a></li>
-                            <li class="item"><a href="#"><?= esc_html__('Trạng thái server','crismaster') ?>Server status</a></li>
-                            <li class="item"><a href="#"><?= esc_html__('Báo cáo','crismaster') ?>Report a bug</a></li>
+                            <li class="item"><a href="#"><?= esc_html__('Mới bắt đầu','crismaster') ?></a></li>
+                            <li class="item"><a href="#"><?= esc_html__('Trung tâm trợ giúp','crismaster') ?></a></li>
+                            <li class="item"><a href="#"><?= esc_html__('Trạng thái server','crismaster') ?></a></li>
+                            <li class="item"><a href="#"><?= esc_html__('Báo cáo','crismaster') ?></a></li>
                         </ul>
                     </div>
                 </div>
