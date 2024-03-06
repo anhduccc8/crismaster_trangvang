@@ -33,7 +33,7 @@ $mobile = wp_is_mobile(); ?>
                             <?php } }
                         ?>
                     </div>
-                    <p class="text"><?= esc_attr($footer_sublogo) ?></p>
+                    <p class="text"><?= esc_attr__($footer_sublogo,'crismaster') ?></p>
                     <ul class="social-network">
                         <li>
                             <a href="<?= $footer_facebook ?>">
@@ -66,41 +66,38 @@ $mobile = wp_is_mobile(); ?>
                     <div class="link-of-home">
                         <h5><?= esc_html__('Trang chủ','crismaster') ?></h5>
                         <ul class="list-link">
-                            <li class="item"><a href="#">Feature</a></li>
-                            <li class="item"><a href="#">Pricing</a></li>
-                            <li class="item"><a href="#">Case Studies</a></li>
-                            <li class="item"><a href="#">Reviews</a></li>
-                            <li class="item"><a href="#">Updates</a></li>
+                            <li class="item"><a href="#"><?= esc_html__('Tính năng','crismaster') ?></a></li>
+                            <li class="item"><a href="#"><?= esc_html__('Bảng giá','crismaster') ?></a></li>
+                            <li class="item"><a href="#"><?= esc_html__('Nghiên cứu','crismaster') ?></a></li>
+                            <li class="item"><a href="#"><?= esc_html__('Đánh giá','crismaster') ?></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-xl-2 col-lg-6 col-md-6 col-sm-12 col-xs-12 wrap-link-footer footer-column">
                     <div class="link-of-company">
-                        <h5>Company</h5>
+                        <h5><?= esc_html__('Công ty','crismaster') ?></h5>
                         <ul class="list-link">
-                            <li class="item"><a href="#">About</a></li>
-                            <li class="item"><a href="#">Contact Us</a></li>
-                            <li class="item"><a href="#">Careers</a></li>
-                            <li class="item"><a href="#">Culture</a></li>
-                            <li class="item"><a href="#">Blog</a></li>
+                            <li class="item"><a href="#"><?= esc_html__('Về chúng tôi','crismaster') ?></a></li>
+                            <li class="item"><a href="#"><?= esc_html__('Liên hệ','crismaster') ?></a></li>
+                            <li class="item"><a href="#"><?= esc_html__('Tuyển dụng','crismaster') ?></a></li>
+                            <li class="item"><a href="#"><?= esc_html__('Văn hóa','crismaster') ?></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-xl-2 col-lg-6 col-md-6 col-sm-12 col-xs-12 wrap-link-footer footer-column">
                     <div class="link-of-support">
-                        <h5>Support</h5>
+                        <h5><?= esc_html__('Trợ giúp','crismaster') ?></h5>
                         <ul class="list-link">
-                            <li class="item"><a href="#">Getting started</a></li>
-                            <li class="item"><a href="#">Help center</a></li>
-                            <li class="item"><a href="#">Server status</a></li>
-                            <li class="item"><a href="#">Report a bug</a></li>
-                            <li class="item"><a href="#">Chat support</a></li>
+                            <li class="item"><a href="#"><?= esc_html__('Mới bắt đầu','crismaster') ?>Getting started</a></li>
+                            <li class="item"><a href="#"><?= esc_html__('Trung tâm trợ giúp','crismaster') ?>Help center</a></li>
+                            <li class="item"><a href="#"><?= esc_html__('Trạng thái server','crismaster') ?>Server status</a></li>
+                            <li class="item"><a href="#"><?= esc_html__('Báo cáo','crismaster') ?>Report a bug</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-xl-2 col-lg-6 col-md-6 col-sm-12 col-xs-12 wrap-link-footer footer-column">
                     <div class="link-of-contact">
-                        <h5>Contact Us</h5>
+                        <h5><?= esc_html__('Liên hệ với chúng tôi','crismaster') ?></h5>
                         <ul class="list-link">
                             <li class="item">
                                 <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">

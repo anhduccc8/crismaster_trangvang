@@ -71,7 +71,7 @@ function crismaster_theme_scripts_styles(){
     wp_enqueue_style( 'header-css', get_template_directory_uri() .'/assets/css/header.css',array());
     wp_enqueue_style( 'footer-css', get_template_directory_uri() .'/assets/css/footer.css',array(),'1.0.1');
     wp_enqueue_style( 'response-css', get_template_directory_uri() .'/assets/css/responsive.css',array(),'1.0.1');
-    wp_enqueue_style( 'mystyle', get_template_directory_uri() .'/style.css',array(),'1.1.8');
+    wp_enqueue_style( 'mystyle', get_template_directory_uri() .'/style.css',array(),'1.1.9');
     /**** Start Jquery ****/
     wp_enqueue_script("jquery-min", get_template_directory_uri()."/assets/js/jquery.min.js",array(),true,false);
 //    wp_enqueue_script("jquery-min", "https://code.jquery.com/jquery-3.6.0.min.js",array(),true,false);
@@ -328,15 +328,15 @@ function custom_polylang_langswitcher() {
     $current_language = function_exists('pll_current_language') ? pll_current_language() : '';
     if ($langs_array) :
         if ($current_language == $langs_array['vi']['slug']){ ?>
-            <div class="cms-langue-active">Tiếng Việt</div>
+            <div class="cms-langue-active"><span><img class="flag-lang" src="<?= get_template_directory_uri() ?>/assets/image/flag_vi.png" alt=""></span> Tiếng Việt</div>
             <ul>
-                <li><a href="<?= $langs_array['ja']['url'] ?>">Tiếng Nhật</a></li>
+                <li><a href="<?= $langs_array['ja']['url'] ?>"><span><img class="flag-lang" src="<?= get_template_directory_uri() ?>/assets/image/flag_ja.png" alt=""></span> Tiếng Nhật</a></li>
             </ul>
         <?php }
         if ($current_language == $langs_array['ja']['slug']){ ?>
-            <div class="cms-langue-active">日本語</div>
+            <div class="cms-langue-active"><span><img class="flag-lang" src="<?= get_template_directory_uri() ?>/assets/image/flag_ja.png" alt=""></span> 日本語</div>
             <ul>
-                <li><a href="<?= $langs_array['vi']['url'] ?>">ベトナム語</a></li>
+                <li><a href="<?= $langs_array['vi']['url'] ?>"><img class="flag-lang" src="<?= get_template_directory_uri() ?>/assets/image/flag_vi.png" alt=""></span> ベトナム語</a></li>
             </ul>
         <?php } ?>
 

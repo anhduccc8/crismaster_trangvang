@@ -130,9 +130,20 @@ p.logged-in-as{
 .item-btn-view-all {
     padding: 12px 10px;
 }
-.cms-lang-curentcy {
-    display: none;
+.hsh-menu-list li {
+    margin-top: 15px;
 }
+.flag-lang {
+    height: 14px;
+    margin-right: 5px;
+    margin-left: 12px;
+}
+.cms-lang ul {
+    padding: 0px 8px 4px;
+}
+/*.cms-lang-curentcy {*/
+/*    display: none;*/
+/*}*/
 @media (min-width: 1200px) {
     #menu-reponsive .hsh-menu-list li a {
         color: #fff;
@@ -165,6 +176,12 @@ p.logged-in-as{
     }
     .info-right .cms-lang-curentcy .cms-lang ul {
         right: auto;
+    }
+    .flag-lang {
+        margin-left: 0px;
+    }
+    .info-right .cms-lang-curentcy .cms-lang ul {
+        background-color: #cdc;
     }
 }
 @media (max-width: 454px) {
