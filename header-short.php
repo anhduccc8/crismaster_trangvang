@@ -60,7 +60,12 @@ foreach ($lines2 as $line2) {
                         <div id="menu-reponsive" class="site-navigation">
                             <ul class="hsh-menu-list">
                                 <?php
-                                $menu_items = wp_get_menu_array('2');
+                                $current_language = function_exists('pll_current_language') ? pll_current_language() : '';
+                                if ($current_language == 'vi'){
+                                    $menu_items = wp_get_menu_array('2');
+                                }else{
+                                    $menu_items = wp_get_menu_array('136');
+                                }
                                 $object = get_queried_object();
                                 if (!empty($menu_items)){
                                     foreach ($menu_items as $menu) { ?>

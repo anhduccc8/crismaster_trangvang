@@ -318,16 +318,19 @@ if(have_posts()):
                                                     $single_image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'large');
                                                     $mst = get_post_meta(get_the_ID(),'_cmb_mst',true);
                                                     $ng_diachi = get_post_meta(get_the_ID(),'_cmb_ng_diachi',true);
+
+                                                    $title_cus = get_the_title();
+                                                    $title_cus =mb_strlen($title_cus, 'UTF-8') > 30 ? mb_substr($title_cus, 0, 30, 'UTF-8') . '...' : $title_cus;
                                                     ?>
                                                     <div class="item box-item-blog">
                                                         <span class="text-style-box"><?= esc_html__('ĐƯỢC ĐỀ XUẤT','crismaster') ?></span>
                                                         <div class="wrap-item relative">
-                                                            <a href="<?= get_permalink() ?>" class="link-box"></a>
+                                                            <a href="<?= get_permalink() ?>"  title="<?= the_title(); ?>" class="link-box"></a>
                                                             <div class="wrap-image">
                                                                 <img class="item-image" src="<?= esc_url($single_image[0]) ?>" alt="Image">
                                                             </div>
                                                             <div class="wrap-box-content-blog mt-30">
-                                                                <h5 class="item-title"> <?= the_title() ?></h5>
+                                                                <h5 class="item-title" title="<?= the_title(); ?>"> <?= $title_cus ?></h5>
                                                                 <div class="box-content-des">
                                                                     <?= esc_attr($ng_diachi) ?>
                                                                 </div>
