@@ -656,7 +656,7 @@ function my_filter_function_profession() {
             </div>
             <?php
         } }else {
-        echo 'Không có dữ liệu.';
+        echo esc_html__('Không có dữ liệu!','crismaster');
     }
     wp_reset_postdata();
     die();

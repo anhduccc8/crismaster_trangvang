@@ -341,7 +341,7 @@ foreach ($lines2 as $line2) {
                                         </div>
                                     <?php
                                     else :
-                                        echo 'Không có dữ liệu.';
+                                        echo esc_html__('Không có dữ liệu!','crismaster');
                                     endif;
                                     ?>
                                 </div>
