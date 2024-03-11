@@ -162,4 +162,59 @@ function displayFileName() {
             $('#text_search_fill').val($(this).text().trim());
         });
     }
+    var commentForm = $('#commentform');
+    if (commentForm.length > 0) {
+        commentForm.submit(function (event) {
+            var authorField = $('#author');
+            var emailField = $('#email');
+            var commentField = $('#comment');
+
+            var hasError = false;
+            var current_lang = themeData.current_lang;
+            var textEr = 'Vui lòng nhập vào trường này!';
+            if (current_lang === 'ja'){
+                textEr = 'このフィールドに入力してください。';
+            }
+
+            if (!authorField.val().trim()) {
+                displayError(authorField, textEr);
+                hasError = true;
+            } else {
+                clearError(authorField);
+            }
+
+            if (!emailField.val().trim()) {
+                displayError(emailField, textEr);
+                hasError = true;
+            } else {
+                clearError(emailField);
+            }
+
+            if (!commentField.val().trim()) {
+                displayError(commentField, textEr);
+                hasError = true;
+            } else {
+                clearError(commentField);
+            }
+
+            if (hasError) {
+                event.preventDefault();
+            }
+        });
+    }
+
+    function displayError(inputField, errorMessage) {
+        var errorElement = inputField.next('.error-message');
+
+        if (errorElement.length === 0) {
+            errorElement = $('<div class="error-message"></div>');
+            inputField.after(errorElement);
+        }
+
+        errorElement.text(errorMessage).css('color', 'red');
+    }
+
+    function clearError(inputField) {
+        inputField.next('.error-message').remove();
+    }
 });

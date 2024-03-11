@@ -79,9 +79,10 @@ function crismaster_theme_scripts_styles(){
     wp_enqueue_script("select2-js", "https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js",array(),true,false);
     wp_enqueue_script("owl-carousel-js", get_template_directory_uri()."/assets/js/owl.carousel.min.js",array(),true,false);
     wp_enqueue_script("map-js", "https://maps.googleapis.com/maps/api/js?key=AIzaSyAlZDuxldYtZzVxBMRnGJrwAcLBEGB2v8s",array(),true,false);
-    wp_enqueue_script("custom-js", get_template_directory_uri()."/assets/js/main.js",array(),'1.0.1',false);
+    wp_enqueue_script("custom-js", get_template_directory_uri()."/assets/js/main.js",array(),'1.0.2',false);
+    $current_language = function_exists('pll_current_language') ? pll_current_language() : '';
     wp_localize_script('custom-js', 'themeData', array(
-        'direc_url' => get_template_directory_uri().'/assets/'
+        'current_lang' => $current_language
     ));
 
 
@@ -384,16 +385,16 @@ function custom_comment_output($comment, $args, $depth) {
 
 // Thêm trường Tên và Số điện thoại vào biểu mẫu bình luận
 function custom_comment_fields($fields) {
-    $fields['author'] = '<div class="form-input-review"><input class="form-control" id="author" name="author" type="text" placeholder="'.esc_html__('Nhập họ tên','crismaster').'"></div>';
-    $fields['email'] = '<div class="form-input-review mt-20"><input class="form-control" id="email" name="email" type="email" placeholder="'.esc_html__('Nhập email','crismaster').'"></div>';
-    $fields['phone_cm'] = '<div class="form-input-review mt-20"><input id="phone_cm"  class="form-control" name="phone_cm" type="tel" placeholder="'.esc_html__('Nhập số điện thoại','crismaster').'"></div>';
+    $fields['author'] = '<div class="form-input-review"><input class="form-control" id="author" name="author" type="text" placeholder="'.esc_html__('Nhập họ tên','crismaster').'" required></div>';
+    $fields['email'] = '<div class="form-input-review mt-20"><input class="form-control" id="email" name="email" type="email" placeholder="'.esc_html__('Nhập email','crismaster').'" required></div>';
+    $fields['phone_cm'] = '<div class="form-input-review mt-20"><input id="phone_cm"  class="form-control" name="phone_cm" type="tel" placeholder="'.esc_html__('Nhập số điện thoại','crismaster').'" required></div>';
     return $fields;
 }
 add_filter('comment_form_default_fields', 'custom_comment_fields');
 
 
 function custom_comment_textarea_field($comment_field) {
-    $comment_field = '<div class="form-input-review mt-20"><textarea name="comment" id="comment" cols="30" rows="10" class="form-control" placeholder="'.esc_html__('Review của bạn','crismaster').'"></textarea></div>';
+    $comment_field = '<div class="form-input-review mt-20"><textarea name="comment" id="comment" cols="30" rows="10" class="form-control" placeholder="'.esc_html__('Review của bạn','crismaster').'" required></textarea></div>';
     return $comment_field;
 }
 add_filter('comment_form_field_comment', 'custom_comment_textarea_field');
