@@ -400,7 +400,7 @@ function custom_comment_textarea_field($comment_field) {
 add_filter('comment_form_field_comment', 'custom_comment_textarea_field');
 
 function custom_comment_submit_button() {
-    $submit_button = '<button type="submit" class="btn-main btn-review form-submit-btn mt-30">'.esc_html__('Gửi thông tin').'</button>';
+    $submit_button = '<button type="submit" class="btn-main btn-review form-submit-btn mt-30">'.esc_html__('Gửi thông tin','crismaster').'</button>';
     return $submit_button;
 }
 add_filter('comment_form_submit_button', 'custom_comment_submit_button');

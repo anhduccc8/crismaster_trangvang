@@ -24,7 +24,7 @@
     endif;
 	if (  comments_open() && get_comments_number() == '0' ) : ?>
     <div class="text-center">
-        <span class="text-center min-h200px"><?= esc_html__('Chưa có nhận xét nào hoặc ý kiến của bạn đang được xét duyệt!','crismaster') ?></span>
+        <span class="text-center min-h200px"><?= esc_html__('Chưa có nhận xét nào hoặc ý kiến của bạn đang được xét duyệt','crismaster') ?></span>
     </div>
 	    <?php
     endif;

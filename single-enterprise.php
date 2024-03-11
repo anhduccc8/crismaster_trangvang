@@ -192,7 +192,7 @@ if(have_posts()):
                                         $giaithuong = get_post_meta( get_the_ID(), $prefix . '_cmb_giaithuong', true );
                                         if ($giaithuong != '' && count($giaithuong) > 0){ ?>
                                         <div class="block-certificate">
-                                            <div class="block-certificate-title mt-50 mb-40"><?= esc_html__('','crismaster') ?>Giải thưởng và danh hiệu uy tín lớn:</div>
+                                            <div class="block-certificate-title mt-50 mb-40"><?= esc_html__('Giải thưởng và danh hiệu uy tín lớn','crismaster') ?>:</div>
                                                 <div class="row">
                                                 <?php
                                                 foreach ($giaithuong as $gt){ ?>
