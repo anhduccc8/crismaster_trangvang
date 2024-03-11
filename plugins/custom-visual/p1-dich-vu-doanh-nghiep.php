@@ -86,7 +86,7 @@ function p1_dich_vu_doanh_nghiep_func($atts,$content = null){
                         $dca['simage'] = wp_get_attachment_image_src($dca['simage'], '');
                     }
                     ?>
-                    <div class="col-12 col-md-3 col-lg-2 item">
+                    <div class="col-6 col-md-3 col-lg-2 item">
                     <a href="<?= esc_url($dca['slink']) ?>" class="wrap-item">
                         <div class="wrap-image">
                             <img class="item-image" src="<?= esc_url($dca['simage'][0]) ?>" alt="Icon">

@@ -62,7 +62,7 @@ $mobile = wp_is_mobile(); ?>
                         </li>
                     </ul>
                 </div>
-                <div class="col-xl-2 col-lg-6 col-md-6 col-sm-12 col-xs-12 wrap-link-footer footer-column">
+                <div class="col-xl-2 col-lg-6 col-md-6 col-sm-12 col-xs-12 wrap-link-footer footer-column hide-mobile-1199">
                     <div class="link-of-home">
                         <h5><?= esc_html__('Trang chủ','crismaster') ?></h5>
                         <ul class="list-link">
@@ -73,7 +73,7 @@ $mobile = wp_is_mobile(); ?>
                         </ul>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-6 col-md-6 col-sm-12 col-xs-12 wrap-link-footer footer-column">
+                <div class="col-xl-2 col-lg-6 col-md-6 col-sm-12 col-xs-12 wrap-link-footer footer-column hide-mobile-1199">
                     <div class="link-of-company">
                         <h5><?= esc_html__('Công ty','crismaster') ?></h5>
                         <ul class="list-link">
@@ -84,7 +84,7 @@ $mobile = wp_is_mobile(); ?>
                         </ul>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-6 col-md-6 col-sm-12 col-xs-12 wrap-link-footer footer-column">
+                <div class="col-xl-2 col-lg-6 col-md-6 col-sm-12 col-xs-12 wrap-link-footer footer-column hide-mobile-1199">
                     <div class="link-of-support">
                         <h5><?= esc_html__('Trợ giúp','crismaster') ?></h5>
                         <ul class="list-link">
@@ -95,7 +95,7 @@ $mobile = wp_is_mobile(); ?>
                         </ul>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-6 col-md-6 col-sm-12 col-xs-12 wrap-link-footer footer-column">
+                <div class="col-xl-2 col-lg-6 col-md-6 col-sm-12 col-xs-12 wrap-link-footer footer-column hide-mobile-1199">
                     <div class="link-of-contact">
                         <h5><?= esc_html__('Liên hệ với chúng tôi','crismaster') ?></h5>
                         <ul class="list-link">
