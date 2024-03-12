@@ -44,7 +44,7 @@ function p1_dang_ky_doanh_nghiep_func($atts,$content = null){
                             </h2>
                         </div>
                         <div class="col-xl-4 col-lg-12 item-right column-btn">
-                            <a class="btn-main btn-round mr-20 style-01" href="<?= esc_url($link1) ?>"><?= esc_html__('Liên hệ ngay','crismaster') ?></a>
+                            <a class="btn-main btn-round mr-20 style-01" href="<?= esc_url($link) ?>"><?= esc_html__('Liên hệ ngay','crismaster') ?></a>
                             <a class="btn-main btn-round style-02" href="<?= esc_url($link2) ?>"><?= esc_html__('Xem Chi Tiết','crismaster') ?> <img src="<?= get_template_directory_uri() ?>/assets/image/double-icon.svg" alt="double icon"></a>
                         </div>
                     </div>
