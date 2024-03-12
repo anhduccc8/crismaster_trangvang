@@ -404,7 +404,12 @@ foreach ($lines2 as $line2) {
                                                 <?= esc_html__('Mục lục','crismaster') ?>
                                             </span>
                                             <?php
-                                            $array_A_to_Z = range('A', 'Z');
+                                            $current_language = function_exists('pll_current_language') ? pll_current_language() : '';
+                                            if ($current_language == 'ja'){
+                                                $array_A_to_Z = ['ア', 'イ', 'ウ', 'エ', 'オ', 'カ', 'キ', 'ク', 'ケ', 'コ', 'サ', 'シ', 'ス', 'セ', 'ソ', 'タ', 'チ', 'ツ', 'テ', 'ト', 'ナ', 'ニ', 'ヌ', 'ネ', 'ノ', 'ハ', 'ヒ', 'フ', 'ヘ', 'ホ', 'マ', 'ミ', 'ム', 'メ', 'モ', 'ヤ', 'ユ', 'ヨ', 'ラ', 'リ', 'ル', 'レ', 'ロ', 'ワ', 'ヲ', 'ン'];
+                                            }else{
+                                                $array_A_to_Z = range('A', 'Z');
+                                            }
                                             foreach ($array_A_to_Z as $value) {
                                                 $search_link = get_search_link($value); ?>
                                                 <li><a class="box-link-table" href="<?= esc_attr($search_link) ?>"><?= esc_attr($value) ?></a></li>
