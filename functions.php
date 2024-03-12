@@ -101,7 +101,7 @@ function crismaster_breadcrumbs() {
     $text['home']     = esc_html__('Trang chủ','crismaster'); // text for the 'Home' link
     $text['category'] = esc_html__('%s','crismaster'); // text for a category page
     $text['tax']      = esc_html__('%s','crismaster'); // text for a taxonomy page
-    $text['search']   = esc_html__('Tìm kiếm "%s"','crismaster'); // text for a search results page
+    $text['search']   = esc_html__('Tìm kiếm: %s','crismaster'); // text for a search results page
     $text['tag']      = esc_html__('Tags "%s"','crismaster'); // text for a tag page
     $text['author']   = esc_html__('Articles Posted by %s','crismaster'); // text for an author page
     $text['404']      = esc_html__('Error 404','crismaster'); // text for the 404 page
