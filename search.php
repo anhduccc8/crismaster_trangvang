@@ -134,7 +134,7 @@ foreach ($lines2 as $line2) {
                                         </svg>
                                         <?= esc_html__('Lọc theo','crismaster') ?> :
                                     </div>
-                                    <div class="dropdown-section">
+                                    <div class="dropdown-section max-w-300px">
                                         <select id="dropdownProfession"  >
                                             <option value=""><?= esc_html__('Chọn Ngành Nghề','crismaster') ?></option>
                                             <?php
@@ -150,7 +150,7 @@ foreach ($lines2 as $line2) {
                                             ?>
                                         </select>
                                     </div>
-                                    <div class="dropdown-section">
+                                    <div class="dropdown-section max-w-300px">
                                         <select id="dropdownProvince" >
                                             <option value=""><?= esc_html__('Chọn Thành Phố','crismaster') ?></option>
                                             <?php if (!empty($header_province_arr)){
