@@ -62,7 +62,7 @@ function p1_muc_luc_nganh_nghe_func($atts,$content = null){
                     $t = 1;
                     foreach ($terms as $term) {
                         $term_link = get_term_link($term);
-                        if ($term->term_id == '14') {
+                        if ($term->term_id == '14' || $term->term_id == '81') {
                             $sorted_terms[] = $term;
                         } else {
                             if($t < 12){ ?>
