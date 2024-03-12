@@ -186,6 +186,9 @@ p.logged-in-as{
     .info-right .cms-lang-curentcy .cms-lang ul {
         background-color: #cdc;
     }
+    .section-widget-fields .wrap-grid-fields .item {
+        padding: 0 15px !important;
+    }
 }
 @media (max-width: 454px) {
     .btn-search-dropdown {

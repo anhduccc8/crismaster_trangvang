@@ -66,7 +66,7 @@ function p1_muc_luc_nganh_nghe_func($atts,$content = null){
                             $sorted_terms[] = $term;
                         } else {
                             if($t < 12){ ?>
-                                <div class="col-12 col-md-3 col-lg-2 item">
+                                <div class="col-6 col-md-3 col-lg-2 item">
                                     <a href="<?= esc_attr($term_link) ?>" class="wrap-item-box">
                                         <h5 class="item-text"><?= esc_attr($term->name) ?></h5>
                                     </a>
@@ -78,7 +78,7 @@ function p1_muc_luc_nganh_nghe_func($atts,$content = null){
                         foreach ($sorted_terms as $term) {
                             $term_link = get_term_link($term);
                             ?>
-                            <div class="col-12 col-md-3 col-lg-2 item">
+                            <div class="col-6 col-md-3 col-lg-2 item">
                                 <a href="<?= esc_attr($term_link) ?>" class="wrap-item-box">
                                     <h5 class="item-text"><?= esc_attr($term->name) ?></h5>
                                 </a>
