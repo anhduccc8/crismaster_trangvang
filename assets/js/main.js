@@ -27,7 +27,7 @@ $(document).ready(function() {
             responsive: {
                 0: {
                     nav: false,
-                    items: 1
+                    items: 2
                 },
                 767: {
                     nav: false,
