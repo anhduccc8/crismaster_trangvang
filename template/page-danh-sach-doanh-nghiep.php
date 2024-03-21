@@ -124,7 +124,11 @@ foreach ($lines2 as $line2) {
                                                 <?php if (!empty($header_province_arr)){
                                                     foreach ($header_province_arr as $province){
                                                         $province_arr = explode('|',$province);
-                                                        $link = get_permalink('208') . '?province=' . urlencode($province_arr[0]);
+                                                        if ($current_language == 'ja'){
+                                                    $link = get_permalink('296') . '?province=' . urlencode($province_arr[0]);
+                                                }else{
+                                                    $link = get_permalink('208') . '?province=' . urlencode($province_arr[0]);
+                                                }
                                                         ?>
                                                         <li>
                                                             <a class="<?php if (isset($_GET['province']) && $province_arr[0] == $_GET['province']  ){ echo 'active'; } ?>" href="<?= esc_url($link) ?>"><?= esc_attr($province_arr[1]) ?></a>
