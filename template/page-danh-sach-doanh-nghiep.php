@@ -16,7 +16,12 @@ $footer_address2 = $theme_option['footer_address2'];
 $footer_phone = $theme_option['footer_phone'];
 $footer_email = $theme_option['footer_email'];
 
-$header_province = $theme_option['header_province'];
+$current_language = function_exists('pll_current_language') ? pll_current_language() : '';
+if ($current_language == 'ja'){
+    $header_province = $theme_option['header_province_ja'];
+}else{
+    $header_province = $theme_option['header_province'];
+}
 $lines2 = explode("\n", trim($header_province));
 $header_province_arr = [];
 foreach ($lines2 as $line2) {

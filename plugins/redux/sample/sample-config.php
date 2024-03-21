@@ -252,6 +252,13 @@ if (!class_exists("Redux_Framework_sample_config")) {
                         'subtitle' => esc_html__( '', 'crismaster' ),
                         'desc'     => esc_html__( '', 'crismaster' ),
                     ),
+                    array(
+                        'id'       => 'header_province_ja',
+                        'type'     => 'textarea',
+                        'title'    => esc_html__( 'API các tỉnh thành (Tiếng Nhật)', 'crismaster' ),
+                        'subtitle' => esc_html__( '', 'crismaster' ),
+                        'desc'     => esc_html__( '', 'crismaster' ),
+                    ),
                 )
             );
             $this->sections[] = array(

@@ -10,7 +10,13 @@ if (isset($theme_option['header_banner']['url'])){
 $header_title = $theme_option['header_title'];
 $header_desc = $theme_option['header_desc'];
 $header_search = $theme_option['header_search'];
-$header_province = $theme_option['header_province'];
+$current_language = function_exists('pll_current_language') ? pll_current_language() : '';
+if ($current_language == 'ja'){
+    $header_province = $theme_option['header_province_ja'];
+}else{
+    $header_province = $theme_option['header_province'];
+}
+
 
 $lines = explode("\n", trim($header_search));
 $header_search_arr = [];
