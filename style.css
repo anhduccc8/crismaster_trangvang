@@ -218,4 +218,38 @@ p.logged-in-as{
     .btn-round.style-02 {
         margin: -1px 5px 12px 15px !important;
     }
+    .section-search {
+        margin-top: 0;
+    }
+    .section-update {
+        margin-top: 80px;
+    }
+    .section-registration {
+        margin-top: 80px;
+    }
+    .section-registration-company {
+        margin-top: 80px;
+    }
+    .section-show-case {
+        margin-top: 80px;
+    }
+    .section-gallery-image {
+        margin-top: 0;
+    }
+    .slide-form-box > div {
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+    header .section-form-search .btn-search-dropdown {
+        margin-top: 15px;
+    }
+    .trending-title {
+        font-size: 10px;
+    }
+    .trending-category li a {
+        font-size: 12px;
+    }
+    .nav-image img {
+        max-width: unset;
+    }
 }

