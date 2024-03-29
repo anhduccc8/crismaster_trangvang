@@ -5,6 +5,7 @@ $enterprise_banner = '';
 if (isset($theme_option['enterprise_banner']['url'])){
     $enterprise_banner = $theme_option['enterprise_banner']['url'];
 }
+$current_language = function_exists('pll_current_language') ? pll_current_language() : '';
 if(have_posts()):
     while ( have_posts() ) : the_post();
         $is_taitro = get_post_meta(get_the_ID(),'_cmb_is_taitro',true);
@@ -218,7 +219,11 @@ if(have_posts()):
                             <div class="col-xs-12 col-lg-3 <?php if ($is_taitro == 'on'){ echo 'blog-sidebar-right'; } ?> sidebar-info-page">
                             <?php
                             if (isset($theme_option['enterprise_adver']) && $is_taitro == 'on') {
-                                $enterprise_adver = $theme_option['enterprise_adver'];
+                                if ($current_language == 'ja'){
+                                    $enterprise_adver = $theme_option['enterprise_adver_ja'];
+                                }else{
+                                    $enterprise_adver = $theme_option['enterprise_adver'];
+                                }
                                 $gallery2_ids_array = explode(',', $enterprise_adver);
                                 foreach ($gallery2_ids_array as $attachment_id2) {
                                     $image_url2 = wp_get_attachment_url($attachment_id2);
@@ -427,7 +432,11 @@ if(have_posts()):
                     </section>
                     <?php
                     if (isset($theme_option['enterprise_banner2'])) {
-                        $enterprise_banner2 = $theme_option['enterprise_banner2'];
+                        if ($current_language == 'ja'){
+                            $enterprise_banner2 = $theme_option['enterprise_banner2_ja'];
+                        }else{
+                            $enterprise_banner2 = $theme_option['enterprise_banner2'];
+                        }
                         $gallery3_ids_array = explode(',', $enterprise_banner2); ?>
                         <section class="section section-widget-banner-image-single space-custom-05">
                             <div class="container-fluid-ct">
