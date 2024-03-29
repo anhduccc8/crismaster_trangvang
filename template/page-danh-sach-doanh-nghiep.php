@@ -27,6 +27,7 @@ $header_province_arr = [];
 foreach ($lines2 as $line2) {
     $header_province_arr[] = $line2;
 }
+$current_language = function_exists('pll_current_language') ? pll_current_language() : '';
 ?>
 
         <main class="site-content-danh-muc">
@@ -37,7 +38,11 @@ foreach ($lines2 as $line2) {
                             <div class="col-12 col-lg-9">
                                 <?php
                                 if (isset($theme_option['enterprise_list_banner'])) {
-                                    $enterprise_list_banner = $theme_option['enterprise_list_banner'];
+                                    if ($current_language == 'ja'){
+                                        $enterprise_list_banner = $theme_option['enterprise_list_banner_ja'];
+                                    }else{
+                                        $enterprise_list_banner = $theme_option['enterprise_list_banner'];
+                                    }
                                     $gallery_ids_array = explode(',', $enterprise_list_banner); ?>
                                     <section class="widget-banner-info mb-30">
                                         <div class="container-fluid-ct">
@@ -365,7 +370,11 @@ foreach ($lines2 as $line2) {
                             </div>
                             <?php
                             if (isset($theme_option['enterprise_list_adver'])) {
-                                $enterprise_list_adver = $theme_option['enterprise_list_adver'];
+                                if ($current_language == 'ja'){
+                                    $enterprise_list_adver = $theme_option['enterprise_list_adver_ja'];
+                                }else{
+                                    $enterprise_list_adver = $theme_option['enterprise_list_adver'];
+                                }
                                 $gallery4_ids_array = explode(',', $enterprise_list_adver); ?>
                                 <div class="col-xs-12 col-lg-3 sidebar-info-page">
                                 <?php
@@ -383,7 +392,11 @@ foreach ($lines2 as $line2) {
                     </section>
                     <?php
                     if (isset($theme_option['enterprise_list_adver2'])) {
-                        $enterprise_list_adver2 = $theme_option['enterprise_list_adver2'];
+                        if ($current_language == 'ja'){
+                            $enterprise_list_adver2 = $theme_option['enterprise_list_adver2_ja'];
+                        }else{
+                            $enterprise_list_adver2 = $theme_option['enterprise_list_adver2'];
+                        }
                         $gallery4_ids_array3 = explode(',', $enterprise_list_adver2); ?>
                          <section class="section section-widget-banner-image-single space-custom-02 section-banner-image-dm-page" style="max-width:1240px; margin: 100px auto 0">
                             <div class="container-fluid-ct">

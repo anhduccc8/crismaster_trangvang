@@ -459,6 +459,33 @@ if (!class_exists("Redux_Framework_sample_config")) {
                             'subtitle' => __( '', 'crismaster' ),
                             'default' => '',
                         ),
+                        array(
+                            'id'       => 'enterprise_list_banner_ja',
+                            'type'     => 'gallery',
+                            'url' => true,
+                            'title'    => __( 'List 4 Ảnh banner bé đầu trang (Ngôn ngữ Nhật)', 'crismaster' ),
+                            'desc'     => __( '', 'crismaster' ),
+                            'subtitle' => __( '', 'crismaster' ),
+                            'default' => '',
+                        ),
+                        array(
+                            'id'       => 'enterprise_list_adver_ja',
+                            'type'     => 'gallery',
+                            'url' => true,
+                            'title'    => __( 'List Ảnh Quảng cáo sidebar (Ngôn ngữ Nhật)', 'crismaster' ),
+                            'desc'     => __( '', 'crismaster' ),
+                            'subtitle' => __( '', 'crismaster' ),
+                            'default' => '',
+                        ),
+                        array(
+                            'id'       => 'enterprise_list_adver2_ja',
+                            'type'     => 'gallery',
+                            'url' => true,
+                            'title'    => __( 'List 4 Ảnh Quảng cáo footer (Ngôn ngữ Nhật)', 'crismaster' ),
+                            'desc'     => __( '', 'crismaster' ),
+                            'subtitle' => __( '', 'crismaster' ),
+                            'default' => '',
+                        ),
                 )
             );
 
