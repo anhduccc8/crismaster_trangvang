@@ -229,7 +229,7 @@ if(have_posts()):
                                     $image_url2 = wp_get_attachment_url($attachment_id2);
                                     $caption2 = get_post_field('post_excerpt', $attachment_id2);
                                     if ($image_url2) { ?>
-                                        <div class="item-post item-banner-sale-sb" onclick="clickChangeUrls('<?= esc_url($caption2) ?> ?>')">
+                                        <div class="item-post item-banner-sale-sb" onclick="clickChangeUrls('<?= esc_url($caption2) ?>')">
                                             <img alt="img-blog-01" src="<?= esc_url($image_url2) ?>" style="width:100%">
                                          </div>
                                     <?php }
